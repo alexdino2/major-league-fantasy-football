@@ -12,19 +12,11 @@ export async function POST(request: Request) {
       )
     }
 
-    // Use current date for year/week
-    const now = new Date()
-    const year = now.getFullYear()
-    const week = getWeekNumber(now)
-
     // Create media item in database
     const mediaItem = await prisma.mediaItem.create({
       data: {
         videoId,
-        year,
-        week,
-        type: "highlight", // Default type
-        submittedAt: now,
+        submittedAt: new Date(),
       },
     })
 

@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -14,14 +8,12 @@ datasource db {
 }
 
 model MediaItem {
-  id          Int      @id @default(autoincrement())
-  videoId     String   @unique
-  title       String
-  description String
-  year        Int
-  week        Int
-  type        String   @default("highlight")
-  submittedAt DateTime @default(now())
+  id          Int       @id @default(autoincrement())
+  videoId     String    @unique
+  year        Int?
+  week        Int?
+  type        String?
+  submittedAt DateTime  @default(now())
 
   @@index([year, week])
 }

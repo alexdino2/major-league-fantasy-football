@@ -15,10 +15,10 @@ import { Calendar as CalendarComponent } from "@/components/ui/calendar"
 
 interface MediaItem {
   id: string
-  type: 'media' | 'news'
-  year: number
-  week: number
-  videoId?: string
+  type?: 'media' | 'news'
+  year?: number
+  week?: number
+  videoId: string
   submittedAt: string
 }
 
@@ -57,23 +57,12 @@ export default function MediaPage() {
   const filteredMediaItems = useMemo(() => {
     let filtered = [...mediaItems]
 
-    // Apply year filter
-    if (selectedYear) {
-      filtered = filtered.filter(item => item.year === selectedYear)
-    }
-
-    // Apply week filter
-    if (selectedWeek) {
-      filtered = filtered.filter(item => item.week === selectedWeek)
-    }
-
-    // Apply date range filter
-    if (dateRange?.from) {
-      filtered = filtered.filter(item => {
-        const itemDate = new Date(item.submittedAt)
-        return itemDate >= dateRange.from! && 
-               (!dateRange.to || itemDate <= dateRange.to)
-      })
+    // Apply search filter
+    if (searchQuery) {
+      const query = searchQuery.toLowerCase()
+      filtered = filtered.filter(item => 
+        item.videoId.toLowerCase().includes(query)
+      )
     }
 
     // Apply sorting
@@ -84,7 +73,28 @@ export default function MediaPage() {
     })
 
     return filtered
-  }, [mediaItems, selectedYear, selectedWeek, dateRange, sortOrder])
+  }, [mediaItems, searchQuery, sortOrder])
+
+  const extractYouTubeVideoId = (url: string): string | null => {
+    // Handles various YouTube URL formats
+    try {
+      // youtu.be/VIDEOID
+      const shortMatch = url.match(/youtu\.be\/([\w-]{11})/)
+      if (shortMatch) return shortMatch[1]
+      // youtube.com/watch?v=VIDEOID
+      const longMatch = url.match(/[?&]v=([\w-]{11})/)
+      if (longMatch) return longMatch[1]
+      // youtube.com/embed/VIDEOID
+      const embedMatch = url.match(/embed\/([\w-]{11})/)
+      if (embedMatch) return embedMatch[1]
+      // youtube.com/v/VIDEOID
+      const vMatch = url.match(/\/v\/([\w-]{11})/)
+      if (vMatch) return vMatch[1]
+      return null
+    } catch {
+      return null
+    }
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -95,16 +105,15 @@ export default function MediaPage() {
       const youtubeRegex = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/.+$/
       if (!youtubeRegex.test(videoUrl)) {
         toast.error("Please enter a valid YouTube URL")
+        setIsSubmitting(false)
         return
       }
 
-      // Extract video ID
-      const videoId = videoUrl.includes("youtu.be") 
-        ? videoUrl.split("/").pop()?.split("?")[0]
-        : new URL(videoUrl).searchParams.get("v")
-
+      // Robustly extract video ID
+      const videoId = extractYouTubeVideoId(videoUrl)
       if (!videoId) {
-        toast.error("Could not extract video ID from URL")
+        toast.error("Could not extract video ID from URL. Please check the link format.")
+        setIsSubmitting(false)
         return
       }
 
@@ -115,23 +124,24 @@ export default function MediaPage() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          type: "media",
           videoId,
         }),
       })
 
       if (!response.ok) {
         const error = await response.json()
-        throw new Error(error.message || 'Failed to submit video')
+        toast.error(error.error || error.message || 'Failed to submit video')
+        setIsSubmitting(false)
+        return
       }
 
+      const newItem = await response.json()
       toast.success("Video submitted successfully!")
-      
-      // Reset form
       setVideoUrl("")
-
-      // Refresh the media items list
-      await fetchMediaItems()
+      // Optimistically add the new item to the top of the list
+      setMediaItems((prev) => [newItem, ...prev])
+      // Fetch the latest list in the background
+      fetchMediaItems()
     } catch (error) {
       toast.error(error instanceof Error ? error.message : "Failed to submit video. Please try again.")
     } finally {
@@ -268,10 +278,6 @@ export default function MediaPage() {
                 </div>
                 <CardHeader className="lg:p-8">
                   <div className="flex items-center gap-4 pt-4">
-                    <div className="flex items-center text-sm text-gray-500">
-                      <Calendar className="w-4 h-4 mr-1" />
-                      {new Date(filteredMediaItems[0].submittedAt).toLocaleDateString()}
-                    </div>
                     <Badge variant="outline">{filteredMediaItems[0].type}</Badge>
                   </div>
                   <div className="flex gap-4 pt-4">
@@ -293,7 +299,7 @@ export default function MediaPage() {
         <div className="mb-12">
           <h2 className="text-2xl font-bold mb-6">All Videos</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredMediaItems.slice(1).map((item) => (
+            {filteredMediaItems.map((item) => (
               <Card key={item.id} className="overflow-hidden">
                 <div className="aspect-video relative">
                   <iframe
@@ -306,9 +312,7 @@ export default function MediaPage() {
                 <CardHeader>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
-                      <Badge variant="secondary">
-                        {item.year} Week {item.week}
-                      </Badge>
+                      {item.type && <Badge variant="secondary">{item.type}</Badge>}
                     </div>
                     <Link
                       href={`https://www.youtube.com/watch?v=${item.videoId}`}
@@ -352,4 +356,4 @@ export default function MediaPage() {
       </div>
     </div>
   )
-} 
+}

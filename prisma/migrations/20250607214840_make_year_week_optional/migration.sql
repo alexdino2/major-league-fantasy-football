@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "MediaItem" ALTER COLUMN "year" DROP NOT NULL,
+ALTER COLUMN "week" DROP NOT NULL;

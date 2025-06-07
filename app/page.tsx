@@ -1,11 +1,22 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, Trophy, Users, Video } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { useEffect, useState } from "react"
 
 export default function HomePage() {
+  const [featuredVideos, setFeaturedVideos] = useState<any[]>([])
+  useEffect(() => {
+    fetch("/api/media/list")
+      .then((res) => res.json())
+      .then((data) => setFeaturedVideos(data.slice(0, 2)))
+      .catch(() => setFeaturedVideos([]))
+  }, [])
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       {/* Hero Section */}
@@ -45,36 +56,42 @@ export default function HomePage() {
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-            <Card className="text-center">
-              <CardHeader>
-                <Trophy className="w-8 h-8 mx-auto text-yellow-500" />
-                <CardTitle>Championships</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-3xl font-bold">30</p>
-                <p className="text-sm text-muted-foreground">Seasons Completed</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center">
-              <CardHeader>
-                <Users className="w-8 h-8 mx-auto text-blue-500" />
-                <CardTitle>Active Teams</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-3xl font-bold">10</p>
-                <p className="text-sm text-muted-foreground">Competing Franchises</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center">
-              <CardHeader>
-                <Video className="w-8 h-8 mx-auto text-red-500" />
-                <CardTitle>Media Files</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-3xl font-bold">150+</p>
-                <p className="text-sm text-muted-foreground">Videos & Articles</p>
-              </CardContent>
-            </Card>
+            <Link href="/history" className="contents">
+              <Card className="text-center cursor-pointer hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <Trophy className="w-8 h-8 mx-auto text-yellow-500" />
+                  <CardTitle>Championships</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-3xl font-bold">30</p>
+                  <p className="text-sm text-muted-foreground">Seasons Completed</p>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/teams" className="contents">
+              <Card className="text-center cursor-pointer hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <Users className="w-8 h-8 mx-auto text-blue-500" />
+                  <CardTitle>Active Teams</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-3xl font-bold">10</p>
+                  <p className="text-sm text-muted-foreground">Competing Franchises</p>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/media" className="contents">
+              <Card className="text-center cursor-pointer hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <Video className="w-8 h-8 mx-auto text-red-500" />
+                  <CardTitle>Media Files</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-3xl font-bold">150+</p>
+                  <p className="text-sm text-muted-foreground">Videos & Articles</p>
+                </CardContent>
+              </Card>
+            </Link>
             <Card className="text-center">
               <CardHeader>
                 <Calendar className="w-8 h-8 mx-auto text-green-500" />
@@ -165,34 +182,45 @@ export default function HomePage() {
               </Button>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Draft Day Highlights 2024</CardTitle>
-                  <CardDescription>
-                    Watch the best moments from this year's draft including surprise picks and reactions.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-                    <Video className="w-12 h-12 text-gray-400" />
-                  </div>
-                  <p className="text-sm text-muted-foreground mt-2">YouTube • 15:32</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Championship Game Recap</CardTitle>
-                  <CardDescription>
-                    Relive the intense final matchup that decided the 2023 MLFF champion.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-                    <Video className="w-12 h-12 text-gray-400" />
-                  </div>
-                  <p className="text-sm text-muted-foreground mt-2">YouTube • 22:45</p>
-                </CardContent>
-              </Card>
+              {featuredVideos.length === 0 ? (
+                <>
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>No Videos Yet</CardTitle>
+                      <CardDescription>
+                        Videos submitted by the community will appear here.
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
+                        <Video className="w-12 h-12 text-gray-400" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </>
+              ) : (
+                featuredVideos.map((item) => (
+                  <Card key={item.id}>
+                    <CardHeader>
+                      <CardTitle>YouTube Video</CardTitle>
+                      <CardDescription>
+                        Video ID: {item.videoId}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center relative overflow-hidden">
+                        <iframe
+                          src={`https://www.youtube.com/embed/${item.videoId}`}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="absolute inset-0 w-full h-full"
+                          title="YouTube video"
+                        />
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))
+              )}
             </div>
           </div>
         </div>

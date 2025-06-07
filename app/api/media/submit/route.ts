@@ -1,18 +1,6 @@
 import { NextResponse } from 'next/server'
 import { prisma } from "@/lib/prisma"
 
-interface VideoSubmission {
-  id: string
-  type: 'media' | 'news'
-  videoId: string
-  title: string
-  description: string
-  year: number
-  week: number
-  date: string
-  submittedAt: string
-}
-
 export async function POST(request: Request) {
   try {
     const { videoId } = await request.json()
@@ -61,7 +49,7 @@ export async function POST(request: Request) {
     // Extract year and week from publish date
     const publishDate = new Date(videoDetails.publishedAt)
     const year = publishDate.getFullYear()
-    const week = Math.ceil((publishDate.getDate() + publishDate.getDay()) / 7)
+    const week = getWeekNumber(publishDate)
 
     // Create media item in database
     const mediaItem = await prisma.mediaItem.create({

@@ -8,7 +8,7 @@ const teams = [
     manager: "Cody Patton",
     email: "pattoncody@hotmail.com",
     phone: "404.368.2399",
-    logo: "/logos/generals.png",
+    logo: "/logos/1-3121.png",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const teams = [
     manager: "Josh Kowall",
     email: "joshkowall@hotmail.com",
     phone: "",
-    logo: "/logos/leeds-united.png",
+    logo: "/logos/3-1698266188.png",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const teams = [
     manager: "Alex Destino",
     email: "alexdino1@gmail.com",
     phone: "6784801872",
-    logo: "/logos/masters-of-disaster.png",
+    logo: "/logos/4-12144.gif",
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ const teams = [
     manager: "Patrick Williams",
     email: "patro7@hotmail.com",
     phone: "",
-    logo: "/logos/relegators.png",
+    logo: "/logos/5-1639702560.jpg",
   },
   {
     id: 5,
@@ -40,7 +40,7 @@ const teams = [
     manager: "Mike Grady",
     email: "mike.grady@live.com",
     phone: "",
-    logo: "/logos/rock-stars.png",
+    logo: "/logos/6-1724002593.jpg",
   },
   {
     id: 6,
@@ -48,7 +48,7 @@ const teams = [
     manager: "Seth Lively",
     email: "sethlively@gmail.com",
     phone: "",
-    logo: "/logos/egyptian-magicians.png",
+    logo: "/logos/7-234011.jpg",
   },
   {
     id: 7,
@@ -56,7 +56,7 @@ const teams = [
     manager: "Michael",
     email: "michael.mignatti@gmail.com",
     phone: "+1512-698-9732",
-    logo: "/logos/homers-heroes.png",
+    logo: "/logos/8-1706630320.jpg",
   },
   {
     id: 8,
@@ -64,7 +64,7 @@ const teams = [
     manager: "Gustave Carruth",
     email: "gustaveneri@gmail.com",
     phone: "",
-    logo: "/logos/kentucky-football-club.png",
+    logo: "/logos/10-117624.png",
   },
   {
     id: 9,
@@ -72,7 +72,7 @@ const teams = [
     manager: "Eric Harvill",
     email: "eharvill13@yahoo.com",
     phone: "770-652-2698",
-    logo: "/logos/la-losers.png",
+    logo: "/logos/11-76851.jpg",
   },
   {
     id: 10,
@@ -80,7 +80,7 @@ const teams = [
     manager: "Brad Venuti",
     email: "bvenuti75@gmail.com",
     phone: "978 317-9308",
-    logo: "/logos/munich-cowboys.png",
+    logo: "/logos/72x72-r.jpg",
   },
 ]
 

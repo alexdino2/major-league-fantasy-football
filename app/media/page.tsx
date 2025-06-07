@@ -1,14 +1,11 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
-import { Calendar, ExternalLink, Play, Search, Upload } from "lucide-react"
+import { Calendar, ExternalLink, Search } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { Label } from "@/components/ui/label"
 import { useState, useMemo, useEffect } from "react"
 import { toast } from "sonner"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
@@ -19,11 +16,8 @@ import { Calendar as CalendarComponent } from "@/components/ui/calendar"
 interface MediaItem {
   id: string
   type: 'media' | 'news'
-  title: string
-  description: string
   year: number
   week: number
-  date: string
   videoId?: string
   submittedAt: string
 }
@@ -63,15 +57,6 @@ export default function MediaPage() {
   const filteredMediaItems = useMemo(() => {
     let filtered = [...mediaItems]
 
-    // Apply search filter
-    if (searchQuery) {
-      const query = searchQuery.toLowerCase()
-      filtered = filtered.filter(item => 
-        item.title.toLowerCase().includes(query) || 
-        item.description.toLowerCase().includes(query)
-      )
-    }
-
     // Apply year filter
     if (selectedYear) {
       filtered = filtered.filter(item => item.year === selectedYear)
@@ -99,7 +84,7 @@ export default function MediaPage() {
     })
 
     return filtered
-  }, [mediaItems, searchQuery, selectedYear, selectedWeek, dateRange, sortOrder])
+  }, [mediaItems, selectedYear, selectedWeek, dateRange, sortOrder])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -276,15 +261,12 @@ export default function MediaPage() {
                 <div className="aspect-video relative">
                   <iframe
                     src={`https://www.youtube.com/embed/${filteredMediaItems[0].videoId}`}
-                    title={filteredMediaItems[0].title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     className="absolute inset-0 w-full h-full"
                   />
                 </div>
                 <CardHeader className="lg:p-8">
-                  <CardTitle className="text-2xl">{filteredMediaItems[0].title}</CardTitle>
-                  <CardDescription className="text-base">{filteredMediaItems[0].description}</CardDescription>
                   <div className="flex items-center gap-4 pt-4">
                     <div className="flex items-center text-sm text-gray-500">
                       <Calendar className="w-4 h-4 mr-1" />
@@ -316,19 +298,12 @@ export default function MediaPage() {
                 <div className="aspect-video relative">
                   <iframe
                     src={`https://www.youtube.com/embed/${item.videoId}`}
-                    title={item.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     className="absolute inset-0 w-full h-full"
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="line-clamp-2">{item.title}</CardTitle>
-                  <CardDescription className="line-clamp-2">
-                    {item.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
                       <Badge variant="secondary">
@@ -345,7 +320,7 @@ export default function MediaPage() {
                       </Button>
                     </Link>
                   </div>
-                </CardContent>
+                </CardHeader>
               </Card>
             ))}
           </div>
@@ -354,13 +329,12 @@ export default function MediaPage() {
         {/* Submit Form */}
         <Card>
           <CardHeader>
-            <CardTitle>Submit Video</CardTitle>
-            <CardDescription>Share a YouTube video with the community</CardDescription>
+            <div className="text-lg font-semibold mb-2">Submit Video</div>
+            <div className="text-gray-500 mb-4">Share a YouTube video with the community</div>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="videoUrl">YouTube URL</Label>
                 <Input
                   id="videoUrl"
                   placeholder="https://www.youtube.com/watch?v=..."

@@ -8,7 +8,7 @@ const teams = [
     manager: "Cody Patton",
     email: "pattoncody@hotmail.com",
     phone: "404.368.2399",
-    logo: "/logos/1-3121.png",
+    logo: "/logos/generals.jpg",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const teams = [
     manager: "Josh Kowall",
     email: "joshkowall@hotmail.com",
     phone: "",
-    logo: "/logos/3-1698266188.png",
+    logo: "/logos/leeds.gif",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const teams = [
     manager: "Alex Destino",
     email: "alexdino1@gmail.com",
     phone: "6784801872",
-    logo: "/logos/4-12144.gif",
+    logo: "/logos/masters.png",
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ const teams = [
     manager: "Patrick Williams",
     email: "patro7@hotmail.com",
     phone: "",
-    logo: "/logos/5-1639702560.jpg",
+    logo: "/logos/relegators.jpg",
   },
   {
     id: 5,
@@ -40,7 +40,7 @@ const teams = [
     manager: "Mike Grady",
     email: "mike.grady@live.com",
     phone: "",
-    logo: "/logos/6-1724002593.jpg",
+    logo: "/logos/rockstars.jpg",
   },
   {
     id: 6,
@@ -48,7 +48,7 @@ const teams = [
     manager: "Seth Lively",
     email: "sethlively@gmail.com",
     phone: "",
-    logo: "/logos/7-234011.jpg",
+    logo: "/logos/egyptian.png",
   },
   {
     id: 7,
@@ -56,7 +56,7 @@ const teams = [
     manager: "Michael",
     email: "michael.mignatti@gmail.com",
     phone: "+1512-698-9732",
-    logo: "/logos/8-1706630320.jpg",
+    logo: "/logos/homers.jpg",
   },
   {
     id: 8,
@@ -64,7 +64,7 @@ const teams = [
     manager: "Gustave Carruth",
     email: "gustaveneri@gmail.com",
     phone: "",
-    logo: "/logos/10-117624.png",
+    logo: "/logos/KFC.jpg",
   },
   {
     id: 9,
@@ -72,7 +72,7 @@ const teams = [
     manager: "Eric Harvill",
     email: "eharvill13@yahoo.com",
     phone: "770-652-2698",
-    logo: "/logos/11-76851.jpg",
+    logo: "/logos/losers.jpg",
   },
   {
     id: 10,
@@ -80,7 +80,7 @@ const teams = [
     manager: "Brad Venuti",
     email: "bvenuti75@gmail.com",
     phone: "978 317-9308",
-    logo: "/logos/72x72-r.jpg",
+    logo: "/logos/munich.png",
   },
 ]
 

@@ -15,6 +15,7 @@ export async function POST(request: Request) {
     // Get YouTube API key from environment
     const apiKey = process.env.YOUTUBE_API_KEY
     if (!apiKey) {
+      console.error("YouTube API key not found in environment variables")
       return NextResponse.json(
         { error: "YouTube API key not configured" },
         { status: 500 }
@@ -38,6 +39,7 @@ export async function POST(request: Request) {
     const data = await response.json()
 
     if (!data.items || data.items.length === 0) {
+      console.error("No video found for ID:", videoId)
       return NextResponse.json(
         { error: "Video not found on YouTube" },
         { status: 404 }
@@ -51,20 +53,28 @@ export async function POST(request: Request) {
     const year = publishDate.getFullYear()
     const week = getWeekNumber(publishDate)
 
-    // Create media item in database
-    const mediaItem = await prisma.mediaItem.create({
-      data: {
-        videoId,
-        title: videoDetails.title,
-        description: videoDetails.description,
-        year,
-        week,
-        type: "highlight", // Default type
-        submittedAt: new Date(),
-      },
-    })
+    try {
+      // Create media item in database
+      const mediaItem = await prisma.mediaItem.create({
+        data: {
+          videoId,
+          title: videoDetails.title,
+          description: videoDetails.description,
+          year,
+          week,
+          type: "highlight", // Default type
+          submittedAt: new Date(),
+        },
+      })
 
-    return NextResponse.json(mediaItem)
+      return NextResponse.json(mediaItem)
+    } catch (dbError) {
+      console.error("Database error:", dbError)
+      return NextResponse.json(
+        { error: "Failed to save video to database" },
+        { status: 500 }
+      )
+    }
   } catch (error) {
     console.error("Error submitting video:", error)
     return NextResponse.json(

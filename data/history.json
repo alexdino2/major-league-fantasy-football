@@ -1,0 +1,464 @@
+{
+  "championships": [
+    {
+      "team": "Leeds United",
+      "championships": 7,
+      "years": [
+        "1999",
+        "2003",
+        "2005",
+        "2006",
+        "2009",
+        "2013",
+        "2014"
+      ]
+    },
+    {
+      "team": "Masters of Disaster",
+      "championships": 5,
+      "years": [
+        "1994",
+        "1998",
+        "2007",
+        "2015",
+        "2018"
+      ]
+    },
+    {
+      "team": "Homers Heroes",
+      "championships": 4,
+      "years": [
+        "1997",
+        "2002",
+        "2016",
+        "2021"
+      ]
+    },
+    {
+      "team": "Egyptian Magicians",
+      "championships": 3,
+      "years": [
+        "2008",
+        "2020",
+        "2023"
+      ]
+    },
+    {
+      "team": "Generals",
+      "championships": 3,
+      "years": [
+        "2012",
+        "2017",
+        "2022"
+      ]
+    },
+    {
+      "team": "Munich Cowboys",
+      "championships": 2,
+      "years": [
+        "2019",
+        "2022"
+      ]
+    },
+    {
+      "team": "LA Losers",
+      "championships": 2,
+      "years": [
+        "1996",
+        "2011"
+      ]
+    },
+    {
+      "team": "Rock Stars",
+      "championships": 2,
+      "years": [
+        "2001",
+        "2004"
+      ]
+    },
+    {
+      "team": "Polish Power",
+      "championships": 2,
+      "years": [
+        "1995",
+        "2000"
+      ]
+    },
+    {
+      "team": "Donora Dragons",
+      "championships": 1,
+      "years": [
+        "2010"
+      ]
+    }
+  ],
+  "standings": [
+    {
+      "team": "Leeds United",
+      "wins": 224,
+      "losses": 184,
+      "ties": 5,
+      "winPercentage": 0.548,
+      "pointsFor": 24483,
+      "pointsAgainst": 23167,
+      "managers": "Josh Kowall (1994-2025)"
+    },
+    {
+      "team": "Polish Power",
+      "wins": 111,
+      "losses": 102,
+      "ties": 5,
+      "winPercentage": 0.521,
+      "pointsFor": 11640,
+      "pointsAgainst": 11391,
+      "managers": "Jeremy Kowall (1994-2012)"
+    },
+    {
+      "team": "Masters of Disaster",
+      "wins": 206,
+      "losses": 196,
+      "ties": 10,
+      "winPercentage": 0.512,
+      "pointsFor": 23969,
+      "pointsAgainst": 23469,
+      "managers": "Alex Destino (1994-2025)"
+    },
+    {
+      "team": "Rock Stars",
+      "wins": 204,
+      "losses": 200,
+      "ties": 8,
+      "winPercentage": 0.505,
+      "pointsFor": 23303,
+      "pointsAgainst": 23904,
+      "managers": "Mike Grady (1994-2025)"
+    },
+    {
+      "team": "Homers Heroes",
+      "wins": 205,
+      "losses": 202,
+      "ties": 5,
+      "winPercentage": 0.504,
+      "pointsFor": 23962,
+      "pointsAgainst": 23580,
+      "managers": "Michael (2016-25) (+2)"
+    },
+    {
+      "team": "Egyptian Magicians",
+      "wins": 202,
+      "losses": 199,
+      "ties": 11,
+      "winPercentage": 0.504,
+      "pointsFor": 23961,
+      "pointsAgainst": 23828,
+      "managers": "Seth Lively (1994-2025)"
+    },
+    {
+      "team": "Generals",
+      "wins": 204,
+      "losses": 203,
+      "ties": 5,
+      "winPercentage": 0.501,
+      "pointsFor": 23791,
+      "pointsAgainst": 23467,
+      "managers": "Cody Patton (1994-2025)"
+    },
+    {
+      "team": "Donora Dragons",
+      "wins": 190,
+      "losses": 194,
+      "ties": 12,
+      "winPercentage": 0.495,
+      "pointsFor": 22367,
+      "pointsAgainst": 22182,
+      "managers": "Sammy Kowall (2018-23) (+2)"
+    },
+    {
+      "team": "Kentucky Football Club",
+      "wins": 96,
+      "losses": 104,
+      "ties": 1,
+      "winPercentage": 0.48,
+      "pointsFor": 11450,
+      "pointsAgainst": 11778,
+      "managers": "Gustave Carruth (2014-25) (+1)"
+    },
+    {
+      "team": "LA Losers",
+      "wins": 189,
+      "losses": 213,
+      "ties": 10,
+      "winPercentage": 0.471,
+      "pointsFor": 22496,
+      "pointsAgainst": 23318,
+      "managers": "Eric Harvill (1994-2025)"
+    },
+    {
+      "team": "Relegators",
+      "wins": 7,
+      "losses": 8,
+      "ties": 1,
+      "winPercentage": 0.469,
+      "pointsFor": 862,
+      "pointsAgainst": 905,
+      "managers": "Patrick Williams (2024-25)"
+    },
+    {
+      "team": "Munich Cowboys",
+      "wins": 184,
+      "losses": 216,
+      "ties": 12,
+      "winPercentage": 0.461,
+      "pointsFor": 22526,
+      "pointsAgainst": 23821,
+      "managers": "Brad Venuti (1994-2025)"
+    }
+  ],
+  "champions": [
+    {
+      "year": 2023,
+      "teams": [
+        "Egyptian Magicians"
+      ]
+    },
+    {
+      "year": 2022,
+      "teams": [
+        "Generals",
+        "Munich Cowboys"
+      ]
+    },
+    {
+      "year": 2021,
+      "teams": [
+        "Homers Heroes"
+      ]
+    },
+    {
+      "year": 2020,
+      "teams": [
+        "Egyptian Magicians"
+      ]
+    },
+    {
+      "year": 2019,
+      "teams": [
+        "Munich Cowboys"
+      ]
+    },
+    {
+      "year": 2018,
+      "teams": [
+        "Masters of Disaster"
+      ]
+    },
+    {
+      "year": 2017,
+      "teams": [
+        "Generals"
+      ]
+    },
+    {
+      "year": 2016,
+      "teams": [
+        "I hate you guys (feat. Homer)"
+      ]
+    },
+    {
+      "year": 2015,
+      "teams": [
+        "Masters of Disaster"
+      ]
+    },
+    {
+      "year": 2014,
+      "teams": [
+        "Leeds United"
+      ]
+    },
+    {
+      "year": 2013,
+      "teams": [
+        "Leeds United"
+      ]
+    },
+    {
+      "year": 2012,
+      "teams": [
+        "Generals"
+      ]
+    },
+    {
+      "year": 2011,
+      "teams": [
+        "LA Losers"
+      ]
+    },
+    {
+      "year": 2010,
+      "teams": [
+        "Donora Dragons"
+      ]
+    },
+    {
+      "year": 2009,
+      "teams": [
+        "Leeds United"
+      ]
+    },
+    {
+      "year": 2008,
+      "teams": [
+        "Egyptian Magicians"
+      ]
+    },
+    {
+      "year": 2007,
+      "teams": [
+        "Masters of Disaster"
+      ]
+    },
+    {
+      "year": 2006,
+      "teams": [
+        "Leeds United"
+      ]
+    },
+    {
+      "year": 2005,
+      "teams": [
+        "Leeds United"
+      ]
+    },
+    {
+      "year": 2004,
+      "teams": [
+        "Rock Stars"
+      ]
+    },
+    {
+      "year": 2003,
+      "teams": [
+        "Leeds United"
+      ]
+    },
+    {
+      "year": 2002,
+      "teams": [
+        "Homers Heroes"
+      ]
+    },
+    {
+      "year": 2001,
+      "teams": [
+        "Rock Stars"
+      ]
+    },
+    {
+      "year": 2000,
+      "teams": [
+        "Polish Power"
+      ]
+    },
+    {
+      "year": 1999,
+      "teams": [
+        "Leeds United"
+      ]
+    },
+    {
+      "year": 1998,
+      "teams": [
+        "Masters of Disaster"
+      ]
+    },
+    {
+      "year": 1997,
+      "teams": [
+        "Magical Mystery Men"
+      ]
+    },
+    {
+      "year": 1996,
+      "teams": [
+        "LA Losers"
+      ]
+    },
+    {
+      "year": 1995,
+      "teams": [
+        "Polish Power"
+      ]
+    },
+    {
+      "year": 1994,
+      "teams": [
+        "Masters of Disaster"
+      ]
+    }
+  ],
+  "records": [],
+  "milestones": [],
+  "mostConsistent": [
+    {
+      "team": "Masters of Disaster",
+      "avgFinish": 4,
+      "avgPointsPerYear": 773.2
+    },
+    {
+      "team": "Polish Power",
+      "avgFinish": 4.1,
+      "avgPointsPerYear": 612.6
+    },
+    {
+      "team": "Leeds United",
+      "avgFinish": 4.2,
+      "avgPointsPerYear": 789.8
+    },
+    {
+      "team": "Egyptian Magicians",
+      "avgFinish": 4.3,
+      "avgPointsPerYear": 772.9
+    },
+    {
+      "team": "Homers Heroes",
+      "avgFinish": 4.4,
+      "avgPointsPerYear": 773
+    },
+    {
+      "team": "Rock Stars",
+      "avgFinish": 4.4,
+      "avgPointsPerYear": 751.7
+    },
+    {
+      "team": "Donora Dragons",
+      "avgFinish": 4.6,
+      "avgPointsPerYear": 745.6
+    },
+    {
+      "team": "Generals",
+      "avgFinish": 4.7,
+      "avgPointsPerYear": 767.5
+    },
+    {
+      "team": "LA Losers",
+      "avgFinish": 5.1,
+      "avgPointsPerYear": 725.7
+    },
+    {
+      "team": "Munich Cowboys",
+      "avgFinish": 5.6,
+      "avgPointsPerYear": 726.6
+    },
+    {
+      "team": "Kentucky Football Club",
+      "avgFinish": 6.2,
+      "avgPointsPerYear": 954.2
+    },
+    {
+      "team": "Relegators",
+      "avgFinish": 7,
+      "avgPointsPerYear": 862
+    }
+  ]
+}

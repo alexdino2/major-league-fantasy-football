@@ -1,0 +1,122 @@
+[
+  {
+    "team": "Leeds United",
+    "wins": 224,
+    "losses": 184,
+    "ties": 5,
+    "winPercentage": 0.548,
+    "pointsFor": 24483,
+    "pointsAgainst": 23167,
+    "managers": "Josh Kowall (1994-2025)"
+  },
+  {
+    "team": "Polish Power",
+    "wins": 111,
+    "losses": 102,
+    "ties": 5,
+    "winPercentage": 0.521,
+    "pointsFor": 11640,
+    "pointsAgainst": 11391,
+    "managers": "Jeremy Kowall (1994-2012)"
+  },
+  {
+    "team": "Masters of Disaster",
+    "wins": 206,
+    "losses": 196,
+    "ties": 10,
+    "winPercentage": 0.512,
+    "pointsFor": 23969,
+    "pointsAgainst": 23469,
+    "managers": "Alex Destino (1994-2025)"
+  },
+  {
+    "team": "Rock Stars",
+    "wins": 204,
+    "losses": 200,
+    "ties": 8,
+    "winPercentage": 0.505,
+    "pointsFor": 23303,
+    "pointsAgainst": 23904,
+    "managers": "Mike Grady (1994-2025)"
+  },
+  {
+    "team": "Homers Heroes",
+    "wins": 205,
+    "losses": 202,
+    "ties": 5,
+    "winPercentage": 0.504,
+    "pointsFor": 23962,
+    "pointsAgainst": 23580,
+    "managers": "Michael (2016-25) (+2)"
+  },
+  {
+    "team": "Egyptian Magicians",
+    "wins": 202,
+    "losses": 199,
+    "ties": 11,
+    "winPercentage": 0.504,
+    "pointsFor": 23961,
+    "pointsAgainst": 23828,
+    "managers": "Seth Lively (1994-2025)"
+  },
+  {
+    "team": "Generals",
+    "wins": 204,
+    "losses": 203,
+    "ties": 5,
+    "winPercentage": 0.501,
+    "pointsFor": 23791,
+    "pointsAgainst": 23467,
+    "managers": "Cody Patton (1994-2025)"
+  },
+  {
+    "team": "Donora Dragons",
+    "wins": 190,
+    "losses": 194,
+    "ties": 12,
+    "winPercentage": 0.495,
+    "pointsFor": 22367,
+    "pointsAgainst": 22182,
+    "managers": "Sammy Kowall (2018-23) (+2)"
+  },
+  {
+    "team": "Kentucky Football Club",
+    "wins": 96,
+    "losses": 104,
+    "ties": 1,
+    "winPercentage": 0.48,
+    "pointsFor": 11450,
+    "pointsAgainst": 11778,
+    "managers": "Gustave Carruth (2014-25) (+1)"
+  },
+  {
+    "team": "LA Losers",
+    "wins": 189,
+    "losses": 213,
+    "ties": 10,
+    "winPercentage": 0.471,
+    "pointsFor": 22496,
+    "pointsAgainst": 23318,
+    "managers": "Eric Harvill (1994-2025)"
+  },
+  {
+    "team": "Relegators",
+    "wins": 7,
+    "losses": 8,
+    "ties": 1,
+    "winPercentage": 0.469,
+    "pointsFor": 862,
+    "pointsAgainst": 905,
+    "managers": "Patrick Williams (2024-25)"
+  },
+  {
+    "team": "Munich Cowboys",
+    "wins": 184,
+    "losses": 216,
+    "ties": 12,
+    "winPercentage": 0.461,
+    "pointsFor": 22526,
+    "pointsAgainst": 23821,
+    "managers": "Brad Venuti (1994-2025)"
+  }
+]

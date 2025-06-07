@@ -1,213 +1,381 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
-import { Play, Search, ExternalLink, Calendar } from "lucide-react"
-import Image from "next/image"
+import { Badge } from "@/components/ui/badge"
+import { Calendar, ExternalLink, Play, Search, Upload } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import { Label } from "@/components/ui/label"
+import { useState, useMemo, useEffect } from "react"
+import { toast } from "sonner"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
+import { DateRange } from "react-day-picker"
+import { Calendar as CalendarComponent } from "@/components/ui/calendar"
+
+interface MediaItem {
+  id: string
+  type: 'media' | 'news'
+  title: string
+  description: string
+  year: number
+  week: number
+  date: string
+  videoId?: string
+  submittedAt: string
+}
 
 export default function MediaPage() {
-  const mediaItems = [
-    {
-      id: 1,
-      title: "Draft Day Highlights 2024",
-      description: "Watch the best moments from this year's draft including surprise picks and reactions.",
-      type: "YouTube Video",
-      duration: "15:32",
-      date: "September 1, 2024",
-      thumbnail: "/placeholder.svg?height=200&width=350",
-      category: "Draft",
-      youtubeId: "dQw4w9WgXcQ",
-    },
-    {
-      id: 2,
-      title: "Championship Game Recap 2023",
-      description: "Relive the intense final matchup that decided the 2023 MLFF champion.",
-      type: "YouTube Video",
-      duration: "22:45",
-      date: "January 15, 2024",
-      thumbnail: "/placeholder.svg?height=200&width=350",
-      category: "Championship",
-      youtubeId: "dQw4w9WgXcQ",
-    },
-    {
-      id: 3,
-      title: "Trade Deadline Madness",
-      description: "A compilation of the craziest trades and reactions from trade deadline day.",
-      type: "YouTube Video",
-      duration: "18:20",
-      date: "November 8, 2023",
-      thumbnail: "/placeholder.svg?height=200&width=350",
-      category: "Trades",
-      youtubeId: "dQw4w9WgXcQ",
-    },
-    {
-      id: 4,
-      title: "Season Preview 2024",
-      description: "Team-by-team breakdown and predictions for the upcoming MLFF season.",
-      type: "YouTube Video",
-      duration: "35:15",
-      date: "August 15, 2024",
-      thumbnail: "/placeholder.svg?height=200&width=350",
-      category: "Preview",
-      youtubeId: "dQw4w9WgXcQ",
-    },
-    {
-      id: 5,
-      title: "Best Trash Talk Moments",
-      description: "The funniest and most memorable trash talk moments from league history.",
-      type: "YouTube Video",
-      duration: "12:30",
-      date: "July 4, 2024",
-      thumbnail: "/placeholder.svg?height=200&width=350",
-      category: "Comedy",
-      youtubeId: "dQw4w9WgXcQ",
-    },
-    {
-      id: 6,
-      title: "Draft Strategy Deep Dive",
-      description: "Expert analysis of different draft strategies used by MLFF managers.",
-      type: "YouTube Video",
-      duration: "28:45",
-      date: "August 20, 2023",
-      thumbnail: "/placeholder.svg?height=200&width=350",
-      category: "Strategy",
-      youtubeId: "dQw4w9WgXcQ",
-    },
-  ]
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [videoUrl, setVideoUrl] = useState("")
+  const [searchQuery, setSearchQuery] = useState("")
+  const [selectedYear, setSelectedYear] = useState<number | undefined>()
+  const [selectedWeek, setSelectedWeek] = useState<number | undefined>()
+  const [sortOrder, setSortOrder] = useState<"newest" | "oldest">("newest")
+  const [dateRange, setDateRange] = useState<DateRange | undefined>()
+  const [mediaItems, setMediaItems] = useState<MediaItem[]>([])
+  const [isLoading, setIsLoading] = useState(true)
 
-  const categories = ["All", "Draft", "Championship", "Trades", "Preview", "Comedy", "Strategy"]
+  const fetchMediaItems = async () => {
+    try {
+      const response = await fetch('/api/media/list')
+      if (!response.ok) {
+        throw new Error('Failed to fetch media items')
+      }
+      const data = await response.json()
+      setMediaItems(data)
+    } catch (error) {
+      toast.error('Failed to load media items')
+      console.error('Error fetching media items:', error)
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  useEffect(() => {
+    fetchMediaItems()
+  }, [])
+
+  // Filter and sort media items
+  const filteredMediaItems = useMemo(() => {
+    let filtered = [...mediaItems]
+
+    // Apply search filter
+    if (searchQuery) {
+      const query = searchQuery.toLowerCase()
+      filtered = filtered.filter(item => 
+        item.title.toLowerCase().includes(query) || 
+        item.description.toLowerCase().includes(query)
+      )
+    }
+
+    // Apply year filter
+    if (selectedYear) {
+      filtered = filtered.filter(item => item.year === selectedYear)
+    }
+
+    // Apply week filter
+    if (selectedWeek) {
+      filtered = filtered.filter(item => item.week === selectedWeek)
+    }
+
+    // Apply date range filter
+    if (dateRange?.from) {
+      filtered = filtered.filter(item => {
+        const itemDate = new Date(item.submittedAt)
+        return itemDate >= dateRange.from! && 
+               (!dateRange.to || itemDate <= dateRange.to)
+      })
+    }
+
+    // Apply sorting
+    filtered.sort((a, b) => {
+      const dateA = new Date(a.submittedAt).getTime()
+      const dateB = new Date(b.submittedAt).getTime()
+      return sortOrder === "newest" ? dateB - dateA : dateA - dateB
+    })
+
+    return filtered
+  }, [mediaItems, searchQuery, selectedYear, selectedWeek, dateRange, sortOrder])
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+
+    try {
+      // Validate YouTube URL
+      const youtubeRegex = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/.+$/
+      if (!youtubeRegex.test(videoUrl)) {
+        toast.error("Please enter a valid YouTube URL")
+        return
+      }
+
+      // Extract video ID
+      const videoId = videoUrl.includes("youtu.be") 
+        ? videoUrl.split("/").pop()?.split("?")[0]
+        : new URL(videoUrl).searchParams.get("v")
+
+      if (!videoId) {
+        toast.error("Could not extract video ID from URL")
+        return
+      }
+
+      // Submit to API
+      const response = await fetch('/api/media/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          type: "media",
+          videoId,
+        }),
+      })
+
+      if (!response.ok) {
+        const error = await response.json()
+        throw new Error(error.message || 'Failed to submit video')
+      }
+
+      toast.success("Video submitted successfully!")
+      
+      // Reset form
+      setVideoUrl("")
+
+      // Refresh the media items list
+      await fetchMediaItems()
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : "Failed to submit video. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  // Helper function to get week number
+  const getWeekNumber = (date: Date) => {
+    const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()))
+    const dayNum = d.getUTCDay() || 7
+    d.setUTCDate(d.getUTCDate() + 4 - dayNum)
+    const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1))
+    return Math.ceil((((d.getTime() - yearStart.getTime()) / 86400000) + 1) / 7)
+  }
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 mx-auto"></div>
+          <p className="mt-4 text-gray-600">Loading media...</p>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-4">MLFF Media Gallery</h1>
-          <p className="text-xl text-gray-600">
-            Videos, highlights, and memorable moments from Major League Fantasy Football
-          </p>
+      {/* Header */}
+      <div className="bg-white border-b">
+        <div className="container mx-auto px-4 py-6">
+          <h1 className="text-3xl font-bold">Media</h1>
+          <p className="text-gray-600 mt-2">Watch highlights, interviews, and more from the MLFF community</p>
         </div>
+      </div>
 
-        {/* Search and Filters */}
-        <div className="mb-8 flex flex-col sm:flex-row gap-4">
-          <div className="relative flex-1">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-            <Input placeholder="Search videos..." className="pl-10" />
+      {/* Main Content */}
+      <div className="container mx-auto px-4 py-6">
+        {/* Filters */}
+        <div className="flex flex-col md:flex-row gap-4 mb-6">
+          <div className="flex-1">
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+              <Input
+                placeholder="Search videos..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-10"
+              />
+            </div>
           </div>
-          <div className="flex gap-2 flex-wrap">
-            {categories.map((category) => (
-              <Button key={category} variant={category === "All" ? "default" : "outline"} size="sm">
-                {category}
+          <Select 
+            value={selectedYear?.toString() || "all"} 
+            onValueChange={(value) => setSelectedYear(value === "all" ? undefined : parseInt(value))}
+          >
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="Year" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All Years</SelectItem>
+              {Array.from({ length: 5 }, (_, i) => new Date().getFullYear() - i).map(year => (
+                <SelectItem key={year} value={year.toString()}>{year}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          <Select 
+            value={selectedWeek?.toString() || "all"} 
+            onValueChange={(value) => setSelectedWeek(value === "all" ? undefined : parseInt(value))}
+          >
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="Week" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All Weeks</SelectItem>
+              {Array.from({ length: 17 }, (_, i) => i + 1).map(week => (
+                <SelectItem key={week} value={week.toString()}>Week {week}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          <Select value={sortOrder} onValueChange={(value: "newest" | "oldest") => setSortOrder(value)}>
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="Sort by" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="newest">Newest First</SelectItem>
+              <SelectItem value="oldest">Oldest First</SelectItem>
+            </SelectContent>
+          </Select>
+          <Popover>
+            <PopoverTrigger asChild>
+              <Button variant="outline" className="w-[180px]">
+                <Calendar className="mr-2 h-4 w-4" />
+                {dateRange?.from ? (
+                  dateRange.to ? (
+                    <>
+                      {dateRange.from.toLocaleDateString()} -{" "}
+                      {dateRange.to.toLocaleDateString()}
+                    </>
+                  ) : (
+                    dateRange.from.toLocaleDateString()
+                  )
+                ) : (
+                  "Date Range"
+                )}
               </Button>
-            ))}
-          </div>
+            </PopoverTrigger>
+            <PopoverContent className="w-auto p-0" align="start">
+              <CalendarComponent
+                initialFocus
+                mode="range"
+                defaultMonth={dateRange?.from}
+                selected={dateRange}
+                onSelect={setDateRange}
+                numberOfMonths={2}
+              />
+            </PopoverContent>
+          </Popover>
         </div>
 
         {/* Featured Video */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6">Featured Video</h2>
-          <Card className="overflow-hidden">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="relative">
-                <Image
-                  src={mediaItems[0].thumbnail || "/placeholder.svg"}
-                  alt={mediaItems[0].title}
-                  width={600}
-                  height={400}
-                  className="w-full h-64 lg:h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                  <Button size="lg" className="rounded-full w-16 h-16">
-                    <Play className="w-8 h-8" />
-                  </Button>
-                </div>
-                <Badge className="absolute top-4 left-4">{mediaItems[0].category}</Badge>
-                <Badge variant="secondary" className="absolute bottom-4 right-4">
-                  {mediaItems[0].duration}
-                </Badge>
-              </div>
-              <CardHeader className="lg:p-8">
-                <CardTitle className="text-2xl">{mediaItems[0].title}</CardTitle>
-                <CardDescription className="text-base">{mediaItems[0].description}</CardDescription>
-                <div className="flex items-center gap-4 pt-4">
-                  <div className="flex items-center text-sm text-gray-500">
-                    <Calendar className="w-4 h-4 mr-1" />
-                    {mediaItems[0].date}
-                  </div>
-                  <Badge variant="outline">{mediaItems[0].type}</Badge>
-                </div>
-                <div className="flex gap-4 pt-4">
-                  <Button asChild>
-                    <Link href={`https://youtube.com/watch?v=${mediaItems[0].youtubeId}`} target="_blank">
-                      Watch on YouTube
-                      <ExternalLink className="w-4 h-4 ml-2" />
-                    </Link>
-                  </Button>
-                  <Button variant="outline">Share Video</Button>
-                </div>
-              </CardHeader>
-            </div>
-          </Card>
-        </div>
-
-        {/* Video Grid */}
-        <div>
-          <h2 className="text-2xl font-bold mb-6">All Videos</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {mediaItems.slice(1).map((item) => (
-              <Card key={item.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="relative">
-                  <Image
-                    src={item.thumbnail || "/placeholder.svg"}
-                    alt={item.title}
-                    width={350}
-                    height={200}
-                    className="w-full h-48 object-cover"
+        {filteredMediaItems.length > 0 && (
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold mb-6">Featured Video</h2>
+            <Card className="overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="aspect-video relative">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${filteredMediaItems[0].videoId}`}
+                    title={filteredMediaItems[0].title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
                   />
-                  <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                    <Button size="lg" className="rounded-full">
-                      <Play className="w-6 h-6" />
-                    </Button>
-                  </div>
-                  <Badge className="absolute top-2 left-2 text-xs">{item.category}</Badge>
-                  <Badge variant="secondary" className="absolute bottom-2 right-2 text-xs">
-                    {item.duration}
-                  </Badge>
                 </div>
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-lg line-clamp-2">{item.title}</CardTitle>
-                  <div className="flex items-center gap-2 text-sm text-gray-500">
-                    <Calendar className="w-3 h-3" />
-                    {item.date}
+                <CardHeader className="lg:p-8">
+                  <CardTitle className="text-2xl">{filteredMediaItems[0].title}</CardTitle>
+                  <CardDescription className="text-base">{filteredMediaItems[0].description}</CardDescription>
+                  <div className="flex items-center gap-4 pt-4">
+                    <div className="flex items-center text-sm text-gray-500">
+                      <Calendar className="w-4 h-4 mr-1" />
+                      {new Date(filteredMediaItems[0].submittedAt).toLocaleDateString()}
+                    </div>
+                    <Badge variant="outline">{filteredMediaItems[0].type}</Badge>
+                  </div>
+                  <div className="flex gap-4 pt-4">
+                    <Button asChild>
+                      <Link href={`https://youtube.com/watch?v=${filteredMediaItems[0].videoId}`} target="_blank">
+                        Watch on YouTube
+                        <ExternalLink className="w-4 h-4 ml-2" />
+                      </Link>
+                    </Button>
+                    <Button variant="outline">Share Video</Button>
                   </div>
                 </CardHeader>
-                <CardContent className="pt-0">
-                  <p className="text-sm text-gray-600 line-clamp-2 mb-4">{item.description}</p>
-                  <Button asChild size="sm" variant="outline" className="w-full">
-                    <Link href={`https://youtube.com/watch?v=${item.youtubeId}`} target="_blank">
-                      Watch on YouTube
-                      <ExternalLink className="w-4 h-4 ml-2" />
+              </div>
+            </Card>
+          </div>
+        )}
+
+        {/* Video Grid */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold mb-6">All Videos</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredMediaItems.slice(1).map((item) => (
+              <Card key={item.id} className="overflow-hidden">
+                <div className="aspect-video relative">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${item.videoId}`}
+                    title={item.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="line-clamp-2">{item.title}</CardTitle>
+                  <CardDescription className="line-clamp-2">
+                    {item.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-2">
+                      <Badge variant="secondary">
+                        {item.year} Week {item.week}
+                      </Badge>
+                    </div>
+                    <Link
+                      href={`https://www.youtube.com/watch?v=${item.videoId}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="ghost" size="icon">
+                        <ExternalLink className="h-4 w-4" />
+                      </Button>
                     </Link>
-                  </Button>
+                  </div>
                 </CardContent>
               </Card>
             ))}
           </div>
         </div>
 
-        {/* Upload Section */}
-        <div className="mt-16 p-6 bg-green-50 rounded-lg">
-          <h3 className="text-xl font-bold mb-4">Submit Your Content</h3>
-          <p className="text-gray-600 mb-4">
-            Have a great MLFF moment to share? Submit your videos and articles to be featured on the site.
-          </p>
-          <div className="flex gap-4">
-            <Button>Submit Video Link</Button>
-            <Button variant="outline">Upload Media</Button>
-          </div>
-        </div>
+        {/* Submit Form */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Submit Video</CardTitle>
+            <CardDescription>Share a YouTube video with the community</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="space-y-2">
+                <Label htmlFor="videoUrl">YouTube URL</Label>
+                <Input
+                  id="videoUrl"
+                  placeholder="https://www.youtube.com/watch?v=..."
+                  value={videoUrl}
+                  onChange={(e) => setVideoUrl(e.target.value)}
+                  required
+                />
+              </div>
+              <Button type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Submit Video"}
+              </Button>
+            </form>
+          </CardContent>
+        </Card>
       </div>
     </div>
   )
-}
+} 

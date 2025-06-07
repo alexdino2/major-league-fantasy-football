@@ -1,0 +1,33 @@
+uid-bp-41330	RX-ef5fbc31-0e8e-4a5e-b1d3-b5d4337dabbe-005	.ads.stickyadstv.com	/	2025-07-27T21:33:55.745Z	55		✓	None			Medium	
+uid-bp-41380	cuid_9d6f6092-8671-11ea-abd3-12821240e6ec	.ads.stickyadstv.com	/	2025-10-04T15:25:44.003Z	53		✓	None			Medium	
+uid-bp-41393	RETRY	.ads.stickyadstv.com	/	2025-06-07T20:54:25.011Z	17		✓	None			Medium	
+uid-bp-41396	4109314405559424771336	.ads.stickyadstv.com	/	2025-07-23T14:38:06.718Z	34		✓	None			Medium	
+uid-bp-41408	aea57da0-4c76-416d-85de-d0f0023bc1e1	.ads.stickyadstv.com	/	2025-09-27T18:05:17.572Z	48		✓	None			Medium	
+uid-bp-41412	RX-ef5fbc31-0e8e-4a5e-b1d3-b5d4337dabbe-005	.ads.stickyadstv.com	/	2025-06-14T19:59:46.839Z	55		✓	None			Medium	
+uid-bp-41414	CA2D4EB8-437E-493D-A5E8-77219BA7E107	.ads.stickyadstv.com	/	2025-07-07T21:22:23.248Z	48		✓	None			Medium	
+uid-bp-41448	18XiidbHudnMxuKN2cb33deQuNHMxrjb1Mb5c_bv	.ads.stickyadstv.com	/	2025-08-03T03:23:06.011Z	52		✓	None			Medium	
+uid-bp-41466	4501432f-597d-4070-aa6f-53909017a563	.ads.stickyadstv.com	/	2025-07-06T20:54:22.336Z	48		✓	None			Medium	
+uid-bp-41500	23r4vw-6E4yhG7MDzPEfoJOW5VV3_Xum02dZ_Ya5tRs	.ads.stickyadstv.com	/	2025-06-14T19:55:51.974Z	55		✓	None			Medium	
+uid-bp-41533	61454A5FD317547D6FEA372EBLIS	.ads.stickyadstv.com	/	2025-09-27T18:05:21.293Z	40		✓	None			Medium	
+uid-bp-41536	"[Demand_ViewerID]"	.ads.stickyadstv.com	/	2025-09-27T18:05:29.923Z	31		✓	None			Medium	
+uid-bp-45	XqNYMQAAAJ3R6AFU	.ads.stickyadstv.com	/	2025-06-15T19:56:18.943Z	25		✓	None			Medium	
+uid-bp-57	8926915274316635289	.ads.stickyadstv.com	/	2025-06-14T19:55:52.510Z	28		✓	None			Medium	
+uid-bp-617	173085093570761801	.ads.stickyadstv.com	/	2025-07-07T21:22:24.053Z	28		✓	None			Medium	
+uid-bp-687	fb13bf65-5781-443e-9935-9e11be9739f9	.ads.stickyadstv.com	/	2025-06-14T19:55:53.628Z	46		✓	None			Medium	
+uid-bp-717	y-lloz4d5E2oOjnthoKa_asfius705Gr36HxvETkDwb_vgMJfaWIfgQkJSSrfUVx9OO6tZRIG_bWAr~A	.ads.stickyadstv.com	/	2025-06-15T16:35:00.177Z	90		✓	None			Medium	
+uid-bp-838	42463644-3724-4feb-8ff5-056eaec0ee9a	.ads.stickyadstv.com	/	2025-06-14T19:55:49.820Z	46		✓	None			Medium	
+uid-bp-8385	7313755836760062099	.ads.stickyadstv.com	/	2025-06-14T20:58:40.758Z	30		✓	None			Medium	
+uid-bp-892	9cd19b42-300b-4f89-81e7-172a3381a989	.ads.stickyadstv.com	/	2025-06-14T19:48:41.083Z	46		✓	None			Medium	
+uid-bp-951	2555113596052149426	.ads.stickyadstv.com	/	2025-07-07T21:00:36.359Z	29		✓	None			Medium	
+uids	eyJ0ZW1wVUlEcyI6eyJhZG54cyI6eyJ1aWQiOiIyNTU1MTEzNTk2MDUyMTQ5NDI2IiwiZXhwaXJlcyI6IjIwMjUtMDYtMjFUMTY6NTM6MDUuNzc2OTg2MjVaIn0sInB1Ym1hdGljIjp7InVpZCI6IkNBMkQ0RUI4LTQzN0UtNDkzRC1BNUU4LTc3MjE5QkE3RTEwNyIsImV4cGlyZXMiOiIyMDI1LTA2LTIxVDE2OjUzOjA2LjExMDM0NTUzOFoifSwic2hhcmV0aHJvdWdoIjp7InVpZCI6IjVhNmIyODBiLTg4Y2MtNGUwOC1hMDM2LTU4NTYwYWM0NDAxNyIsImV4cGlyZXMiOiIyMDI1LTA2LTIxVDE2OjUzOjAxLjUzMzQzMzc2M1oifSwidHJpcGxlbGlmdCI6eyJ1aWQiOiI0MTA5MzE0NDA1NTU5NDI0NzcxMzM2IiwiZXhwaXJlcyI6IjIwMjUtMDYtMjFUMTY6NTM6MDEuOTQyOTUxNzI2WiJ9LCJydWJpY29uIjp7InVpZCI6Iks5RU5NTVpJLTFOLUMwMk4iLCJleHBpcmVzIjoiMjAyNS0wNi0yMVQxNjo1MzowMi4zMTA4ODMxMTRaIn0sIm9wZW54Ijp7InVpZCI6IjQ1MDE0MzJmLTU5N2QtNDA3MC1hYTZmLTUzOTA5MDE3YTU2MyIsImV4cGlyZXMiOiIyMDI1LTA2LTIxVDE2OjUzOjAzLjY4NTI2NTE5OFoifSwieWllbGRtbyI6eyJ1aWQiOiJWZUhPOHJyV1dPclZWMnZoOG0yZiIsImV4cGlyZXMiOiIyMDI1LTA2LTIxVDE2OjUzOjAxLjM4NTUwMzkzNVoifX19	pbs.at.cbsi.com	/	2025-09-05T16:53:05.753Z	872		✓	None			Medium	
+uids	eyJ0ZW1wVUlEcyI6eyJhZG54cyI6eyJ1aWQiOiIyNTU1MTEzNTk2MDUyMTQ5NDI2IiwiZXhwaXJlcyI6IjIwMjUtMDYtMjFUMTc6NDI6NTEuMTIwMjEyNDQ4WiJ9LCJhbXgiOnsidWlkIjoiZGQxYWMyMjctNzA1Yi00MzdmLTk4YTItMTM3ZDZiNTJjZjRhIiwiZXhwaXJlcyI6IjIwMjUtMDYtMjFUMTc6NDI6NTEuMTIwMjI4MTY5WiJ9LCJydWJpY29uIjp7InVpZCI6Iks5RU5NTVpJLTFOLUMwMk4iLCJleHBpcmVzIjoiMjAyNS0wOS0wNVQxNzo0MjoyMloifSwidHJpcGxlbGlmdCI6eyJ1aWQiOiI0MTA5MzE0NDA1NTU5NDI0NzcxMzM2IiwiZXhwaXJlcyI6IjIwMjUtMDktMDRUMjA6NTM6NTdaIn19fQ==	.adnxs.com	/	2025-09-05T17:42:50.715Z	460		✓	None			Medium	
+univ_id	537072971|9cd19b42-300b-4f89-81e7-172a3381a989|1748356881779198	.openx.net	/	2025-06-11T14:41:21.796Z	70		✓	None			Medium	
+usersync	eNqdWMtuGzEM_Jc9-8CXKNG_UhRFkfpgIE2C2ChaBPn3GmjhDbCSspyr14OhhiOS4tvy6_R6OT8_LUc-LC_n36fHy3L88racfyxHOyyXP08P3y7X76_X2x-qhZgq1f-_Pzz_fHk8XU-3T--Hf5CSh7QuRHQCiS1EOUhtDGHKR8YMYGwQm04wW9WalmDhCca3GPNGEmOMcD42Kfn0SAUwLR_b_VuCRwGtNfI8Nro8Mrk8gEddOudxtZluDeBp3OVxbRsM3TFIbLqbZy0HDJQQB-4plXxSGaoInev9OZMA94G1AcXUOF992PZfcVpLYwVA3jNRSLNpQS0D5_mMqeUtLgyEJ9yQgh8AE9QmRBAm3e3yu-SiBDCpAXlSpMcaktxtt9BWqShPvCfmCKjlXS7bxqRNohSx2eDA-cIixXYzfQivIEyOCFERUAAgpBqJ7zfsCqoKqFeBTii1r161WXIroh4yrQgyrtzudX5ekVYQkAPqhQ1Akzwp0W4QraD9yV2ZmIDwWBCQ5mu5sgNMgqgnfZcXrxOQCiC5at5GOmif8_DMgPCs5QuLWgBMRQBHDMfRmXpOgHoODFTqyOvWgReAVgHOVIGNklYHkluRdUKN3eGtZ2r7k7syNQXO1G01fUd8CK8ANopRU5udKZBiGW0303qmiHx4hjQ1I2CGNZL8k9UI2HsYGbCYImDhar316adCaACSGyHLNs17zzr9SZuLUcxAnm8AZsBsZMNOOBUi8u3TSuZF_fX9L44VfDg.	.adnxs.com	/	2025-09-05T17:57:18.881Z	772		✓	None			Medium	
+usprivacy	1YNN	mlffatl.football.cbssports.com	/	2026-06-07T18:09:07.000Z	13			Lax			Medium	
+utag_main	v_id:01974b4f33ff001cc8d7349b0f0f0506f008f06700bd0$_sn:1$_se:72$_ss:0$_st:1749321547467$ses_id:1749315171331%3Bexp-session$_pn:26%3Bexp-session$vapi_domain:cbssports.com$dc_visit:1$dc_event:33%3Bexp-session$dc_region:us-east-1%3Bexp-session	.cbssports.com	/	2026-06-07T18:09:11.000Z	249						Medium	
+uuid2	2555113596052149426	.adnxs.com	/	2025-09-05T18:11:24.203Z	24	✓	✓	None			Medium	
+vst	u_63ff0b3d-b64a-454b-8673-525f1a8ca5f0	.gumgum.com	/	2026-02-16T04:09:23.303Z	41		✓	None			Medium	
+wrvUserID	wbfgLgqrCp_mm	.minutemedia-prebid.com	/	2025-07-07T17:44:23.584Z	22	✓	✓	None			Medium	
+XANDR_PANID	-L7wJN3dm6sAnTSEI2i0phGeaE0Sgigpb7irZx32J3xx6JIEhjzlBpJ9r8w9sNpnGWi47JTfK_muCACrYRFSjJhnWX4QPyAepNDsTgIYFvM.	.adnxs.com	/	2025-09-05T18:11:24.203Z	119		✓	None	https://cbssports.com	✓	Medium	
+XFP_FIRSTPAGE	0	.cbssports.com	/	2025-06-08T04:45:05.000Z	14						Medium	
+XID

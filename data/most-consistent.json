@@ -1,0 +1,62 @@
+[
+  {
+    "team": "Masters of Disaster",
+    "avgFinish": 4,
+    "avgPointsPerYear": 773.2
+  },
+  {
+    "team": "Polish Power",
+    "avgFinish": 4.1,
+    "avgPointsPerYear": 612.6
+  },
+  {
+    "team": "Leeds United",
+    "avgFinish": 4.2,
+    "avgPointsPerYear": 789.8
+  },
+  {
+    "team": "Egyptian Magicians",
+    "avgFinish": 4.3,
+    "avgPointsPerYear": 772.9
+  },
+  {
+    "team": "Homers Heroes",
+    "avgFinish": 4.4,
+    "avgPointsPerYear": 773
+  },
+  {
+    "team": "Rock Stars",
+    "avgFinish": 4.4,
+    "avgPointsPerYear": 751.7
+  },
+  {
+    "team": "Donora Dragons",
+    "avgFinish": 4.6,
+    "avgPointsPerYear": 745.6
+  },
+  {
+    "team": "Generals",
+    "avgFinish": 4.7,
+    "avgPointsPerYear": 767.5
+  },
+  {
+    "team": "LA Losers",
+    "avgFinish": 5.1,
+    "avgPointsPerYear": 725.7
+  },
+  {
+    "team": "Munich Cowboys",
+    "avgFinish": 5.6,
+    "avgPointsPerYear": 726.6
+  },
+  {
+    "team": "Kentucky Football Club",
+    "avgFinish": 6.2,
+    "avgPointsPerYear": 954.2
+  },
+  {
+    "team": "Relegators",
+    "avgFinish": 7,
+    "avgPointsPerYear": 862
+  }
+]

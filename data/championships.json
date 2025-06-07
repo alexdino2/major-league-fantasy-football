@@ -1,0 +1,93 @@
+[
+  {
+    "team": "Leeds United",
+    "championships": 7,
+    "years": [
+      "1999",
+      "2003",
+      "2005",
+      "2006",
+      "2009",
+      "2013",
+      "2014"
+    ]
+  },
+  {
+    "team": "Masters of Disaster",
+    "championships": 5,
+    "years": [
+      "1994",
+      "1998",
+      "2007",
+      "2015",
+      "2018"
+    ]
+  },
+  {
+    "team": "Homers Heroes",
+    "championships": 4,
+    "years": [
+      "1997",
+      "2002",
+      "2016",
+      "2021"
+    ]
+  },
+  {
+    "team": "Egyptian Magicians",
+    "championships": 3,
+    "years": [
+      "2008",
+      "2020",
+      "2023"
+    ]
+  },
+  {
+    "team": "Generals",
+    "championships": 3,
+    "years": [
+      "2012",
+      "2017",
+      "2022"
+    ]
+  },
+  {
+    "team": "Munich Cowboys",
+    "championships": 2,
+    "years": [
+      "2019",
+      "2022"
+    ]
+  },
+  {
+    "team": "LA Losers",
+    "championships": 2,
+    "years": [
+      "1996",
+      "2011"
+    ]
+  },
+  {
+    "team": "Rock Stars",
+    "championships": 2,
+    "years": [
+      "2001",
+      "2004"
+    ]
+  },
+  {
+    "team": "Polish Power",
+    "championships": 2,
+    "years": [
+      "1995",
+      "2000"
+    ]
+  },
+  {
+    "team": "Donora Dragons",
+    "championships": 1,
+    "years": [
+      "2010"
+    ]
+  }
+]

@@ -1,0 +1,86 @@
+week,away_team,home_team,away_result,home_result
+1,"My hate for you, it grow","Egyptian Magicians",54.0,56.0
+1,"Donora Dragons","Rock Stars",36.0,58.0
+1,"Generals","Munich Cowboys",50.0,46.0
+1,"LA Losers","Leeds United",41.0,38.0
+1,"Kentucky Football Club","Masters of Disaster",43.0,44.0
+2,"Generals","Masters of Disaster",70.0,35.0
+2,"LA Losers","Rock Stars",54.0,56.0
+2,"My hate for you, it grow","Leeds United",25.0,75.0
+2,"Munich Cowboys","Donora Dragons",62.0,60.0
+2,"Kentucky Football Club","Egyptian Magicians",46.0,53.0
+3,"Kentucky Football Club","Generals",46.0,71.0
+3,"Egyptian Magicians","Donora Dragons",46.0,86.0
+3,"Rock Stars","Leeds United",38.0,104.0
+3,"LA Losers","Munich Cowboys",53.0,83.0
+3,"My hate for you, it grow","Masters of Disaster",30.0,82.0
+4,"Masters of Disaster","Egyptian Magicians",59.0,45.0
+4,"Leeds United","Donora Dragons",53.0,68.0
+4,"Generals","My hate for you, it grow",54.0,29.0
+4,"Munich Cowboys","Rock Stars",88.0,28.0
+4,"Kentucky Football Club","LA Losers",51.0,43.0
+5,"My hate for you, it grow","Kentucky Football Club",65.0,44.0
+5,"LA Losers","Donora Dragons",53.0,33.0
+5,"Egyptian Magicians","Generals",68.0,73.0
+5,"Leeds United","Munich Cowboys",52.0,44.0
+5,"Masters of Disaster","Rock Stars",49.0,48.0
+6,"Masters of Disaster","My hate for you, it grow",58.0,78.0
+6,"Donora Dragons","Rock Stars",80.0,65.0
+6,"Munich Cowboys","LA Losers",71.0,49.0
+6,"Generals","Leeds United",48.0,40.0
+6,"Egyptian Magicians","Kentucky Football Club",50.0,42.0
+7,"Munich Cowboys","Generals",78.0,68.0
+7,"Leeds United","Masters of Disaster",70.0,54.0
+7,"My hate for you, it grow","Rock Stars",40.0,59.0
+7,"LA Losers","Kentucky Football Club",36.0,41.0
+7,"Donora Dragons","Egyptian Magicians",70.0,111.0
+8,"Munich Cowboys","Masters of Disaster",49.0,68.0
+8,"Kentucky Football Club","Leeds United",65.0,39.0
+8,"Generals","Rock Stars",71.0,52.0
+8,"LA Losers","Egyptian Magicians",61.0,85.0
+8,"My hate for you, it grow","Donora Dragons",74.0,49.0
+9,"Kentucky Football Club","Generals",44.0,62.0
+9,"Rock Stars","Leeds United",55.0,57.0
+9,"Masters of Disaster","Munich Cowboys",42.0,31.0
+9,"LA Losers","Donora Dragons",70.0,70.0
+9,"Egyptian Magicians","My hate for you, it grow",43.0,55.0
+10,"Donora Dragons","Kentucky Football Club",43.0,64.0
+10,"Leeds United","Munich Cowboys",54.0,44.0
+10,"Egyptian Magicians","Rock Stars",44.0,42.0
+10,"My hate for you, it grow","LA Losers",79.0,66.0
+10,"Generals","Masters of Disaster",65.0,55.0
+11,"Egyptian Magicians","Munich Cowboys",68.0,91.0
+11,"Donora Dragons","Leeds United",47.0,51.0
+11,"Rock Stars","Generals",53.0,73.0
+11,"Masters of Disaster","LA Losers",62.0,61.0
+11,"My hate for you, it grow","Kentucky Football Club",58.0,37.0
+12,"Munich Cowboys","My hate for you, it grow",58.0,62.0
+12,"Kentucky Football Club","Rock Stars",74.0,53.0
+12,"Leeds United","Egyptian Magicians",64.0,67.0
+12,"Generals","LA Losers",56.0,44.0
+12,"Donora Dragons","Masters of Disaster",64.0,72.0
+13,"Egyptian Magicians","LA Losers",57.0,53.0
+13,"Rock Stars","My hate for you, it grow",33.0,41.0
+13,"Generals","Donora Dragons",38.0,38.0
+13,"Kentucky Football Club","Munich Cowboys",70.0,72.0
+13,"Masters of Disaster","Leeds United",59.0,98.0
+14,"Leeds United","Generals",55.0,55.0
+14,"Rock Stars","Egyptian Magicians",72.0,53.0
+14,"Masters of Disaster","LA Losers",72.0,31.0
+14,"Donora Dragons","Kentucky Football Club",78.0,40.0
+14,"Munich Cowboys","My hate for you, it grow",64.0,63.0
+15,"Munich Cowboys","Donora Dragons",53.0,98.0
+15,"Leeds United","Kentucky Football Club",56.0,72.0
+15,"Rock Stars","LA Losers",42.0,43.0
+15,"Generals","My hate for you, it grow",62.0,76.0
+15,"Masters of Disaster","Egyptian Magicians",28.0,72.0
+16,"Rock Stars","Munich Cowboys",60.0,54.0
+16,"Egyptian Magicians","Generals",50.0,61.0
+16,"Leeds United","LA Losers",33.0,44.0
+16,"Donora Dragons","My hate for you, it grow",67.0,65.0
+16,"Masters of Disaster","Kentucky Football Club",68.0,36.0
+17,"Leeds United","Generals",39.0,80.0
+17,"Munich Cowboys","Masters of Disaster",29.0,46.0
+17,"Egyptian Magicians","Donora Dragons",50.0,50.0
+17,"Rock Stars","My hate for you, it grow",69.0,83.0
+17,"LA Losers","Kentucky Football Club",38.0,51.0

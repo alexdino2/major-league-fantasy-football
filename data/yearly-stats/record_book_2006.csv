@@ -1,0 +1,24 @@
+record,team,value
+"Most Points Scored, Season","Leeds United",1093.0
+"Most Points Scored, Game","Leeds United",111
+"Least Points Scored, Season","Munich Cowboys",747.0
+"Most Points Allowed, Season","Egyptian Magicians",1005.0
+"Least Points Allowed, Season","Leeds United",805.0
+"Highest Average Game Score, Season","Leeds United",64.29
+"Lowest Average Game Score, Season","Munich Cowboys",43.94
+"Least Points Scored, Game","Generals",19
+"Most Points Allowed, Game","Polish Power",111
+"Least Points Allowed, Game","Munich Cowboys",19
+"Highest Winning Percentage, Season","Leeds United",0.824
+"Lowest Winning Percentage, Season","Masters of Disaster",0.235
+"Most Wins, Season","Leeds United",14
+"Least Wins, Season","Masters of Disaster",4
+"Best Margin of Victory, Game","Leeds United",65
+"Worst Margin of Defeat, Game","Egyptian Magicians",-65
+"Best Average Point Differential, Season","Leeds United",16.94
+"Worst Average Point Differential, Season","Egyptian Magicians",-11.41
+"Longest Winning Streak, Season","Donora Dragons",8
+"Longest Losing Streak, Season","Masters of Disaster",10
+"Best Power Ranking, Season","Leeds United",30
+"Worst Power Ranking, Season","Munich Cowboys",7.5
+"Most High Week Scores, Season","Homers Heroes",4

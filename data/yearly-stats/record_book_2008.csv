@@ -1,0 +1,24 @@
+record,team,value
+"Most Points Scored, Season","Egyptian Magicians",1001.0
+"Most Points Scored, Game","Masters of Disaster",94
+"Least Points Scored, Season","Munich Cowboys",783.0
+"Most Points Allowed, Season","Munich Cowboys",945.0
+"Least Points Allowed, Season","Donora Dragons",839.0
+"Highest Average Game Score, Season","Egyptian Magicians",58.88
+"Lowest Average Game Score, Season","Munich Cowboys",46.06
+"Least Points Scored, Game","Munich Cowboys",21
+"Most Points Allowed, Game","Donora Dragons",94
+"Least Points Allowed, Game","Egyptian Magicians",21
+"Highest Winning Percentage, Season","Egyptian Magicians",0.676
+"Lowest Winning Percentage, Season","Munich Cowboys",0.324
+"Most Wins, Season","Egyptian Magicians",11
+"Least Wins, Season","Munich Cowboys",5
+"Best Margin of Victory, Game","Egyptian Magicians",60
+"Worst Margin of Defeat, Game","Munich Cowboys",-60
+"Best Average Point Differential, Season","Egyptian Magicians",8.29
+"Worst Average Point Differential, Season","Munich Cowboys",-9.53
+"Longest Winning Streak, Season","Rock Stars",6
+"Longest Losing Streak, Season","Munich Cowboys",5
+"Best Power Ranking, Season","Egyptian Magicians",30
+"Worst Power Ranking, Season","Munich Cowboys",3
+"Most High Week Scores, Season","Egyptian Magicians",3.3

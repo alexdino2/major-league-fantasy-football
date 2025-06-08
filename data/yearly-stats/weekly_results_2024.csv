@@ -1,0 +1,91 @@
+week,away_team,home_team,away_result,home_result
+1,"Kentucky Football Club","Egyptian Magicians",73.0,62.0
+1,"Masters of Disaster","Relegators",63.0,65.0
+1,"Homers Heroes","Leeds United",70.0,59.0
+1,"Rock Stars","Generals",37.0,57.0
+1,"LA Losers","Munich Cowboys",67.0,49.0
+2,"LA Losers","Egyptian Magicians",89.0,44.0
+2,"Homers Heroes","Kentucky Football Club",56.0,55.0
+2,"Rock Stars","Masters of Disaster",69.0,71.0
+2,"Relegators","Munich Cowboys",59.0,47.0
+2,"Generals","Leeds United",63.0,83.0
+3,"Rock Stars","Kentucky Football Club",58.0,39.0
+3,"Munich Cowboys","Leeds United",69.0,53.0
+3,"LA Losers","Generals",64.0,50.0
+3,"Relegators","Homers Heroes",49.0,54.0
+3,"Egyptian Magicians","Masters of Disaster",71.0,49.0
+4,"Munich Cowboys","Kentucky Football Club",69.0,36.0
+4,"Egyptian Magicians","Homers Heroes",48.0,54.0
+4,"Rock Stars","LA Losers",61.0,60.0
+4,"Relegators","Leeds United",51.0,51.0
+4,"Generals","Masters of Disaster",60.0,38.0
+5,"Leeds United","Masters of Disaster",54.0,64.0
+5,"Rock Stars","Relegators",73.0,48.0
+5,"Homers Heroes","Munich Cowboys",89.0,56.0
+5,"Egyptian Magicians","Generals",53.0,64.0
+5,"LA Losers","Kentucky Football Club",31.0,51.0
+6,"Relegators","Kentucky Football Club",76.0,45.0
+6,"Munich Cowboys","Rock Stars",67.0,89.0
+6,"Homers Heroes","Generals",76.0,81.0
+6,"Leeds United","Egyptian Magicians",75.0,42.0
+6,"LA Losers","Masters of Disaster",35.0,34.0
+7,"Relegators","Leeds United",46.0,54.0
+7,"Munich Cowboys","Rock Stars",49.0,54.0
+7,"Generals","Masters of Disaster",56.0,55.0
+7,"Kentucky Football Club","Homers Heroes",44.0,94.0
+7,"Egyptian Magicians","LA Losers",62.0,39.0
+8,"Homers Heroes","Egyptian Magicians",62.0,68.0
+8,"Leeds United","Masters of Disaster",62.0,57.0
+8,"LA Losers","Munich Cowboys",46.0,46.0
+8,"Generals","Rock Stars",89.0,71.0
+8,"Kentucky Football Club","Relegators",70.0,32.0
+9,"Munich Cowboys","Egyptian Magicians",85.0,56.0
+9,"Masters of Disaster","Relegators",43.0,56.0
+9,"Kentucky Football Club","LA Losers",61.0,56.0
+9,"Homers Heroes","Generals",49.0,66.0
+9,"Leeds United","Rock Stars",81.0,52.0
+10,"Munich Cowboys","Homers Heroes",66.0,56.0
+10,"Kentucky Football Club","Rock Stars",67.0,39.0
+10,"Egyptian Magicians","Masters of Disaster",37.0,92.0
+10,"Generals","Leeds United",64.0,51.0
+10,"Relegators","LA Losers",32.0,41.0
+11,"Munich Cowboys","Kentucky Football Club",68.0,62.0
+11,"Generals","LA Losers",48.0,92.0
+11,"Relegators","Rock Stars",50.0,88.0
+11,"Masters of Disaster","Homers Heroes",49.0,73.0
+11,"Leeds United","Egyptian Magicians",66.0,47.0
+12,"Masters of Disaster","Munich Cowboys",25.0,78.0
+12,"Homers Heroes","Relegators",47.0,31.0
+12,"Kentucky Football Club","Generals",42.0,66.0
+12,"LA Losers","Leeds United",61.0,37.0
+12,"Egyptian Magicians","Rock Stars",73.0,44.0
+13,"Homers Heroes","Rock Stars",58.0,60.0
+13,"Generals","Munich Cowboys",62.0,61.0
+13,"Masters of Disaster","LA Losers",74.0,63.0
+13,"Leeds United","Kentucky Football Club",32.0,79.0
+13,"Relegators","Egyptian Magicians",55.0,41.0
+14,"Rock Stars","Leeds United",46.0,62.0
+14,"Munich Cowboys","Egyptian Magicians",62.0,117.0
+14,"Relegators","Generals",64.0,81.0
+14,"LA Losers","Homers Heroes",57.0,47.0
+14,"Masters of Disaster","Kentucky Football Club",82.0,86.0
+15,"Munich Cowboys","Generals",86.0,65.0
+15,"Rock Stars","LA Losers",58.0,67.0
+15,"Masters of Disaster","Kentucky Football Club",60.0,80.0
+15,"Leeds United","Homers Heroes",53.0,103.0
+15,"Egyptian Magicians","Relegators",43.0,74.0
+16,"Generals","Relegators",64.0,74.0
+16,"Munich Cowboys","Leeds United",85.0,81.0
+16,"LA Losers","Homers Heroes",60.0,48.0
+16,"Egyptian Magicians","Kentucky Football Club",66.0,68.0
+16,"Rock Stars","Masters of Disaster",59.0,91.0
+17,"TBA","TBA",0.0,0.0
+17,"TBA","TBA",0.0,0.0
+17,"TBA","TBA",0.0,0.0
+17,"TBA","TBA",0.0,0.0
+17,"TBA","TBA",0.0,0.0
+18,"Generals","LA Losers",110.0,69.0
+18,"TBA","TBA",0.0,0.0
+18,"TBA","TBA",0.0,0.0
+18,"TBA","TBA",0.0,0.0
+18,"TBA","TBA",0.0,0.0

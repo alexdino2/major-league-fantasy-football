@@ -1,0 +1,24 @@
+record,team,value
+"Most Points Scored, Season","Leeds United",1196.0
+"Most Points Scored, Game","Generals",121.0000
+"Least Points Scored, Season","Rock Stars",855.0
+"Most Points Allowed, Season","Rock Stars",1115.0
+"Least Points Allowed, Season","Egyptian Magicians",926.0
+"Highest Average Game Score, Season","Leeds United",74.75
+"Lowest Average Game Score, Season","Rock Stars",53.44
+"Least Points Scored, Game","Rock Stars",21.0000
+"Most Points Allowed, Game","Rock Stars",121.0000
+"Least Points Allowed, Game","Leeds United",21.0000
+"Highest Winning Percentage, Season","Leeds United",0.688
+"Lowest Winning Percentage, Season","Rock Stars",0.312
+"Most Wins, Season","Leeds United",11
+"Least Wins, Season","Rock Stars",5
+"Best Margin of Victory, Game","Leeds United",75
+"Worst Margin of Defeat, Game","Rock Stars",-75
+"Best Average Point Differential, Season","Leeds United",16.25
+"Worst Average Point Differential, Season","Rock Stars",-16.25
+"Longest Winning Streak, Season","Homers Heroes",5
+"Longest Losing Streak, Season","Rock Stars",9
+"Best Power Ranking, Season","Leeds United",30
+"Worst Power Ranking, Season","Rock Stars",4
+"Most High Week Scores, Season","Leeds United",6

@@ -7,7 +7,11 @@
     "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
-    "scrape-history": "node scripts/scrape-history.js"
+    "scrape-history": "node scripts/scrape-history.js",
+    "scrape-yearly-stats": "node scripts/scrape-yearly-stats.js",
+    "scrape-playoff-brackets": "node scripts/scrape-playoff-brackets.js",
+    "scrape-record-books": "node scripts/scrape-record-books.js",
+    "scrape-weekly-results": "node scripts/scrape-weekly-results.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",

@@ -1,0 +1,24 @@
+record,team,value
+"Most Points Scored, Season","Rock Stars",1041.0
+"Most Points Scored, Game","Homers Heroes",103
+"Least Points Scored, Season","Munich Cowboys",814.0
+"Most Points Allowed, Season","Egyptian Magicians",1041.0
+"Least Points Allowed, Season","Donora Dragons",812.0
+"Highest Average Game Score, Season","Rock Stars",61.24
+"Lowest Average Game Score, Season","Munich Cowboys",47.88
+"Least Points Scored, Game","Homers Heroes",18
+"Most Points Allowed, Game","LA Losers",103
+"Least Points Allowed, Game","Polish Power",18
+"Highest Winning Percentage, Season","LA Losers",0.706
+"Lowest Winning Percentage, Season","Masters of Disaster",0.353
+"Most Wins, Season","LA Losers",12
+"Least Wins, Season","Masters of Disaster",6
+"Best Margin of Victory, Game","Masters of Disaster",52
+"Worst Margin of Defeat, Game","Polish Power",-52
+"Best Average Point Differential, Season","LA Losers",8.65
+"Worst Average Point Differential, Season","Munich Cowboys",-7.06
+"Longest Winning Streak, Season","Donora Dragons",6
+"Longest Losing Streak, Season","Generals",6
+"Best Power Ranking, Season","Rock Stars",29
+"Worst Power Ranking, Season","Munich Cowboys",4.5
+"Most High Week Scores, Season","LA Losers",4

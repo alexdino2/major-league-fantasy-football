@@ -1,0 +1,24 @@
+record,team,value
+"Most Points Scored, Season","Generals",1097.0
+"Most Points Scored, Game","Generals",112.0
+"Least Points Scored, Season","Masters of Disaster",865.0
+"Most Points Allowed, Season","LA Losers",1047.0
+"Least Points Allowed, Season","Donora Dragons",855.0
+"Highest Average Game Score, Season","Generals",68.56
+"Lowest Average Game Score, Season","Masters of Disaster",54.06
+"Least Points Scored, Game","Masters of Disaster",28.0
+"Most Points Allowed, Game","LA Losers",112.0
+"Least Points Allowed, Game","Generals",28.0
+"Highest Winning Percentage, Season","Generals",0.812
+"Lowest Winning Percentage, Season","Munich Cowboys",0.344
+"Most Wins, Season","Generals",13
+"Least Wins, Season","Munich Cowboys",5
+"Best Margin of Victory, Game","LA Losers",57
+"Worst Margin of Defeat, Game","Leeds United",-57
+"Best Average Point Differential, Season","Generals",14.31
+"Worst Average Point Differential, Season","Leeds United",-9.06
+"Longest Winning Streak, Season","Generals",8
+"Longest Losing Streak, Season","Polish Power",5
+"Best Power Ranking, Season","Generals",30
+"Worst Power Ranking, Season","Masters of Disaster",5
+"Most High Week Scores, Season","Egyptian Magicians",4

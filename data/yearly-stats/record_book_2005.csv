@@ -1,0 +1,24 @@
+record,team,value
+"Most Points Scored, Season","Masters of Disaster",1110.0
+"Most Points Scored, Game","Egyptian Magicians",89
+"Least Points Scored, Season","P-Funk All Stars",654.0
+"Most Points Allowed, Season","Egyptian Magicians",964.0
+"Least Points Allowed, Season","Munich Cowboys",816.0
+"Highest Average Game Score, Season","Masters of Disaster",65.29
+"Lowest Average Game Score, Season","P-Funk All Stars",38.47
+"Least Points Scored, Game","Rock Stars",13
+"Most Points Allowed, Game","Munich Cowboys",89
+"Least Points Allowed, Game","Munich Cowboys",13
+"Highest Winning Percentage, Season","Masters of Disaster",0.706
+"Lowest Winning Percentage, Season","P-Funk All Stars",0.176
+"Most Wins, Season","Munich Cowboys",12
+"Least Wins, Season","P-Funk All Stars",3
+"Best Margin of Victory, Game","Masters of Disaster",58
+"Worst Margin of Defeat, Game","Munich Cowboys",-58
+"Best Average Point Differential, Season","Masters of Disaster",13.24
+"Worst Average Point Differential, Season","P-Funk All Stars",-11.18
+"Longest Winning Streak, Season","Generals",5
+"Longest Losing Streak, Season","P-Funk All Stars",9
+"Best Power Ranking, Season","Masters of Disaster",29.5
+"Worst Power Ranking, Season","P-Funk All Stars",3
+"Most High Week Scores, Season","Masters of Disaster",4

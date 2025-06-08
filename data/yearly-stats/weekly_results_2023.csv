@@ -1,0 +1,86 @@
+week,away_team,home_team,away_result,home_result
+1,"Egyptian Magicians","Kentucky Football Club",76.0,27.0
+1,"Munich Cowboys","Donora Dragons",44.0,70.0
+1,"Masters of Disaster","LA Losers",25.0,42.0
+1,"Homers Heroes","Generals",28.0,51.0
+1,"Leeds United","Rock Stars",79.0,38.0
+2,"Donora Dragons","Masters of Disaster",58.0,60.0
+2,"Leeds United","Generals",33.0,64.0
+2,"Rock Stars","LA Losers",80.0,58.0
+2,"Egyptian Magicians","Homers Heroes",61.0,60.0
+2,"Kentucky Football Club","Munich Cowboys",55.0,62.0
+3,"Egyptian Magicians","Donora Dragons",59.0,59.0
+3,"Rock Stars","Masters of Disaster",105.0,76.0
+3,"LA Losers","Generals",83.0,56.0
+3,"Leeds United","Munich Cowboys",64.0,48.0
+3,"Kentucky Football Club","Homers Heroes",39.0,77.0
+4,"Generals","Rock Stars",77.0,72.0
+4,"Donora Dragons","Homers Heroes",61.0,41.0
+4,"Masters of Disaster","Leeds United",51.0,73.0
+4,"Egyptian Magicians","Munich Cowboys",49.0,41.0
+4,"Kentucky Football Club","LA Losers",77.0,95.0
+5,"Rock Stars","Egyptian Magicians",44.0,68.0
+5,"Munich Cowboys","Homers Heroes",92.0,75.0
+5,"Masters of Disaster","Generals",63.0,73.0
+5,"LA Losers","Leeds United",66.0,70.0
+5,"Donora Dragons","Kentucky Football Club",30.0,82.0
+6,"Kentucky Football Club","Munich Cowboys",57.0,36.0
+6,"Egyptian Magicians","Donora Dragons",55.0,41.0
+6,"LA Losers","Generals",74.0,61.0
+6,"Homers Heroes","Masters of Disaster",45.0,56.0
+6,"Rock Stars","Leeds United",61.0,52.0
+7,"Munich Cowboys","Egyptian Magicians",50.0,64.0
+7,"Masters of Disaster","Kentucky Football Club",51.0,60.0
+7,"Generals","Leeds United",68.0,43.0
+7,"Homers Heroes","Donora Dragons",58.0,63.0
+7,"Rock Stars","LA Losers",37.0,72.0
+8,"Munich Cowboys","Homers Heroes",63.0,51.0
+8,"LA Losers","Masters of Disaster",83.0,53.0
+8,"Generals","Rock Stars",96.0,54.0
+8,"Donora Dragons","Leeds United",40.0,70.0
+8,"Kentucky Football Club","Egyptian Magicians",37.0,66.0
+9,"Masters of Disaster","Rock Stars",54.0,22.0
+9,"Generals","Egyptian Magicians",81.0,49.0
+9,"LA Losers","Leeds United",59.0,49.0
+9,"Homers Heroes","Kentucky Football Club",63.0,40.0
+9,"Munich Cowboys","Donora Dragons",61.0,62.0
+10,"Generals","Masters of Disaster",70.0,74.0
+10,"Rock Stars","Munich Cowboys",88.0,75.0
+10,"Donora Dragons","LA Losers",53.0,57.0
+10,"Leeds United","Kentucky Football Club",54.0,40.0
+10,"Homers Heroes","Egyptian Magicians",65.0,54.0
+11,"Donora Dragons","Kentucky Football Club",62.0,60.0
+11,"Generals","Munich Cowboys",63.0,27.0
+11,"Egyptian Magicians","LA Losers",69.0,51.0
+11,"Rock Stars","Homers Heroes",59.0,65.0
+11,"Leeds United","Masters of Disaster",61.0,70.0
+12,"Leeds United","Egyptian Magicians",78.0,67.0
+12,"LA Losers","Homers Heroes",68.0,46.0
+12,"Masters of Disaster","Munich Cowboys",67.0,70.0
+12,"Rock Stars","Kentucky Football Club",51.0,39.0
+12,"Generals","Donora Dragons",89.0,62.0
+13,"Egyptian Magicians","Masters of Disaster",75.0,64.0
+13,"Munich Cowboys","LA Losers",70.0,64.0
+13,"Homers Heroes","Leeds United",49.0,92.0
+13,"Donora Dragons","Rock Stars",45.0,35.0
+13,"Kentucky Football Club","Generals",69.0,97.0
+14,"Generals","Donora Dragons",83.0,33.0
+14,"Egyptian Magicians","LA Losers",60.0,61.0
+14,"Munich Cowboys","Rock Stars",57.0,35.0
+14,"Kentucky Football Club","Leeds United",93.0,22.0
+14,"Homers Heroes","Masters of Disaster",37.0,29.0
+15,"Donora Dragons","Rock Stars",69.0,61.0
+15,"LA Losers","Kentucky Football Club",69.0,27.0
+15,"Munich Cowboys","Leeds United",61.0,47.0
+15,"Masters of Disaster","Egyptian Magicians",45.0,56.0
+15,"Homers Heroes","Generals",60.0,74.0
+16,"Homers Heroes","Rock Stars",39.0,28.0
+16,"Munich Cowboys","LA Losers",91.0,66.0
+16,"Leeds United","Donora Dragons",23.0,73.0
+16,"Masters of Disaster","Kentucky Football Club",52.0,53.0
+16,"Egyptian Magicians","Generals",83.0,64.0
+17,"Egyptian Magicians","Generals",41.0,38.0
+17,"LA Losers","Donora Dragons",52.0,48.0
+17,"Munich Cowboys","Leeds United",100.0,61.0
+17,"Rock Stars","Kentucky Football Club",60.0,82.0
+17,"Masters of Disaster","Homers Heroes",44.0,63.0

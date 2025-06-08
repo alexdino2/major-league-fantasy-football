@@ -1,0 +1,24 @@
+record,team,value
+"Most Points Scored, Season","Egyptian Magicians",1027.0
+"Most Points Scored, Game","Egyptian Magicians",128
+"Least Points Scored, Season","Generals",724.0
+"Most Points Allowed, Season","Generals",1023.0
+"Least Points Allowed, Season","Masters of Disaster",791.0
+"Highest Average Game Score, Season","Egyptian Magicians",60.41
+"Lowest Average Game Score, Season","Generals",42.59
+"Least Points Scored, Game","Generals",24
+"Most Points Allowed, Game","Homers Heroes",128
+"Least Points Allowed, Game","LA Losers",24
+"Highest Winning Percentage, Season","Masters of Disaster",0.706
+"Lowest Winning Percentage, Season","Generals",0.235
+"Most Wins, Season","Masters of Disaster",12
+"Least Wins, Season","Generals",4
+"Best Margin of Victory, Game","Egyptian Magicians",89
+"Worst Margin of Defeat, Game","Homers Heroes",-89
+"Best Average Point Differential, Season","Masters of Disaster",9.35
+"Worst Average Point Differential, Season","Generals",-17.59
+"Longest Winning Streak, Season","Masters of Disaster",6
+"Longest Losing Streak, Season","LA Losers",8
+"Best Power Ranking, Season","Polish Power",26
+"Worst Power Ranking, Season","Generals",3
+"Most High Week Scores, Season","Masters of Disaster",4

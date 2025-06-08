@@ -1,0 +1,24 @@
+record,team,value
+"Most Points Scored, Season","Leeds United",1005.0
+"Most Points Scored, Game","Munich Cowboys",95
+"Least Points Scored, Season","Donora Dragons",796.0
+"Most Points Allowed, Season","Leeds United",961.0
+"Least Points Allowed, Season","LA Losers",790.0
+"Highest Average Game Score, Season","Leeds United",62.81
+"Lowest Average Game Score, Season","Donora Dragons",49.75
+"Least Points Scored, Game","LA Losers",23
+"Most Points Allowed, Game","Rock Stars",95
+"Least Points Allowed, Game","Generals",23
+"Highest Winning Percentage, Season","LA Losers",0.656
+"Lowest Winning Percentage, Season","Generals",0.375
+"Most Wins, Season","LA Losers",10
+"Least Wins, Season","Donora Dragons",6
+"Best Margin of Victory, Game","Masters of Disaster",41
+"Worst Margin of Defeat, Game","Donora Dragons",-41
+"Best Average Point Differential, Season","LA Losers",3.62
+"Worst Average Point Differential, Season","Rock Stars",-3.56
+"Longest Winning Streak, Season","LA Losers",8
+"Longest Losing Streak, Season","Generals",8
+"Best Power Ranking, Season","Masters of Disaster",27.5
+"Worst Power Ranking, Season","Donora Dragons",4.5
+"Most High Week Scores, Season","Homers Heroes",3

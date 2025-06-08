@@ -1,0 +1,86 @@
+week,away_team,home_team,away_result,home_result
+1,"Munich Cowboys","Leeds United",40.0,38.0
+1,"Donora Dragons","Masters of Disaster",41.0,56.0
+1,"Homer's Zeroes (feat. Homer)","Egyptian Magicians",66.0,55.0
+1,"Kentucky Football Club","Rock Stars",85.0,64.0
+1,"LA Losers","Generals",50.0,58.0
+2,"LA Losers","Egyptian Magicians",60.0,58.0
+2,"Donora Dragons","Kentucky Football Club",32.0,56.0
+2,"Munich Cowboys","Rock Stars",56.0,65.0
+2,"Masters of Disaster","Homer's Zeroes (feat. Homer)",71.0,63.0
+2,"Generals","Leeds United",28.0,62.0
+3,"Egyptian Magicians","Generals",59.0,96.0
+3,"Leeds United","Masters of Disaster",82.0,47.0
+3,"Rock Stars","Donora Dragons",88.0,73.0
+3,"Kentucky Football Club","Homer's Zeroes (feat. Homer)",69.0,70.0
+3,"LA Losers","Munich Cowboys",76.0,38.0
+4,"Leeds United","LA Losers",39.0,43.0
+4,"Rock Stars","Masters of Disaster",41.0,44.0
+4,"Munich Cowboys","Egyptian Magicians",56.0,56.0
+4,"Homer's Zeroes (feat. Homer)","Donora Dragons",55.0,33.0
+4,"Kentucky Football Club","Generals",25.0,71.0
+5,"Generals","Munich Cowboys",89.0,50.0
+5,"Masters of Disaster","Kentucky Football Club",53.0,42.0
+5,"Egyptian Magicians","Leeds United",75.0,62.0
+5,"Homer's Zeroes (feat. Homer)","Rock Stars",43.0,55.0
+5,"LA Losers","Donora Dragons",75.0,55.0
+6,"LA Losers","Munich Cowboys",56.0,54.0
+6,"Donora Dragons","Masters of Disaster",70.0,37.0
+6,"Kentucky Football Club","Homer's Zeroes (feat. Homer)",39.0,43.0
+6,"Egyptian Magicians","Rock Stars",78.0,80.0
+6,"Leeds United","Generals",62.0,98.0
+7,"Masters of Disaster","Generals",63.0,44.0
+7,"Rock Stars","Egyptian Magicians",93.0,57.0
+7,"Leeds United","Donora Dragons",72.0,87.0
+7,"LA Losers","Kentucky Football Club",26.0,54.0
+7,"Munich Cowboys","Homer's Zeroes (feat. Homer)",67.0,66.0
+8,"Kentucky Football Club","Generals",62.0,73.0
+8,"Rock Stars","LA Losers",41.0,105.0
+8,"Donora Dragons","Munich Cowboys",45.0,50.0
+8,"Masters of Disaster","Leeds United",58.0,53.0
+8,"Homer's Zeroes (feat. Homer)","Egyptian Magicians",78.0,54.0
+9,"Generals","Rock Stars",65.0,47.0
+9,"Egyptian Magicians","Donora Dragons",67.0,48.0
+9,"Leeds United","Kentucky Football Club",107.0,32.0
+9,"Masters of Disaster","Munich Cowboys",91.0,76.0
+9,"Homer's Zeroes (feat. Homer)","LA Losers",84.0,52.0
+10,"Generals","Masters of Disaster",53.0,56.0
+10,"Homer's Zeroes (feat. Homer)","Rock Stars",48.0,42.0
+10,"Leeds United","Donora Dragons",52.0,68.0
+10,"Kentucky Football Club","Munich Cowboys",49.0,71.0
+10,"Egyptian Magicians","LA Losers",21.0,66.0
+11,"Leeds United","Homer's Zeroes (feat. Homer)",52.0,37.0
+11,"Rock Stars","Masters of Disaster",47.0,67.0
+11,"Donora Dragons","Egyptian Magicians",58.0,64.0
+11,"Kentucky Football Club","LA Losers",35.0,38.0
+11,"Munich Cowboys","Generals",48.0,45.0
+12,"Homer's Zeroes (feat. Homer)","Munich Cowboys",76.0,52.0
+12,"Generals","Donora Dragons",71.0,55.0
+12,"Rock Stars","Leeds United",53.0,32.0
+12,"Egyptian Magicians","Kentucky Football Club",90.0,72.0
+12,"Masters of Disaster","LA Losers",55.0,52.0
+13,"Kentucky Football Club","Leeds United",29.0,73.0
+13,"Donora Dragons","Munich Cowboys",73.0,59.0
+13,"Masters of Disaster","Egyptian Magicians",123.0,61.0
+13,"Generals","Homer's Zeroes (feat. Homer)",91.0,46.0
+13,"LA Losers","Rock Stars",74.0,59.0
+14,"Generals","Rock Stars",35.0,69.0
+14,"Donora Dragons","Kentucky Football Club",88.0,49.0
+14,"Munich Cowboys","Egyptian Magicians",78.0,37.0
+14,"Homer's Zeroes (feat. Homer)","Masters of Disaster",72.0,68.0
+14,"Leeds United","LA Losers",71.0,88.0
+15,"Generals","LA Losers",59.0,60.0
+15,"Egyptian Magicians","Leeds United",98.0,63.0
+15,"Donora Dragons","Homer's Zeroes (feat. Homer)",78.0,74.0
+15,"Rock Stars","Kentucky Football Club",75.0,57.0
+15,"Munich Cowboys","Masters of Disaster",57.0,65.0
+16,"Egyptian Magicians","Generals",70.0,59.0
+16,"Rock Stars","Donora Dragons",65.0,72.0
+16,"LA Losers","Homer's Zeroes (feat. Homer)",46.0,69.0
+16,"Masters of Disaster","Kentucky Football Club",31.0,79.0
+16,"Munich Cowboys","Leeds United",51.0,55.0
+17,"LA Losers","Masters of Disaster",59.0,71.0
+17,"Homer's Zeroes (feat. Homer)","Generals",43.0,66.0
+17,"Egyptian Magicians","Rock Stars",69.0,56.0
+17,"Munich Cowboys","Donora Dragons",48.0,25.0
+17,"Leeds United","Kentucky Football Club",52.0,28.0

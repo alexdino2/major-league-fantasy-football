@@ -1,0 +1,24 @@
+record,team,value
+"Most Points Scored, Game","Homers Heroes",103
+"Most Points Scored, Season","Homers Heroes",1123.0
+"Least Points Scored, Season","Masters of Disaster",805.0
+"Most Points Allowed, Season","Generals",945.0
+"Least Points Allowed, Season","Leeds United",861.0
+"Highest Average Game Score, Season","Homers Heroes",66.06
+"Lowest Average Game Score, Season","Masters of Disaster",47.35
+"Least Points Scored, Game","Polish Power",26
+"Most Points Allowed, Game","Munich Cowboys",103
+"Least Points Allowed, Game","Homers Heroes",26
+"Highest Winning Percentage, Season","Egyptian Magicians",0.647
+"Lowest Winning Percentage, Season","Masters of Disaster",0.353
+"Most Wins, Season","Egyptian Magicians",11
+"Least Wins, Season","Masters of Disaster",6
+"Best Margin of Victory, Game","Egyptian Magicians",47
+"Worst Margin of Defeat, Game","Rock Stars",-47
+"Best Average Point Differential, Season","Homers Heroes",10.76
+"Worst Average Point Differential, Season","Generals",-5.18
+"Longest Winning Streak, Season","P-Funk All Stars",5
+"Longest Losing Streak, Season","Polish Power",5
+"Best Power Ranking, Season","Homers Heroes",29.5
+"Worst Power Ranking, Season","Masters of Disaster",3
+"Most High Week Scores, Season","Homers Heroes",5.0

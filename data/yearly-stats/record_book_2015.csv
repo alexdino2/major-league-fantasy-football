@@ -1,0 +1,24 @@
+record,team,value
+"Most Points Scored, Season","Generals",1035.0
+"Most Points Scored, Game","Masters of Disaster",123.0000
+"Least Points Scored, Season","Kentucky Football Club",834.0
+"Most Points Allowed, Season","Egyptian Magicians",1158.0
+"Least Points Allowed, Season","LA Losers",850.0
+"Highest Average Game Score, Season","Generals",64.69
+"Lowest Average Game Score, Season","Kentucky Football Club",52.12
+"Least Points Scored, Game","Egyptian Magicians",21.0000
+"Most Points Allowed, Game","Egyptian Magicians",123.0000
+"Least Points Allowed, Game","LA Losers",21.0000
+"Highest Winning Percentage, Season","Masters of Disaster",0.750
+"Lowest Winning Percentage, Season","Kentucky Football Club",0.250
+"Most Wins, Season","Masters of Disaster",12
+"Least Wins, Season","Kentucky Football Club",4
+"Best Margin of Victory, Game","Leeds United",75
+"Worst Margin of Defeat, Game","Kentucky Football Club",-75
+"Best Average Point Differential, Season","Generals",9.44
+"Worst Average Point Differential, Season","Kentucky Football Club",-10.69
+"Longest Winning Streak, Season","Masters of Disaster",7
+"Longest Losing Streak, Season","Kentucky Football Club",8
+"Best Power Ranking, Season","Generals",26.5
+"Worst Power Ranking, Season","Kentucky Football Club",3
+"Most High Week Scores, Season","Generals",4

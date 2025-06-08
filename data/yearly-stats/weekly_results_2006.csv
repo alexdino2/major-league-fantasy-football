@@ -1,0 +1,86 @@
+week,away_team,home_team,away_result,home_result
+1,"LA Losers","Leeds United",43.0,44.0
+1,"Egyptian Magicians","Rock Stars",59.0,29.0
+1,"Munich Cowboys","Generals",49.0,41.0
+1,"Masters of Disaster","Homers Heroes",47.0,24.0
+1,"Polish Power","Donora Dragons",49.0,37.0
+2,"Rock Stars","Leeds United",30.0,26.0
+2,"Generals","LA Losers",44.0,65.0
+2,"Homers Heroes","Egyptian Magicians",58.0,54.0
+2,"Polish Power","Munich Cowboys",48.0,33.0
+2,"Donora Dragons","Masters of Disaster",39.0,81.0
+3,"Masters of Disaster","LA Losers",41.0,47.0
+3,"Generals","Rock Stars",81.0,37.0
+3,"Leeds United","Egyptian Magicians",60.0,46.0
+3,"Munich Cowboys","Donora Dragons",28.0,69.0
+3,"Homers Heroes","Polish Power",44.0,60.0
+4,"LA Losers","Egyptian Magicians",48.0,61.0
+4,"Leeds United","Generals",65.0,36.0
+4,"Munich Cowboys","Homers Heroes",42.0,31.0
+4,"Polish Power","Masters of Disaster",57.0,35.0
+4,"Rock Stars","Donora Dragons",49.0,82.0
+5,"LA Losers","Rock Stars",37.0,63.0
+5,"Egyptian Magicians","Generals",38.0,44.0
+5,"Masters of Disaster","Munich Cowboys",41.0,47.0
+5,"Donora Dragons","Homers Heroes",63.0,21.0
+5,"Leeds United","Polish Power",50.0,52.0
+6,"Leeds United","LA Losers",84.0,52.0
+6,"Munich Cowboys","Egyptian Magicians",56.0,58.0
+6,"Rock Stars","Generals",41.0,53.0
+6,"Polish Power","Homers Heroes",60.0,75.0
+6,"Masters of Disaster","Donora Dragons",32.0,94.0
+7,"Leeds United","Rock Stars",65.0,50.0
+7,"LA Losers","Generals",73.0,74.0
+7,"Homers Heroes","Munich Cowboys",49.0,41.0
+7,"Egyptian Magicians","Donora Dragons",54.0,85.0
+7,"Masters of Disaster","Polish Power",50.0,68.0
+8,"Generals","Leeds United",44.0,48.0
+8,"Homers Heroes","LA Losers",90.0,48.0
+8,"Rock Stars","Egyptian Magicians",78.0,57.0
+8,"Munich Cowboys","Masters of Disaster",42.0,36.0
+8,"Donora Dragons","Polish Power",55.0,46.0
+9,"Egyptian Magicians","Leeds United",26.0,91.0
+9,"Rock Stars","LA Losers",38.0,56.0
+9,"Polish Power","Generals",75.0,52.0
+9,"Donora Dragons","Munich Cowboys",68.0,45.0
+9,"Homers Heroes","Masters of Disaster",74.0,62.0
+10,"Generals","Egyptian Magicians",70.0,46.0
+10,"Rock Stars","Homers Heroes",39.0,72.0
+10,"Leeds United","Masters of Disaster",69.0,51.0
+10,"LA Losers","Donora Dragons",34.0,39.0
+10,"Munich Cowboys","Polish Power",29.0,52.0
+11,"Egyptian Magicians","LA Losers",31.0,45.0
+11,"Polish Power","Rock Stars",49.0,60.0
+11,"Leeds United","Munich Cowboys",39.0,56.0
+11,"Generals","Masters of Disaster",48.0,40.0
+11,"Homers Heroes","Donora Dragons",89.0,44.0
+12,"Donora Dragons","Leeds United",54.0,70.0
+12,"Munich Cowboys","Rock Stars",60.0,50.0
+12,"Masters of Disaster","Egyptian Magicians",54.0,56.0
+12,"Generals","Homers Heroes",46.0,81.0
+12,"LA Losers","Polish Power",49.0,44.0
+13,"Homers Heroes","Leeds United",50.0,55.0
+13,"Donora Dragons","Generals",49.0,52.0
+13,"LA Losers","Munich Cowboys",27.0,53.0
+13,"Rock Stars","Masters of Disaster",47.0,52.0
+13,"Egyptian Magicians","Polish Power",51.0,67.0
+14,"Leeds United","Masters of Disaster",91.0,56.0
+14,"LA Losers","Donora Dragons",45.0,50.0
+14,"Rock Stars","Polish Power",47.0,44.0
+14,"Egyptian Magicians","Munich Cowboys",62.0,50.0
+14,"Generals","Homers Heroes",43.0,79.0
+15,"Homers Heroes","Leeds United",58.0,70.0
+15,"Masters of Disaster","LA Losers",49.0,56.0
+15,"Donora Dragons","Rock Stars",43.0,44.0
+15,"Polish Power","Egyptian Magicians",68.0,35.0
+15,"Munich Cowboys","Generals",41.0,19.0
+16,"Leeds United","Munich Cowboys",55.0,25.0
+16,"LA Losers","Homers Heroes",48.0,62.0
+16,"Masters of Disaster","Rock Stars",58.0,65.0
+16,"Egyptian Magicians","Donora Dragons",41.0,52.0
+16,"Generals","Polish Power",30.0,58.0
+17,"Polish Power","Leeds United",76.0,111.0
+17,"Homers Heroes","Generals",30.0,63.0
+17,"Donora Dragons","Rock Stars",65.0,28.0
+17,"Munich Cowboys","LA Losers",50.0,66.0
+17,"Masters of Disaster","Egyptian Magicians",50.0,36.0

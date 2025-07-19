@@ -1,0 +1,161 @@
+Team,POS,Player,Salary,ELIG,Total FPTS,Active FPTS
+"Munich Cowboys",RB,"Nick Chubb RB • CLE",84,RB,7.0,7.0
+"Munich Cowboys",QB,"Justin Fields QB • NYJ",25,QB,149.0,122.0
+"Munich Cowboys",WR,"CeeDee Lamb WR • DAL",63,WR,166.0,146.0
+"Munich Cowboys",RB,"Rhamondre Stevenson RB • NE",27,RB,50.0,39.0
+"Munich Cowboys",WR,"Chris Olave WR • NO",50,WR,74.0,66.0
+"Munich Cowboys",RES,"Isiah Pacheco RB • KC",4,RB,125.0,66.0
+"Munich Cowboys",WR,"Tyler Lockett WR • TEN",10,WR,62.0,19.0
+"Munich Cowboys",RES,"Geno Smith QB • LV",2,QB,155.0,46.0
+"Munich Cowboys",RES,"Rachaad White RB • TB",4,RB,114.0,9.0
+"Munich Cowboys",TE,"Kyle Pitts TE • ATL",9,TE,36.0,7.0
+"Munich Cowboys",RES,"Javonte Williams RB • DAL",9,RB,61.0,19.0
+"Munich Cowboys",RES,"Brandin Cooks WR • NO",2,WR,69.0,19.0
+"Munich Cowboys",RES,"Zay Flowers WR • BAL",7,WR,81.0,25.0
+"Munich Cowboys",RES,"Chigoziem Okonkwo TE • TEN",2,TE,20.0,0.0
+"Munich Cowboys",K,"Cameron Dicker K • LAC",1,K,135.0,49.0
+"Munich Cowboys",DST,"Saints DST • NO",1,DST,100.0,56.0
+"DONORA DRAGONS",QB,"Patrick Mahomes QB • KC",60,QB,240.0,194.0
+"DONORA DRAGONS",RB,"Najee Harris RB • LAC",32,RB,86.0,19.0
+"DONORA DRAGONS",RB,"Jonathan Taylor RB • IND",53,RB,76.0,60.0
+"DONORA DRAGONS",WR,"Garrett Wilson WR • NYJ",42,WR,58.0,54.0
+"DONORA DRAGONS",WR,"Amon-Ra St. Brown WR • DET",54,WR,141.0,110.0
+"DONORA DRAGONS",WR,"Amari Cooper WR • BUF",28,WR,87.0,72.0
+"DONORA DRAGONS",DST,"Cowboys DST • DAL",2,DST,129.0,114.0
+"DONORA DRAGONS",RES,"James Cook RB • BUF",8,RB,90.0,60.0
+"DONORA DRAGONS",K,"Tyler Bass K • BUF",2,K,138.0,22.0
+"DONORA DRAGONS",RES,"Marquise Brown WR • KC",5,WR,42.0,13.0
+"DONORA DRAGONS",RES,"Antonio Gibson RB • NE",3,RB,29.0,0.0
+"DONORA DRAGONS",TE,"Dalton Schultz TE • HOU",1,TE,58.0,12.0
+"DONORA DRAGONS",RES,"Ezekiel Elliott RB • LAC",2,RB,55.0,16.0
+"DONORA DRAGONS",RES,"Kenny Pickett QB • CLE",1,QB,64.0,0.0
+"DONORA DRAGONS",RES,"Rashod Bateman WR • BAL",3,WR,15.0,0.0
+"DONORA DRAGONS",RES,"Jaylen Warren RB • PIT",4,RB,61.0,3.0
+"MASTERS OF DISASTER",TE,"Travis Kelce TE • KC",80,TE,95.0,64.0
+"MASTERS OF DISASTER",WR,"Justin Jefferson WR • MIN",84,WR,76.0,62.0
+"MASTERS OF DISASTER",WR,"Ja'Marr Chase WR • CIN",81,WR,93.0,92.0
+"MASTERS OF DISASTER",RB,"J.K. Dobbins RB • LAC",17,RB,6.0,6.0
+"MASTERS OF DISASTER",QB,"Deshaun Watson QB • CLE",3,QB,60.0,0.0
+"MASTERS OF DISASTER",K,"Evan McPherson K • CIN",1,K,125.0,9.0
+"MASTERS OF DISASTER",WR,"Drake London WR • ATL",7,WR,46.0,13.0
+"MASTERS OF DISASTER",RB,"Brian Robinson Jr. RB • WAS",5,RB,91.0,68.0
+"MASTERS OF DISASTER",RES,"Dak Prescott QB • DAL",1,QB,272.0,207.0
+"MASTERS OF DISASTER",RES,"Mike Williams WR • LAC",9,WR,17.0,17.0
+"MASTERS OF DISASTER",RES,"Khalil Herbert RB • IND",3,RB,44.0,7.0
+"MASTERS OF DISASTER",DST,"Seahawks DST • SEA",2,DST,87.0,6.0
+"MASTERS OF DISASTER",RES,"Evan Engram TE • DEN",4,TE,54.0,1.0
+"MASTERS OF DISASTER",RES,"Elijah Moore WR • BUF",1,WR,28.0,0.0
+"MASTERS OF DISASTER",RES,"Samaje Perine RB • CIN",1,RB,19.0,0.0
+"MASTERS OF DISASTER",RES,"Damien Harris RB • BUF",1,RB,8.0,0.0
+"LEEDS UNITED",RB,"Josh Jacobs RB • GB",62,RB,72.0,72.0
+"LEEDS UNITED",RB,"Tony Pollard RB • TEN",75,RB,86.0,69.0
+"LEEDS UNITED",WR,"Stefon Diggs WR • NE",67,WR,98.0,93.0
+"LEEDS UNITED",QB,"Kirk Cousins QB • ATL",9,QB,120.0,0.0
+"LEEDS UNITED",WR,"Christian Watson WR • GB",22,WR,42.0,18.0
+"LEEDS UNITED",RES,"Jared Goff QB • DET",1,QB,252.0,14.0
+"LEEDS UNITED",WR,"Christian Kirk WR • HOU",19,WR,48.0,12.0
+"LEEDS UNITED",DST,"Ravens DST • BAL",3,DST,131.0,9.0
+"LEEDS UNITED",RES,"James Conner RB • ARI",7,RB,98.0,35.0
+"LEEDS UNITED",TE,"Pat Freiermuth TE • PIT",6,TE,25.0,10.0
+"LEEDS UNITED",RES,"Tua Tagovailoa QB • MIA",5,QB,221.0,187.0
+"LEEDS UNITED",RES,"Jordan Addison WR • MIN",5,WR,98.0,30.0
+"LEEDS UNITED",RES,"Brandon Aiyuk WR • SF",11,WR,109.0,80.0
+"LEEDS UNITED",RES,"Diontae Johnson WR • CLE",6,WR,62.0,22.0
+"LEEDS UNITED",K,"Jake Elliott K • PHI",1,K,145.0,85.0
+"LEEDS UNITED",RES,"Quentin Johnston WR • LAC",1,WR,22.0,0.0
+"HOMERS HEROES",RB,"Austin Ekeler RB • WAS",81,RB,65.0,64.0
+"HOMERS HEROES",WR,"Davante Adams WR • LAR",61,WR,92.0,85.0
+"HOMERS HEROES",QB,"Joe Burrow QB • CIN",32,QB,103.0,55.0
+"HOMERS HEROES",RB,"Jahmyr Gibbs RB • DET",26,RB,131.0,58.0
+"HOMERS HEROES",WR,"Tee Higgins WR • CIN",37,WR,53.0,20.0
+"HOMERS HEROES",TE,"Darren Waller TE •",29,TE,22.0,17.0
+"HOMERS HEROES",WR,"Jahan Dotson WR • PHI",13,WR,38.0,7.0
+"HOMERS HEROES",RES,"George Pickens WR • DAL",10,WR,84.0,34.0
+"HOMERS HEROES",RES,"Kadarius Toney WR • CLE",2,WR,9.0,0.0
+"HOMERS HEROES",DST,"Patriots DST • NE",1,DST,78.0,2.0
+"HOMERS HEROES",RES,"Daniel Jones QB • IND",1,QB,32.0,0.0
+"HOMERS HEROES",K,"Greg Joseph K • SF",1,K,112.0,5.0
+"HOMERS HEROES",RES,"Roschon Johnson RB • CHI",1,RB,21.0,0.0
+"HOMERS HEROES",RES,"Michael Gallup WR • WAS",1,WR,28.0,0.0
+"HOMERS HEROES",RES,"Zach Charbonnet RB • SEA",2,RB,20.0,10.0
+"HOMERS HEROES",RES,"Zay Jones WR • ARI",1,WR,21.0,0.0
+"ROCK STARS",RB,"Bijan Robinson RB • ATL",79,RB,100.0,86.0
+"ROCK STARS",WR,"Cooper Kupp WR • SEA",71,WR,62.0,61.0
+"ROCK STARS",TE,"Mark Andrews TE • BAL",36,TE,52.0,45.0
+"ROCK STARS",RB,"Kenneth Walker III RB • SEA",24,RB,93.0,82.0
+"ROCK STARS",QB,"Justin Herbert QB • LAC",30,QB,157.0,140.0
+"ROCK STARS",RES,"Aaron Jones RB • MIN",22,RB,77.0,5.0
+"ROCK STARS",WR,"Keenan Allen WR • CHI",20,WR,98.0,98.0
+"ROCK STARS",WR,"Chris Godwin WR • TB",9,WR,68.0,35.0
+"ROCK STARS",RES,"Michael Pittman WR • IND",2,WR,72.0,45.0
+"ROCK STARS",RES,"Isaiah Hodgins WR • SF",1,WR,20.0,7.0
+"ROCK STARS",DST,"Chiefs DST • KC",1,DST,112.0,13.0
+"ROCK STARS",RES,"Derek Carr QB • NO",1,QB,172.0,0.0
+"ROCK STARS",K,"Brandon McManus K • GB",1,K,130.0,7.0
+"ROCK STARS",RES,"Jerick McKinnon RB • KC",1,RB,34.0,0.0
+"ROCK STARS",RES,"Tyler Allgeier RB • ATL",1,RB,58.0,2.0
+"ROCK STARS",RES,"Tyler Boyd WR • TEN",1,WR,32.0,1.0
+"GENERALS",QB,"Josh Allen QB • BUF",76,QB,344.0,282.0
+"GENERALS",RB,"Alvin Kamara RB • NO",15,RB,78.0,75.0
+"GENERALS",TE,"George Kittle TE • SF",20,TE,87.0,77.0
+"GENERALS",K,"Harrison Butker K • KC",3,K,185.0,22.0
+"GENERALS",RB,"Alexander Mattison RB • MIA",20,RB,42.0,8.0
+"GENERALS",WR,"Deebo Samuel WR • WAS",25,WR,118.0,111.0
+"GENERALS",RES,"Travis Etienne RB • JAC",25,RB,129.0,68.0
+"GENERALS",WR,"Jaylen Waddle WR • MIA",54,WR,65.0,45.0
+"GENERALS",WR,"DeVonta Smith WR • PHI",47,WR,87.0,81.0
+"GENERALS",DST,"Commanders DST • WAS",2,DST,59.0,10.0
+"GENERALS",RES,"Skyy Moore WR • KC",3,WR,11.0,0.0
+"GENERALS",RES,"Juwan Johnson TE • NO",2,TE,33.0,0.0
+"GENERALS",RES,"Treylon Burks WR • TEN",1,WR,6.0,0.0
+"GENERALS",RES,"Courtland Sutton WR • DEN",1,WR,89.0,10.0
+"GENERALS",RES,"Jamaal Williams RB • NO",3,RB,13.0,0.0
+"GENERALS",RES,"Brock Purdy QB • SF",3,QB,256.0,19.0
+"LA LOSERS",QB,"Jalen Hurts QB • PHI",65,QB,276.0,267.0
+"LA LOSERS",WR,"A.J. Brown WR • PHI",61,WR,104.0,104.0
+"LA LOSERS",RB,"Christian McCaffrey RB • SF",88,RB,248.0,204.0
+"LA LOSERS",RB,"Joe Mixon RB • HOU",55,RB,113.0,29.0
+"LA LOSERS",K,"Brandon Aubrey K • DAL",1,K,171.0,113.0
+"LA LOSERS",DST,"Eagles DST • PHI",1,DST,85.0,54.0
+"LA LOSERS",WR,"Odell Beckham Jr. WR • MIA",9,WR,39.0,1.0
+"LA LOSERS",RES,"Younghoe Koo K • ATL",2,K,126.0,73.0
+"LA LOSERS",WR,"Jerry Jeudy WR • CLE",5,WR,37.0,3.0
+"LA LOSERS",TE,"David Njoku TE • CLE",3,TE,68.0,24.0
+"LA LOSERS",RES,"Elijah Mitchell RB • KC",3,RB,25.0,0.0
+"LA LOSERS",RES,"Jaxon Smith-Njigba WR • SEA",3,WR,41.0,14.0
+"LA LOSERS",RES,"Richie James WR • KC",1,WR,2.0,0.0
+"LA LOSERS",RES,"Jameson Williams WR • DET",1,WR,46.0,10.0
+"LA LOSERS",RES,"Romeo Doubs WR • GB",1,WR,85.0,56.0
+"LA LOSERS",RES,"Raheem Mostert RB • LV",1,RB,165.0,123.0
+"EGYPTIAN MAGICIANS",WR,"Tyreek Hill WR • MIA",80,WR,173.0,154.0
+"EGYPTIAN MAGICIANS",WR,"Calvin Ridley WR • TEN",31,WR,90.0,39.0
+"EGYPTIAN MAGICIANS",RB,"Dameon Pierce RB • HOU",16,RB,31.0,5.0
+"EGYPTIAN MAGICIANS",QB,"Trevor Lawrence QB • JAC",16,QB,196.0,89.0
+"EGYPTIAN MAGICIANS",DST,"49ers DST • SF",2,DST,108.0,35.0
+"EGYPTIAN MAGICIANS",WR,"DK Metcalf WR • PIT",28,WR,91.0,55.0
+"EGYPTIAN MAGICIANS",RB,"Breece Hall RB • NYJ",19,RB,114.0,88.0
+"EGYPTIAN MAGICIANS",TE,"T.J. Hockenson TE • MIN",24,TE,64.0,64.0
+"EGYPTIAN MAGICIANS",RES,"Dalvin Cook RB • DAL",11,RB,4.0,0.0
+"EGYPTIAN MAGICIANS",RES,"Cam Akers RB • MIN",15,RB,17.0,7.0
+"EGYPTIAN MAGICIANS",RES,"Gabe Davis WR • JAC",9,WR,74.0,0.0
+"EGYPTIAN MAGICIANS",RES,"Mike Evans WR • TB",10,WR,138.0,103.0
+"EGYPTIAN MAGICIANS",RES,"AJ Dillon RB • PHI",7,RB,35.0,3.0
+"EGYPTIAN MAGICIANS",RES,"D'Andre Swift RB • CHI",7,RB,79.0,76.0
+"EGYPTIAN MAGICIANS",RES,"Terry McLaurin WR • WAS",13,WR,70.0,12.0
+"EGYPTIAN MAGICIANS",K,"Daniel Carlson K • LV",12,K,111.0,5.0
+"KENTUCKY FOOTBALL CLUB",WR,"DJ Moore WR • CHI",25,WR,109.0,107.0
+"KENTUCKY FOOTBALL CLUB",RB,"Saquon Barkley RB • PHI",76,RB,101.0,36.0
+"KENTUCKY FOOTBALL CLUB",QB,"Lamar Jackson QB • BAL",49,QB,257.0,219.0
+"KENTUCKY FOOTBALL CLUB",RB,"Derrick Henry RB • BAL",74,RB,126.0,98.0
+"KENTUCKY FOOTBALL CLUB",TE,"Dallas Goedert TE • PHI",15,TE,43.0,11.0
+"KENTUCKY FOOTBALL CLUB",K,"Justin Tucker K • BAL",3,K,163.0,144.0
+"KENTUCKY FOOTBALL CLUB",WR,"DeAndre Hopkins WR • BAL",11,WR,83.0,48.0
+"KENTUCKY FOOTBALL CLUB",RES,"Aaron Rodgers QB • NYJ",2,QB,0.0,0.0
+"KENTUCKY FOOTBALL CLUB",WR,"Michael Thomas WR • NO",9,WR,20.0,8.0
+"KENTUCKY FOOTBALL CLUB",RES,"Adam Thielen WR • CAR",6,WR,61.0,4.0
+"KENTUCKY FOOTBALL CLUB",RES,"David Montgomery RB • DET",8,RB,138.0,63.0
+"KENTUCKY FOOTBALL CLUB",RES,"Rashaad Penny RB •",3,RB,1.0,0.0
+"KENTUCKY FOOTBALL CLUB",RES,"Miles Sanders RB • DAL",13,RB,18.0,0.0
+"KENTUCKY FOOTBALL CLUB",RES,"JuJu Smith-Schuster WR • KC",3,WR,13.0,0.0
+"KENTUCKY FOOTBALL CLUB",DST,"Jets DST • NYJ",1,DST,118.0,19.0
+"KENTUCKY FOOTBALL CLUB",RES,"Dalton Kincaid TE • BUF",1,TE,42.0,0.0

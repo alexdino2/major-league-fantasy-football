@@ -1,0 +1,565 @@
+Team,Player,Draft_freq
+"Munich Cowboys","Kyle Pitts TE",3
+"HOMERS HEROES","Davante Adams WR",3
+"ROCK STARS","Justin Herbert QB",3
+"GENERALS","Alvin Kamara RB",3
+"GENERALS","Alexander Mattison RB",3
+"KENTUCKY FOOTBALL CLUB","Aaron Rodgers QB",3
+"MASTERS OF DISASTER","Ja'Marr Chase WR",3
+"GENERALS","George Kittle TE",3
+"GENERALS","DeVonta Smith WR",3
+"Munich Cowboys","Darrell Henderson Jr. RB •",2
+"DONORA DRAGONS","Amari Cooper WR",2
+"MASTERS OF DISASTER","Travis Kelce TE",2
+"MASTERS OF DISASTER","DK Metcalf WR",2
+"MASTERS OF DISASTER","Kareem Hunt RB",2
+"MASTERS OF DISASTER","J.K. Dobbins RB",2
+"MASTERS OF DISASTER","Courtland Sutton WR",2
+"MASTERS OF DISASTER","Joe Burrow QB",2
+"LEEDS UNITED","Tom Brady QB •",2
+"LEEDS UNITED","James Robinson RB",2
+"LEEDS UNITED","Tyler Bass K",2
+"HOMERS HEROES","Dalvin Cook RB",2
+"HOMERS HEROES","Michael Carter RB",2
+"ROCK STARS","Jonathan Taylor RB",2
+"ROCK STARS","Matthew Stafford QB",2
+"ROCK STARS","Younghoe Koo K",2
+"GENERALS","Tyler Lockett WR",2
+"GENERALS","Harrison Butker K",2
+"LA LOSERS","Keenan Allen WR",2
+"LA LOSERS","Odell Beckham Jr. WR",2
+"LA LOSERS","Rodrigo Blankenship K •",2
+"LA LOSERS","Ravens DST",2
+"EGYPTIAN MAGICIANS","Nick Chubb RB",2
+"EGYPTIAN MAGICIANS","Chris Godwin WR",2
+"EGYPTIAN MAGICIANS","Zack Moss RB",2
+"KENTUCKY FOOTBALL CLUB","Derrick Henry RB",2
+"KENTUCKY FOOTBALL CLUB","JuJu Smith-Schuster WR",2
+"KENTUCKY FOOTBALL CLUB","Damien Harris RB",2
+"KENTUCKY FOOTBALL CLUB","Tee Higgins WR",2
+"KENTUCKY FOOTBALL CLUB","49ers DST",2
+"KENTUCKY FOOTBALL CLUB","Derek Carr QB",2
+"Munich Cowboys","Browns DST",2
+"Munich Cowboys","Brandon Aiyuk WR",2
+"Munich Cowboys","Rhamondre Stevenson RB",2
+"MASTERS OF DISASTER","Elijah Moore WR",2
+"LEEDS UNITED","Josh Jacobs RB",2
+"LEEDS UNITED","Steelers DST",2
+"LEEDS UNITED","Tua Tagovailoa QB",2
+"HOMERS HEROES","Aaron Jones RB",2
+"ROCK STARS","Mark Andrews TE",2
+"ROCK STARS","Stefon Diggs WR",2
+"ROCK STARS","Kenneth Walker III RB",2
+"GENERALS","Josh Allen QB",2
+"GENERALS","Ezekiel Elliott RB",2
+"LA LOSERS","Saquon Barkley RB",2
+"EGYPTIAN MAGICIANS","Deebo Samuel WR",2
+"EGYPTIAN MAGICIANS","Dak Prescott QB",2
+"EGYPTIAN MAGICIANS","Michael Pittman WR",2
+"KENTUCKY FOOTBALL CLUB","Lamar Jackson QB",2
+"KENTUCKY FOOTBALL CLUB","Michael Thomas WR",2
+"KENTUCKY FOOTBALL CLUB","Justin Tucker K",2
+"KENTUCKY FOOTBALL CLUB","Miles Sanders RB",2
+"LEEDS UNITED","Tony Pollard RB",2
+"ROCK STARS","Keenan Allen WR",2
+"GENERALS","Jaylen Waddle WR",2
+"LA LOSERS","Christian McCaffrey RB",2
+"LA LOSERS","Jerry Jeudy WR",2
+"KENTUCKY FOOTBALL CLUB","DeAndre Hopkins WR",2
+"Munich Cowboys","Ezekiel Elliott RB",1
+"Munich Cowboys","A.J. Brown WR",1
+"Munich Cowboys","David Montgomery RB",1
+"Munich Cowboys","Calvin Ridley WR",1
+"Munich Cowboys","T.J. Hockenson TE",1
+"Munich Cowboys","Marquise Brown WR",1
+"Munich Cowboys","Robbie Chosen WR",1
+"Munich Cowboys","Tony Pollard RB",1
+"Munich Cowboys","Matt Gay K",1
+"Munich Cowboys","Trey Sermon RB",1
+"Munich Cowboys","Jalen Hurts QB",1
+"Munich Cowboys","Broncos DST",1
+"Munich Cowboys","Darnell Mooney WR",1
+"Munich Cowboys","Trey Lance QB",1
+"DONORA DRAGONS","Christian McCaffrey RB",1
+"DONORA DRAGONS","Saquon Barkley RB",1
+"DONORA DRAGONS","Dak Prescott QB",1
+"DONORA DRAGONS","Diontae Johnson WR",1
+"DONORA DRAGONS","Myles Gaskin RB",1
+"DONORA DRAGONS","Javonte Williams RB",1
+"DONORA DRAGONS","Brandon Aiyuk WR",1
+"DONORA DRAGONS","Jerry Jeudy WR",1
+"DONORA DRAGONS","Ja'Marr Chase WR",1
+"DONORA DRAGONS","Leonard Fournette RB •",1
+"DONORA DRAGONS","Brandin Cooks WR",1
+"DONORA DRAGONS","Jason Myers K",1
+"DONORA DRAGONS","Steelers DST",1
+"DONORA DRAGONS","Tyler Higbee TE",1
+"DONORA DRAGONS","Ryan Tannehill QB",1
+"MASTERS OF DISASTER","Lamar Jackson QB",1
+"MASTERS OF DISASTER","D'Andre Swift RB",1
+"MASTERS OF DISASTER","Julio Jones WR •",1
+"MASTERS OF DISASTER","Raheem Mostert RB",1
+"MASTERS OF DISASTER","Justin Tucker K",1
+"MASTERS OF DISASTER","Commanders DST",1
+"MASTERS OF DISASTER","Kenny Golladay WR •",1
+"MASTERS OF DISASTER","DeVonta Smith WR",1
+"MASTERS OF DISASTER","Corey Davis WR •",1
+"MASTERS OF DISASTER","Ronald Jones RB •",1
+"LEEDS UNITED","Aaron Jones RB",1
+"LEEDS UNITED","Tyreek Hill WR",1
+"LEEDS UNITED","Mike Davis RB •",1
+"LEEDS UNITED","Robert Woods WR",1
+"LEEDS UNITED","Russell Wilson QB",1
+"LEEDS UNITED","Chase Claypool WR",1
+"LEEDS UNITED","Patriots DST",1
+"LEEDS UNITED","Michael Gallup WR",1
+"LEEDS UNITED","Logan Thomas TE",1
+"LEEDS UNITED","Michael Pittman WR",1
+"LEEDS UNITED","Mecole Hardman WR",1
+"LEEDS UNITED","Phillip Lindsay RB •",1
+"LEEDS UNITED","Irv Smith TE",1
+"HOMERS HEROES","Josh Allen QB",1
+"HOMERS HEROES","Antonio Gibson RB",1
+"HOMERS HEROES","Tua Tagovailoa QB",1
+"HOMERS HEROES","Colts DST",1
+"HOMERS HEROES","Jarvis Landry WR •",1
+"HOMERS HEROES","Mason Crosby K •",1
+"HOMERS HEROES","Curtis Samuel WR",1
+"HOMERS HEROES","Jaylen Waddle WR",1
+"HOMERS HEROES","Rob Gronkowski TE •",1
+"HOMERS HEROES","Noah Fant TE",1
+"HOMERS HEROES","Laviska Shenault Jr. WR",1
+"HOMERS HEROES","Marvin Jones WR •",1
+"HOMERS HEROES","A.J. Green WR •",1
+"ROCK STARS","Joe Mixon RB",1
+"ROCK STARS","Darren Waller TE •",1
+"ROCK STARS","Terry McLaurin WR",1
+"ROCK STARS","Mike Evans WR",1
+"ROCK STARS","Chase Edmonds RB",1
+"ROCK STARS","DJ Moore WR",1
+"ROCK STARS","Rams DST",1
+"ROCK STARS","David Johnson RB •",1
+"ROCK STARS","Antonio Brown WR",1
+"ROCK STARS","Sony Michel RB •",1
+"ROCK STARS","Nelson Agholor WR",1
+"ROCK STARS","Tre'Quan Smith WR",1
+"GENERALS","Patrick Mahomes QB",1
+"GENERALS","Josh Jacobs RB",1
+"GENERALS","DeAndre Hopkins WR",1
+"GENERALS","Latavius Murray RB",1
+"GENERALS","Michael Thomas WR",1
+"GENERALS","Melvin Gordon RB •",1
+"GENERALS","Robert Tonyan TE",1
+"GENERALS","Marquez Callaway WR",1
+"GENERALS","Panthers DST",1
+"GENERALS","Kenyan Drake RB •",1
+"GENERALS","Kirk Cousins QB",1
+"GENERALS","Henry Ruggs III WR •",1
+"LA LOSERS","Najee Harris RB",1
+"LA LOSERS","Austin Ekeler RB",1
+"LA LOSERS","Miles Sanders RB",1
+"LA LOSERS","Justin Jefferson WR",1
+"LA LOSERS","CeeDee Lamb WR",1
+"LA LOSERS","Deebo Samuel WR",1
+"LA LOSERS","Taysom Hill TE",1
+"LA LOSERS","Matt Ryan QB •",1
+"LA LOSERS","Jason Sanders K",1
+"LA LOSERS","Jared Cook TE •",1
+"LA LOSERS","Dallas Goedert TE",1
+"LA LOSERS","J.D. McKissic RB •",1
+"EGYPTIAN MAGICIANS","George Kittle TE",1
+"EGYPTIAN MAGICIANS","Clyde Edwards-Helaire RB",1
+"EGYPTIAN MAGICIANS","Kyler Murray QB",1
+"EGYPTIAN MAGICIANS","Adam Thielen WR",1
+"EGYPTIAN MAGICIANS","Allen Robinson WR",1
+"EGYPTIAN MAGICIANS","Buccaneers DST",1
+"EGYPTIAN MAGICIANS","Greg Zuerlein K",1
+"EGYPTIAN MAGICIANS","Emmanuel Sanders WR •",1
+"EGYPTIAN MAGICIANS","T.Y. Hilton WR •",1
+"EGYPTIAN MAGICIANS","Tyler Boyd WR",1
+"EGYPTIAN MAGICIANS","James Conner RB",1
+"EGYPTIAN MAGICIANS","Will Fuller WR •",1
+"EGYPTIAN MAGICIANS","Mike Williams WR",1
+"KENTUCKY FOOTBALL CLUB","Stefon Diggs WR",1
+"KENTUCKY FOOTBALL CLUB","Chris Carson RB •",1
+"KENTUCKY FOOTBALL CLUB","DJ Chark WR",1
+"KENTUCKY FOOTBALL CLUB","Mark Andrews TE",1
+"KENTUCKY FOOTBALL CLUB","Cooper Kupp WR",1
+"KENTUCKY FOOTBALL CLUB","Ryan Succop K •",1
+"KENTUCKY FOOTBALL CLUB","Darrynton Evans RB",1
+"KENTUCKY FOOTBALL CLUB","Mike Gesicki TE",1
+"KENTUCKY FOOTBALL CLUB","Gus Edwards RB",1
+"Munich Cowboys","Austin Ekeler RB",1
+"Munich Cowboys","Justin Jefferson WR",1
+"Munich Cowboys","Elijah Mitchell RB",1
+"Munich Cowboys","Russell Wilson QB",1
+"Munich Cowboys","DJ Moore WR",1
+"Munich Cowboys","Clyde Edwards-Helaire RB",1
+"Munich Cowboys","JuJu Smith-Schuster WR",1
+"Munich Cowboys","Dameon Pierce RB",1
+"Munich Cowboys","Amon-Ra St. Brown WR",1
+"Munich Cowboys","Daniel Carlson K",1
+"Munich Cowboys","Trevor Lawrence QB",1
+"DONORA DRAGONS","James Conner RB",1
+"DONORA DRAGONS","Joe Mixon RB",1
+"DONORA DRAGONS","Justin Herbert QB",1
+"DONORA DRAGONS","Mike Evans WR",1
+"DONORA DRAGONS","A.J. Brown WR",1
+"DONORA DRAGONS","Terry McLaurin WR",1
+"DONORA DRAGONS","Allen Lazard WR",1
+"DONORA DRAGONS","George Pickens WR",1
+"DONORA DRAGONS","Rashaad Penny RB •",1
+"DONORA DRAGONS","Colts DST",1
+"DONORA DRAGONS","Chase Edmonds RB",1
+"DONORA DRAGONS","Matt Ryan QB •",1
+"DONORA DRAGONS","Dawson Knox TE",1
+"DONORA DRAGONS","Matt Prater K",1
+"DONORA DRAGONS","Mark Ingram RB •",1
+"DONORA DRAGONS","Jamaal Williams RB",1
+"MASTERS OF DISASTER","Nick Chubb RB",1
+"MASTERS OF DISASTER","Cooper Kupp WR",1
+"MASTERS OF DISASTER","Bills DST",1
+"MASTERS OF DISASTER","Kirk Cousins QB",1
+"MASTERS OF DISASTER","David Montgomery RB",1
+"MASTERS OF DISASTER","Dallas Goedert TE",1
+"MASTERS OF DISASTER","AJ Dillon RB",1
+"MASTERS OF DISASTER","T.J. Hockenson TE",1
+"MASTERS OF DISASTER","Matt Gay K",1
+"MASTERS OF DISASTER","Christian Kirk WR",1
+"MASTERS OF DISASTER","Kenneth Gainwell RB",1
+"LEEDS UNITED","Najee Harris RB",1
+"LEEDS UNITED","CeeDee Lamb WR",1
+"LEEDS UNITED","J.K. Dobbins RB",1
+"LEEDS UNITED","Mike Williams WR",1
+"LEEDS UNITED","Gabe Davis WR",1
+"LEEDS UNITED","Marquise Brown WR",1
+"LEEDS UNITED","Allen Robinson WR",1
+"LEEDS UNITED","Zach Ertz TE",1
+"LEEDS UNITED","David Njoku TE",1
+"LEEDS UNITED","Younghoe Koo K",1
+"LEEDS UNITED","Jameis Winston QB",1
+"HOMERS HEROES","Christian McCaffrey RB",1
+"HOMERS HEROES","Kyler Murray QB",1
+"HOMERS HEROES","Dalton Schultz TE",1
+"HOMERS HEROES","Robert Woods WR",1
+"HOMERS HEROES","Darnell Mooney WR",1
+"HOMERS HEROES","Rams DST",1
+"HOMERS HEROES","Trey Lance QB",1
+"HOMERS HEROES","Ryan Succop K •",1
+"HOMERS HEROES","Marquez Valdes-Scantling WR",1
+"HOMERS HEROES","Tyler Allgeier RB",1
+"HOMERS HEROES","Russell Gage WR",1
+"HOMERS HEROES","Chase Claypool WR",1
+"ROCK STARS","Jalen Hurts QB",1
+"ROCK STARS","Devin Singletary RB",1
+"ROCK STARS","Breece Hall RB",1
+"ROCK STARS","Diontae Johnson WR",1
+"ROCK STARS","Brandin Cooks WR",1
+"ROCK STARS","Antonio Gibson RB",1
+"ROCK STARS","Buccaneers DST",1
+"ROCK STARS","Evan McPherson K",1
+"ROCK STARS","Marvin Jones WR •",1
+"ROCK STARS","Julio Jones WR •",1
+"ROCK STARS","Pat Freiermuth TE",1
+"GENERALS","Adam Thielen WR",1
+"GENERALS","Tyler Bass K",1
+"GENERALS","Tony Pollard RB",1
+"GENERALS","Jerry Jeudy WR",1
+"GENERALS","Drake London WR",1
+"GENERALS","Chris Olave WR",1
+"GENERALS","Saints DST",1
+"GENERALS","Michael Gallup WR",1
+"GENERALS","Tyler Boyd WR",1
+"LA LOSERS","Patrick Mahomes QB",1
+"LA LOSERS","Leonard Fournette RB •",1
+"LA LOSERS","Cordarrelle Patterson RB",1
+"LA LOSERS","Tee Higgins WR",1
+"LA LOSERS","Jaylen Waddle WR",1
+"LA LOSERS","Travis Etienne RB",1
+"LA LOSERS","Hunter Renfrow WR",1
+"LA LOSERS","Cowboys DST",1
+"LA LOSERS","Mike Gesicki TE",1
+"LA LOSERS","Ryan Tannehill QB",1
+"LA LOSERS","Donovan Peoples-Jones WR",1
+"LA LOSERS","Josh Palmer WR",1
+"LA LOSERS","Cole Kmet TE",1
+"EGYPTIAN MAGICIANS","Javonte Williams RB",1
+"EGYPTIAN MAGICIANS","Derrick Henry RB",1
+"EGYPTIAN MAGICIANS","Melvin Gordon RB •",1
+"EGYPTIAN MAGICIANS","Darren Waller TE •",1
+"EGYPTIAN MAGICIANS","Packers DST",1
+"EGYPTIAN MAGICIANS","Kadarius Toney WR",1
+"EGYPTIAN MAGICIANS","Harrison Butker K",1
+"EGYPTIAN MAGICIANS","Brian Robinson Jr. RB",1
+"EGYPTIAN MAGICIANS","DeAndre Hopkins WR",1
+"EGYPTIAN MAGICIANS","Rashod Bateman WR",1
+"EGYPTIAN MAGICIANS","Rondale Moore WR",1
+"EGYPTIAN MAGICIANS","Treylon Burks WR",1
+"KENTUCKY FOOTBALL CLUB","Travis Kelce TE",1
+"KENTUCKY FOOTBALL CLUB","D'Andre Swift RB",1
+"KENTUCKY FOOTBALL CLUB","Tyreek Hill WR",1
+"KENTUCKY FOOTBALL CLUB","Cam Akers RB",1
+"KENTUCKY FOOTBALL CLUB","Courtland Sutton WR",1
+"KENTUCKY FOOTBALL CLUB","Irv Smith TE",1
+"KENTUCKY FOOTBALL CLUB","Amari Cooper WR",1
+"KENTUCKY FOOTBALL CLUB","DeVante Parker WR •",1
+"Munich Cowboys","Nick Chubb RB",1
+"Munich Cowboys","Justin Fields QB",1
+"Munich Cowboys","CeeDee Lamb WR",1
+"Munich Cowboys","Chris Olave WR",1
+"Munich Cowboys","Isiah Pacheco RB",1
+"Munich Cowboys","Tyler Lockett WR",1
+"Munich Cowboys","Geno Smith QB",1
+"Munich Cowboys","Rachaad White RB",1
+"Munich Cowboys","Javonte Williams RB",1
+"Munich Cowboys","Brandin Cooks WR",1
+"Munich Cowboys","Zay Flowers WR",1
+"Munich Cowboys","Chigoziem Okonkwo TE",1
+"Munich Cowboys","Cameron Dicker K",1
+"Munich Cowboys","Saints DST",1
+"DONORA DRAGONS","Patrick Mahomes QB",1
+"DONORA DRAGONS","Najee Harris RB",1
+"DONORA DRAGONS","Jonathan Taylor RB",1
+"DONORA DRAGONS","Garrett Wilson WR",1
+"DONORA DRAGONS","Amon-Ra St. Brown WR",1
+"DONORA DRAGONS","Cowboys DST",1
+"DONORA DRAGONS","James Cook RB",1
+"DONORA DRAGONS","Tyler Bass K",1
+"DONORA DRAGONS","Marquise Brown WR",1
+"DONORA DRAGONS","Antonio Gibson RB",1
+"DONORA DRAGONS","Dalton Schultz TE",1
+"DONORA DRAGONS","Ezekiel Elliott RB",1
+"DONORA DRAGONS","Kenny Pickett QB",1
+"DONORA DRAGONS","Rashod Bateman WR",1
+"DONORA DRAGONS","Jaylen Warren RB",1
+"MASTERS OF DISASTER","Justin Jefferson WR",1
+"MASTERS OF DISASTER","Deshaun Watson QB",1
+"MASTERS OF DISASTER","Evan McPherson K",1
+"MASTERS OF DISASTER","Drake London WR",1
+"MASTERS OF DISASTER","Brian Robinson Jr. RB",1
+"MASTERS OF DISASTER","Dak Prescott QB",1
+"MASTERS OF DISASTER","Mike Williams WR",1
+"MASTERS OF DISASTER","Khalil Herbert RB",1
+"MASTERS OF DISASTER","Seahawks DST",1
+"MASTERS OF DISASTER","Evan Engram TE",1
+"MASTERS OF DISASTER","Samaje Perine RB",1
+"MASTERS OF DISASTER","Damien Harris RB",1
+"LEEDS UNITED","Stefon Diggs WR",1
+"LEEDS UNITED","Kirk Cousins QB",1
+"LEEDS UNITED","Christian Watson WR",1
+"LEEDS UNITED","Jared Goff QB",1
+"LEEDS UNITED","Christian Kirk WR",1
+"LEEDS UNITED","Ravens DST",1
+"LEEDS UNITED","James Conner RB",1
+"LEEDS UNITED","Pat Freiermuth TE",1
+"LEEDS UNITED","Jordan Addison WR",1
+"LEEDS UNITED","Brandon Aiyuk WR",1
+"LEEDS UNITED","Diontae Johnson WR",1
+"LEEDS UNITED","Jake Elliott K",1
+"LEEDS UNITED","Quentin Johnston WR",1
+"HOMERS HEROES","Austin Ekeler RB",1
+"HOMERS HEROES","Joe Burrow QB",1
+"HOMERS HEROES","Jahmyr Gibbs RB",1
+"HOMERS HEROES","Tee Higgins WR",1
+"HOMERS HEROES","Darren Waller TE •",1
+"HOMERS HEROES","Jahan Dotson WR",1
+"HOMERS HEROES","George Pickens WR",1
+"HOMERS HEROES","Kadarius Toney WR",1
+"HOMERS HEROES","Patriots DST",1
+"HOMERS HEROES","Daniel Jones QB",1
+"HOMERS HEROES","Greg Joseph K",1
+"HOMERS HEROES","Roschon Johnson RB",1
+"HOMERS HEROES","Michael Gallup WR",1
+"HOMERS HEROES","Zach Charbonnet RB",1
+"HOMERS HEROES","Zay Jones WR",1
+"ROCK STARS","Bijan Robinson RB",1
+"ROCK STARS","Cooper Kupp WR",1
+"ROCK STARS","Aaron Jones RB",1
+"ROCK STARS","Chris Godwin WR",1
+"ROCK STARS","Michael Pittman WR",1
+"ROCK STARS","Isaiah Hodgins WR",1
+"ROCK STARS","Chiefs DST",1
+"ROCK STARS","Derek Carr QB",1
+"ROCK STARS","Brandon McManus K",1
+"ROCK STARS","Jerick McKinnon RB",1
+"ROCK STARS","Tyler Allgeier RB",1
+"ROCK STARS","Tyler Boyd WR",1
+"GENERALS","Deebo Samuel WR",1
+"GENERALS","Travis Etienne RB",1
+"GENERALS","Commanders DST",1
+"GENERALS","Skyy Moore WR",1
+"GENERALS","Juwan Johnson TE",1
+"GENERALS","Treylon Burks WR",1
+"GENERALS","Courtland Sutton WR",1
+"GENERALS","Jamaal Williams RB",1
+"GENERALS","Brock Purdy QB",1
+"LA LOSERS","Jalen Hurts QB",1
+"LA LOSERS","A.J. Brown WR",1
+"LA LOSERS","Joe Mixon RB",1
+"LA LOSERS","Brandon Aubrey K",1
+"LA LOSERS","Eagles DST",1
+"LA LOSERS","Younghoe Koo K",1
+"LA LOSERS","David Njoku TE",1
+"LA LOSERS","Elijah Mitchell RB",1
+"LA LOSERS","Jaxon Smith-Njigba WR",1
+"LA LOSERS","Richie James WR",1
+"LA LOSERS","Jameson Williams WR",1
+"LA LOSERS","Romeo Doubs WR",1
+"LA LOSERS","Raheem Mostert RB",1
+"EGYPTIAN MAGICIANS","Tyreek Hill WR",1
+"EGYPTIAN MAGICIANS","Calvin Ridley WR",1
+"EGYPTIAN MAGICIANS","Dameon Pierce RB",1
+"EGYPTIAN MAGICIANS","Trevor Lawrence QB",1
+"EGYPTIAN MAGICIANS","49ers DST",1
+"EGYPTIAN MAGICIANS","DK Metcalf WR",1
+"EGYPTIAN MAGICIANS","Breece Hall RB",1
+"EGYPTIAN MAGICIANS","T.J. Hockenson TE",1
+"EGYPTIAN MAGICIANS","Dalvin Cook RB",1
+"EGYPTIAN MAGICIANS","Cam Akers RB",1
+"EGYPTIAN MAGICIANS","Gabe Davis WR",1
+"EGYPTIAN MAGICIANS","Mike Evans WR",1
+"EGYPTIAN MAGICIANS","AJ Dillon RB",1
+"EGYPTIAN MAGICIANS","D'Andre Swift RB",1
+"EGYPTIAN MAGICIANS","Terry McLaurin WR",1
+"EGYPTIAN MAGICIANS","Daniel Carlson K",1
+"KENTUCKY FOOTBALL CLUB","DJ Moore WR",1
+"KENTUCKY FOOTBALL CLUB","Saquon Barkley RB",1
+"KENTUCKY FOOTBALL CLUB","Dallas Goedert TE",1
+"KENTUCKY FOOTBALL CLUB","Adam Thielen WR",1
+"KENTUCKY FOOTBALL CLUB","David Montgomery RB",1
+"KENTUCKY FOOTBALL CLUB","Rashaad Penny RB •",1
+"KENTUCKY FOOTBALL CLUB","Jets DST",1
+"KENTUCKY FOOTBALL CLUB","Dalton Kincaid TE",1
+"Munich Cowboys","Joe Burrow QB",1
+"Munich Cowboys","Tyreek Hill WR",1
+"Munich Cowboys","Derrick Henry RB",1
+"Munich Cowboys","James Conner RB",1
+"Munich Cowboys","Drake London WR",1
+"Munich Cowboys","Dalton Kincaid TE",1
+"Munich Cowboys","Jake Ferguson TE",1
+"Munich Cowboys","Jayden Reed WR",1
+"Munich Cowboys","Brian Robinson Jr. RB",1
+"Munich Cowboys","Jerome Ford RB",1
+"Munich Cowboys","Terry McLaurin WR",1
+"Munich Cowboys","Jaylen Warren RB",1
+"Munich Cowboys","Jayden Daniels QB",1
+"Munich Cowboys","Jake Elliott K",1
+"MASTERS OF DISASTER","Travis Etienne RB",1
+"MASTERS OF DISASTER","C.J. Stroud QB",1
+"MASTERS OF DISASTER","Mark Andrews TE",1
+"MASTERS OF DISASTER","Calvin Ridley WR",1
+"MASTERS OF DISASTER","Davante Adams WR",1
+"MASTERS OF DISASTER","George Pickens WR",1
+"MASTERS OF DISASTER","Kyler Murray QB",1
+"MASTERS OF DISASTER","Rhamondre Stevenson RB",1
+"MASTERS OF DISASTER","Chris Olave WR",1
+"MASTERS OF DISASTER","Zamir White RB",1
+"MASTERS OF DISASTER","Cowboys DST",1
+"MASTERS OF DISASTER","Javonte Williams RB",1
+"MASTERS OF DISASTER","Devin Singletary RB",1
+"MASTERS OF DISASTER","Brandon Aubrey K",1
+"LEEDS UNITED","Isiah Pacheco RB",1
+"LEEDS UNITED","DK Metcalf WR",1
+"LEEDS UNITED","Justin Jefferson WR",1
+"LEEDS UNITED","Raheem Mostert RB",1
+"LEEDS UNITED","Anthony Richardson QB",1
+"LEEDS UNITED","Garrett Wilson WR",1
+"LEEDS UNITED","Gus Edwards RB",1
+"LEEDS UNITED","Trey McBride TE",1
+"LEEDS UNITED","Khalil Shakir WR",1
+"LEEDS UNITED","Malik Nabers WR",1
+"LEEDS UNITED","Chris Godwin WR",1
+"LEEDS UNITED","Kyle Pitts TE",1
+"LEEDS UNITED","Aaron Rodgers QB",1
+"HOMERS HEROES","Breece Hall RB",1
+"HOMERS HEROES","Lamar Jackson QB",1
+"HOMERS HEROES","Joe Mixon RB",1
+"HOMERS HEROES","Nico Collins WR",1
+"HOMERS HEROES","DJ Moore WR",1
+"HOMERS HEROES","J.K. Dobbins RB",1
+"HOMERS HEROES","Brock Purdy QB",1
+"HOMERS HEROES","Mike Evans WR",1
+"HOMERS HEROES","Christian Kirk WR",1
+"HOMERS HEROES","Dallas Goedert TE",1
+"HOMERS HEROES","Romeo Doubs WR",1
+"HOMERS HEROES","Justin Tucker K",1
+"HOMERS HEROES","Brandin Cooks WR",1
+"HOMERS HEROES","Xavier Worthy WR",1
+"HOMERS HEROES","Texans DST",1
+"ROCK STARS","Amon-Ra St. Brown WR",1
+"ROCK STARS","Patrick Mahomes QB",1
+"ROCK STARS","Puka Nacua WR",1
+"ROCK STARS","James Cook RB",1
+"ROCK STARS","D'Andre Swift RB",1
+"ROCK STARS","Rachaad White RB",1
+"ROCK STARS","Rashee Rice WR",1
+"ROCK STARS","Jets DST",1
+"ROCK STARS","Brock Bowers TE",1
+"ROCK STARS","Josh Palmer WR",1
+"ROCK STARS","Chuba Hubbard RB",1
+"ROCK STARS","Evan Engram TE",1
+"GENERALS","Jalen Hurts QB",1
+"GENERALS","Kyren Williams RB",1
+"GENERALS","Jahmyr Gibbs RB",1
+"GENERALS","David Montgomery RB",1
+"GENERALS","Bengals DST",1
+"GENERALS","Rome Odunze WR",1
+"GENERALS","Jaxon Smith-Njigba WR",1
+"GENERALS","Ka'imi Fairbairn K",1
+"GENERALS","Dalton Schultz TE",1
+"GENERALS","Tyler Allgeier RB",1
+"GENERALS","Diontae Johnson WR",1
+"GENERALS","DJ Chark WR",1
+"LA LOSERS","Marvin Harrison Jr. WR",1
+"LA LOSERS","Tua Tagovailoa QB",1
+"LA LOSERS","Cooper Kupp WR",1
+"LA LOSERS","Tank Dell WR",1
+"LA LOSERS","Alvin Kamara RB",1
+"LA LOSERS","Daniel Carlson K",1
+"LA LOSERS","Isaiah Likely TE",1
+"LA LOSERS","Jared Goff QB",1
+"LA LOSERS","Kirk Cousins QB",1
+"LA LOSERS","Jakobi Meyers WR",1
+"LA LOSERS","Trey Benson RB",1
+"LA LOSERS","Jonathon Brooks RB",1
+"EGYPTIAN MAGICIANS","A.J. Brown WR",1
+"EGYPTIAN MAGICIANS","Josh Jacobs RB",1
+"EGYPTIAN MAGICIANS","Travis Kelce TE",1
+"EGYPTIAN MAGICIANS","Amari Cooper WR",1
+"EGYPTIAN MAGICIANS","Jason Myers K",1
+"EGYPTIAN MAGICIANS","Bears DST",1
+"EGYPTIAN MAGICIANS","Blake Corum RB",1
+"EGYPTIAN MAGICIANS","Chase Brown RB",1
+"EGYPTIAN MAGICIANS","Marquise Brown WR",1
+"EGYPTIAN MAGICIANS","Curtis Samuel WR",1
+"EGYPTIAN MAGICIANS","Keon Coleman WR",1
+"KENTUCKY FOOTBALL CLUB","CeeDee Lamb WR",1
+"KENTUCKY FOOTBALL CLUB","Josh Allen QB",1
+"KENTUCKY FOOTBALL CLUB","De'Von Achane RB",1
+"KENTUCKY FOOTBALL CLUB","Sam LaPorta TE",1
+"KENTUCKY FOOTBALL CLUB","Trevor Lawrence QB",1
+"KENTUCKY FOOTBALL CLUB","Austin Ekeler RB",1
+"KENTUCKY FOOTBALL CLUB","Najee Harris RB",1
+"KENTUCKY FOOTBALL CLUB","Chiefs DST",1
+"KENTUCKY FOOTBALL CLUB","Jake Moody K",1
+"KENTUCKY FOOTBALL CLUB","Rashid Shaheed WR",1
+"KENTUCKY FOOTBALL CLUB","Tyjae Spears RB",1
+"KENTUCKY FOOTBALL CLUB","Ray Davis RB",1
+"KENTUCKY FOOTBALL CLUB","Rico Dowdle RB",1
+"KENTUCKY FOOTBALL CLUB","Gabe Davis WR",1
+"RELEGATORS","Bijan Robinson RB",1
+"RELEGATORS","Kenneth Walker III RB",1
+"RELEGATORS","Jonathan Taylor RB",1
+"RELEGATORS","Harrison Butker K",1
+"RELEGATORS","49ers DST",1
+"RELEGATORS","Jordan Love QB",1
+"RELEGATORS","Caleb Williams QB",1
+"RELEGATORS","Christian Watson WR",1
+"RELEGATORS","Zay Flowers WR",1
+"RELEGATORS","Jameson Williams WR",1
+"RELEGATORS","David Njoku TE",1
+"RELEGATORS","Jordan Mason RB",1
+"RELEGATORS","Pat Freiermuth TE",1
+"RELEGATORS","Jordan Addison WR",1
+"RELEGATORS","Ladd McConkey WR",1
+"RELEGATORS","Tyler Lockett WR",1

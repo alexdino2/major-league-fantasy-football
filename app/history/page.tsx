@@ -38,15 +38,33 @@ interface Milestone {
 const sampleRecords: Record[] = [
   {
     category: "Most Points in a Season",
-    record: "1,234",
+    record: "1,225",
+    holder: "Masters of Disaster",
+    year: "2018"
+  },
+  {
+    category: "Highest Points in a Game",
+    record: "128",
+    holder: "Egyptian Magicians",
+    year: "2007"
+  },
+  {
+    category: "Highest Winning Percentage",
+    record: ".824",
     holder: "Leeds United",
-    year: "2014"
+    year: "2006"
   },
   {
     category: "Longest Win Streak",
-    record: "8 games",
-    holder: "Masters of Disaster",
-    year: "2018"
+    record: "11 games",
+    holder: "Leeds United",
+    year: "2013"
+  },
+  {
+    category: "Longest Losing Streak",
+    record: "10 games",
+    holder: "Generals",
+    year: "2003"
   }
 ]
 

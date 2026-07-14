@@ -1,122 +1,122 @@
 [
   {
     "team": "Leeds United",
-    "wins": 224,
-    "losses": 184,
-    "ties": 5,
-    "winPercentage": 0.548,
-    "pointsFor": 24483,
-    "pointsAgainst": 23167,
-    "managers": "Josh Kowall (1994-2025)"
-  },
-  {
-    "team": "Polish Power",
-    "wins": 111,
-    "losses": 102,
-    "ties": 5,
-    "winPercentage": 0.521,
-    "pointsFor": 11640,
-    "pointsAgainst": 11391,
-    "managers": "Jeremy Kowall (1994-2012)"
+    "wins": 324,
+    "losses": 268,
+    "ties": 7,
+    "winPercentage": 0.541,
+    "pointsFor": 33938,
+    "pointsAgainst": 30419,
+    "managers": "Josh Kowall (1994-2026)"
   },
   {
     "team": "Masters of Disaster",
-    "wins": 206,
-    "losses": 196,
-    "ties": 10,
-    "winPercentage": 0.512,
-    "pointsFor": 23969,
-    "pointsAgainst": 23469,
-    "managers": "Alex Destino (1994-2025)"
-  },
-  {
-    "team": "Rock Stars",
-    "wins": 204,
-    "losses": 200,
-    "ties": 8,
-    "winPercentage": 0.505,
-    "pointsFor": 23303,
-    "pointsAgainst": 23904,
-    "managers": "Mike Grady (1994-2025)"
+    "wins": 307,
+    "losses": 277,
+    "ties": 14,
+    "winPercentage": 0.513,
+    "pointsFor": 33595,
+    "pointsAgainst": 30822,
+    "managers": "Alex Destino (1994-2026)"
   },
   {
     "team": "Homers Heroes",
-    "wins": 205,
-    "losses": 202,
-    "ties": 5,
-    "winPercentage": 0.504,
-    "pointsFor": 23962,
-    "pointsAgainst": 23580,
-    "managers": "Michael (2016-25) (+2)"
+    "wins": 258,
+    "losses": 249,
+    "ties": 6,
+    "winPercentage": 0.503,
+    "pointsFor": 29561,
+    "pointsAgainst": 28932,
+    "managers": "Michael (2016-26) (+2)"
   },
   {
-    "team": "Egyptian Magicians",
-    "wins": 202,
-    "losses": 199,
+    "team": "Rock Stars",
+    "wins": 291,
+    "losses": 279,
     "ties": 11,
-    "winPercentage": 0.504,
-    "pointsFor": 23961,
-    "pointsAgainst": 23828,
-    "managers": "Seth Lively (1994-2025)"
+    "winPercentage": 0.501,
+    "pointsFor": 32040,
+    "pointsAgainst": 30457,
+    "managers": "Mike Grady (1994-2026)"
   },
   {
     "team": "Generals",
-    "wins": 204,
-    "losses": 203,
-    "ties": 5,
-    "winPercentage": 0.501,
-    "pointsFor": 23791,
-    "pointsAgainst": 23467,
-    "managers": "Cody Patton (1994-2025)"
+    "wins": 272,
+    "losses": 268,
+    "ties": 7,
+    "winPercentage": 0.497,
+    "pointsFor": 30782,
+    "pointsAgainst": 28758,
+    "managers": "Cody Patton (1994-2026)"
+  },
+  {
+    "team": "Egyptian Magicians",
+    "wins": 269,
+    "losses": 266,
+    "ties": 12,
+    "winPercentage": 0.492,
+    "pointsFor": 31237,
+    "pointsAgainst": 29026,
+    "managers": "Seth Lively (1994-2026)"
+  },
+  {
+    "team": "LA Losers",
+    "wins": 293,
+    "losses": 289,
+    "ties": 16,
+    "winPercentage": 0.49,
+    "pointsFor": 31631,
+    "pointsAgainst": 30621,
+    "managers": "Eric Harvill (1994-2026)"
   },
   {
     "team": "Donora Dragons",
-    "wins": 190,
-    "losses": 194,
+    "wins": 226,
+    "losses": 226,
     "ties": 12,
-    "winPercentage": 0.495,
-    "pointsFor": 22367,
-    "pointsAgainst": 22182,
+    "winPercentage": 0.487,
+    "pointsFor": 25342,
+    "pointsAgainst": 24252,
     "managers": "Sammy Kowall (2018-23) (+2)"
   },
   {
     "team": "Kentucky Football Club",
-    "wins": 96,
-    "losses": 104,
+    "wins": 106,
+    "losses": 112,
     "ties": 1,
-    "winPercentage": 0.48,
-    "pointsFor": 11450,
-    "pointsAgainst": 11778,
-    "managers": "Gustave Carruth (2014-25) (+1)"
+    "winPercentage": 0.484,
+    "pointsFor": 12386,
+    "pointsAgainst": 12783,
+    "managers": "Gustave Carruth (2014-26) (+1)"
   },
   {
-    "team": "LA Losers",
-    "wins": 189,
-    "losses": 213,
-    "ties": 10,
-    "winPercentage": 0.471,
-    "pointsFor": 22496,
-    "pointsAgainst": 23318,
-    "managers": "Eric Harvill (1994-2025)"
-  },
-  {
-    "team": "Relegators",
-    "wins": 7,
-    "losses": 8,
-    "ties": 1,
-    "winPercentage": 0.469,
-    "pointsFor": 862,
-    "pointsAgainst": 905,
-    "managers": "Patrick Williams (2024-25)"
+    "team": "Polish Power",
+    "wins": 187,
+    "losses": 192,
+    "ties": 9,
+    "winPercentage": 0.482,
+    "pointsFor": 19528,
+    "pointsAgainst": 17705,
+    "managers": "Jeremy Kowall (1994-2012)"
   },
   {
     "team": "Munich Cowboys",
-    "wins": 184,
-    "losses": 216,
-    "ties": 12,
-    "winPercentage": 0.461,
-    "pointsFor": 22526,
-    "pointsAgainst": 23821,
-    "managers": "Brad Venuti (1994-2025)"
+    "wins": 201,
+    "losses": 231,
+    "ties": 13,
+    "winPercentage": 0.452,
+    "pointsFor": 24582,
+    "pointsAgainst": 24784,
+    "managers": "Brad Venuti (1994-2026)"
+  },
+  {
+    "team": "Relegators",
+    "wins": 10,
+    "losses": 21,
+    "ties": 1,
+    "winPercentage": 0.313,
+    "pointsFor": 1718,
+    "pointsAgainst": 2030,
+    "managers": "Patrick Williams (2024-26)"
   }
 ]

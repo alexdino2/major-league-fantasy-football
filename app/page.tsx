@@ -63,7 +63,7 @@ export default function HomePage() {
                   <CardTitle>Championships</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-3xl font-bold">30</p>
+                  <p className="text-3xl font-bold">32</p>
                   <p className="text-sm text-muted-foreground">Seasons Completed</p>
                 </CardContent>
               </Card>

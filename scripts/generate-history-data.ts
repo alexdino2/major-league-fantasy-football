@@ -1,6 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const { JSDOM } = require('jsdom')
+const { mergePreCbsStandings, writeMergedStandings } = require('./merge-pre-cbs-standings')
 
 interface Championship {
   team: string
@@ -242,11 +243,18 @@ async function main() {
     const html = fs.readFileSync(htmlPath, 'utf-8')
 
     const historyData = parseHistoryData(html)
+    const cbsStandings = historyData.standings
+    historyData.standings = mergePreCbsStandings(cbsStandings)
 
     // Write individual files
     fs.writeFileSync(
       path.join(dataDir, 'championships.json'),
       JSON.stringify(historyData.championships, null, 2)
+    )
+
+    fs.writeFileSync(
+      path.join(dataDir, 'standings-cbs.json'),
+      JSON.stringify(cbsStandings, null, 2)
     )
 
     fs.writeFileSync(

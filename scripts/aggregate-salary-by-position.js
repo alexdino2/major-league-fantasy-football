@@ -19,6 +19,17 @@ function parseCSV(content) {
   return rows;
 }
 
+// Team names appear in different casing across years (e.g. "GENERALS" vs "Generals"),
+// so normalize case-insensitively to the first spelling encountered.
+const canonicalTeamNames = new Map();
+function normalizeTeamName(name) {
+  const key = name.trim().toUpperCase();
+  if (!canonicalTeamNames.has(key)) {
+    canonicalTeamNames.set(key, name.trim());
+  }
+  return canonicalTeamNames.get(key);
+}
+
 // Function to convert salary string to number
 function parseSalary(salaryStr) {
   if (!salaryStr || salaryStr.trim() === '') return 0;
@@ -27,7 +38,7 @@ function parseSalary(salaryStr) {
 }
 
 async function aggregateSalaryByPosition() {
-  const years = [2021, 2022, 2023, 2024];
+  const years = [2021, 2022, 2023, 2024, 2025];
   const allDrafts = [];
   
   // Read and parse each year's draft results
@@ -47,7 +58,7 @@ async function aggregateSalaryByPosition() {
       rows.forEach(row => {
         if (row.Team && row.ELIG && row.Salary) {
           allDrafts.push({
-            Team: row.Team.trim(),
+            Team: normalizeTeamName(row.Team),
             ELIG: row.ELIG.trim(),
             Salary: parseSalary(row.Salary),
             Year: year
@@ -102,7 +113,7 @@ async function aggregateSalaryByPosition() {
   const csv = [csvHeader, ...csvRows].join('\n');
   
   // Write to file
-  const outputPath = path.join(yearlyStatsDir, 'aggregated_salary_by_position_2021_2024.csv');
+  const outputPath = path.join(yearlyStatsDir, 'aggregated_salary_by_position_2021_2025.csv');
   fs.writeFileSync(outputPath, csv);
   
   console.log(`\nAggregated salary data saved to: ${outputPath}`);

@@ -1,0 +1,91 @@
+week,away_team,home_team,away_result,home_result
+1,"Kentucky Football Club","Egyptian Magicians",37.0,52.0
+1,"Homers Heroes","LA Losers",36.0,61.0
+1,"Rock Stars","Munich Cowboys",54.0,50.0
+1,"Relegators","Masters of Disaster",59.0,57.0
+1,"Generals","Leeds United",65.0,46.0
+2,"Munich Cowboys","Homers Heroes",84.0,36.0
+2,"Egyptian Magicians","LA Losers",72.0,42.0
+2,"Leeds United","Kentucky Football Club",55.0,60.0
+2,"Rock Stars","Relegators",60.0,51.0
+2,"Generals","Masters of Disaster",63.0,36.0
+3,"Munich Cowboys","Egyptian Magicians",95.0,51.0
+3,"Masters of Disaster","Rock Stars",70.0,45.0
+3,"Relegators","Leeds United",34.0,62.0
+3,"Kentucky Football Club","LA Losers",58.0,45.0
+3,"Homers Heroes","Generals",47.0,82.0
+4,"Generals","Relegators",81.0,61.0
+4,"Egyptian Magicians","Masters of Disaster",57.0,59.0
+4,"Leeds United","Rock Stars",69.0,56.0
+4,"Homers Heroes","Kentucky Football Club",79.0,64.0
+4,"LA Losers","Munich Cowboys",75.0,76.0
+5,"Munich Cowboys","Leeds United",76.0,59.0
+5,"Relegators","Egyptian Magicians",56.0,62.0
+5,"Kentucky Football Club","Rock Stars",51.0,73.0
+5,"LA Losers","Generals",66.0,66.0
+5,"Masters of Disaster","Homers Heroes",57.0,49.0
+6,"Rock Stars","Munich Cowboys",59.0,59.0
+6,"Generals","Homers Heroes",65.0,49.0
+6,"Egyptian Magicians","Masters of Disaster",53.0,64.0
+6,"Relegators","Kentucky Football Club",52.0,74.0
+6,"Leeds United","LA Losers",73.0,22.0
+7,"Relegators","Munich Cowboys",86.0,108.0
+7,"Homers Heroes","Leeds United",96.0,76.0
+7,"Masters of Disaster","Kentucky Football Club",58.0,52.0
+7,"Generals","Egyptian Magicians",47.0,35.0
+7,"LA Losers","Rock Stars",31.0,56.0
+8,"LA Losers","Munich Cowboys",99.0,72.0
+8,"Relegators","Masters of Disaster",43.0,96.0
+8,"Rock Stars","Generals",48.0,56.0
+8,"Egyptian Magicians","Kentucky Football Club",72.0,53.0
+8,"Homers Heroes","Leeds United",49.0,46.0
+9,"LA Losers","Kentucky Football Club",71.0,98.0
+9,"Masters of Disaster","Rock Stars",37.0,55.0
+9,"Leeds United","Generals",67.0,70.0
+9,"Munich Cowboys","Relegators",61.0,40.0
+9,"Egyptian Magicians","Homers Heroes",48.0,70.0
+10,"LA Losers","Generals",45.0,78.0
+10,"Rock Stars","Relegators",62.0,36.0
+10,"Homers Heroes","Masters of Disaster",74.0,62.0
+10,"Kentucky Football Club","Munich Cowboys",56.0,100.0
+10,"Leeds United","Egyptian Magicians",56.0,65.0
+11,"Kentucky Football Club","Homers Heroes",46.0,43.0
+11,"Masters of Disaster","Leeds United",77.0,39.0
+11,"Generals","Munich Cowboys",53.0,47.0
+11,"Rock Stars","LA Losers",66.0,45.0
+11,"Egyptian Magicians","Relegators",59.0,62.0
+12,"Egyptian Magicians","Rock Stars",55.0,47.0
+12,"Masters of Disaster","LA Losers",55.0,37.0
+12,"Generals","Kentucky Football Club",51.0,60.0
+12,"Munich Cowboys","Leeds United",67.0,39.0
+12,"Relegators","Homers Heroes",65.0,98.0
+13,"Masters of Disaster","Munich Cowboys",77.0,73.0
+13,"Kentucky Football Club","Relegators",48.0,47.0
+13,"Egyptian Magicians","Generals",51.0,94.0
+13,"Rock Stars","Homers Heroes",35.0,64.0
+13,"LA Losers","Leeds United",31.0,45.0
+14,"Munich Cowboys","Kentucky Football Club",62.0,64.0
+14,"Homers Heroes","Egyptian Magicians",70.0,59.0
+14,"Rock Stars","Generals",30.0,70.0
+14,"Relegators","LA Losers",61.0,67.0
+14,"Leeds United","Masters of Disaster",35.0,42.0
+15,"Munich Cowboys","Egyptian Magicians",98.0,66.0
+15,"Kentucky Football Club","Rock Stars",50.0,54.0
+15,"Homers Heroes","LA Losers",71.0,91.0
+15,"Masters of Disaster","Generals",65.0,79.0
+15,"Leeds United","Relegators",41.0,65.0
+16,"Munich Cowboys","Homers Heroes",50.0,49.0
+16,"LA Losers","Egyptian Magicians",95.0,52.0
+16,"Leeds United","Rock Stars",44.0,85.0
+16,"Generals","Relegators",89.0,38.0
+16,"Kentucky Football Club","Masters of Disaster",65.0,91.0
+17,"Munich Cowboys","Generals",54.0,35.0
+17,"Homers Heroes","Masters of Disaster",27.0,96.0
+17,"Rock Stars","Kentucky Football Club",77.0,61.0
+17,"Egyptian Magicians","Leeds United",35.0,64.0
+17,"LA Losers","Relegators",52.0,88.0
+18,"Generals","Munich Cowboys",65.0,60.0
+18,"TBA","TBA",0.0,0.0
+18,"TBA","TBA",0.0,0.0
+18,"TBA","TBA",0.0,0.0
+18,"TBA","TBA",0.0,0.0

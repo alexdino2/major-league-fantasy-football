@@ -1,2 +1,24 @@
 record,team,value
-"No records were found.","",
+"Most Points Scored, Game","Munich Cowboys",108.0000
+"Most Points Scored, Season","Munich Cowboys",1178.0
+"Least Points Scored, Season","Leeds United",852.0
+"Most Points Allowed, Season","Relegators",1125.0
+"Least Points Allowed, Season","Generals",791.0
+"Highest Average Game Score, Season","Munich Cowboys",73.62
+"Lowest Average Game Score, Season","Leeds United",53.25
+"Least Points Scored, Game","Munich Cowboys",0
+"Most Points Allowed, Game","Relegators",108.0000
+"Least Points Allowed, Game","Munich Cowboys",0
+"Highest Winning Percentage, Season","Generals",0.906
+"Lowest Winning Percentage, Season","Relegators",0.188
+"Most Wins, Season","Generals",14
+"Least Wins, Season","Relegators",3
+"Best Margin of Victory, Game","Masters of Disaster",53
+"Worst Margin of Defeat, Game","Relegators",-53
+"Best Average Point Differential, Season","Generals",19.88
+"Worst Average Point Differential, Season","Relegators",-16.81
+"Longest Winning Streak, Season","Generals",10
+"Longest Losing Streak, Season","Relegators",9
+"Best Power Ranking, Season","Generals",29
+"Worst Power Ranking, Season","Leeds United",4
+"Most High Week Scores, Season","Munich Cowboys",6

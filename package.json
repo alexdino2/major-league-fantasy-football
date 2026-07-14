@@ -15,7 +15,8 @@
     "scrape-draft-results": "node scripts/scrape-draft-results.js",
     "fix-munich-cowboys": "node scripts/fix-munich-cowboys.js",
     "fix-munich-cowboys:revert": "node scripts/fix-munich-cowboys.js revert",
-    "merge-draft-results": "node scripts/merge-draft-results.js"
+    "merge-draft-results": "node scripts/merge-draft-results.js",
+    "merge-pre-cbs-standings": "node scripts/merge-pre-cbs-standings.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -87,6 +88,7 @@
     "prisma": "^6.9.0",
     "tailwindcss": "^3.4.17",
     "ts-node": "^10.9.2",
-    "typescript": "^5"
+    "typescript": "^5",
+    "xlsx": "^0.18.5"
   }
 }

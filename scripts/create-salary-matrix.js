@@ -39,7 +39,7 @@ function getYearlySalaries(team, position, allDrafts) {
 
 async function createSalaryMatrix() {
   // Read the aggregated salary file
-  const aggregatedFilePath = path.join(yearlyStatsDir, 'aggregated_salary_by_position_2021_2024.csv');
+  const aggregatedFilePath = path.join(yearlyStatsDir, 'aggregated_salary_by_position_2021_2025.csv');
   
   if (!fs.existsSync(aggregatedFilePath)) {
     console.error('Aggregated salary file not found. Please run the aggregate-salary-by-position.js script first.');
@@ -109,7 +109,7 @@ async function createSalaryMatrix() {
     const csv = [csvHeader, ...csvRows].join('\n');
     
     // Write to file
-    const outputPath = path.join(yearlyStatsDir, 'salary_matrix_2021_2024.csv');
+    const outputPath = path.join(yearlyStatsDir, 'salary_matrix_2021_2025.csv');
     fs.writeFileSync(outputPath, csv);
     
     console.log(`\nSalary matrix saved to: ${outputPath}`);

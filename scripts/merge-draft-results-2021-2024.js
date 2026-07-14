@@ -19,6 +19,17 @@ function parseCSV(content) {
   return rows;
 }
 
+// Team names appear in different casing across years (e.g. "GENERALS" vs "Generals"),
+// so normalize case-insensitively to the first spelling encountered.
+const canonicalTeamNames = new Map();
+function normalizeTeamName(name) {
+  const key = name.trim().toUpperCase();
+  if (!canonicalTeamNames.has(key)) {
+    canonicalTeamNames.set(key, name.trim());
+  }
+  return canonicalTeamNames.get(key);
+}
+
 // Function to clean player names (remove team info)
 function cleanPlayerName(playerName) {
   // Remove " • TEAM" part from player names
@@ -26,7 +37,7 @@ function cleanPlayerName(playerName) {
 }
 
 async function mergeDraftResults() {
-  const years = [2021, 2022, 2023, 2024];
+  const years = [2021, 2022, 2023, 2024, 2025];
   const allDrafts = [];
   
   // Read and parse each year's draft results
@@ -46,7 +57,7 @@ async function mergeDraftResults() {
       rows.forEach(row => {
         if (row.Team && row.Player) {
           allDrafts.push({
-            Team: row.Team.trim(),
+            Team: normalizeTeamName(row.Team),
             Player: cleanPlayerName(row.Player),
             Year: year
           });
@@ -93,7 +104,7 @@ async function mergeDraftResults() {
   const csv = [csvHeader, ...csvRows].join('\n');
   
   // Write to file
-  const outputPath = path.join(yearlyStatsDir, 'merged_draft_results_2021_2022_2023_2024.csv');
+  const outputPath = path.join(yearlyStatsDir, 'merged_draft_results_2021_2025.csv');
   fs.writeFileSync(outputPath, csv);
   
   console.log(`\nMerged draft results saved to: ${outputPath}`);

@@ -34,6 +34,16 @@
     ]
   },
   {
+    "team": "Generals",
+    "championships": 3.5,
+    "years": [
+      "2012",
+      "2017",
+      "2022*",
+      "2024"
+    ]
+  },
+  {
     "team": "Egyptian Magicians",
     "championships": 3,
     "years": [
@@ -43,21 +53,12 @@
     ]
   },
   {
-    "team": "Generals",
-    "championships": 4,
-    "years": [
-      "2012",
-      "2017",
-      "2022",
-      "2024"
-    ]
-  },
-  {
     "team": "Munich Cowboys",
-    "championships": 2,
+    "championships": 2.5,
     "years": [
       "2019",
-      "2022"
+      "2022*",
+      "2025"
     ]
   },
   {

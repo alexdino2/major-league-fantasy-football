@@ -16,7 +16,8 @@ if (!fs.existsSync(yearlyStatsDir)) {
 }
 
 const draftUrls = [
-  { year: 2024, url: 'https://mlffatl.football.cbssports.com/draft/results/2024:Pre-season:MLFF%20AUCTION3/' }
+  { year: 2024, url: 'https://mlffatl.football.cbssports.com/draft/results/2024:Pre-season:MLFF%20AUCTION3/' },
+  { year: 2025, url: 'https://mlffatl.football.cbssports.com/draft/results/2025:Pre-season:Pre-season/' }
 ];
 
 async function waitForUserInput(message) {

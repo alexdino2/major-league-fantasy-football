@@ -76,8 +76,8 @@ const sampleMilestones: Milestone[] = [
   },
   {
     year: 2010,
-    event: "Expansion",
-    description: "League expanded to 14 teams"
+    event: "Roster Change",
+    description: "League added a third starting receiver"
   }
 ]
 
@@ -200,13 +200,16 @@ export default function HistoryPage() {
                     <CardTitle className="text-lg">{team.team}</CardTitle>
                   </div>
                   <Badge variant={index < 3 ? "default" : "secondary"} className="ml-auto">
-                    {team.championships} {team.championships === 1 ? 'Title' : 'Titles'}
+                    {Number.isInteger(team.championships) ? team.championships : team.championships.toFixed(1)} {team.championships === 1 ? 'Title' : 'Titles'}
                   </Badge>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
                     {team.years.join(', ')}
                   </p>
+                  {team.years.some(year => year.includes('*')) && (
+                    <p className="text-xs text-muted-foreground mt-1">* Co-championship (½ title)</p>
+                  )}
                 </CardContent>
               </Card>
             ))}

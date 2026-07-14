@@ -8,6 +8,7 @@ const EXCEL_PATH = path.join(DATA_DIR, 'MLFF Records Pre-CBS.xlsx')
 /** Renamed franchises: pre-CBS name -> current CBS franchise name */
 const TEAM_MAPPINGS = {
   'Magical Mystery Men': 'Homers Heroes',
+  'Italian Stallions': 'Munich Cowboys',
 }
 
 function aggregatePreCbs(rows) {

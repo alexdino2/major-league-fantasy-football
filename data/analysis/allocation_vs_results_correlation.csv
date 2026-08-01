@@ -1,0 +1,10 @@
+SpendVariable,TeamSeasons,Corr_vs_PointsFor_raw,Corr_vs_PointsFor_zByYear,Corr_vs_Wins_zByYear
+RB,50,0.008,-0.089,0.201
+WR,50,-0.101,-0.04,-0.356
+QB,50,0.075,0.189,0.216
+TE,50,0.04,0.051,0.086
+K,50,0.012,-0.044,-0.099
+DST,50,0.306,0.37,0.187
+TOP3,50,-0.145,-0.129,-0.016
+STARS,50,-0.133,-0.152,-0.021
+DEPTH,50,0.094,0.067,-0.109

@@ -40,6 +40,29 @@ const HEADLESS = process.env.CBS_HEADLESS
 
 const debugDir = path.join(dataDir, 'scrape-debug');
 
+// Sandboxed environments can put a TLS-inspecting gateway in front of all
+// outbound traffic. curl and node trust it through the usual CA env vars, but
+// Chromium reads neither, so every request dies with ERR_CERT_AUTHORITY_INVALID.
+// Pin the SPKIs of the CAs in that bundle instead of turning verification off:
+// certificates outside the pinned set are still rejected normally.
+function proxyCaPins() {
+  const bundles = [process.env.NODE_EXTRA_CA_CERTS, process.env.SSL_CERT_FILE].filter(Boolean);
+  const pins = new Set();
+  for (const file of bundles) {
+    if (!fs.existsSync(file)) continue;
+    const certs = fs.readFileSync(file, 'utf8').match(/-----BEGIN CERTIFICATE-----[\s\S]*?-----END CERTIFICATE-----/g) || [];
+    for (const pem of certs) {
+      try {
+        const x = new (require('crypto').X509Certificate)(pem);
+        // Only the sandbox's own interception CAs, never public roots.
+        if (!/Anthropic|Egress Gateway|TLS Inspection|Proxy CA/i.test(x.subject)) continue;
+        pins.add(require('crypto').createHash('sha256').update(x.publicKey.export({ type: 'spki', format: 'der' })).digest('base64'));
+      } catch { /* not a parseable cert, skip */ }
+    }
+  }
+  return [...pins];
+}
+
 async function waitForUserInput(message) {
   if (!INTERACTIVE) {
     console.log(`(non-interactive: skipping "${message.trim()}")`);
@@ -85,13 +108,30 @@ async function scrapeDraftResults() {
   console.log(`Years: ${draftUrls.map(d => d.year).join(', ')}`);
   console.log(`Mode: ${HEADLESS ? 'headless' : 'headed'}, ${INTERACTIVE ? 'interactive' : 'non-interactive'}\n`);
 
+  const pins = proxyCaPins();
+  const sandboxArgs = [];
+  if (pins.length) {
+    // The gateway intercepts transparently, so Chromium must go direct rather
+    // than through HTTPS_PROXY - it gets its connections reset otherwise.
+    // Only the component updater is silenced. --disable-background-networking
+    // is deliberately not used: it keeps the login page's scripts from
+    // loading, and an unhydrated form falls back to a native GET submit.
+    sandboxArgs.push('--no-proxy-server',
+                     '--disable-component-update',
+                     `--ignore-certificate-errors-spki-list=${pins.join(',')}`);
+    console.log(`Trusting ${pins.length} sandbox interception CA(s) by public-key pin`);
+  }
+
   const browser = await puppeteer.launch({
     headless: HEADLESS,
     defaultViewport: HEADLESS ? { width: 1440, height: 1200 } : null,
-    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
-    args: HEADLESS
-      ? ['--no-sandbox', '--disable-dev-shm-usage']
-      : ['--start-maximized']
+    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH
+      || (fs.existsSync('/opt/pw-browsers/chromium-1194/chrome-linux/chrome')
+          ? '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' : undefined),
+    args: [
+      ...(HEADLESS ? ['--no-sandbox', '--disable-dev-shm-usage'] : ['--start-maximized']),
+      ...sandboxArgs
+    ]
   });
 
   const scraped = [];
@@ -111,9 +151,23 @@ async function scrapeDraftResults() {
     console.log('Clicking submit...');
     await page.waitForSelector('button[type="submit"]', { visible: true });
     await page.click('button[type="submit"]');
-    console.log('Waiting for navigation...');
-    await page.waitForNavigation({ waitUntil: 'networkidle0', timeout: 60000 });
+
+    // CBS signs in over XHR, so there is often no navigation to wait for.
+    // Poll for the URL leaving /login instead of hanging on waitForNavigation.
+    console.log('Waiting for sign-in to complete...');
+    for (let i = 0; i < 30 && page.url().includes('/login'); i++) await sleep(1000);
     await waitForUserInput('Please solve any captcha if present, then press Enter to continue...');
+
+    // An unhydrated form submits natively and puts the password in the query
+    // string. Never carry on from that state - the URL would be logged by
+    // every proxy in the path.
+    if (/[?&]password=/i.test(page.url())) {
+      await page.goto('about:blank');
+      throw new Error(
+        'The login form submitted as a plain GET, putting the credentials in the URL. ' +
+        'The page scripts did not load, so nothing was actually signed in. Aborting.'
+      );
+    }
 
     if (page.url().includes('/login')) {
       await dumpPage(page, 'login-failed');

@@ -88,6 +88,11 @@ function parse(year) {
     };
     const player = cell('Player');
     if (!player || player.toLowerCase() === 'player') return;
+    // CBS links each name to /players/playerpage/<id>. That id is a far safer
+    // join key than the name when points have to be sourced from another page
+    // - it survives "Jr.", punctuation differences and duplicate names.
+    const href = idx.Player === undefined ? '' : ($(cells[idx.Player]).find('a').attr('href') || '');
+    const cbsId = (href.match(/playerpage\/(\d+)/) || [])[1] || '';
     rows.push({
       Team: currentTeam || '',
       POS: cell('POS'),
@@ -96,6 +101,7 @@ function parse(year) {
       ELIG: cell('ELIG'),
       'Total FPTS': cell('Total FPTS'),
       'Active FPTS': cell('Active FPTS'),
+      cbsId,
     });
   });
 
@@ -112,6 +118,18 @@ function parse(year) {
 
   fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(path.join(outDir, `draft_results_${year}.csv`), csv + '\n');
+
+  // Sidecar id map, written whenever the page carried ids. Kept separate so
+  // the draft CSVs keep the column layout every other script expects.
+  const ided = rows.filter((r) => r.cbsId);
+  if (ided.length) {
+    const idCsv = [
+      'Year,Team,Player,CbsPlayerId',
+      ...ided.map((r) => [year, q(r.Team), q(r.Player), r.cbsId].join(',')),
+    ].join('\n');
+    fs.writeFileSync(path.join(outDir, `draft_player_ids_${year}.csv`), idCsv + '\n');
+    console.log(`  ${year}: wrote draft_player_ids_${year}.csv (${ided.length} ids)`);
+  }
 
   const withPoints = rows.filter((r) => r['Total FPTS']).length;
   const teams = new Set(rows.map((r) => r.Team)).size;

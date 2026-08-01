@@ -23,7 +23,6 @@ const fs = require('fs');
 const path = require('path');
 
 const YEARS = [2021, 2022, 2023, 2024, 2025];
-const SCORED_YEARS = [2021, 2022, 2023]; // years with player-level FPTS
 const POSITIONS = ['RB', 'WR', 'QB', 'TE', 'K', 'DST'];
 const CAP = 300;
 
@@ -149,6 +148,14 @@ for (const y of YEARS) {
   seasonPoints[y] = loadSeasonPoints(y);
 }
 const allPicks = YEARS.flatMap((y) => draft[y]);
+
+// Years whose draft file actually carries player points. Derived rather than
+// hardcoded so that back-filling a season's FPTS widens the analysis on the
+// next run with no code change.
+const SCORED_YEARS = YEARS.filter((y) => draft[y].some((p) => p.totalPts !== null));
+if (!SCORED_YEARS.length) throw new Error('No draft file contains player FPTS.');
+console.log(`Spend analysis: ${YEARS.join(', ')}`);
+console.log(`Points analysis: ${SCORED_YEARS.join(', ')} (${SCORED_YEARS.length * 160} roster spots)\n`);
 
 fs.mkdirSync(outDir, { recursive: true });
 

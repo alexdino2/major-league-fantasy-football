@@ -6,6 +6,11 @@ const readline = require('readline');
 
 dotenv.config({ path: '.env.local' });
 
+// Accept a few spellings so the credentials work whether they came from
+// .env.local or from environment settings named something shorter.
+const CBS_EMAIL = process.env.CBS_SPORTS_EMAIL || process.env.CBS_EMAIL || process.env.cbslogin || process.env.CBSLOGIN;
+const CBS_PASSWORD = process.env.CBS_SPORTS_PASSWORD || process.env.CBS_PASSWORD || process.env.cbspw || process.env.CBSPW;
+
 const dataDir = path.join(process.cwd(), 'data');
 if (!fs.existsSync(dataDir)) {
   fs.mkdirSync(dataDir);
@@ -15,12 +20,31 @@ if (!fs.existsSync(yearlyStatsDir)) {
   fs.mkdirSync(yearlyStatsDir);
 }
 
-const draftUrls = [
+const ALL_DRAFT_URLS = [
   { year: 2024, url: 'https://mlffatl.football.cbssports.com/draft/results/2024:Pre-season:MLFF%20AUCTION3/' },
   { year: 2025, url: 'https://mlffatl.football.cbssports.com/draft/results/2025:Pre-season:Pre-season/' }
 ];
 
+// `node scripts/scrape-draft-results.js 2024` limits the run to those years.
+const requestedYears = process.argv.slice(2).map(Number).filter(Boolean);
+const draftUrls = requestedYears.length
+  ? ALL_DRAFT_URLS.filter(d => requestedYears.includes(d.year))
+  : ALL_DRAFT_URLS;
+
+// Interactive by default (so a human can clear a captcha), automatic when
+// there is no terminal attached - e.g. running inside a container or CI.
+const INTERACTIVE = process.stdin.isTTY && process.env.CBS_NONINTERACTIVE !== '1';
+const HEADLESS = process.env.CBS_HEADLESS
+  ? process.env.CBS_HEADLESS === '1'
+  : !INTERACTIVE;
+
+const debugDir = path.join(dataDir, 'scrape-debug');
+
 async function waitForUserInput(message) {
+  if (!INTERACTIVE) {
+    console.log(`(non-interactive: skipping "${message.trim()}")`);
+    return;
+  }
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -33,17 +57,44 @@ async function waitForUserInput(message) {
   });
 }
 
+// When a headless run hits a captcha or an unexpected page there is nobody to
+// look at the screen, so leave behind enough to diagnose it afterwards.
+async function dumpPage(page, label) {
+  fs.mkdirSync(debugDir, { recursive: true });
+  const stem = path.join(debugDir, label);
+  try {
+    await page.screenshot({ path: `${stem}.png`, fullPage: true });
+    fs.writeFileSync(`${stem}.html`, await page.content());
+    console.log(`  wrote data/scrape-debug/${label}.{png,html}`);
+  } catch (e) {
+    console.log(`  could not capture debug output: ${e.message}`);
+  }
+}
+
 async function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 async function scrapeDraftResults() {
+  if (!CBS_EMAIL || !CBS_PASSWORD) {
+    throw new Error(
+      'CBS credentials must be set (env or .env.local): CBS_SPORTS_EMAIL/CBS_SPORTS_PASSWORD, ' +
+      'or cbslogin/cbspw. The MLFF league pages are private, so there is no unauthenticated fallback.'
+    );
+  }
+  console.log(`Years: ${draftUrls.map(d => d.year).join(', ')}`);
+  console.log(`Mode: ${HEADLESS ? 'headless' : 'headed'}, ${INTERACTIVE ? 'interactive' : 'non-interactive'}\n`);
+
   const browser = await puppeteer.launch({
-    headless: false,
-    defaultViewport: null,
-    args: ['--start-maximized']
+    headless: HEADLESS,
+    defaultViewport: HEADLESS ? { width: 1440, height: 1200 } : null,
+    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
+    args: HEADLESS
+      ? ['--no-sandbox', '--disable-dev-shm-usage']
+      : ['--start-maximized']
   });
 
+  const scraped = [];
   try {
     const page = await browser.newPage();
     console.log('Navigating to login page...');
@@ -55,14 +106,23 @@ async function scrapeDraftResults() {
     await page.waitForSelector('input[name="email"]', { visible: true });
     await page.waitForSelector('input[name="password"]', { visible: true });
     console.log('Entering credentials...');
-    await page.type('input[name="email"]', process.env.CBS_SPORTS_EMAIL);
-    await page.type('input[name="password"]', process.env.CBS_SPORTS_PASSWORD);
+    await page.type('input[name="email"]', CBS_EMAIL);
+    await page.type('input[name="password"]', CBS_PASSWORD);
     console.log('Clicking submit...');
     await page.waitForSelector('button[type="submit"]', { visible: true });
     await page.click('button[type="submit"]');
     console.log('Waiting for navigation...');
     await page.waitForNavigation({ waitUntil: 'networkidle0', timeout: 60000 });
     await waitForUserInput('Please solve any captcha if present, then press Enter to continue...');
+
+    if (page.url().includes('/login')) {
+      await dumpPage(page, 'login-failed');
+      throw new Error(
+        `Still on the login page after submitting credentials (${page.url()}). ` +
+        'This is usually a captcha or a rejected password - see data/scrape-debug/login-failed.png.'
+      );
+    }
+    console.log(`Logged in (now at ${page.url()})`);
 
     for (const { year, url } of draftUrls) {
       console.log(`\nProcessing year ${year}...`);
@@ -73,7 +133,8 @@ async function scrapeDraftResults() {
           timeout: 60000
         });
         if (response.url().includes('login')) {
-          console.log('Got redirected to login page. Please log in again...');
+          console.log('Got redirected to login page - the session did not stick.');
+          await dumpPage(page, `redirected-${year}`);
           await waitForUserInput('Press Enter after logging in...');
           continue;
         }
@@ -122,8 +183,11 @@ async function scrapeDraftResults() {
               if (cells.length > 5 && cells[5]) {
                 ActiveFPTS = cells[5].innerText ? cells[5].innerText.trim() : null;
               }
-              // For years before 2021 and 2024, set FPTS columns to null
-              if (year < 2021 || year === 2024) {
+              // CBS did not publish per-player fantasy points on the draft
+              // results page before 2021, so there is nothing to read there.
+              // (2024 used to be excluded here too, which is why that season's
+              // FPTS columns came back empty even though CBS has them.)
+              if (year < 2021) {
                 TotalFPTS = null;
                 ActiveFPTS = null;
               }
@@ -150,9 +214,20 @@ async function scrapeDraftResults() {
             path.join(yearlyStatsDir, `draft_results_${year}.csv`),
             csv
           );
-          console.log(`Saved draft results for ${year}`);
+          // The whole point of re-running is the points columns, so say plainly
+          // whether they arrived rather than just reporting row counts.
+          const withPoints = draftResults.filter(r => r.TotalFPTS).length;
+          console.log(`Saved ${draftResults.length} rows for ${year}; ${withPoints} have Total FPTS`);
+          if (!withPoints) {
+            console.log(`  WARNING: no fantasy points for ${year}. If the season is complete, ` +
+                        'the draft results page may still be showing its pre-season view.');
+            await dumpPage(page, `no-points-${year}`);
+          }
+          scraped.push({ year, rows: draftResults.length, withPoints });
         } else {
-          console.log(`No draft results data found for ${year}`);
+          console.log(`No draft results data found for ${year} - page layout may have changed`);
+          await dumpPage(page, `no-table-${year}`);
+          scraped.push({ year, rows: 0, withPoints: 0 });
         }
         await sleep(1000);
       } catch (yearError) {
@@ -160,7 +235,13 @@ async function scrapeDraftResults() {
         continue;
       }
     }
-    console.log('\nScraping completed successfully!');
+    console.log('\nSummary:');
+    for (const s of scraped) {
+      console.log(`  ${s.year}: ${s.rows} rows, ${s.withPoints} with points`);
+    }
+    if (scraped.some(s => s.withPoints)) {
+      console.log('\nNext: node scripts/auction-analysis.js');
+    }
   } catch (error) {
     console.error('Error scraping draft results:', error);
     throw error;

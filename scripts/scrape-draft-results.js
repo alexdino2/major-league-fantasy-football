@@ -64,6 +64,13 @@ async function waitForManualLogin(page, timeoutMs = Number(process.env.CBS_LOGIN
   const statusPath = path.join(dataDir, 'cbs-login-status.txt');
   fs.writeFileSync(statusPath, 'waiting_for_login\n');
 
+  const signalPath = path.join(dataDir, 'cbs-login-done.flag');
+  if (fs.existsSync(signalPath)) {
+    fs.unlinkSync(signalPath);
+  }
+  console.log(`   Or create signal file: ${signalPath}`);
+  console.log('   (Script will NOT navigate away while you finish login.)');
+
   while (Date.now() - start < timeoutMs) {
     const url = page.url();
     if (url !== lastUrl) {
@@ -72,20 +79,22 @@ async function waitForManualLogin(page, timeoutMs = Number(process.env.CBS_LOGIN
       fs.writeFileSync(statusPath, `waiting_for_login\nurl=${url}\n`);
     }
 
-    // Strong signal: can reach the league without redirect to login
+    // Success: puppeteer page is already on the league
     if (url.includes('mlffatl.football.cbssports.com') && !url.includes('login')) {
       console.log('Detected league URL — login looks successful.');
       fs.writeFileSync(statusPath, `logged_in\nurl=${url}\n`);
       return true;
     }
 
-    // Soft signal: left the login page on cbssports
-    if (!url.includes('/login') && url.includes('cbssports.com')) {
-      // Probe the league to confirm cookies work
+    // Only probe when the user/agent explicitly signals done — never
+    // steal the tab while they're on get-pass / captcha / registration.
+    if (fs.existsSync(signalPath)) {
+      console.log('Detected cbs-login-done.flag — probing league with current cookies...');
+      try { fs.unlinkSync(signalPath); } catch {}
       try {
         const probe = await page.goto(
           'https://mlffatl.football.cbssports.com/',
-          { waitUntil: 'networkidle0', timeout: 30000 }
+          { waitUntil: 'networkidle0', timeout: 45000 }
         );
         const probeUrl = probe ? probe.url() : page.url();
         console.log(`[login-wait] league probe -> ${probeUrl}`);
@@ -94,15 +103,8 @@ async function waitForManualLogin(page, timeoutMs = Number(process.env.CBS_LOGIN
           fs.writeFileSync(statusPath, `logged_in\nurl=${probeUrl}\n`);
           return true;
         }
-        // Still redirected; send user back to login if needed
-        if (page.url().includes('login')) {
-          // stay; user still needs to finish login
-        } else {
-          await page.goto('https://www.cbssports.com/login', {
-            waitUntil: 'domcontentloaded',
-            timeout: 30000
-          }).catch(() => null);
-        }
+        console.log('League probe still redirected to login — session not ready yet.');
+        fs.writeFileSync(statusPath, `waiting_for_login\nurl=${probeUrl}\nprobe=failed\n`);
       } catch (e) {
         console.log(`[login-wait] probe error: ${e.message}`);
       }

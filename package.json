@@ -24,6 +24,8 @@
     "scrape-record-books": "node scripts/scrape-record-books.js",
     "scrape-weekly-results": "node scripts/scrape-weekly-results.js",
     "scrape-draft-results": "node scripts/scrape-draft-results.js",
+    "parse-draft-results-html": "node scripts/parse-draft-results-html.js",
+    "auction-analysis": "node scripts/auction-analysis.js",
     "fix-munich-cowboys": "node scripts/fix-munich-cowboys.js",
     "fix-munich-cowboys:revert": "node scripts/fix-munich-cowboys.js revert",
     "merge-draft-results": "node scripts/merge-draft-results.js",

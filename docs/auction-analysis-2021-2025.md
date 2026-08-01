@@ -19,9 +19,16 @@ CSV in [`data/analysis/`](../data/analysis).
 | **Team points** | Complete, all five years (standings + weekly results) |
 
 So: **spend-by-team-by-position runs the full five years. Anything that ties dollars
-to player points is a three-year sample (480 roster spots).** Filling in 2024–2025
-requires re-running `scripts/scrape-draft-results.js` with CBS credentials; that is
-the single highest-value data fix before the 2026 auction.
+to player points is a three-year sample (480 roster spots).** Back-filling 2024–2025
+is the single highest-value data fix before the 2026 auction — see
+[Back-filling 2024–2025](#back-filling-20242025-points) below. `auction-analysis.js`
+detects which seasons carry points automatically, so once the CSVs have them, a
+re-run widens every table here with no code change.
+
+Part of the gap was self-inflicted: the scraper contained
+`if (year < 2021 || year === 2024) { TotalFPTS = null }`, which discarded 2024's
+points regardless of what CBS returned. That is fixed. 2025 was scraped pre-season,
+before any points existed.
 
 Two more notes on the source data:
 
@@ -314,8 +321,38 @@ Andrews at $29 in 2024, and George Kittle at $39 in 2025 sits in the same dead z
    tell us whether the QB inefficiency has already been arbitraged away — QB share
    of cap has risen every year since 2022.
 
+## Back-filling 2024–2025 points
+
+Two routes. Both end at the same place — populated `Total FPTS` / `Active FPTS`
+columns in `data/yearly-stats/draft_results_2024.csv` and `_2025.csv`.
+
+**Route A — scrape it.** Needs CBS credentials and a browser that can reach the
+internet.
+
+```bash
+export CBS_SPORTS_EMAIL=...   # or cbslogin
+export CBS_SPORTS_PASSWORD=...  # or cbspw
+pnpm scrape-draft-results 2024 2025
+```
+
+Runs headed and interactive at a desktop (so you can clear a captcha), and headless
+when no terminal is attached. A failed login writes a screenshot and the page HTML
+to `data/scrape-debug/`.
+
+**Route B — save the pages.** No credentials handled by any script; works when
+browser automation is blocked.
+
+1. Open each page in a browser you're already logged into:
+   - `https://mlffatl.football.cbssports.com/draft/results/2024:Pre-season:MLFF%20AUCTION3/`
+   - `https://mlffatl.football.cbssports.com/draft/results/2025:Pre-season:Pre-season/`
+2. Save as `data/raw/draft_2024.html` and `data/raw/draft_2025.html`.
+3. `pnpm parse-draft-results-html`
+
+Either way, finish with `pnpm auction-analysis`. Both scripts report how many rows
+came back carrying points, so a silent empty result isn't possible.
+
 ## Reproducing
 
 ```bash
-node scripts/auction-analysis.js   # writes data/analysis/*.csv
+pnpm auction-analysis    # node scripts/auction-analysis.js -> data/analysis/*.csv
 ```

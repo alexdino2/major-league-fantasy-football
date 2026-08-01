@@ -28,3 +28,9 @@ package-lock.json
 *.tsbuildinfo
 next-env.d.ts
 /lib/generated/prisma
+
+# CBS scrape session (do not commit)
+data/cbs-session-cookies.json
+data/cbs-login-status.txt
+data/.chrome-cbs-profile/
+data/draft-debug-*.html

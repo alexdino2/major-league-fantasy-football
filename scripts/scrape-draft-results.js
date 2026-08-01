@@ -4,6 +4,8 @@ const path = require('path');
 const dotenv = require('dotenv');
 const readline = require('readline');
 
+const { applySession, extraChromiumArgs, getCredentials, getSessionPath, isSessionValid, loadSession, saveSession } = require('./cbs-session');
+
 dotenv.config({ path: '.env.local' });
 
 const dataDir = path.join(process.cwd(), 'data');
@@ -33,10 +35,13 @@ const draftUrls = requestedYears.length > 0
   ? allDraftUrls.filter(entry => requestedYears.includes(entry.year))
   : allDraftUrls;
 
-const email = process.env.CBS_SPORTS_EMAIL || process.env.cbslogin;
-const password = process.env.CBS_SPORTS_PASSWORD || process.env.cbspw;
-if (!email || !password) {
-  console.error('Missing CBS credentials. Set CBS_SPORTS_EMAIL and CBS_SPORTS_PASSWORD in .env.local.');
+const savedSession = loadSession();
+const { email, password } = getCredentials();
+// A saved session skips the login form entirely, so credentials are only needed
+// when there is no session to reuse.
+if (!savedSession && (!email || !password)) {
+  console.error('Missing CBS credentials. Set CBS_SPORTS_EMAIL and CBS_SPORTS_PASSWORD in .env.local,');
+  console.error('or save a session once with `pnpm cbs-login`.');
   process.exit(1);
 }
 
@@ -44,9 +49,6 @@ if (!email || !password) {
 // display and no TTY, so fall back to headless there.
 const interactive = Boolean(process.stdin.isTTY);
 const headless = process.env.HEADLESS ? process.env.HEADLESS !== 'false' : !interactive;
-// Extra Chromium flags for sandboxed/proxied environments, e.g.
-// PUPPETEER_EXTRA_ARGS="--no-sandbox --proxy-server=http://127.0.0.1:8080"
-const extraArgs = (process.env.PUPPETEER_EXTRA_ARGS || '').split(' ').filter(Boolean);
 
 async function waitForUserInput(message) {
   if (!interactive) {
@@ -69,32 +71,69 @@ async function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+// Reuses the session saved by `pnpm cbs-login` when there is one, and otherwise
+// logs in from scratch. CBS guards the login form with reCAPTCHA Enterprise, so
+// the fallback only gets through where a human can solve the challenge.
+async function establishSession(browser, page) {
+  if (savedSession) {
+    console.log(`Reusing saved CBS session from ${getSessionPath()}...`);
+    await applySession(browser, savedSession);
+    if (await isSessionValid(page)) {
+      console.log('Saved session accepted.');
+      return;
+    }
+    console.log('Saved session is no longer valid, falling back to logging in.');
+  }
+
+  if (!email || !password) {
+    throw new Error('No valid session and no credentials to log in with. Run `pnpm cbs-login`.');
+  }
+
+  console.log('Navigating to login page...');
+  await page.goto('https://www.cbssports.com/login', {
+    waitUntil: 'networkidle0',
+    timeout: 60000
+  });
+  console.log('Waiting for login form...');
+  await page.waitForSelector('input[name="email"]', { visible: true });
+  await page.waitForSelector('input[name="password"]', { visible: true });
+  console.log('Entering credentials...');
+  await page.type('input[name="email"]', email);
+  await page.type('input[name="password"]', password);
+  console.log('Clicking submit...');
+  await page.waitForSelector('button[type="submit"]', { visible: true });
+  await page.click('button[type="submit"]');
+  console.log('Waiting for navigation...');
+  await page.waitForNavigation({ waitUntil: 'networkidle0', timeout: 60000 }).catch(error => {
+    // A captcha challenge keeps the page put, so let the prompt below handle it
+    // rather than failing the whole run here.
+    console.log(`No navigation after submit (${error.message}).`);
+  });
+  await waitForUserInput('Please solve any captcha if present, then press Enter to continue...');
+
+  if (!(await isSessionValid(page))) {
+    throw new Error('Login did not complete — CBS still redirects to the login page. Run `pnpm cbs-login` on a machine with a display.');
+  }
+
+  // Save the fresh login so the next run can skip all of this.
+  try {
+    const { path: savedPath, count } = await saveSession(browser);
+    console.log(`Saved ${count} cookies to ${savedPath}`);
+  } catch (error) {
+    console.warn(`Could not save session: ${error.message}`);
+  }
+}
+
 async function scrapeDraftResults() {
   const browser = await puppeteer.launch({
     headless,
     defaultViewport: headless ? { width: 1920, height: 1080 } : null,
-    args: ['--start-maximized', ...extraArgs]
+    args: ['--start-maximized', ...extraChromiumArgs()]
   });
 
   try {
     const page = await browser.newPage();
-    console.log('Navigating to login page...');
-    await page.goto('https://www.cbssports.com/login', {
-      waitUntil: 'networkidle0',
-      timeout: 60000
-    });
-    console.log('Waiting for login form...');
-    await page.waitForSelector('input[name="email"]', { visible: true });
-    await page.waitForSelector('input[name="password"]', { visible: true });
-    console.log('Entering credentials...');
-    await page.type('input[name="email"]', email);
-    await page.type('input[name="password"]', password);
-    console.log('Clicking submit...');
-    await page.waitForSelector('button[type="submit"]', { visible: true });
-    await page.click('button[type="submit"]');
-    console.log('Waiting for navigation...');
-    await page.waitForNavigation({ waitUntil: 'networkidle0', timeout: 60000 });
-    await waitForUserInput('Please solve any captcha if present, then press Enter to continue...');
+    await establishSession(browser, page);
 
     for (const { year, url } of draftUrls) {
       console.log(`\nProcessing year ${year}...`);

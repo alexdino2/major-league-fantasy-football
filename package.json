@@ -23,6 +23,7 @@
     "scrape-playoff-brackets": "node scripts/scrape-playoff-brackets.js",
     "scrape-record-books": "node scripts/scrape-record-books.js",
     "scrape-weekly-results": "node scripts/scrape-weekly-results.js",
+    "cbs-login": "node scripts/cbs-login.js",
     "scrape-draft-results": "node scripts/scrape-draft-results.js",
     "fix-munich-cowboys": "node scripts/fix-munich-cowboys.js",
     "fix-munich-cowboys:revert": "node scripts/fix-munich-cowboys.js revert",

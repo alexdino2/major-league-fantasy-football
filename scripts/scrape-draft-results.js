@@ -2,6 +2,8 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
 const dotenv = require('dotenv');
+const { spawn } = require('child_process');
+const http = require('http');
 
 dotenv.config({ path: '.env.local' });
 dotenv.config({ path: '.env' });
@@ -19,7 +21,14 @@ if (!fs.existsSync(yearlyStatsDir)) {
 }
 
 const COOKIES_PATH = path.join(dataDir, 'cbs-session-cookies.json');
-const USER_DATA_DIR = path.join(dataDir, '.chrome-cbs-profile');
+const DEBUG_PORT = Number(process.env.CBS_CHROME_DEBUG_PORT || 9222);
+const CHROME_BIN =
+  process.env.CBS_CHROME_BIN ||
+  ['/opt/google/chrome/chrome', '/usr/bin/google-chrome-stable', '/usr/bin/google-chrome']
+    .find(p => fs.existsSync(p));
+const USER_DATA_DIR =
+  process.env.CBS_CHROME_PROFILE ||
+  path.join(dataDir, '.chrome-cbs-system-profile');
 
 const draftUrls = [
   { year: 2024, url: 'https://mlffatl.football.cbssports.com/draft/results/2024:Pre-season:MLFF%20AUCTION3/' },
@@ -30,91 +39,70 @@ async function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function looksLoggedIn(url) {
-  if (!url) return false;
-  if (url.includes('/login')) return false;
-  // League pages after auth
-  return (
-    url.includes('mlffatl.football.cbssports.com') ||
-    url.includes('cbssports.com/fantasy') ||
-    url.includes('cbssports.com/home') ||
-    url.includes('cbssports.com/?') ||
-    /cbssports\.com\/?$/.test(url.split('?')[0])
-  );
+function httpGetJson(url, timeoutMs = 2000) {
+  return new Promise((resolve, reject) => {
+    const req = http.get(url, res => {
+      let data = '';
+      res.on('data', c => (data += c));
+      res.on('end', () => {
+        try {
+          resolve(JSON.parse(data));
+        } catch (e) {
+          reject(e);
+        }
+      });
+    });
+    req.on('error', reject);
+    req.setTimeout(timeoutMs, () => {
+      req.destroy(new Error('timeout'));
+    });
+  });
 }
 
-async function waitForManualLogin(page, timeoutMs = Number(process.env.CBS_LOGIN_TIMEOUT_MS || 60 * 60 * 1000)) {
+async function waitForDebugger(port, timeoutMs = 30000) {
   const start = Date.now();
-  let lastUrl = '';
-  console.log('\n========================================');
-  console.log('MANUAL LOGIN REQUIRED');
-  console.log('========================================');
-  console.log('1. In the Chrome window on the desktop, log into CBS Sports.');
-  if (email) {
-    console.log(`   Username/email hint: ${email}`);
-  }
-  console.log('2. Solve any captcha if shown.');
-  console.log('3. After you are logged in, open the league (or stay on any non-login CBS page).');
-  console.log('   Tip: go to https://mlffatl.football.cbssports.com/');
-  console.log('4. This script will detect the session and continue automatically.');
-  console.log(`   Waiting up to ${Math.round(timeoutMs / 60000)} minutes...`);
-  console.log('========================================\n');
-
-  // Drop a status file the agent/user can peek at
-  const statusPath = path.join(dataDir, 'cbs-login-status.txt');
-  fs.writeFileSync(statusPath, 'waiting_for_login\n');
-
-  const signalPath = path.join(dataDir, 'cbs-login-done.flag');
-  if (fs.existsSync(signalPath)) {
-    fs.unlinkSync(signalPath);
-  }
-  console.log(`   Or create signal file: ${signalPath}`);
-  console.log('   (Script will NOT navigate away while you finish login.)');
-
   while (Date.now() - start < timeoutMs) {
-    const url = page.url();
-    if (url !== lastUrl) {
-      console.log(`[login-wait] current URL: ${url}`);
-      lastUrl = url;
-      fs.writeFileSync(statusPath, `waiting_for_login\nurl=${url}\n`);
-    }
-
-    // Success: puppeteer page is already on the league
-    if (url.includes('mlffatl.football.cbssports.com') && !url.includes('login')) {
-      console.log('Detected league URL — login looks successful.');
-      fs.writeFileSync(statusPath, `logged_in\nurl=${url}\n`);
-      return true;
-    }
-
-    // Only probe when the user/agent explicitly signals done — never
-    // steal the tab while they're on get-pass / captcha / registration.
-    if (fs.existsSync(signalPath)) {
-      console.log('Detected cbs-login-done.flag — probing league with current cookies...');
-      try { fs.unlinkSync(signalPath); } catch {}
-      try {
-        const probe = await page.goto(
-          'https://mlffatl.football.cbssports.com/',
-          { waitUntil: 'networkidle0', timeout: 45000 }
-        );
-        const probeUrl = probe ? probe.url() : page.url();
-        console.log(`[login-wait] league probe -> ${probeUrl}`);
-        if (!probeUrl.includes('login')) {
-          console.log('League probe succeeded — login confirmed.');
-          fs.writeFileSync(statusPath, `logged_in\nurl=${probeUrl}\n`);
-          return true;
-        }
-        console.log('League probe still redirected to login — session not ready yet.');
-        fs.writeFileSync(statusPath, `waiting_for_login\nurl=${probeUrl}\nprobe=failed\n`);
-      } catch (e) {
-        console.log(`[login-wait] probe error: ${e.message}`);
-      }
-    }
-
-    await sleep(2500);
+    try {
+      const version = await httpGetJson(`http://127.0.0.1:${port}/json/version`);
+      if (version && version.webSocketDebuggerUrl) return version;
+    } catch {}
+    await sleep(500);
   }
+  throw new Error(`Chrome remote debugging on port ${port} did not become ready`);
+}
 
-  fs.writeFileSync(statusPath, 'timeout\n');
-  throw new Error('Timed out waiting for manual CBS login.');
+function startSystemChrome() {
+  if (!CHROME_BIN) {
+    throw new Error('Could not find Google Chrome binary');
+  }
+  if (!fs.existsSync(USER_DATA_DIR)) {
+    fs.mkdirSync(USER_DATA_DIR, { recursive: true });
+  }
+  console.log(`Launching Google Chrome: ${CHROME_BIN}`);
+  console.log(`Profile: ${USER_DATA_DIR}`);
+  console.log(`Remote debugging port: ${DEBUG_PORT}`);
+
+  const child = spawn(
+    CHROME_BIN,
+    [
+      `--remote-debugging-port=${DEBUG_PORT}`,
+      `--user-data-dir=${USER_DATA_DIR}`,
+      '--no-first-run',
+      '--no-default-browser-check',
+      '--disable-dev-shm-usage',
+      '--no-sandbox',
+      '--window-size=1400,900',
+      '--window-position=40,40',
+      'https://www.cbssports.com/login'
+    ],
+    {
+      stdio: 'ignore',
+      detached: true,
+      env: { ...process.env, DISPLAY: process.env.DISPLAY || ':1' }
+    }
+  );
+  child.unref();
+  return child;
 }
 
 async function saveCookies(page) {
@@ -127,18 +115,94 @@ async function saveCookies(page) {
   return cookies;
 }
 
-async function loadCookiesIfPresent(page) {
-  if (!fs.existsSync(COOKIES_PATH)) return false;
-  try {
-    const cookies = JSON.parse(fs.readFileSync(COOKIES_PATH, 'utf8'));
-    if (!Array.isArray(cookies) || cookies.length === 0) return false;
-    await page.setCookie(...cookies);
-    console.log(`Loaded ${cookies.length} cookies from ${COOKIES_PATH}`);
-    return true;
-  } catch (e) {
-    console.log(`Could not load saved cookies: ${e.message}`);
-    return false;
+async function findLeaguePage(browser) {
+  const pages = await browser.pages();
+  for (const p of pages) {
+    const url = p.url();
+    if (url.includes('mlffatl.football.cbssports.com') && !url.includes('login')) {
+      return p;
+    }
   }
+  // Also check targets (popups / new windows)
+  for (const t of browser.targets()) {
+    const url = t.url();
+    if (url.includes('mlffatl.football.cbssports.com') && !url.includes('login')) {
+      const p = await t.page();
+      if (p) return p;
+    }
+  }
+  return null;
+}
+
+async function waitForManualLogin(browser, page, timeoutMs = Number(process.env.CBS_LOGIN_TIMEOUT_MS || 60 * 60 * 1000)) {
+  const start = Date.now();
+  let lastUrl = '';
+  const statusPath = path.join(dataDir, 'cbs-login-status.txt');
+  const signalPath = path.join(dataDir, 'cbs-login-done.flag');
+  if (fs.existsSync(signalPath)) fs.unlinkSync(signalPath);
+
+  console.log('\n========================================');
+  console.log('MANUAL LOGIN REQUIRED');
+  console.log('========================================');
+  console.log('Use the normal Google Chrome window on the desktop');
+  console.log('(title bar says "Google Chrome" — not "Chrome for Testing").');
+  if (email) console.log(`Username/email hint: ${email}`);
+  console.log('1. Log into CBS Sports (email/password or Google).');
+  console.log('2. Solve any captcha.');
+  console.log('3. Open https://mlffatl.football.cbssports.com/');
+  console.log('4. This script detects the league URL and continues.');
+  console.log(`   Waiting up to ${Math.round(timeoutMs / 60000)} minutes...`);
+  console.log(`   Optional signal file: ${signalPath}`);
+  console.log('========================================\n');
+  fs.writeFileSync(statusPath, 'waiting_for_login\n');
+
+  while (Date.now() - start < timeoutMs) {
+    // Prefer any open tab already on the league
+    const leaguePage = await findLeaguePage(browser);
+    if (leaguePage) {
+      const url = leaguePage.url();
+      console.log(`Detected league tab: ${url}`);
+      fs.writeFileSync(statusPath, `logged_in\nurl=${url}\n`);
+      return leaguePage;
+    }
+
+    const url = page.url();
+    if (url !== lastUrl) {
+      console.log(`[login-wait] tracked tab URL: ${url}`);
+      lastUrl = url;
+      fs.writeFileSync(statusPath, `waiting_for_login\nurl=${url}\n`);
+    }
+
+    if (url.includes('mlffatl.football.cbssports.com') && !url.includes('login')) {
+      console.log('Tracked tab is on league — login successful.');
+      fs.writeFileSync(statusPath, `logged_in\nurl=${url}\n`);
+      return page;
+    }
+
+    if (fs.existsSync(signalPath)) {
+      console.log('Detected cbs-login-done.flag — probing league...');
+      try { fs.unlinkSync(signalPath); } catch {}
+      try {
+        await page.bringToFront().catch(() => null);
+        const probe = await page.goto('https://mlffatl.football.cbssports.com/', {
+          waitUntil: 'networkidle0',
+          timeout: 45000
+        });
+        const probeUrl = probe ? probe.url() : page.url();
+        console.log(`[login-wait] league probe -> ${probeUrl}`);
+        if (!probeUrl.includes('login')) {
+          fs.writeFileSync(statusPath, `logged_in\nurl=${probeUrl}\n`);
+          return page;
+        }
+        console.log('Probe still redirected to login.');
+      } catch (e) {
+        console.log(`[login-wait] probe error: ${e.message}`);
+      }
+    }
+
+    await sleep(2500);
+  }
+  throw new Error('Timed out waiting for manual CBS login.');
 }
 
 async function scrapeYear(page, year, url) {
@@ -198,7 +262,6 @@ async function scrapeYear(page, year, url) {
         if (cells.length > 5 && cells[5]) {
           ActiveFPTS = cells[5].innerText ? cells[5].innerText.trim() : null;
         }
-        // FPTS columns only exist from 2021 onward on CBS draft results
         if (year < 2021) {
           TotalFPTS = null;
           ActiveFPTS = null;
@@ -231,85 +294,45 @@ async function scrapeYear(page, year, url) {
   const csvRows = draftResults.rows.map(row =>
     [`"${row.Team.replace(/"/g, '""')}"`, row.POS, `"${row.Player.replace(/"/g, '""')}"`, row.Salary, row.ELIG, row.TotalFPTS ?? '', row.ActiveFPTS ?? ''].join(',')
   );
-  const csv = [csvHeader, ...csvRows].join('\n');
-  fs.writeFileSync(path.join(yearlyStatsDir, `draft_results_${year}.csv`), csv);
+  fs.writeFileSync(path.join(yearlyStatsDir, `draft_results_${year}.csv`), [csvHeader, ...csvRows].join('\n'));
   const withFpts = draftResults.rows.filter(r => r.TotalFPTS).length;
   console.log(`Saved draft results for ${year} (${withFpts}/${draftResults.rows.length} with Total FPTS)`);
   return { year, count: draftResults.rows.length, withFpts };
 }
 
 async function scrapeDraftResults() {
-  if (!fs.existsSync(USER_DATA_DIR)) {
-    fs.mkdirSync(USER_DATA_DIR, { recursive: true });
-  }
-
-  const browser = await puppeteer.launch({
-    headless: false,
-    defaultViewport: { width: 1400, height: 900 },
-    userDataDir: USER_DATA_DIR,
-    args: [
-      '--no-sandbox',
-      '--disable-setuid-sandbox',
-      '--window-size=1400,900',
-      '--disable-blink-features=AutomationControlled'
-    ]
+  startSystemChrome();
+  await waitForDebugger(DEBUG_PORT);
+  const browser = await puppeteer.connect({
+    browserURL: `http://127.0.0.1:${DEBUG_PORT}`,
+    defaultViewport: null
   });
 
   try {
-    const page = await browser.newPage();
-    await page.setUserAgent(
-      'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36'
-    );
+    let page = (await browser.pages())[0] || await browser.newPage();
 
-    // Try existing session first (cookies file or chrome profile)
-    const hadCookies = await loadCookiesIfPresent(page);
-    let loggedIn = false;
-
-    if (hadCookies) {
-      console.log('Probing saved session against league home...');
-      try {
-        await page.goto('https://mlffatl.football.cbssports.com/', {
+    // Pre-fill credentials on login page when possible (do not submit).
+    try {
+      if (page.url().includes('login') || page.url() === 'about:blank') {
+        await page.goto('https://www.cbssports.com/login', {
           waitUntil: 'networkidle0',
-          timeout: 45000
+          timeout: 60000
         });
-        if (!page.url().includes('login')) {
-          loggedIn = true;
-          console.log('Saved session is still valid.');
-        } else {
-          console.log('Saved session expired.');
-        }
-      } catch (e) {
-        console.log(`Session probe failed: ${e.message}`);
       }
-    }
-
-    if (!loggedIn) {
-      // Open login page; optionally pre-fill credentials but do NOT auto-submit
-      // (reCAPTCHA must be completed by a human).
-      console.log('Opening CBS login page for manual sign-in...');
-      await page.goto('https://www.cbssports.com/login', {
-        waitUntil: 'networkidle0',
-        timeout: 60000
-      });
-      await page.waitForSelector('input[name="email"]', { visible: true, timeout: 30000 }).catch(() => null);
-
+      await page.waitForSelector('input[name="email"]', { visible: true, timeout: 20000 });
       if (email && password) {
-        try {
-          await page.click('input[name="email"]', { clickCount: 3 });
-          await page.type('input[name="email"]', email, { delay: 15 });
-          await page.click('input[name="password"]', { clickCount: 3 });
-          await page.type('input[name="password"]', password, { delay: 15 });
-          console.log('Pre-filled username/password. Please solve captcha and click Continue.');
-        } catch (e) {
-          console.log(`Could not pre-fill credentials: ${e.message}`);
-        }
+        await page.click('input[name="email"]', { clickCount: 3 });
+        await page.type('input[name="email"]', email, { delay: 15 });
+        await page.click('input[name="password"]', { clickCount: 3 });
+        await page.type('input[name="password"]', password, { delay: 15 });
+        console.log('Pre-filled username/password in Google Chrome. Solve captcha and click Continue.');
       }
-
-      await waitForManualLogin(page);
-      await saveCookies(page);
-    } else {
-      await saveCookies(page);
+    } catch (e) {
+      console.log(`Pre-fill skipped: ${e.message}`);
     }
+
+    page = await waitForManualLogin(browser, page);
+    await saveCookies(page);
 
     const summaries = [];
     for (const { year, url } of draftUrls) {
@@ -317,7 +340,6 @@ async function scrapeDraftResults() {
         summaries.push(await scrapeYear(page, year, url));
       } catch (yearError) {
         console.error(`Error processing year ${year}:`, yearError);
-        // One retry after re-saving cookies / brief pause
         await sleep(2000);
         try {
           summaries.push(await scrapeYear(page, year, url));
@@ -339,7 +361,9 @@ async function scrapeDraftResults() {
     console.error('Error scraping draft results:', error);
     throw error;
   } finally {
-    await browser.close();
+    try {
+      browser.disconnect();
+    } catch {}
   }
 }
 

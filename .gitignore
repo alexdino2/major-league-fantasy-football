@@ -32,5 +32,8 @@ next-env.d.ts
 # CBS scrape session (do not commit)
 data/cbs-session-cookies.json
 data/cbs-login-status.txt
+data/cbs-login-done.flag
 data/.chrome-cbs-profile/
+data/.chrome-cbs-system-profile/
 data/draft-debug-*.html
+data/window-investigation-report.txt

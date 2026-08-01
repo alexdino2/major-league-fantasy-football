@@ -25,15 +25,20 @@ const outDir = path.join(process.cwd(), 'data', 'yearly-stats');
 
 const COLUMNS = ['POS', 'Player', 'Salary', 'ELIG', 'Total FPTS', 'Active FPTS'];
 
+// The header row is not necessarily the first row: CBS opens each team's block
+// with a single-cell banner and repeats the column headers underneath it, so
+// the first header row can be row 1 (and appears once per team after that).
 function findDraftTable($) {
   let match = null;
   $('table').each((_, el) => {
     if (match) return;
-    const headers = $(el).find('tr').first().find('th, td')
-      .map((__, c) => $(c).text().trim().toLowerCase()).get();
-    const hasPlayer = headers.some((h) => h === 'player');
-    const hasSalary = headers.some((h) => h.includes('salary') || h === '$');
-    if (hasPlayer && hasSalary) match = { el, headers };
+    $(el).find('tr').slice(0, 8).each((__, tr) => {
+      if (match) return;
+      const headers = $(tr).find('th, td').map((___, c) => $(c).text().trim().toLowerCase()).get();
+      const hasPlayer = headers.some((h) => h === 'player');
+      const hasSalary = headers.some((h) => h.includes('salary') || h === '$');
+      if (hasPlayer && hasSalary) match = { el, headers };
+    });
   });
   return match;
 }
@@ -65,7 +70,10 @@ function parse(year) {
 
   const rows = [];
   let currentTeam = null;
-  $(found.el).find('tr').slice(1).each((_, tr) => {
+  // Every row is walked, including the first: it is the opening team banner,
+  // and skipping it silently orphaned that team's picks. Header rows are
+  // filtered out below by their Player cell instead.
+  $(found.el).find('tr').each((_, tr) => {
     const cells = $(tr).find('td');
     // A single-cell row is a team banner separating that team's picks.
     if (cells.length === 1) {

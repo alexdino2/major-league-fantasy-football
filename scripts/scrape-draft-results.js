@@ -15,12 +15,44 @@ if (!fs.existsSync(yearlyStatsDir)) {
   fs.mkdirSync(yearlyStatsDir);
 }
 
-const draftUrls = [
+const allDraftUrls = [
   { year: 2024, url: 'https://mlffatl.football.cbssports.com/draft/results/2024:Pre-season:MLFF%20AUCTION3/' },
   { year: 2025, url: 'https://mlffatl.football.cbssports.com/draft/results/2025:Pre-season:Pre-season/' }
 ];
 
+// Years may be passed on the command line, e.g. `pnpm scrape-draft-results 2024 2025`.
+// With no arguments every known year is scraped.
+const requestedYears = process.argv.slice(2).map(Number).filter(year => Number.isInteger(year));
+const unknownYears = requestedYears.filter(year => !allDraftUrls.some(entry => entry.year === year));
+if (unknownYears.length > 0) {
+  console.error(`No draft URL configured for: ${unknownYears.join(', ')}`);
+  console.error(`Known years: ${allDraftUrls.map(entry => entry.year).join(', ')}`);
+  process.exit(1);
+}
+const draftUrls = requestedYears.length > 0
+  ? allDraftUrls.filter(entry => requestedYears.includes(entry.year))
+  : allDraftUrls;
+
+const email = process.env.CBS_SPORTS_EMAIL || process.env.cbslogin;
+const password = process.env.CBS_SPORTS_PASSWORD || process.env.cbspw;
+if (!email || !password) {
+  console.error('Missing CBS credentials. Set CBS_SPORTS_EMAIL and CBS_SPORTS_PASSWORD in .env.local.');
+  process.exit(1);
+}
+
+// The captcha step needs a real browser window, but CI and container runs have no
+// display and no TTY, so fall back to headless there.
+const interactive = Boolean(process.stdin.isTTY);
+const headless = process.env.HEADLESS ? process.env.HEADLESS !== 'false' : !interactive;
+// Extra Chromium flags for sandboxed/proxied environments, e.g.
+// PUPPETEER_EXTRA_ARGS="--no-sandbox --proxy-server=http://127.0.0.1:8080"
+const extraArgs = (process.env.PUPPETEER_EXTRA_ARGS || '').split(' ').filter(Boolean);
+
 async function waitForUserInput(message) {
+  if (!interactive) {
+    console.log(`Skipping prompt (no TTY): ${message}`);
+    return;
+  }
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -39,9 +71,9 @@ async function sleep(ms) {
 
 async function scrapeDraftResults() {
   const browser = await puppeteer.launch({
-    headless: false,
-    defaultViewport: null,
-    args: ['--start-maximized']
+    headless,
+    defaultViewport: headless ? { width: 1920, height: 1080 } : null,
+    args: ['--start-maximized', ...extraArgs]
   });
 
   try {
@@ -55,8 +87,8 @@ async function scrapeDraftResults() {
     await page.waitForSelector('input[name="email"]', { visible: true });
     await page.waitForSelector('input[name="password"]', { visible: true });
     console.log('Entering credentials...');
-    await page.type('input[name="email"]', process.env.CBS_SPORTS_EMAIL);
-    await page.type('input[name="password"]', process.env.CBS_SPORTS_PASSWORD);
+    await page.type('input[name="email"]', email);
+    await page.type('input[name="password"]', password);
     console.log('Clicking submit...');
     await page.waitForSelector('button[type="submit"]', { visible: true });
     await page.click('button[type="submit"]');

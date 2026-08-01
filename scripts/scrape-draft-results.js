@@ -43,7 +43,7 @@ function looksLoggedIn(url) {
   );
 }
 
-async function waitForManualLogin(page, timeoutMs = 10 * 60 * 1000) {
+async function waitForManualLogin(page, timeoutMs = Number(process.env.CBS_LOGIN_TIMEOUT_MS || 60 * 60 * 1000)) {
   const start = Date.now();
   let lastUrl = '';
   console.log('\n========================================');

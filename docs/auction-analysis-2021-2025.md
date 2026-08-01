@@ -330,14 +330,27 @@ columns in `data/yearly-stats/draft_results_2024.csv` and `_2025.csv`.
 internet.
 
 ```bash
-export CBS_SPORTS_EMAIL=...   # or cbslogin
-export CBS_SPORTS_PASSWORD=...  # or cbspw
+pnpm install
 pnpm scrape-draft-results 2024 2025
 ```
 
+Credentials come from `CBS_SPORTS_EMAIL`/`CBS_SPORTS_PASSWORD` or `cbslogin`/`cbspw`,
+in the environment or `.env.local`. The login field is CBS's **email address**, not
+the account's username.
+
 Runs headed and interactive at a desktop (so you can clear a captcha), and headless
-when no terminal is attached. A failed login writes a screenshot and the page HTML
-to `data/scrape-debug/`.
+when no terminal is attached. A failed login writes a screenshot and the page HTML to
+`data/scrape-debug/` (gitignored).
+
+Two things that cost time the first time round:
+
+- **Managed environments inject variables only at session start.** Editing them
+  mid-session changes nothing for the session already running — it keeps the values
+  it booted with. Start a fresh session after changing a credential.
+- **Chromium ignores `NODE_EXTRA_CA_CERTS` and the system trust store.** Behind a
+  TLS-inspecting egress gateway it must be launched direct rather than through
+  `HTTPS_PROXY`, or every request fails with `ERR_CONNECTION_RESET`. The scraper
+  detects this, pins the gateway CA's public key and handles it; no flags needed.
 
 **Route B — save the pages.** No credentials handled by any script; works when
 browser automation is blocked.

@@ -19,6 +19,7 @@ const {
   BUDGET,
   POSITIONS,
   ROSTER_SIZE,
+  SEASON_WEEKS,
   STARTERS,
   TEAMS,
   correlation,
@@ -146,13 +147,16 @@ const BANDS = {
   DST: [[1, 2], [3, 11]]
 };
 
-// Extra bodies a position may carry beyond its starting slots. K and DST are
-// held to one apiece: the Active FPTS data shows they get streamed off waivers
-// all season, so a drafted backup at those spots buys nothing a free agent
-// would not.
-const MAX_EXTRA = { QB: 3, RB: 3, WR: 3, TE: 2, K: 0, DST: 0 };
+// Extra bodies a position may carry beyond its starting slots.
+//
+// K and DST are held to one apiece and TE to two. The Active FPTS data shows
+// all three get churned off waivers during the season, and the model cannot see
+// that churn - it only knows what was bought on draft day. Left uncapped it
+// stockpiles cheap tight ends for a few points a season, which no manager would
+// actually carry to week 17.
+const MAX_EXTRA = { QB: 3, RB: 4, WR: 4, TE: 1, K: 0, DST: 0 };
 
-const PLAN_SAMPLES = 400;
+const PLAN_SAMPLES = 250;
 
 // Deterministic RNG so a rerun of the report produces the same numbers.
 function makeRandom(seed) {
@@ -224,48 +228,98 @@ function bandPlans(bandCount, n) {
   return out;
 }
 
-// Score a purchase plan against the real auctions: draw the specified number of
-// players from each band in a season, start the best of them, and average over
-// many draws in every season.
-function evaluatePlan(seasons, pos, counts, capture, random) {
+// Score a purchase plan against the real auctions, week by week.
+//
+// A season total hides the thing that makes depth worth buying: a player who
+// misses six games contributes nothing in those six weeks, and the slot still
+// has to be filled. So each drawn player is available in a given week with
+// probability (games played / 17), the best available fill the starting slots at
+// their per-game rate, and any slot left empty falls back to a waiver pickup at
+// replacement level. That is what makes a third RB worth money and a third TE
+// not: the RB slot bleeds 7 points a week when it goes unfilled, the TE slot
+// bleeds a fraction of a point.
+function evaluatePlan(seasons, pos, counts, capture, random, samples = PLAN_SAMPLES) {
   const bands = BANDS[pos];
   const slots = STARTERS[pos];
   let costTotal = 0;
-  let hindsightTotal = 0;
+  let skilledTotal = 0;
   let randomTotal = 0;
   let weight = 0;
+  // Reused across draws so the hot loop allocates nothing.
+  const maxPlayers = counts.reduce((a, b) => a + b, 0);
+  const perGame = new Float64Array(maxPlayers);
+  const availability = new Float64Array(maxPlayers);
 
   seasons.forEach(season => {
     const picks = season.byPosition[pos] || [];
     const pools = bands.map(([lo, hi]) => picks.filter(p => p.priceRank >= lo && p.priceRank <= hi));
     if (pools.some((pool, i) => pool.length < counts[i])) return;
 
-    for (let draw = 0; draw < PLAN_SAMPLES; draw++) {
+    // A streamed free agent, per week.
+    const waiverPerWeek = season.replacement[pos] / SEASON_WEEKS;
+
+    for (let draw = 0; draw < samples; draw++) {
       const chosen = [];
       pools.forEach((pool, i) => {
         if (counts[i] > 0) chosen.push(...sample(pool, counts[i], random));
       });
-      const sorted = chosen.map(p => p.points).sort((a, b) => b - a);
       costTotal += chosen.reduce((sum, p) => sum + p.salary, 0);
-      hindsightTotal += sorted.slice(0, slots).reduce((a, b) => a + b, 0);
-      // No-skill floor: fill the slots at random from the group.
-      randomTotal += mean(sorted) * slots;
+
+      // Rank once by per-game rate: you generally know which of your own players
+      // is better, even if you cannot know which will outscore the other in a
+      // given week.
+      chosen.sort((a, b) => (b.pointsPerGame || 0) - (a.pointsPerGame || 0));
+      const size = chosen.length;
+      for (let i = 0; i < size; i++) {
+        perGame[i] = chosen[i].pointsPerGame || 0;
+        availability[i] = (chosen[i].games === null ? SEASON_WEEKS : chosen[i].games) / SEASON_WEEKS;
+      }
+
+      let skilled = 0;
+      let noSkill = 0;
+      for (let week = 0; week < SEASON_WEEKS; week++) {
+        // One pass over the roster in talent order: the first `slots` available
+        // players start, and the rest of the pass only tallies the no-skill mean.
+        let started = 0;
+        let availableCount = 0;
+        let availableSum = 0;
+        for (let i = 0; i < size; i++) {
+          if (random() >= availability[i]) continue;
+          availableCount++;
+          availableSum += perGame[i] > waiverPerWeek ? perGame[i] : waiverPerWeek;
+          if (started < slots) {
+            // A rostered player who is worse than the wire does not get started;
+            // the manager streams instead. This is why a fourth tight end is not
+            // worth a roster spot: the wire already offers that option for free.
+            skilled += perGame[i] > waiverPerWeek ? perGame[i] : waiverPerWeek;
+            started++;
+          }
+        }
+        skilled += (slots - started) * waiverPerWeek;
+
+        // No-skill floor: fill the slots from whoever is available, at random.
+        const usable = availableCount < slots ? availableCount : slots;
+        if (usable > 0) noSkill += (availableSum / availableCount) * usable;
+        noSkill += (slots - usable) * waiverPerWeek;
+      }
+      skilledTotal += skilled;
+      randomTotal += noSkill;
       weight++;
     }
   });
 
   if (weight === 0) return null;
-  const hindsight = hindsightTotal / weight;
+  const skilled = skilledTotal / weight;
   const noSkill = randomTotal / weight;
   return {
     pos,
     counts,
     players: counts.reduce((a, b) => a + b, 0),
     cost: costTotal / weight,
-    hindsight,
+    hindsight: skilled,
     noSkill,
     // Depth is only worth the share of the upside a manager actually converts.
-    points: noSkill + capture * (hindsight - noSkill)
+    points: noSkill + capture * (skilled - noSkill)
   };
 }
 
@@ -431,41 +485,6 @@ function optimizeBudget(curves, pointsKey, benchReserve) {
 // Cheap-dart math
 // ---------------------------------------------------------------------------
 
-// If you buy N cheap players at a position and start whichever hits, what do you
-// get? Sampled from every same-year combination of picks in the price band.
-function bestOfNCheap(seasons, pos, minRank, maxRank, n) {
-  const outcomes = [];
-  seasons.forEach(season => {
-    const band = (season.byPosition[pos] || []).filter(p => p.priceRank >= minRank && p.priceRank <= maxRank);
-    if (band.length < n) return;
-    const combos = [];
-    const build = (start, current) => {
-      if (current.length === n) {
-        combos.push([...current]);
-        return;
-      }
-      for (let i = start; i < band.length; i++) {
-        current.push(band[i]);
-        build(i + 1, current);
-        current.pop();
-      }
-    };
-    build(0, []);
-    combos.forEach(combo => {
-      outcomes.push({
-        points: Math.max(...combo.map(p => p.points)),
-        cost: combo.reduce((sum, p) => sum + p.salary, 0)
-      });
-    });
-  });
-  return {
-    n,
-    samples: outcomes.length,
-    points: mean(outcomes.map(o => o.points)),
-    cost: mean(outcomes.map(o => o.cost))
-  };
-}
-
 // ---------------------------------------------------------------------------
 // Report
 // ---------------------------------------------------------------------------
@@ -473,7 +492,72 @@ function bestOfNCheap(seasons, pos, minRank, maxRank, n) {
 const fmt = (value, digits = 0) => (Number.isFinite(value) ? value.toFixed(digits) : '-');
 const money = value => `$${fmt(value, 0)}`;
 
-function buildReport(seasons, curves, capture, rosterPlan, holdouts, champions) {
+// Marginal value of the Nth body at a position, starters held fixed and extras
+// bought from the cheapest band. This is the table that answers "how many RBs?".
+function depthCurveFor(seasons, capture) {
+  const shape = {
+    QB: { base: [1, 0, 0, 0], extra: 3 },
+    RB: { base: [0, 1, 1, 0, 0, 0], extra: 4 },
+    WR: { base: [0, 0, 0, 0, 3, 0], extra: 4 },
+    TE: { base: [0, 0, 1], extra: 2 }
+  };
+  const rows = [];
+  Object.entries(shape).forEach(([pos, { base, extra }]) => {
+    const cheapest = base.length - 1;
+    let previous = null;
+    for (let n = 0; n <= extra; n++) {
+      const counts = [...base];
+      counts[cheapest] += n;
+      // Headline table, so it gets a heavier sample than the optimizer sweep.
+      const evaluated = evaluatePlan(seasons, pos, counts, capture[pos], makeRandom(0xd3f7), 4000);
+      if (!evaluated) continue;
+      if (previous) {
+        rows.push({
+          pos,
+          from: previous.players,
+          to: evaluated.players,
+          cost: evaluated.cost - previous.cost,
+          points: evaluated.points - previous.points
+        });
+      }
+      previous = evaluated;
+    }
+  });
+  return rows;
+}
+
+// Each position priced as "buy the top" against "buy the cheap end, two deep".
+function puntComparisonFor(seasons, capture) {
+  const shape = {
+    QB: { payBand: 0, puntBand: 3 },
+    RB: { payBand: 1, puntBand: 4 },
+    WR: { payBand: 1, puntBand: 4 },
+    TE: { payBand: 0, puntBand: 2 }
+  };
+  const rows = [];
+  Object.entries(shape).forEach(([pos, { payBand, puntBand }]) => {
+    const slots = STARTERS[pos];
+    const label = (band, count) => `${count}x ${pos}${BANDS[pos][band][0]}-${BANDS[pos][band][1]}`;
+
+    const payCounts = BANDS[pos].map((_, i) => (i === payBand ? slots : 0));
+    const puntCounts = BANDS[pos].map((_, i) => (i === puntBand ? slots + 2 : 0));
+    const pay = evaluatePlan(seasons, pos, payCounts, capture[pos], makeRandom(0xb1d), 4000);
+    const punt = evaluatePlan(seasons, pos, puntCounts, capture[pos], makeRandom(0xb1d), 4000);
+    if (!pay || !punt) return;
+    rows.push({
+      pos,
+      payLabel: label(payBand, slots),
+      payCost: pay.cost,
+      payPoints: pay.points,
+      puntLabel: label(puntBand, slots + 2),
+      puntCost: punt.cost,
+      puntPoints: punt.points
+    });
+  });
+  return rows;
+}
+
+function buildReport(seasons, curves, capture, rosterPlan, holdouts, champions, depthCurve, puntComparison) {
   const out = [];
   const push = (...lines) => out.push(...lines);
 
@@ -506,11 +590,12 @@ function buildReport(seasons, curves, capture, rosterPlan, holdouts, champions) 
     push(`| ${pos} | ${money(leagueAvg[pos])} | **${money(plan ? plan.roundedCost : 0)}** | ${plan ? plan.players : 0} | ${label} |`);
   });
   push('');
-  push('Three things drive that split:');
+  push('Four things drive that split:');
   push('');
-  push('1. **The league spends 80% of its money on RB and WR, and the top of the WR market has not paid for it.** The two most expensive receivers each year cost $81 on average and returned 93 points - a median finish of WR15. Five receivers bought in the WR23-35 price band cost $60 total and put three starters on the field averaging 81 points each.');
-  push('2. **QB is the widest gap between best and replacement of any position (165 points), and the market underpays it.** The elite QB costs $63 and is the only expensive tier in the league that clears its own price. The QBs priced 3rd through 6th are the trap: $38 for a median QB12 finish.');
-  push('3. **Cheap QBs and TEs hit often enough that two or three darts beat one expensive body.** A $1-3 QB finished top-10 in every one of the five seasons - Stafford, Cousins, Burrow, Purdy, Goff, Daniels, Maye, Williams. Three darts cost $8 and return 214 points against 264 for the $63 starter.');
+  push('1. **The league spends 80% of its money on RB and WR, and the top of the WR market has not paid for it.** The two most expensive receivers each year cost $81 on average and returned 93 points - a median finish of WR15. Receivers bought in the WR23-35 band cost about $12 each, and buying seven of them fields three starters every week for $82 total.');
+  push('2. **QB is the widest gap between best and replacement of any position (165 points), and the market underpays it.** The elite QB costs $63 and is the only expensive tier in the league that clears its own price. The QBs priced 3rd through 6th are the trap: $38 for a median QB12 finish, which is worse than what a $10 quarterback returns.');
+  push('3. **Depth is bought at the position with the most slots, not the most bodies.** Three WR slots break far more often than one QB slot, which is why the fourth and fifth receiver are worth 8-9 points each while a backup quarterback behind an elite starter is worth slightly less than nothing.');
+  push('4. **If you do not buy the elite QB, punt the position entirely rather than shopping in the middle.** Three $1-3 quarterbacks return 216 points for $4; one $38 quarterback returns 205. A $1-3 QB finished top-10 in every one of the five seasons - Stafford, Cousins, Burrow, Purdy, Goff, Daniels, Maye, Williams.');
   push('');
 
   // --- 1. Scarcity -----------------------------------------------------------
@@ -621,25 +706,20 @@ function buildReport(seasons, curves, capture, rosterPlan, holdouts, champions) 
   push('');
 
   // --- 5. Cheap darts --------------------------------------------------------
-  push('## 5. The cheap-dart effect');
+  push('## 5. Paying up versus punting');
   push('');
-  push('At QB and TE the auction is deep enough that you can buy two or three lottery tickets and start whichever one hits. Expected points from the *best* of N cheap buys:');
+  push(`Each position priced two ways, scored on the same week-by-week model as section 6: buy your starters at the top of the market, or buy two extra bodies from the cheap end and rotate whoever is healthy. Points are what the position's starting slots actually produce across a ${SEASON_WEEKS}-week season.`);
   push('');
-  push('| Pos | Price band | 1 dart | 2 darts | 3 darts | Cost of 3 | Cost of the #1-priced player | Its points |');
+  push('| Pos | Pay up | Cost | Points | Punt | Cost | Points | Cost of the upgrade |');
   push('|---|---|---|---|---|---|---|---|');
-  [
-    { pos: 'QB', lo: 10, hi: 21 },
-    { pos: 'TE', lo: 7, hi: 15 },
-    { pos: 'RB', lo: 24, hi: 40 },
-    { pos: 'WR', lo: 30, hi: 50 }
-  ].forEach(({ pos, lo, hi }) => {
-    const darts = [1, 2, 3].map(n => bestOfNCheap(seasons, pos, lo, hi, n));
-    const top = curves[pos][0];
+  puntComparison.forEach(row => {
     push(
-      `| ${pos} | ${pos}${lo}-${hi} | ${fmt(darts[0].points)} | ${fmt(darts[1].points)} | ${fmt(darts[2].points)} | ` +
-      `${money(darts[2].cost)} | ${money(top.exactCost)} | ${fmt(top.points)} |`
+      `| ${row.pos} | ${row.payLabel} | ${money(row.payCost)} | ${fmt(row.payPoints)} | ${row.puntLabel} | ` +
+      `${money(row.puntCost)} | ${fmt(row.puntPoints)} | ${money(row.payCost - row.puntCost)} for ${row.payPoints - row.puntPoints >= 0 ? '+' : ''}${fmt(row.payPoints - row.puntPoints)} |`
     );
   });
+  push('');
+  push('QB is the one position where paying up survives contact with the alternative, and even there the upgrade is the most expensive point-per-dollar on the board. At WR the punt simply wins.');
   push('');
 
   // --- 6. Optimal budget -----------------------------------------------------
@@ -665,9 +745,19 @@ function buildReport(seasons, curves, capture, rosterPlan, holdouts, champions) 
 
   push(`### 6b. Whole roster (${ROSTER_SIZE} spots, ${money(BUDGET)})`);
   push('');
-  push('The bench is not filler - it is extra draws at a position, and only the best of them starts. This run optimizes all sixteen spots at once, scoring each plan by drawing real players from real auctions and starting the best of them.');
+  push(`The bench is not filler - it is insurance, and whether it is worth buying depends on how often the starter in front of it is missing. This run optimizes all sixteen spots at once and scores every plan week by week: each drawn player is available in a given week with probability (games played / ${SEASON_WEEKS}), the best available fill the starting slots at their per-game rate, and any slot left open falls back to a waiver pickup at replacement level. A rostered player who is worse than the wire never gets started.`);
   push('');
   push(`Depth is credited at the rate the league actually converts it. Comparing Active FPTS against each roster's best-case lineup over 2021-2023, managers captured ${POSITIONS.filter(p => p !== 'K' && p !== 'DST').map(p => `${fmt(100 * capture[p])}% at ${p}`).join(', ')}. An extra body is only worth the share of its upside you actually start.`);
+  push('');
+  push('What each additional body is worth, holding the starters fixed and adding from the cheapest band:');
+  push('');
+  push('| Pos | Bodies | Marginal cost | Marginal points |');
+  push('|---|---|---|---|');
+  depthCurve.forEach(row => {
+    push(`| ${row.pos} | ${row.from} -> ${row.to} | ${money(row.cost)} | ${row.points >= 0 ? '+' : ''}${fmt(row.points, 1)} |`);
+  });
+  push('');
+  push('Those numbers are the honest scale of the bench question: single digits per season against a roster that scores over a thousand. The first spare receiver is worth real points because three WR slots break more often than one; a third quarterback behind an elite starter is worth less than nothing, because it is a roster spot spent on someone who will not play. Everything in between is close enough to zero that roster feel should win the argument.');
   push('');
   push('| Pos | Players | $ | Where to buy them | Expected starter points |');
   push('|---|---|---|---|---|');
@@ -715,16 +805,16 @@ function buildReport(seasons, curves, capture, rosterPlan, holdouts, champions) 
   push('|---|---|---|---|---|---|');
   const targets = [
     { pos: 'QB', lo: 1, hi: 2, verdict: 'Buy, but only the top of the market. The gap to a replacement QB is the biggest at any position.' },
-    { pos: 'QB', lo: 14, hi: 21, verdict: 'Buy two as $1 darts even if you already bought QB1. Cheapest upside in the auction.' },
+    { pos: 'QB', lo: 14, hi: 21, verdict: 'The punt. Three of these return 216 points for $4. Buy them only if you lose QB1-2 - behind an elite starter a backup QB is worth less than the roster spot.' },
     { pos: 'QB', lo: 3, hi: 6, verdict: 'Avoid. Costs like a starter, finishes like a streamer.' },
     { pos: 'RB', lo: 3, hi: 6, verdict: 'Buy both starters here. Best points-per-dollar of any expensive tier.' },
     { pos: 'RB', lo: 1, hi: 2, verdict: 'Avoid. Same money, worse return, and the two worst busts of the five years.' },
     { pos: 'RB', lo: 14, hi: 22, verdict: 'Avoid. The middle class returns barely more than the $5 tier.' },
-    { pos: 'RB', lo: 23, hi: 35, verdict: 'Buy for the bench. Same points as the $28 tier at a quarter the price.' },
-    { pos: 'WR', lo: 23, hi: 35, verdict: 'Buy four or five. This is the whole WR plan.' },
+    { pos: 'RB', lo: 23, hi: 35, verdict: 'Buy one or two behind your starters. Same points as the $28 tier at a quarter the price.' },
+    { pos: 'WR', lo: 23, hi: 35, verdict: 'Buy five to seven. This is the whole WR plan - three slots break often, so bodies here are the best-value depth on the board.' },
     { pos: 'WR', lo: 1, hi: 2, verdict: 'Avoid. The single largest overpay in the league.' },
     { pos: 'WR', lo: 14, hi: 22, verdict: 'Avoid. Costs double the WR23-35 tier for fewer points.' },
-    { pos: 'TE', lo: 7, hi: 15, verdict: 'Buy two or three. The position is nearly flat below the top two.' },
+    { pos: 'TE', lo: 7, hi: 15, verdict: 'Buy two. The second is worth 6 points, the third only 4 - and you would stream over him by October anyway.' },
     { pos: 'TE', lo: 1, hi: 2, verdict: 'Avoid unless it goes cheap. Worst points-per-dollar of any tier over $20.' },
     { pos: 'K', lo: 1, hi: 2, verdict: 'Buy. Costs $4 and is the only place a few dollars still moves the needle.' },
     { pos: 'DST', lo: 1, hi: 2, verdict: 'Buy. Same logic, $3.' }
@@ -858,7 +948,9 @@ function main() {
   }));
 
   const champions = loadChampions(seasons);
-  const report = buildReport(seasons, curves, capture, rosterPlan, holdouts, champions);
+  const depthCurve = depthCurveFor(seasons, capture);
+  const puntComparison = puntComparisonFor(seasons, capture);
+  const report = buildReport(seasons, curves, capture, rosterPlan, holdouts, champions, depthCurve, puntComparison);
 
   if (process.argv.includes('--stdout')) {
     process.stdout.write(report);

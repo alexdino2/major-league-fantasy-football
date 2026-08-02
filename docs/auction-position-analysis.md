@@ -10,18 +10,19 @@ Points below are each **player's** season scoring total, not a fantasy team's sc
 
 | Pos | League pays | This plan pays | Bodies | Where |
 |---|---|---|---|---|
-| QB | $36 | **$65** | 3 | 1x QB1-2 + 2x QB14-21 |
-| RB | $124 | **$154** | 2 | 2x RB3-6 |
-| WR | $116 | **$60** | 6 | 5x WR23-35 + 1x WR36-59 |
-| TE | $19 | **$7** | 3 | 3x TE7-15 |
+| QB | $36 | **$63** | 1 | 1x QB1-2 |
+| RB | $124 | **$140** | 4 | 1x RB3-6 + 1x RB7-13 + 1x RB23-35 + 1x RB36-47 |
+| WR | $116 | **$82** | 7 | 7x WR23-35 |
+| TE | $19 | **$5** | 2 | 2x TE7-15 |
 | K | $2 | **$4** | 1 | 1x K1-2 |
 | DST | $2 | **$3** | 1 | 1x DST1-2 |
 
-Three things drive that split:
+Four things drive that split:
 
-1. **The league spends 80% of its money on RB and WR, and the top of the WR market has not paid for it.** The two most expensive receivers each year cost $81 on average and returned 93 points - a median finish of WR15. Five receivers bought in the WR23-35 price band cost $60 total and put three starters on the field averaging 81 points each.
-2. **QB is the widest gap between best and replacement of any position (165 points), and the market underpays it.** The elite QB costs $63 and is the only expensive tier in the league that clears its own price. The QBs priced 3rd through 6th are the trap: $38 for a median QB12 finish.
-3. **Cheap QBs and TEs hit often enough that two or three darts beat one expensive body.** A $1-3 QB finished top-10 in every one of the five seasons - Stafford, Cousins, Burrow, Purdy, Goff, Daniels, Maye, Williams. Three darts cost $8 and return 214 points against 264 for the $63 starter.
+1. **The league spends 80% of its money on RB and WR, and the top of the WR market has not paid for it.** The two most expensive receivers each year cost $81 on average and returned 93 points - a median finish of WR15. Receivers bought in the WR23-35 band cost about $12 each, and buying seven of them fields three starters every week for $82 total.
+2. **QB is the widest gap between best and replacement of any position (165 points), and the market underpays it.** The elite QB costs $63 and is the only expensive tier in the league that clears its own price. The QBs priced 3rd through 6th are the trap: $38 for a median QB12 finish, which is worse than what a $10 quarterback returns.
+3. **Depth is bought at the position with the most slots, not the most bodies.** Three WR slots break far more often than one QB slot, which is why the fourth and fifth receiver are worth 8-9 points each while a backup quarterback behind an elite starter is worth slightly less than nothing.
+4. **If you do not buy the elite QB, punt the position entirely rather than shopping in the middle.** Three $1-3 quarterbacks return 216 points for $4; one $38 quarterback returns 205. A $1-3 QB finished top-10 in every one of the five seasons - Stafford, Cousins, Burrow, Purdy, Goff, Daniels, Maye, Williams.
 
 ## 1. What each position is actually worth
 
@@ -172,16 +173,18 @@ League-wide, a point over replacement costs **$6 per 10 points**. Measured again
 | QB | QB14-22 | $1 | 24 | $13 | +$12 |
 | QB | QB7-13 | $10 | 45 | $25 | +$15 |
 
-## 5. The cheap-dart effect
+## 5. Paying up versus punting
 
-At QB and TE the auction is deep enough that you can buy two or three lottery tickets and start whichever one hits. Expected points from the *best* of N cheap buys:
+Each position priced two ways, scored on the same week-by-week model as section 6: buy your starters at the top of the market, or buy two extra bodies from the cheap end and rotate whoever is healthy. Points are what the position's starting slots actually produce across a 17-week season.
 
-| Pos | Price band | 1 dart | 2 darts | 3 darts | Cost of 3 | Cost of the #1-priced player | Its points |
+| Pos | Pay up | Cost | Points | Punt | Cost | Points | Cost of the upgrade |
 |---|---|---|---|---|---|---|---|
-| QB | QB10-21 | 156 | 197 | 214 | $8 | $67 | 264 |
-| TE | TE7-15 | 42 | 53 | 59 | $7 | $57 | 69 |
-| RB | RB24-40 | 62 | 82 | 94 | $17 | $95 | 98 |
-| WR | WR30-50 | 55 | 72 | 81 | $14 | $84 | 93 |
+| QB | 1x QB1-2 | $63 | 270 | 3x QB14-21 | $3 | 216 | $59 for +54 |
+| RB | 2x RB3-6 | $154 | 267 | 4x RB23-35 | $32 | 184 | $122 for +83 |
+| WR | 3x WR3-6 | $194 | 319 | 5x WR23-35 | $58 | 259 | $135 for +59 |
+| TE | 1x TE1-2 | $49 | 76 | 3x TE7-15 | $7 | 60 | $42 for +16 |
+
+QB is the one position where paying up survives contact with the alternative, and even there the upgrade is the most expensive point-per-dollar on the board. At WR the punt simply wins.
 
 ## 6. Ideal $300 budget
 
@@ -202,27 +205,47 @@ The **conservative** column smooths each position's price curve so expected poin
 
 ### 6b. Whole roster (16 spots, $300)
 
-The bench is not filler - it is extra draws at a position, and only the best of them starts. This run optimizes all sixteen spots at once, scoring each plan by drawing real players from real auctions and starting the best of them.
+The bench is not filler - it is insurance, and whether it is worth buying depends on how often the starter in front of it is missing. This run optimizes all sixteen spots at once and scores every plan week by week: each drawn player is available in a given week with probability (games played / 17), the best available fill the starting slots at their per-game rate, and any slot left open falls back to a waiver pickup at replacement level. A rostered player who is worse than the wire never gets started.
 
 Depth is credited at the rate the league actually converts it. Comparing Active FPTS against each roster's best-case lineup over 2021-2023, managers captured 88% at QB, 86% at RB, 82% at WR, 72% at TE. An extra body is only worth the share of its upside you actually start.
 
+What each additional body is worth, holding the starters fixed and adding from the cheapest band:
+
+| Pos | Bodies | Marginal cost | Marginal points |
+|---|---|---|---|
+| QB | 1 -> 2 | $1 | -0.4 |
+| QB | 2 -> 3 | $1 | -0.7 |
+| QB | 3 -> 4 | $1 | +0.0 |
+| RB | 2 -> 3 | $2 | +2.2 |
+| RB | 3 -> 4 | $1 | +1.7 |
+| RB | 4 -> 5 | $1 | +2.3 |
+| RB | 5 -> 6 | $2 | +3.0 |
+| WR | 3 -> 4 | $2 | +9.2 |
+| WR | 4 -> 5 | $2 | +7.7 |
+| WR | 5 -> 6 | $2 | +5.3 |
+| WR | 6 -> 7 | $2 | +4.4 |
+| TE | 1 -> 2 | $2 | +6.1 |
+| TE | 2 -> 3 | $2 | +3.9 |
+
+Those numbers are the honest scale of the bench question: single digits per season against a roster that scores over a thousand. The first spare receiver is worth real points because three WR slots break more often than one; a third quarterback behind an elite starter is worth less than nothing, because it is a roster spot spent on someone who will not play. Everything in between is close enough to zero that roster feel should win the argument.
+
 | Pos | Players | $ | Where to buy them | Expected starter points |
 |---|---|---|---|---|
-| QB | 3 | **$65** | 1x QB1-2 + 2x QB14-21 | 261 |
-| RB | 2 | **$154** | 2x RB3-6 | 263 |
-| WR | 6 | **$60** | 5x WR23-35 + 1x WR36-59 | 244 |
-| TE | 3 | **$7** | 3x TE7-15 | 54 |
-| K | 1 | **$4** | 1x K1-2 | 134 |
-| DST | 1 | **$3** | 1x DST1-2 | 100 |
-| **Total** | 16 | **$293** | | **1056** |
+| QB | 1 | **$63** | 1x QB1-2 | 269 |
+| RB | 4 | **$140** | 1x RB3-6 + 1x RB7-13 + 1x RB23-35 + 1x RB36-47 | 253 |
+| WR | 7 | **$82** | 7x WR23-35 | 286 |
+| TE | 2 | **$5** | 2x TE7-15 | 56 |
+| K | 1 | **$4** | 1x K1-2 | 146 |
+| DST | 1 | **$3** | 1x DST1-2 | 104 |
+| **Total** | 16 | **$297** | | **1114** |
 
 For reference, the league's own average allocation run through the same evaluator:
 
 | Pos | QB | RB | WR | TE | K | DST |
 |---|---|---|---|---|---|---|
-| Optimizer | $65 | $154 | $60 | $7 | $4 | $3 |
+| Optimizer | $63 | $140 | $82 | $5 | $4 | $3 |
 | League average | $36 | $124 | $116 | $19 | $2 | $2 |
-| Difference | +$29 | +$30 | -$56 | -$12 | +$2 | +$1 |
+| Difference | +$27 | +$16 | -$34 | -$14 | +$2 | +$1 |
 
 ### 6c. Does the plan hold up out of sample?
 
@@ -230,11 +253,11 @@ Each row refits the optimizer with one season removed, so that season never info
 
 | Season held out | QB | RB | WR | TE | K | DST |
 |---|---|---|---|---|---|---|
-| 2021 | $68 (3) | $152 (2) | $63 (6) | $7 (3) | $4 (1) | $3 (1) |
-| 2022 | $33 (4) | $156 (2) | $63 (6) | $36 (2) | $5 (1) | $3 (1) |
-| 2023 | $64 (4) | $153 (2) | $72 (6) | $4 (2) | $4 (1) | $3 (1) |
-| 2024 | $61 (1) | $102 (4) | $122 (6) | $7 (3) | $5 (1) | $3 (1) |
-| 2025 | $60 (1) | $100 (4) | $124 (6) | $7 (3) | $5 (1) | $2 (1) |
+| 2021 | $69 (4) | $152 (2) | $55 (7) | $17 (1) | $4 (1) | $3 (1) |
+| 2022 | $42 (4) | $157 (2) | $73 (7) | $18 (1) | $5 (1) | $3 (1) |
+| 2023 | $32 (3) | $154 (2) | $84 (7) | $18 (2) | $4 (1) | $3 (1) |
+| 2024 | $61 (1) | $97 (5) | $82 (7) | $52 (1) | $4 (1) | $3 (1) |
+| 2025 | $60 (1) | $35 (6) | $176 (6) | $20 (1) | $5 (1) | $2 (1) |
 
 ## 7. Draft-day target list
 
@@ -243,16 +266,16 @@ Price rank translated back into dollars, so it is usable while bidding. "Going r
 | Buy | Price rank | Going rate | Avg points | Median finish | Verdict |
 |---|---|---|---|---|---|
 | Target | **QB1-2** | $42-$77 (avg $63) | 264 | QB2 | Buy, but only the top of the market. The gap to a replacement QB is the biggest at any position. |
-| Target | **QB14-21** | $1-$3 (avg $1) | 153 | QB17 | Buy two as $1 darts even if you already bought QB1. Cheapest upside in the auction. |
+| Target | **QB14-21** | $1-$3 (avg $1) | 153 | QB17 | The punt. Three of these return 216 points for $4. Buy them only if you lose QB1-2 - behind an elite starter a backup QB is worth less than the roster spot. |
 | Avoid | **QB3-6** | $22-$60 (avg $38) | 181 | QB12 | Avoid. Costs like a starter, finishes like a streamer. |
 | Target | **RB3-6** | $68-$99 (avg $77) | 131 | RB8 | Buy both starters here. Best points-per-dollar of any expensive tier. |
 | Avoid | **RB1-2** | $79-$101 (avg $91) | 98 | RB11 | Avoid. Same money, worse return, and the two worst busts of the five years. |
 | Avoid | **RB14-22** | $15-$44 (avg $28) | 66 | RB25 | Avoid. The middle class returns barely more than the $5 tier. |
-| Target | **RB23-35** | $1-$18 (avg $8) | 65 | RB29 | Buy for the bench. Same points as the $28 tier at a quarter the price. |
-| Target | **WR23-35** | $3-$21 (avg $12) | 65 | WR33 | Buy four or five. This is the whole WR plan. |
+| Target | **RB23-35** | $1-$18 (avg $8) | 65 | RB29 | Buy one or two behind your starters. Same points as the $28 tier at a quarter the price. |
+| Target | **WR23-35** | $3-$21 (avg $12) | 65 | WR33 | Buy five to seven. This is the whole WR plan - three slots break often, so bodies here are the best-value depth on the board. |
 | Avoid | **WR1-2** | $74-$88 (avg $81) | 93 | WR15 | Avoid. The single largest overpay in the league. |
 | Avoid | **WR14-22** | $16-$37 (avg $25) | 64 | WR29 | Avoid. Costs double the WR23-35 tier for fewer points. |
-| Target | **TE7-15** | $1-$9 (avg $2) | 42 | TE16 | Buy two or three. The position is nearly flat below the top two. |
+| Target | **TE7-15** | $1-$9 (avg $2) | 42 | TE16 | Buy two. The second is worth 6 points, the third only 4 - and you would stream over him by October anyway. |
 | Avoid | **TE1-2** | $36-$80 (avg $49) | 69 | TE6 | Avoid unless it goes cheap. Worst points-per-dollar of any tier over $20. |
 | Target | **K1-2** | $1-$12 (avg $4) | 135 | K4 | Buy. Costs $4 and is the only place a few dollars still moves the needle. |
 | Target | **DST1-2** | $2-$4 (avg $3) | 100 | DST6 | Buy. Same logic, $3. |

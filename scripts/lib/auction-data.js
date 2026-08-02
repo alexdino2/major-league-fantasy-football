@@ -21,6 +21,8 @@ const STARTERS = { QB: 1, RB: 2, WR: 3, TE: 1, K: 1, DST: 1 };
 const TEAMS = 10;
 const ROSTER_SIZE = 16;
 const BUDGET = 300;
+// Fantasy weeks in a season; also the cap on games played for availability math.
+const SEASON_WEEKS = 17;
 
 function parseCsv(content) {
   const lines = content.replace(/^﻿/, '').split(/\r?\n/).filter(line => line.length > 0);
@@ -103,13 +105,18 @@ function loadPlayerPool(year) {
     if (!byPosition[pos]) return;
     const points = num(row['Total FPTS']);
     if (points === null) return;
-    byPosition[pos].push({ key: playerKey(row.Player), player: row.Player, points });
+    // Games played is not published directly, but total / per-game average
+    // recovers it exactly (it lands on a whole number for every row).
+    const average = num(row['Avg FPTS']);
+    const games = average > 0 ? Math.min(SEASON_WEEKS, Math.round(points / average)) : null;
+    byPosition[pos].push({ key: playerKey(row.Player), player: row.Player, points, games });
   });
 
   const seen = new Set();
   POSITIONS.forEach(pos => byPosition[pos].forEach(entry => seen.add(`${pos}|${entry.key}`)));
 
   const draftRows = readCsv(`draft_results_${year}.csv`) || [];
+  const restored = [];
   draftRows.forEach(row => {
     const pos = row.ELIG || row.POS;
     if (!byPosition[pos]) return;
@@ -118,7 +125,22 @@ function loadPlayerPool(year) {
     const points = num(row['Total FPTS']);
     if (points === null) return;
     seen.add(`${pos}|${key}`);
-    byPosition[pos].push({ key, player: row.Player, points, restored: true });
+    const entry = { key, player: row.Player, points, games: null, restored: true };
+    byPosition[pos].push(entry);
+    restored.push({ pos, entry });
+  });
+
+  // Restored players come from the draft export, which carries no per-game
+  // average, so games played has to be imputed from comparable scorers.
+  restored.forEach(({ pos, entry }) => {
+    const neighbours = byPosition[pos]
+      .filter(other => other.games !== null && Math.abs(other.points - entry.points) <= Math.max(5, entry.points * 0.1))
+      .map(other => other.games)
+      .sort((a, b) => a - b);
+    entry.games = neighbours.length
+      ? neighbours[Math.floor(neighbours.length / 2)]
+      : SEASON_WEEKS;
+    entry.gamesImputed = true;
   });
 
   const index = new Map();
@@ -170,6 +192,8 @@ function loadDraft(year, pool) {
       points: points === null ? 0 : points,
       hasPoints: points !== null,
       finishRank: poolEntry ? poolEntry.rank : null,
+      games: poolEntry ? poolEntry.games : null,
+      pointsPerGame: poolEntry && poolEntry.games ? poolEntry.points / poolEntry.games : null,
       activePoints: num(row['Active FPTS'])
     };
   });
@@ -242,6 +266,7 @@ module.exports = {
   BUDGET,
   POSITIONS,
   ROSTER_SIZE,
+  SEASON_WEEKS,
   STARTERS,
   TEAMS,
   correlation,

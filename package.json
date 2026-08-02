@@ -25,6 +25,7 @@
     "scrape-weekly-results": "node scripts/scrape-weekly-results.js",
     "cbs-login": "node scripts/cbs-login.js",
     "scrape-draft-results": "node scripts/scrape-draft-results.js",
+    "scrape-player-fpts": "node scripts/scrape-player-fpts.js",
     "fix-munich-cowboys": "node scripts/fix-munich-cowboys.js",
     "fix-munich-cowboys:revert": "node scripts/fix-munich-cowboys.js revert",
     "merge-draft-results": "node scripts/merge-draft-results.js",

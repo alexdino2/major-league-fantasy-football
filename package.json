@@ -28,6 +28,7 @@
     "scrape-player-fpts": "node scripts/scrape-player-fpts.js",
     "fix-munich-cowboys": "node scripts/fix-munich-cowboys.js",
     "fix-munich-cowboys:revert": "node scripts/fix-munich-cowboys.js revert",
+    "analyze-position-value": "node scripts/analyze-position-value.js",
     "merge-draft-results": "node scripts/merge-draft-results.js",
     "merge-pre-cbs-standings": "node scripts/merge-pre-cbs-standings.js"
   },

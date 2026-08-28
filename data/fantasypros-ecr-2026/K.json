@@ -1,0 +1,272 @@
+[
+{
+"name": "Brandon Aubrey",
+"team": "DAL",
+"pos": "K",
+"posRank": 1,
+"ecr": 1,
+"tier": null,
+"bye": "14"
+},
+{
+"name": "Cameron Dicker",
+"team": "LAC",
+"pos": "K",
+"posRank": 2,
+"ecr": 2,
+"tier": null,
+"bye": "7"
+},
+{
+"name": "Cam Little",
+"team": "JAC",
+"pos": "K",
+"posRank": 3,
+"ecr": 3,
+"tier": null,
+"bye": "7"
+},
+{
+"name": "Ka'imi Fairbairn",
+"team": "HOU",
+"pos": "K",
+"posRank": 4,
+"ecr": 4,
+"tier": null,
+"bye": "8"
+},
+{
+"name": "Tyler Loop",
+"team": "BAL",
+"pos": "K",
+"posRank": 5,
+"ecr": 5,
+"tier": null,
+"bye": "13"
+},
+{
+"name": "Chase McLaughlin",
+"team": "TB",
+"pos": "K",
+"posRank": 6,
+"ecr": 6,
+"tier": null,
+"bye": "10"
+},
+{
+"name": "Evan McPherson",
+"team": "CIN",
+"pos": "K",
+"posRank": 7,
+"ecr": 7,
+"tier": null,
+"bye": "6"
+},
+{
+"name": "Jason Myers",
+"team": "SEA",
+"pos": "K",
+"posRank": 8,
+"ecr": 8,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Jake Bates",
+"team": "DET",
+"pos": "K",
+"posRank": 9,
+"ecr": 9,
+"tier": null,
+"bye": "6"
+},
+{
+"name": "Chris Boswell",
+"team": "PIT",
+"pos": "K",
+"posRank": 10,
+"ecr": 10,
+"tier": null,
+"bye": "9"
+},
+{
+"name": "Will Reichard",
+"team": "MIN",
+"pos": "K",
+"posRank": 11,
+"ecr": 11,
+"tier": null,
+"bye": "6"
+},
+{
+"name": "Eddy Pineiro",
+"team": "SF",
+"pos": "K",
+"posRank": 12,
+"ecr": 12,
+"tier": null,
+"bye": "8"
+},
+{
+"name": "Cairo Santos",
+"team": "CHI",
+"pos": "K",
+"posRank": 13,
+"ecr": 13,
+"tier": null,
+"bye": "10"
+},
+{
+"name": "Jake Elliott",
+"team": "PHI",
+"pos": "K",
+"posRank": 14,
+"ecr": 14,
+"tier": null,
+"bye": "10"
+},
+{
+"name": "Harrison Mevis",
+"team": "LAR",
+"pos": "K",
+"posRank": 15,
+"ecr": 15,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Trey Smack",
+"team": "GB",
+"pos": "K",
+"posRank": 16,
+"ecr": 16,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Harrison Butker",
+"team": "KC",
+"pos": "K",
+"posRank": 17,
+"ecr": 17,
+"tier": null,
+"bye": "5"
+},
+{
+"name": "Charlie Smyth",
+"team": "NO",
+"pos": "K",
+"posRank": 18,
+"ecr": 18,
+"tier": null,
+"bye": "8"
+},
+{
+"name": "Wil Lutz",
+"team": "DEN",
+"pos": "K",
+"posRank": 19,
+"ecr": 19,
+"tier": null,
+"bye": "10"
+},
+{
+"name": "Tyler Bass",
+"team": "BUF",
+"pos": "K",
+"posRank": 20,
+"ecr": 20,
+"tier": null,
+"bye": "7"
+},
+{
+"name": "Ryan Fitzgerald",
+"team": "CAR",
+"pos": "K",
+"posRank": 21,
+"ecr": 21,
+"tier": null,
+"bye": "5"
+},
+{
+"name": "Andy Borregales",
+"team": "NE",
+"pos": "K",
+"posRank": 22,
+"ecr": 22,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Joey Slye",
+"team": "TEN",
+"pos": "K",
+"posRank": 23,
+"ecr": 23,
+"tier": null,
+"bye": "9"
+},
+{
+"name": "Blake Grupe",
+"team": "IND",
+"pos": "K",
+"posRank": 24,
+"ecr": 24,
+"tier": null,
+"bye": "13"
+},
+{
+"name": "Nick Folk",
+"team": "ATL",
+"pos": "K",
+"posRank": 25,
+"ecr": 25,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Daniel Carlson",
+"team": "NO",
+"pos": "K",
+"posRank": 26,
+"ecr": 26,
+"tier": null,
+"bye": "8"
+},
+{
+"name": "Chad Ryland",
+"team": "ARI",
+"pos": "K",
+"posRank": 27,
+"ecr": 27,
+"tier": null,
+"bye": "14"
+},
+{
+"name": "Andrew Wellock",
+"team": "CAR",
+"pos": "K",
+"posRank": 28,
+"ecr": 28,
+"tier": null,
+"bye": "5"
+},
+{
+"name": "Andre Szmyt",
+"team": "CLE",
+"pos": "K",
+"posRank": 29,
+"ecr": 29,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Jake Moody",
+"team": "FA",
+"pos": "K",
+"posRank": 30,
+"ecr": 30,
+"tier": null,
+"bye": null
+}
+]

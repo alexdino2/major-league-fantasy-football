@@ -30,7 +30,8 @@
     "fix-munich-cowboys:revert": "node scripts/fix-munich-cowboys.js revert",
     "analyze-position-value": "node scripts/analyze-position-value.js",
     "merge-draft-results": "node scripts/merge-draft-results.js",
-    "merge-pre-cbs-standings": "node scripts/merge-pre-cbs-standings.js"
+    "merge-pre-cbs-standings": "node scripts/merge-pre-cbs-standings.js",
+    "build-auction-cheatsheet": "node scripts/build-auction-cheatsheet.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",

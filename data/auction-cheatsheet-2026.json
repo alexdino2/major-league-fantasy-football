@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-28T02:28:40.592Z",
+ "generatedAt": "2026-08-28T02:40:33.979Z",
  "board": {
   "QB": [
    {
@@ -13,6 +13,7 @@
     "projPts": 293.4,
     "vorp": 164.5,
     "market": 62.8,
+    "lastYr": 77,
     "adjVorp": 164.5,
     "value": 70,
     "edge": 7
@@ -28,6 +29,7 @@
     "projPts": 282.6,
     "vorp": 153.7,
     "market": 58.6,
+    "lastYr": 67,
     "adjVorp": 153.7,
     "value": 66,
     "edge": 7
@@ -43,6 +45,7 @@
     "projPts": 263,
     "vorp": 134.1,
     "market": 49.9,
+    "lastYr": 59,
     "adjVorp": 134.1,
     "value": 58,
     "edge": 8
@@ -58,6 +61,7 @@
     "projPts": 255.6,
     "vorp": 126.7,
     "market": 41.1,
+    "lastYr": 57,
     "adjVorp": 126.7,
     "value": 54,
     "edge": 13
@@ -73,6 +77,7 @@
     "projPts": 238.6,
     "vorp": 109.7,
     "market": 33.8,
+    "lastYr": 47,
     "adjVorp": 109.7,
     "value": 47,
     "edge": 13
@@ -88,6 +93,7 @@
     "projPts": 228.4,
     "vorp": 99.5,
     "market": 27.5,
+    "lastYr": 40,
     "adjVorp": 99.5,
     "value": 43,
     "edge": 16
@@ -103,6 +109,7 @@
     "projPts": 223.8,
     "vorp": 94.9,
     "market": 22.2,
+    "lastYr": 25,
     "adjVorp": 94.9,
     "value": 41,
     "edge": 19
@@ -118,6 +125,7 @@
     "projPts": 218.8,
     "vorp": 89.9,
     "market": 16.9,
+    "lastYr": 9,
     "adjVorp": 89.9,
     "value": 39,
     "edge": 22
@@ -133,6 +141,7 @@
     "projPts": 212.4,
     "vorp": 83.5,
     "market": 12.5,
+    "lastYr": 9,
     "adjVorp": 83.5,
     "value": 36,
     "edge": 24
@@ -148,6 +157,7 @@
     "projPts": 202,
     "vorp": 73.1,
     "market": 9.1,
+    "lastYr": 8,
     "adjVorp": 73.1,
     "value": 32,
     "edge": 23
@@ -163,6 +173,7 @@
     "projPts": 194.6,
     "vorp": 65.7,
     "market": 6.1,
+    "lastYr": 4,
     "adjVorp": 65.7,
     "value": 29,
     "edge": 23
@@ -178,6 +189,7 @@
     "projPts": 186.2,
     "vorp": 57.3,
     "market": 3.9,
+    "lastYr": 4,
     "adjVorp": 57.3,
     "value": 25,
     "edge": 21
@@ -193,6 +205,7 @@
     "projPts": 183,
     "vorp": 54.1,
     "market": 2.6,
+    "lastYr": 3,
     "adjVorp": 54.1,
     "value": 24,
     "edge": 21
@@ -208,6 +221,7 @@
     "projPts": 179.6,
     "vorp": 50.7,
     "market": 1.8,
+    "lastYr": 1,
     "adjVorp": 50.7,
     "value": 22,
     "edge": 20
@@ -223,6 +237,7 @@
     "projPts": 171.8,
     "vorp": 42.9,
     "market": 1.3,
+    "lastYr": 1,
     "adjVorp": 42.9,
     "value": 19,
     "edge": 18
@@ -238,6 +253,7 @@
     "projPts": 167,
     "vorp": 38.1,
     "market": 1.1,
+    "lastYr": 1,
     "adjVorp": 38.1,
     "value": 17,
     "edge": 16
@@ -253,6 +269,7 @@
     "projPts": 157.6,
     "vorp": 28.7,
     "market": 1,
+    "lastYr": 1,
     "adjVorp": 28.7,
     "value": 13,
     "edge": 12
@@ -268,6 +285,7 @@
     "projPts": 155,
     "vorp": 26.1,
     "market": 1,
+    "lastYr": 1,
     "adjVorp": 26.1,
     "value": 12,
     "edge": 11
@@ -283,6 +301,7 @@
     "projPts": 149,
     "vorp": 20.1,
     "market": 1,
+    "lastYr": 1,
     "adjVorp": 20.1,
     "value": 9,
     "edge": 8
@@ -298,6 +317,7 @@
     "projPts": 143.2,
     "vorp": 14.3,
     "market": 1,
+    "lastYr": 1,
     "adjVorp": 14.3,
     "value": 7,
     "edge": 6
@@ -313,6 +333,7 @@
     "projPts": 138.6,
     "vorp": 9.7,
     "market": 1,
+    "lastYr": 1,
     "adjVorp": 9.7,
     "value": 5,
     "edge": 4
@@ -328,6 +349,7 @@
     "projPts": 132.6,
     "vorp": 3.7,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 3.7,
     "value": 3,
     "edge": 2
@@ -343,6 +365,7 @@
     "projPts": 125.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -358,6 +381,7 @@
     "projPts": 120,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -373,6 +397,7 @@
     "projPts": 116,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -388,6 +413,7 @@
     "projPts": 111.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -403,6 +429,7 @@
     "projPts": 105.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -418,6 +445,7 @@
     "projPts": 99.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -433,6 +461,7 @@
     "projPts": 97.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -448,6 +477,7 @@
     "projPts": 88.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -463,6 +493,7 @@
     "projPts": 83.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -478,6 +509,7 @@
     "projPts": 78.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -493,6 +525,7 @@
     "projPts": 74,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -508,6 +541,7 @@
     "projPts": 68.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -523,6 +557,7 @@
     "projPts": 64,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -538,6 +573,7 @@
     "projPts": 57.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -553,6 +589,7 @@
     "projPts": 54.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -568,6 +605,7 @@
     "projPts": 50.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -583,6 +621,7 @@
     "projPts": 47.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -598,6 +637,7 @@
     "projPts": 42.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -613,6 +653,7 @@
     "projPts": 39.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -628,6 +669,7 @@
     "projPts": 38,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -643,6 +685,7 @@
     "projPts": 34.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -658,6 +701,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -673,6 +717,7 @@
     "projPts": 28.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -688,6 +733,7 @@
     "projPts": 26.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -703,6 +749,7 @@
     "projPts": 22.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -718,6 +765,7 @@
     "projPts": 20.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -733,6 +781,7 @@
     "projPts": 17.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -748,6 +797,7 @@
     "projPts": 16.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -763,6 +813,7 @@
     "projPts": 15.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -778,6 +829,7 @@
     "projPts": 14.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -793,6 +845,7 @@
     "projPts": 12.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -808,6 +861,7 @@
     "projPts": 11.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -823,6 +877,7 @@
     "projPts": 9.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -838,6 +893,7 @@
     "projPts": 7,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -853,6 +909,7 @@
     "projPts": 6.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -868,6 +925,7 @@
     "projPts": 6.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -883,6 +941,7 @@
     "projPts": 5.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -898,6 +957,7 @@
     "projPts": 4.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -913,6 +973,7 @@
     "projPts": 4.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -928,6 +989,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -943,6 +1005,7 @@
     "projPts": 2.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -958,6 +1021,7 @@
     "projPts": 2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -973,6 +1037,7 @@
     "projPts": 0.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -988,6 +1053,7 @@
     "projPts": 0.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1003,6 +1069,7 @@
     "projPts": 0.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1018,6 +1085,7 @@
     "projPts": 0.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1033,6 +1101,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1048,6 +1117,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1063,6 +1133,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1078,6 +1149,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1093,6 +1165,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1108,6 +1181,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1123,6 +1197,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1138,6 +1213,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1153,6 +1229,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1168,6 +1245,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1183,6 +1261,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1198,6 +1277,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1213,6 +1293,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1228,6 +1309,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1243,6 +1325,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1258,6 +1341,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1273,6 +1357,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1288,6 +1373,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1303,6 +1389,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1318,6 +1405,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1333,6 +1421,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1348,6 +1437,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1363,6 +1453,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1378,6 +1469,7 @@
     "projPts": 0,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -1395,6 +1487,7 @@
     "projPts": 192.2,
     "vorp": 161.6,
     "market": 90.9,
+    "lastYr": 95,
     "goalLine": 1.15,
     "adjVorp": 185.8,
     "value": 79,
@@ -1411,6 +1504,7 @@
     "projPts": 172.8,
     "vorp": 142.2,
     "market": 88.5,
+    "lastYr": 86,
     "goalLine": 1.1,
     "adjVorp": 156.4,
     "value": 67,
@@ -1427,6 +1521,7 @@
     "projPts": 160.8,
     "vorp": 130.2,
     "market": 82.7,
+    "lastYr": 82,
     "goalLine": 1.2,
     "adjVorp": 156.2,
     "value": 67,
@@ -1443,6 +1538,7 @@
     "projPts": 148.2,
     "vorp": 117.6,
     "market": 78.7,
+    "lastYr": 81,
     "goalLine": 1.08,
     "adjVorp": 127,
     "value": 55,
@@ -1459,6 +1555,7 @@
     "projPts": 142.8,
     "vorp": 112.2,
     "market": 74.7,
+    "lastYr": 80,
     "goalLine": 1.22,
     "adjVorp": 136.9,
     "value": 59,
@@ -1475,6 +1572,7 @@
     "projPts": 138.2,
     "vorp": 107.6,
     "market": 71.4,
+    "lastYr": 74,
     "goalLine": 1,
     "adjVorp": 107.6,
     "value": 46,
@@ -1491,6 +1589,7 @@
     "projPts": 128,
     "vorp": 97.4,
     "market": 67.2,
+    "lastYr": 68,
     "goalLine": 1.15,
     "adjVorp": 112,
     "value": 48,
@@ -1507,6 +1606,7 @@
     "projPts": 120.8,
     "vorp": 90.2,
     "market": 62.6,
+    "lastYr": 63,
     "goalLine": 1.1,
     "adjVorp": 99.2,
     "value": 43,
@@ -1523,6 +1623,7 @@
     "projPts": 115.6,
     "vorp": 85,
     "market": 58.3,
+    "lastYr": 63,
     "goalLine": 1,
     "adjVorp": 85,
     "value": 37,
@@ -1539,6 +1640,7 @@
     "projPts": 113.2,
     "vorp": 82.6,
     "market": 53.5,
+    "lastYr": 60,
     "goalLine": 1.08,
     "adjVorp": 89.2,
     "value": 39,
@@ -1555,6 +1657,7 @@
     "projPts": 110.4,
     "vorp": 79.8,
     "market": 49.3,
+    "lastYr": 52,
     "goalLine": 1.12,
     "adjVorp": 89.4,
     "value": 39,
@@ -1571,6 +1674,7 @@
     "projPts": 106,
     "vorp": 75.4,
     "market": 44.5,
+    "lastYr": 49,
     "goalLine": 1.12,
     "adjVorp": 84.4,
     "value": 37,
@@ -1587,6 +1691,7 @@
     "projPts": 103.6,
     "vorp": 73,
     "market": 41.1,
+    "lastYr": 46,
     "goalLine": 1.2,
     "adjVorp": 87.6,
     "value": 38,
@@ -1603,6 +1708,7 @@
     "projPts": 101.8,
     "vorp": 71.2,
     "market": 38.5,
+    "lastYr": 39,
     "goalLine": 1.12,
     "adjVorp": 79.7,
     "value": 35,
@@ -1619,6 +1725,7 @@
     "projPts": 98.6,
     "vorp": 68,
     "market": 36.6,
+    "lastYr": 39,
     "goalLine": 1.2,
     "adjVorp": 81.6,
     "value": 35,
@@ -1635,6 +1742,7 @@
     "projPts": 93.8,
     "vorp": 63.2,
     "market": 34.7,
+    "lastYr": 39,
     "goalLine": 1.08,
     "adjVorp": 68.3,
     "value": 30,
@@ -1651,6 +1759,7 @@
     "projPts": 90.6,
     "vorp": 60,
     "market": 31.8,
+    "lastYr": 38,
     "goalLine": 1,
     "adjVorp": 60,
     "value": 26,
@@ -1667,6 +1776,7 @@
     "projPts": 88.8,
     "vorp": 58.2,
     "market": 28.2,
+    "lastYr": 35,
     "goalLine": 1,
     "adjVorp": 58.2,
     "value": 26,
@@ -1683,6 +1793,7 @@
     "projPts": 85.6,
     "vorp": 55,
     "market": 24.7,
+    "lastYr": 26,
     "goalLine": 1,
     "adjVorp": 55,
     "value": 24,
@@ -1699,6 +1810,7 @@
     "projPts": 81.6,
     "vorp": 51,
     "market": 21.3,
+    "lastYr": 22,
     "goalLine": 1,
     "adjVorp": 51,
     "value": 23,
@@ -1715,6 +1827,7 @@
     "projPts": 80,
     "vorp": 49.4,
     "market": 18.7,
+    "lastYr": 20,
     "goalLine": 1.08,
     "adjVorp": 53.4,
     "value": 24,
@@ -1731,6 +1844,7 @@
     "projPts": 78.2,
     "vorp": 47.6,
     "market": 16.7,
+    "lastYr": 17,
     "goalLine": 1,
     "adjVorp": 47.6,
     "value": 21,
@@ -1747,6 +1861,7 @@
     "projPts": 75.8,
     "vorp": 45.2,
     "market": 15.4,
+    "lastYr": 17,
     "goalLine": 1.08,
     "adjVorp": 48.8,
     "value": 22,
@@ -1763,6 +1878,7 @@
     "projPts": 74.6,
     "vorp": 44,
     "market": 14.3,
+    "lastYr": 17,
     "goalLine": 1,
     "adjVorp": 44,
     "value": 20,
@@ -1779,6 +1895,7 @@
     "projPts": 73.4,
     "vorp": 42.8,
     "market": 13.1,
+    "lastYr": 15,
     "goalLine": 1.05,
     "adjVorp": 44.9,
     "value": 20,
@@ -1795,6 +1912,7 @@
     "projPts": 71.6,
     "vorp": 41,
     "market": 11.5,
+    "lastYr": 15,
     "goalLine": 1.1,
     "adjVorp": 45.1,
     "value": 20,
@@ -1811,6 +1929,7 @@
     "projPts": 69.6,
     "vorp": 39,
     "market": 9.9,
+    "lastYr": 9,
     "goalLine": 1,
     "adjVorp": 39,
     "value": 17,
@@ -1827,6 +1946,7 @@
     "projPts": 67.2,
     "vorp": 36.6,
     "market": 8.2,
+    "lastYr": 8,
     "goalLine": 1.08,
     "adjVorp": 39.5,
     "value": 18,
@@ -1843,6 +1963,7 @@
     "projPts": 65.8,
     "vorp": 35.2,
     "market": 7.1,
+    "lastYr": 5,
     "goalLine": 1,
     "adjVorp": 35.2,
     "value": 16,
@@ -1859,6 +1980,7 @@
     "projPts": 63.4,
     "vorp": 32.8,
     "market": 6,
+    "lastYr": 5,
     "goalLine": 1,
     "adjVorp": 32.8,
     "value": 15,
@@ -1875,6 +1997,7 @@
     "projPts": 62.4,
     "vorp": 31.8,
     "market": 5,
+    "lastYr": 3,
     "goalLine": 1.08,
     "adjVorp": 34.3,
     "value": 15,
@@ -1891,6 +2014,7 @@
     "projPts": 57.2,
     "vorp": 26.6,
     "market": 4.1,
+    "lastYr": 2,
     "goalLine": 1.1,
     "adjVorp": 29.3,
     "value": 13,
@@ -1907,6 +2031,7 @@
     "projPts": 56.2,
     "vorp": 25.6,
     "market": 3.7,
+    "lastYr": 2,
     "goalLine": 1,
     "adjVorp": 25.6,
     "value": 12,
@@ -1923,6 +2048,7 @@
     "projPts": 54.6,
     "vorp": 24,
     "market": 3.2,
+    "lastYr": 1,
     "goalLine": 1,
     "adjVorp": 24,
     "value": 11,
@@ -1939,6 +2065,7 @@
     "projPts": 53,
     "vorp": 22.4,
     "market": 2.7,
+    "lastYr": 1,
     "goalLine": 1,
     "adjVorp": 22.4,
     "value": 10,
@@ -1955,6 +2082,7 @@
     "projPts": 50.2,
     "vorp": 19.6,
     "market": 2.3,
+    "lastYr": 1,
     "goalLine": 1.08,
     "adjVorp": 21.2,
     "value": 10,
@@ -1971,6 +2099,7 @@
     "projPts": 47.6,
     "vorp": 17,
     "market": 2.3,
+    "lastYr": 1,
     "goalLine": 1,
     "adjVorp": 17,
     "value": 8,
@@ -1987,6 +2116,7 @@
     "projPts": 46.2,
     "vorp": 15.6,
     "market": 2,
+    "lastYr": 1,
     "goalLine": 1,
     "adjVorp": 15.6,
     "value": 8,
@@ -2003,6 +2133,7 @@
     "projPts": 45.2,
     "vorp": 14.6,
     "market": 1.7,
+    "lastYr": 1,
     "goalLine": 1,
     "adjVorp": 14.6,
     "value": 7,
@@ -2019,6 +2150,7 @@
     "projPts": 43.8,
     "vorp": 13.2,
     "market": 1.3,
+    "lastYr": 1,
     "goalLine": 1,
     "adjVorp": 13.2,
     "value": 7,
@@ -2035,6 +2167,7 @@
     "projPts": 42.2,
     "vorp": 11.6,
     "market": 1.1,
+    "lastYr": 1,
     "goalLine": 1,
     "adjVorp": 11.6,
     "value": 6,
@@ -2051,6 +2184,7 @@
     "projPts": 40.8,
     "vorp": 10.2,
     "market": 1.1,
+    "lastYr": 1,
     "goalLine": 1.05,
     "adjVorp": 10.7,
     "value": 6,
@@ -2067,6 +2201,7 @@
     "projPts": 39.4,
     "vorp": 8.8,
     "market": 1,
+    "lastYr": 1,
     "goalLine": 1,
     "adjVorp": 8.8,
     "value": 5,
@@ -2083,6 +2218,7 @@
     "projPts": 38.4,
     "vorp": 7.8,
     "market": 1,
+    "lastYr": 1,
     "goalLine": 1,
     "adjVorp": 7.8,
     "value": 4,
@@ -2099,6 +2235,7 @@
     "projPts": 37.2,
     "vorp": 6.6,
     "market": 1,
+    "lastYr": 1,
     "goalLine": 1,
     "adjVorp": 6.6,
     "value": 4,
@@ -2115,6 +2252,7 @@
     "projPts": 36.4,
     "vorp": 5.8,
     "market": 1,
+    "lastYr": 1,
     "goalLine": 1,
     "adjVorp": 5.8,
     "value": 3,
@@ -2131,6 +2269,7 @@
     "projPts": 34,
     "vorp": 3.4,
     "market": 1,
+    "lastYr": 1,
     "goalLine": 1.12,
     "adjVorp": 3.8,
     "value": 3,
@@ -2147,6 +2286,7 @@
     "projPts": 32.8,
     "vorp": 2.2,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 2.2,
     "value": 2,
@@ -2163,6 +2303,7 @@
     "projPts": 32,
     "vorp": 1.4,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 1.4,
     "value": 2,
@@ -2179,6 +2320,7 @@
     "projPts": 30.8,
     "vorp": 0.2,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1.08,
     "adjVorp": 0.2,
     "value": 1,
@@ -2195,6 +2337,7 @@
     "projPts": 28.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2211,6 +2354,7 @@
     "projPts": 27.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2227,6 +2371,7 @@
     "projPts": 25.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2243,6 +2388,7 @@
     "projPts": 25.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2259,6 +2405,7 @@
     "projPts": 24.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2275,6 +2422,7 @@
     "projPts": 23.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1.08,
     "adjVorp": 0,
     "value": 1,
@@ -2291,6 +2439,7 @@
     "projPts": 23,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2307,6 +2456,7 @@
     "projPts": 21.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2323,6 +2473,7 @@
     "projPts": 21.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1.1,
     "adjVorp": 0,
     "value": 1,
@@ -2339,6 +2490,7 @@
     "projPts": 20,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2355,6 +2507,7 @@
     "projPts": 19.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2371,6 +2524,7 @@
     "projPts": 18.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2387,6 +2541,7 @@
     "projPts": 17.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2403,6 +2558,7 @@
     "projPts": 17.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2419,6 +2575,7 @@
     "projPts": 16.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2435,6 +2592,7 @@
     "projPts": 15.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2451,6 +2609,7 @@
     "projPts": 15,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2467,6 +2626,7 @@
     "projPts": 14.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2483,6 +2643,7 @@
     "projPts": 14.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2499,6 +2660,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2515,6 +2677,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2531,6 +2694,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1.12,
     "adjVorp": 0,
     "value": 1,
@@ -2547,6 +2711,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2563,6 +2728,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2579,6 +2745,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2595,6 +2762,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2611,6 +2779,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2627,6 +2796,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2643,6 +2813,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2659,6 +2830,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1.1,
     "adjVorp": 0,
     "value": 1,
@@ -2675,6 +2847,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2691,6 +2864,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2707,6 +2881,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2723,6 +2898,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2739,6 +2915,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2755,6 +2932,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2771,6 +2949,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2787,6 +2966,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2803,6 +2983,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1.05,
     "adjVorp": 0,
     "value": 1,
@@ -2819,6 +3000,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2835,6 +3017,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2851,6 +3034,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2867,6 +3051,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2883,6 +3068,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2899,6 +3085,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2915,6 +3102,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2931,6 +3119,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2947,6 +3136,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2963,6 +3153,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2979,6 +3170,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -2995,6 +3187,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3011,6 +3204,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3027,6 +3221,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3043,6 +3238,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3059,6 +3255,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3075,6 +3272,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3091,6 +3289,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3107,6 +3306,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3123,6 +3323,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3139,6 +3340,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3155,6 +3357,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3171,6 +3374,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3187,6 +3391,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3203,6 +3408,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3219,6 +3425,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3235,6 +3442,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3251,6 +3459,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3267,6 +3476,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3283,6 +3493,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3299,6 +3510,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3315,6 +3527,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3331,6 +3544,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3347,6 +3561,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3363,6 +3578,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3379,6 +3595,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3395,6 +3612,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3411,6 +3629,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3427,6 +3646,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3443,6 +3663,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3459,6 +3680,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3475,6 +3697,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3491,6 +3714,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3507,6 +3731,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3523,6 +3748,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3539,6 +3765,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3555,6 +3782,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3571,6 +3799,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3587,6 +3816,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3603,6 +3833,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3619,6 +3850,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3635,6 +3867,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3651,6 +3884,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3667,6 +3901,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3683,6 +3918,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3699,6 +3935,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3715,6 +3952,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3731,6 +3969,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3747,6 +3986,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3763,6 +4003,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3779,6 +4020,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3795,6 +4037,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3811,6 +4054,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3827,6 +4071,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3843,6 +4088,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3859,6 +4105,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3875,6 +4122,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3891,6 +4139,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3907,6 +4156,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3923,6 +4173,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3939,6 +4190,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3955,6 +4207,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3971,6 +4224,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -3987,6 +4241,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "goalLine": 1,
     "adjVorp": 0,
     "value": 1,
@@ -4005,6 +4260,7 @@
     "projPts": 163,
     "vorp": 127.4,
     "market": 81.4,
+    "lastYr": 88,
     "adjVorp": 108.3,
     "value": 47,
     "edge": -34
@@ -4020,6 +4276,7 @@
     "projPts": 143.4,
     "vorp": 107.8,
     "market": 78.7,
+    "lastYr": 83,
     "adjVorp": 91.6,
     "value": 40,
     "edge": -39
@@ -4035,6 +4292,7 @@
     "projPts": 128.2,
     "vorp": 92.6,
     "market": 72.9,
+    "lastYr": 78,
     "adjVorp": 78.7,
     "value": 34,
     "edge": -39
@@ -4050,6 +4308,7 @@
     "projPts": 123.2,
     "vorp": 87.6,
     "market": 66.9,
+    "lastYr": 65,
     "adjVorp": 74.5,
     "value": 32,
     "edge": -35
@@ -4065,6 +4324,7 @@
     "projPts": 118.8,
     "vorp": 83.2,
     "market": 61.7,
+    "lastYr": 63,
     "adjVorp": 70.7,
     "value": 31,
     "edge": -31
@@ -4080,6 +4340,7 @@
     "projPts": 109.4,
     "vorp": 73.8,
     "market": 57.9,
+    "lastYr": 57,
     "adjVorp": 62.7,
     "value": 27,
     "edge": -31
@@ -4095,6 +4356,7 @@
     "projPts": 103.8,
     "vorp": 68.2,
     "market": 54.6,
+    "lastYr": 57,
     "adjVorp": 58,
     "value": 25,
     "edge": -30
@@ -4110,6 +4372,7 @@
     "projPts": 100.4,
     "vorp": 64.8,
     "market": 50.7,
+    "lastYr": 45,
     "adjVorp": 55.1,
     "value": 24,
     "edge": -27
@@ -4125,6 +4388,7 @@
     "projPts": 97.6,
     "vorp": 62,
     "market": 46.3,
+    "lastYr": 41,
     "adjVorp": 52.7,
     "value": 23,
     "edge": -23
@@ -4140,6 +4404,7 @@
     "projPts": 94.4,
     "vorp": 58.8,
     "market": 42.4,
+    "lastYr": 38,
     "adjVorp": 50,
     "value": 22,
     "edge": -20
@@ -4155,6 +4420,7 @@
     "projPts": 92.6,
     "vorp": 57,
     "market": 39.5,
+    "lastYr": 38,
     "adjVorp": 48.4,
     "value": 21,
     "edge": -18
@@ -4170,6 +4436,7 @@
     "projPts": 90.6,
     "vorp": 55,
     "market": 37.5,
+    "lastYr": 36,
     "adjVorp": 46.8,
     "value": 21,
     "edge": -16
@@ -4185,6 +4452,7 @@
     "projPts": 88.4,
     "vorp": 52.8,
     "market": 35.3,
+    "lastYr": 35,
     "adjVorp": 44.9,
     "value": 20,
     "edge": -15
@@ -4200,6 +4468,7 @@
     "projPts": 85.6,
     "vorp": 50,
     "market": 32.9,
+    "lastYr": 32,
     "adjVorp": 42.5,
     "value": 19,
     "edge": -14
@@ -4215,6 +4484,7 @@
     "projPts": 84.4,
     "vorp": 48.8,
     "market": 30.2,
+    "lastYr": 28,
     "adjVorp": 41.5,
     "value": 19,
     "edge": -11
@@ -4230,6 +4500,7 @@
     "projPts": 83,
     "vorp": 47.4,
     "market": 28.1,
+    "lastYr": 27,
     "adjVorp": 40.3,
     "value": 18,
     "edge": -10
@@ -4245,6 +4516,7 @@
     "projPts": 82,
     "vorp": 46.4,
     "market": 26.5,
+    "lastYr": 26,
     "adjVorp": 39.4,
     "value": 18,
     "edge": -8
@@ -4260,6 +4532,7 @@
     "projPts": 81.2,
     "vorp": 45.6,
     "market": 25.1,
+    "lastYr": 23,
     "adjVorp": 38.8,
     "value": 17,
     "edge": -8
@@ -4275,6 +4548,7 @@
     "projPts": 80,
     "vorp": 44.4,
     "market": 23.5,
+    "lastYr": 22,
     "adjVorp": 37.7,
     "value": 17,
     "edge": -6
@@ -4290,6 +4564,7 @@
     "projPts": 79.6,
     "vorp": 44,
     "market": 22.4,
+    "lastYr": 22,
     "adjVorp": 37.4,
     "value": 17,
     "edge": -5
@@ -4305,6 +4580,7 @@
     "projPts": 77.8,
     "vorp": 42.2,
     "market": 21.2,
+    "lastYr": 21,
     "adjVorp": 35.9,
     "value": 16,
     "edge": -5
@@ -4320,6 +4596,7 @@
     "projPts": 76.8,
     "vorp": 41.2,
     "market": 19.5,
+    "lastYr": 20,
     "adjVorp": 35,
     "value": 16,
     "edge": -3
@@ -4335,6 +4612,7 @@
     "projPts": 75.4,
     "vorp": 39.8,
     "market": 17.9,
+    "lastYr": 18,
     "adjVorp": 33.8,
     "value": 15,
     "edge": -3
@@ -4350,6 +4628,7 @@
     "projPts": 72.4,
     "vorp": 36.8,
     "market": 16.3,
+    "lastYr": 18,
     "adjVorp": 31.3,
     "value": 14,
     "edge": -2
@@ -4365,6 +4644,7 @@
     "projPts": 70.4,
     "vorp": 34.8,
     "market": 15.3,
+    "lastYr": 15,
     "adjVorp": 29.6,
     "value": 13,
     "edge": -2
@@ -4380,6 +4660,7 @@
     "projPts": 69,
     "vorp": 33.4,
     "market": 14.2,
+    "lastYr": 14,
     "adjVorp": 28.4,
     "value": 13,
     "edge": -1
@@ -4395,6 +4676,7 @@
     "projPts": 67.2,
     "vorp": 31.6,
     "market": 13.5,
+    "lastYr": 12,
     "adjVorp": 26.9,
     "value": 12,
     "edge": -1
@@ -4410,6 +4692,7 @@
     "projPts": 67,
     "vorp": 31.4,
     "market": 12.6,
+    "lastYr": 12,
     "adjVorp": 26.7,
     "value": 12,
     "edge": -1
@@ -4425,6 +4708,7 @@
     "projPts": 65.8,
     "vorp": 30.2,
     "market": 11.6,
+    "lastYr": 10,
     "adjVorp": 25.7,
     "value": 12,
     "edge": 0
@@ -4440,6 +4724,7 @@
     "projPts": 65.2,
     "vorp": 29.6,
     "market": 10.7,
+    "lastYr": 9,
     "adjVorp": 25.2,
     "value": 12,
     "edge": 1
@@ -4455,6 +4740,7 @@
     "projPts": 64.6,
     "vorp": 29,
     "market": 9.9,
+    "lastYr": 8,
     "adjVorp": 24.7,
     "value": 11,
     "edge": 1
@@ -4470,6 +4756,7 @@
     "projPts": 64,
     "vorp": 28.4,
     "market": 9,
+    "lastYr": 7,
     "adjVorp": 24.1,
     "value": 11,
     "edge": 2
@@ -4485,6 +4772,7 @@
     "projPts": 63.4,
     "vorp": 27.8,
     "market": 7.9,
+    "lastYr": 7,
     "adjVorp": 23.6,
     "value": 11,
     "edge": 3
@@ -4500,6 +4788,7 @@
     "projPts": 63,
     "vorp": 27.4,
     "market": 6.9,
+    "lastYr": 5,
     "adjVorp": 23.3,
     "value": 11,
     "edge": 4
@@ -4515,6 +4804,7 @@
     "projPts": 60.6,
     "vorp": 25,
     "market": 6.3,
+    "lastYr": 4,
     "adjVorp": 21.3,
     "value": 10,
     "edge": 4
@@ -4530,6 +4820,7 @@
     "projPts": 60.2,
     "vorp": 24.6,
     "market": 5.7,
+    "lastYr": 4,
     "adjVorp": 20.9,
     "value": 10,
     "edge": 4
@@ -4545,6 +4836,7 @@
     "projPts": 58.8,
     "vorp": 23.2,
     "market": 5.3,
+    "lastYr": 4,
     "adjVorp": 19.7,
     "value": 9,
     "edge": 4
@@ -4560,6 +4852,7 @@
     "projPts": 57.6,
     "vorp": 22,
     "market": 4.7,
+    "lastYr": 3,
     "adjVorp": 18.7,
     "value": 9,
     "edge": 4
@@ -4575,6 +4868,7 @@
     "projPts": 56.4,
     "vorp": 20.8,
     "market": 4.3,
+    "lastYr": 2,
     "adjVorp": 17.7,
     "value": 8,
     "edge": 4
@@ -4590,6 +4884,7 @@
     "projPts": 55.4,
     "vorp": 19.8,
     "market": 4,
+    "lastYr": 2,
     "adjVorp": 16.8,
     "value": 8,
     "edge": 4
@@ -4605,6 +4900,7 @@
     "projPts": 53.6,
     "vorp": 18,
     "market": 3.7,
+    "lastYr": 2,
     "adjVorp": 15.3,
     "value": 7,
     "edge": 3
@@ -4620,6 +4916,7 @@
     "projPts": 52,
     "vorp": 16.4,
     "market": 3.2,
+    "lastYr": 2,
     "adjVorp": 13.9,
     "value": 7,
     "edge": 4
@@ -4635,6 +4932,7 @@
     "projPts": 50.8,
     "vorp": 15.2,
     "market": 2.8,
+    "lastYr": 1,
     "adjVorp": 12.9,
     "value": 6,
     "edge": 3
@@ -4650,6 +4948,7 @@
     "projPts": 50,
     "vorp": 14.4,
     "market": 2.5,
+    "lastYr": 1,
     "adjVorp": 12.2,
     "value": 6,
     "edge": 4
@@ -4665,6 +4964,7 @@
     "projPts": 48.8,
     "vorp": 13.2,
     "market": 2.4,
+    "lastYr": 1,
     "adjVorp": 11.2,
     "value": 6,
     "edge": 4
@@ -4680,6 +4980,7 @@
     "projPts": 47.4,
     "vorp": 11.8,
     "market": 2.3,
+    "lastYr": 1,
     "adjVorp": 10,
     "value": 5,
     "edge": 3
@@ -4695,6 +4996,7 @@
     "projPts": 46.8,
     "vorp": 11.2,
     "market": 2.1,
+    "lastYr": 1,
     "adjVorp": 9.5,
     "value": 5,
     "edge": 3
@@ -4710,6 +5012,7 @@
     "projPts": 45.4,
     "vorp": 9.8,
     "market": 1.9,
+    "lastYr": 1,
     "adjVorp": 8.3,
     "value": 5,
     "edge": 3
@@ -4725,6 +5028,7 @@
     "projPts": 44.2,
     "vorp": 8.6,
     "market": 1.6,
+    "lastYr": 1,
     "adjVorp": 7.3,
     "value": 4,
     "edge": 2
@@ -4740,6 +5044,7 @@
     "projPts": 43,
     "vorp": 7.4,
     "market": 1.3,
+    "lastYr": 1,
     "adjVorp": 6.3,
     "value": 4,
     "edge": 3
@@ -4755,6 +5060,7 @@
     "projPts": 42.4,
     "vorp": 6.8,
     "market": 1.2,
+    "lastYr": 1,
     "adjVorp": 5.8,
     "value": 3,
     "edge": 2
@@ -4770,6 +5076,7 @@
     "projPts": 41.4,
     "vorp": 5.8,
     "market": 1.1,
+    "lastYr": 1,
     "adjVorp": 4.9,
     "value": 3,
     "edge": 2
@@ -4785,6 +5092,7 @@
     "projPts": 41,
     "vorp": 5.4,
     "market": 1.1,
+    "lastYr": 1,
     "adjVorp": 4.6,
     "value": 3,
     "edge": 2
@@ -4800,6 +5108,7 @@
     "projPts": 40.4,
     "vorp": 4.8,
     "market": 1,
+    "lastYr": 1,
     "adjVorp": 4.1,
     "value": 3,
     "edge": 2
@@ -4815,6 +5124,7 @@
     "projPts": 39.8,
     "vorp": 4.2,
     "market": 1,
+    "lastYr": 1,
     "adjVorp": 3.6,
     "value": 3,
     "edge": 2
@@ -4830,6 +5140,7 @@
     "projPts": 39,
     "vorp": 3.4,
     "market": 1,
+    "lastYr": 1,
     "adjVorp": 2.9,
     "value": 2,
     "edge": 1
@@ -4845,6 +5156,7 @@
     "projPts": 38.2,
     "vorp": 2.6,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 2.2,
     "value": 2,
     "edge": 1
@@ -4860,6 +5172,7 @@
     "projPts": 37.4,
     "vorp": 1.8,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 1.5,
     "value": 2,
     "edge": 1
@@ -4875,6 +5188,7 @@
     "projPts": 37,
     "vorp": 1.4,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 1.2,
     "value": 2,
     "edge": 1
@@ -4890,6 +5204,7 @@
     "projPts": 36,
     "vorp": 0.4,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0.3,
     "value": 1,
     "edge": 0
@@ -4905,6 +5220,7 @@
     "projPts": 35.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -4920,6 +5236,7 @@
     "projPts": 34.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -4935,6 +5252,7 @@
     "projPts": 34,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -4950,6 +5268,7 @@
     "projPts": 34,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -4965,6 +5284,7 @@
     "projPts": 33,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -4980,6 +5300,7 @@
     "projPts": 32.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -4995,6 +5316,7 @@
     "projPts": 32.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5010,6 +5332,7 @@
     "projPts": 32,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5025,6 +5348,7 @@
     "projPts": 31.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5040,6 +5364,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5055,6 +5380,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5070,6 +5396,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5085,6 +5412,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5100,6 +5428,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5115,6 +5444,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5130,6 +5460,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5145,6 +5476,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5160,6 +5492,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5175,6 +5508,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5190,6 +5524,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5205,6 +5540,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5220,6 +5556,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5235,6 +5572,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5250,6 +5588,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5265,6 +5604,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5280,6 +5620,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5295,6 +5636,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5310,6 +5652,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5325,6 +5668,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5340,6 +5684,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5355,6 +5700,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5370,6 +5716,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5385,6 +5732,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5400,6 +5748,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5415,6 +5764,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5430,6 +5780,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5445,6 +5796,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5460,6 +5812,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5475,6 +5828,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5490,6 +5844,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5505,6 +5860,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5520,6 +5876,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5535,6 +5892,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5550,6 +5908,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5565,6 +5924,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5580,6 +5940,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5595,6 +5956,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5610,6 +5972,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5625,6 +5988,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5640,6 +6004,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5655,6 +6020,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5670,6 +6036,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5685,6 +6052,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5700,6 +6068,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5715,6 +6084,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5730,6 +6100,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5745,6 +6116,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5760,6 +6132,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5775,6 +6148,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5790,6 +6164,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5805,6 +6180,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5820,6 +6196,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5835,6 +6212,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5850,6 +6228,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5865,6 +6244,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5880,6 +6260,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5895,6 +6276,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5910,6 +6292,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5925,6 +6308,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5940,6 +6324,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5955,6 +6340,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5970,6 +6356,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -5985,6 +6372,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6000,6 +6388,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6015,6 +6404,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6030,6 +6420,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6045,6 +6436,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6060,6 +6452,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6075,6 +6468,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6090,6 +6484,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6105,6 +6500,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6120,6 +6516,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6135,6 +6532,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6150,6 +6548,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6165,6 +6564,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6180,6 +6580,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6195,6 +6596,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6210,6 +6612,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6225,6 +6628,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6240,6 +6644,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6255,6 +6660,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6270,6 +6676,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6285,6 +6692,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6300,6 +6708,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6315,6 +6724,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6330,6 +6740,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6345,6 +6756,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6360,6 +6772,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6375,6 +6788,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6390,6 +6804,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6405,6 +6820,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6420,6 +6836,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6435,6 +6852,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6450,6 +6868,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6465,6 +6884,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6480,6 +6900,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6495,6 +6916,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6510,6 +6932,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6525,6 +6948,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6540,6 +6964,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6555,6 +6980,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6570,6 +6996,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6585,6 +7012,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6600,6 +7028,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6615,6 +7044,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6630,6 +7060,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6645,6 +7076,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6660,6 +7092,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6675,6 +7108,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6690,6 +7124,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6705,6 +7140,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6720,6 +7156,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6735,6 +7172,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6750,6 +7188,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6765,6 +7204,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6780,6 +7220,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6795,6 +7236,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6810,6 +7252,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6825,6 +7268,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6840,6 +7284,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6855,6 +7300,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6870,6 +7316,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6885,6 +7332,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6900,6 +7348,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6915,6 +7364,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6930,6 +7380,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6945,6 +7396,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6960,6 +7412,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6975,6 +7428,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -6990,6 +7444,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7005,6 +7460,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7020,6 +7476,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7035,6 +7492,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7050,6 +7508,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7065,6 +7524,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7080,6 +7540,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7095,6 +7556,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7110,6 +7572,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7125,6 +7588,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7140,6 +7604,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7155,6 +7620,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7170,6 +7636,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7185,6 +7652,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7200,6 +7668,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7215,6 +7684,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7230,6 +7700,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7245,6 +7716,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7260,6 +7732,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7275,6 +7748,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7290,6 +7764,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7305,6 +7780,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7320,6 +7796,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7335,6 +7812,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7350,6 +7828,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7365,6 +7844,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7380,6 +7860,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7395,6 +7876,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7410,6 +7892,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7425,6 +7908,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7440,6 +7924,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7455,6 +7940,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7470,6 +7956,7 @@
     "projPts": 31,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7487,6 +7974,7 @@
     "projPts": 106.2,
     "vorp": 67.3,
     "market": 49,
+    "lastYr": 40,
     "adjVorp": 67.3,
     "value": 29,
     "edge": -20
@@ -7502,6 +7990,7 @@
     "projPts": 88,
     "vorp": 49.1,
     "market": 41.5,
+    "lastYr": 39,
     "adjVorp": 49.1,
     "value": 22,
     "edge": -19
@@ -7517,6 +8006,7 @@
     "projPts": 74.4,
     "vorp": 35.5,
     "market": 28.9,
+    "lastYr": 11,
     "adjVorp": 35.5,
     "value": 16,
     "edge": -13
@@ -7532,6 +8022,7 @@
     "projPts": 69.8,
     "vorp": 30.9,
     "market": 19.9,
+    "lastYr": 11,
     "adjVorp": 30.9,
     "value": 14,
     "edge": -6
@@ -7547,6 +8038,7 @@
     "projPts": 67.6,
     "vorp": 28.7,
     "market": 14.5,
+    "lastYr": 10,
     "adjVorp": 28.7,
     "value": 13,
     "edge": -1
@@ -7562,6 +8054,7 @@
     "projPts": 64.4,
     "vorp": 25.5,
     "market": 10.5,
+    "lastYr": 8,
     "adjVorp": 25.5,
     "value": 12,
     "edge": 2
@@ -7577,6 +8070,7 @@
     "projPts": 63.2,
     "vorp": 24.3,
     "market": 6.9,
+    "lastYr": 3,
     "adjVorp": 24.3,
     "value": 11,
     "edge": 4
@@ -7592,6 +8086,7 @@
     "projPts": 57.6,
     "vorp": 18.7,
     "market": 4.3,
+    "lastYr": 3,
     "adjVorp": 18.7,
     "value": 9,
     "edge": 5
@@ -7607,6 +8102,7 @@
     "projPts": 55.4,
     "vorp": 16.5,
     "market": 2.7,
+    "lastYr": 2,
     "adjVorp": 16.5,
     "value": 8,
     "edge": 5
@@ -7622,6 +8118,7 @@
     "projPts": 53,
     "vorp": 14.1,
     "market": 1.9,
+    "lastYr": 1,
     "adjVorp": 14.1,
     "value": 7,
     "edge": 5
@@ -7637,6 +8134,7 @@
     "projPts": 51,
     "vorp": 12.1,
     "market": 1.5,
+    "lastYr": 1,
     "adjVorp": 12.1,
     "value": 6,
     "edge": 5
@@ -7652,6 +8150,7 @@
     "projPts": 48,
     "vorp": 9.1,
     "market": 1.1,
+    "lastYr": 1,
     "adjVorp": 9.1,
     "value": 5,
     "edge": 4
@@ -7667,6 +8166,7 @@
     "projPts": 46,
     "vorp": 7.1,
     "market": 1.1,
+    "lastYr": 1,
     "adjVorp": 7.1,
     "value": 4,
     "edge": 3
@@ -7682,6 +8182,7 @@
     "projPts": 44.4,
     "vorp": 5.5,
     "market": 1,
+    "lastYr": 1,
     "adjVorp": 5.5,
     "value": 3,
     "edge": 2
@@ -7697,6 +8198,7 @@
     "projPts": 42.4,
     "vorp": 3.5,
     "market": 1,
+    "lastYr": 1,
     "adjVorp": 3.5,
     "value": 2,
     "edge": 1
@@ -7712,6 +8214,7 @@
     "projPts": 41.4,
     "vorp": 2.5,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 2.5,
     "value": 2,
     "edge": 1
@@ -7727,6 +8230,7 @@
     "projPts": 40,
     "vorp": 1.1,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 1.1,
     "value": 1,
     "edge": 0
@@ -7742,6 +8246,7 @@
     "projPts": 38.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7757,6 +8262,7 @@
     "projPts": 37.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7772,6 +8278,7 @@
     "projPts": 36,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7787,6 +8294,7 @@
     "projPts": 34.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7802,6 +8310,7 @@
     "projPts": 32.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7817,6 +8326,7 @@
     "projPts": 30.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7832,6 +8342,7 @@
     "projPts": 29.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7847,6 +8358,7 @@
     "projPts": 28.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7862,6 +8374,7 @@
     "projPts": 27.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7877,6 +8390,7 @@
     "projPts": 26.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7892,6 +8406,7 @@
     "projPts": 25.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7907,6 +8422,7 @@
     "projPts": 24.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7922,6 +8438,7 @@
     "projPts": 24,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7937,6 +8454,7 @@
     "projPts": 22.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7952,6 +8470,7 @@
     "projPts": 22.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7967,6 +8486,7 @@
     "projPts": 22,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7982,6 +8502,7 @@
     "projPts": 21.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -7997,6 +8518,7 @@
     "projPts": 20.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8012,6 +8534,7 @@
     "projPts": 20,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8027,6 +8550,7 @@
     "projPts": 19.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8042,6 +8566,7 @@
     "projPts": 18.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8057,6 +8582,7 @@
     "projPts": 18,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8072,6 +8598,7 @@
     "projPts": 17.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8087,6 +8614,7 @@
     "projPts": 16.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8102,6 +8630,7 @@
     "projPts": 15.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8117,6 +8646,7 @@
     "projPts": 15,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8132,6 +8662,7 @@
     "projPts": 14.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8147,6 +8678,7 @@
     "projPts": 13.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8162,6 +8694,7 @@
     "projPts": 13.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8177,6 +8710,7 @@
     "projPts": 13.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8192,6 +8726,7 @@
     "projPts": 12.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8207,6 +8742,7 @@
     "projPts": 11.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8222,6 +8758,7 @@
     "projPts": 10.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8237,6 +8774,7 @@
     "projPts": 10.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8252,6 +8790,7 @@
     "projPts": 9.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8267,6 +8806,7 @@
     "projPts": 9.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8282,6 +8822,7 @@
     "projPts": 9.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8297,6 +8838,7 @@
     "projPts": 9,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8312,6 +8854,7 @@
     "projPts": 8.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8327,6 +8870,7 @@
     "projPts": 8.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8342,6 +8886,7 @@
     "projPts": 8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8357,6 +8902,7 @@
     "projPts": 7,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8372,6 +8918,7 @@
     "projPts": 6.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8387,6 +8934,7 @@
     "projPts": 5.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8402,6 +8950,7 @@
     "projPts": 5.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8417,6 +8966,7 @@
     "projPts": 5.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8432,6 +8982,7 @@
     "projPts": 5.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8447,6 +8998,7 @@
     "projPts": 5.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8462,6 +9014,7 @@
     "projPts": 5.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8477,6 +9030,7 @@
     "projPts": 4.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8492,6 +9046,7 @@
     "projPts": 4.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8507,6 +9062,7 @@
     "projPts": 4.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8522,6 +9078,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8537,6 +9094,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8552,6 +9110,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8567,6 +9126,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8582,6 +9142,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8597,6 +9158,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8612,6 +9174,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8627,6 +9190,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8642,6 +9206,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8657,6 +9222,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8672,6 +9238,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8687,6 +9254,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8702,6 +9270,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8717,6 +9286,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8732,6 +9302,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8747,6 +9318,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8762,6 +9334,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8777,6 +9350,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8792,6 +9366,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8807,6 +9382,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8822,6 +9398,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8837,6 +9414,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8852,6 +9430,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8867,6 +9446,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8882,6 +9462,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8897,6 +9478,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8912,6 +9494,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8927,6 +9510,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8942,6 +9526,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8957,6 +9542,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8972,6 +9558,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -8987,6 +9574,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9002,6 +9590,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9017,6 +9606,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9032,6 +9622,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9047,6 +9638,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9062,6 +9654,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9077,6 +9670,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9092,6 +9686,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9107,6 +9702,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9122,6 +9718,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9137,6 +9734,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9152,6 +9750,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9167,6 +9766,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9182,6 +9782,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9197,6 +9798,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9212,6 +9814,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9227,6 +9830,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9242,6 +9846,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9257,6 +9862,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9272,6 +9878,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9287,6 +9894,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9302,6 +9910,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9317,6 +9926,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9332,6 +9942,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9347,6 +9958,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9362,6 +9974,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9377,6 +9990,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9392,6 +10006,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9407,6 +10022,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9422,6 +10038,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9437,6 +10054,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9452,6 +10070,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9467,6 +10086,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9482,6 +10102,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9497,6 +10118,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9512,6 +10134,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9527,6 +10150,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9542,6 +10166,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9557,6 +10182,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9572,6 +10198,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9587,6 +10214,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9602,6 +10230,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9617,6 +10246,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9632,6 +10262,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9647,6 +10278,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9662,6 +10294,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9677,6 +10310,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9692,6 +10326,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9707,6 +10342,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9722,6 +10358,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9737,6 +10374,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9752,6 +10390,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9767,6 +10406,7 @@
     "projPts": 3.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9784,6 +10424,7 @@
     "projPts": 165,
     "vorp": 39.4,
     "market": 4.4,
+    "lastYr": 4,
     "adjVorp": 39.4,
     "value": 3,
     "edge": -1
@@ -9799,6 +10440,7 @@
     "projPts": 157,
     "vorp": 31.4,
     "market": 3.5,
+    "lastYr": 1,
     "adjVorp": 31.4,
     "value": 2,
     "edge": -1
@@ -9814,6 +10456,7 @@
     "projPts": 152.8,
     "vorp": 27.2,
     "market": 2,
+    "lastYr": 1,
     "adjVorp": 27.2,
     "value": 2,
     "edge": 0
@@ -9829,6 +10472,7 @@
     "projPts": 146,
     "vorp": 20.4,
     "market": 1.7,
+    "lastYr": 1,
     "adjVorp": 20.4,
     "value": 2,
     "edge": 0
@@ -9844,6 +10488,7 @@
     "projPts": 143.4,
     "vorp": 17.8,
     "market": 1.5,
+    "lastYr": 1,
     "adjVorp": 17.8,
     "value": 2,
     "edge": 1
@@ -9859,6 +10504,7 @@
     "projPts": 141.2,
     "vorp": 15.6,
     "market": 1.3,
+    "lastYr": 1,
     "adjVorp": 15.6,
     "value": 2,
     "edge": 1
@@ -9874,6 +10520,7 @@
     "projPts": 140.4,
     "vorp": 14.8,
     "market": 1.1,
+    "lastYr": 1,
     "adjVorp": 14.8,
     "value": 2,
     "edge": 1
@@ -9889,6 +10536,7 @@
     "projPts": 137.2,
     "vorp": 11.6,
     "market": 1,
+    "lastYr": 1,
     "adjVorp": 11.6,
     "value": 2,
     "edge": 1
@@ -9904,6 +10552,7 @@
     "projPts": 134.4,
     "vorp": 8.8,
     "market": 1,
+    "lastYr": 1,
     "adjVorp": 8.8,
     "value": 2,
     "edge": 1
@@ -9919,6 +10568,7 @@
     "projPts": 132.6,
     "vorp": 7,
     "market": 1,
+    "lastYr": 1,
     "adjVorp": 7,
     "value": 2,
     "edge": 1
@@ -9934,6 +10584,7 @@
     "projPts": 130.4,
     "vorp": 4.8,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 4.8,
     "value": 2,
     "edge": 1
@@ -9949,6 +10600,7 @@
     "projPts": 129.4,
     "vorp": 3.8,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 3.8,
     "value": 2,
     "edge": 1
@@ -9964,6 +10616,7 @@
     "projPts": 126.6,
     "vorp": 1,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 1,
     "value": 1,
     "edge": 0
@@ -9979,6 +10632,7 @@
     "projPts": 124.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -9994,6 +10648,7 @@
     "projPts": 121.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10009,6 +10664,7 @@
     "projPts": 119,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10024,6 +10680,7 @@
     "projPts": 118.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10039,6 +10696,7 @@
     "projPts": 117,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10054,6 +10712,7 @@
     "projPts": 114.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10069,6 +10728,7 @@
     "projPts": 112.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10084,6 +10744,7 @@
     "projPts": 109.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10099,6 +10760,7 @@
     "projPts": 106.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10114,6 +10776,7 @@
     "projPts": 103.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10129,6 +10792,7 @@
     "projPts": 98.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10144,6 +10808,7 @@
     "projPts": 97.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10159,6 +10824,7 @@
     "projPts": 94,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10174,6 +10840,7 @@
     "projPts": 87,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10189,6 +10856,7 @@
     "projPts": 82.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10204,6 +10872,7 @@
     "projPts": 75.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10219,6 +10888,7 @@
     "projPts": 65.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10236,6 +10906,7 @@
     "projPts": 130,
     "vorp": 43,
     "market": 2.5,
+    "lastYr": 4,
     "adjVorp": 43,
     "value": 3,
     "edge": 1
@@ -10251,6 +10922,7 @@
     "projPts": 117.2,
     "vorp": 30.2,
     "market": 2.3,
+    "lastYr": 2,
     "adjVorp": 30.2,
     "value": 2,
     "edge": 0
@@ -10266,6 +10938,7 @@
     "projPts": 112.8,
     "vorp": 25.8,
     "market": 1.9,
+    "lastYr": 2,
     "adjVorp": 25.8,
     "value": 2,
     "edge": 0
@@ -10281,6 +10954,7 @@
     "projPts": 109.6,
     "vorp": 22.6,
     "market": 1.7,
+    "lastYr": 2,
     "adjVorp": 22.6,
     "value": 2,
     "edge": 0
@@ -10296,6 +10970,7 @@
     "projPts": 104.4,
     "vorp": 17.4,
     "market": 1.3,
+    "lastYr": 1,
     "adjVorp": 17.4,
     "value": 2,
     "edge": 1
@@ -10311,6 +10986,7 @@
     "projPts": 102.4,
     "vorp": 15.4,
     "market": 1.1,
+    "lastYr": 1,
     "adjVorp": 15.4,
     "value": 2,
     "edge": 1
@@ -10326,6 +11002,7 @@
     "projPts": 98,
     "vorp": 11,
     "market": 1,
+    "lastYr": 1,
     "adjVorp": 11,
     "value": 2,
     "edge": 1
@@ -10341,6 +11018,7 @@
     "projPts": 96.6,
     "vorp": 9.6,
     "market": 1,
+    "lastYr": 1,
     "adjVorp": 9.6,
     "value": 2,
     "edge": 1
@@ -10356,6 +11034,7 @@
     "projPts": 94.4,
     "vorp": 7.4,
     "market": 1,
+    "lastYr": 1,
     "adjVorp": 7.4,
     "value": 2,
     "edge": 1
@@ -10371,6 +11050,7 @@
     "projPts": 93.4,
     "vorp": 6.4,
     "market": 1,
+    "lastYr": 1,
     "adjVorp": 6.4,
     "value": 2,
     "edge": 1
@@ -10386,6 +11066,7 @@
     "projPts": 90.2,
     "vorp": 3.2,
     "market": 1,
+    "lastYr": 1,
     "adjVorp": 3.2,
     "value": 2,
     "edge": 1
@@ -10401,6 +11082,7 @@
     "projPts": 88.4,
     "vorp": 1.4,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 1.4,
     "value": 2,
     "edge": 1
@@ -10416,6 +11098,7 @@
     "projPts": 86.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10431,6 +11114,7 @@
     "projPts": 86.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10446,6 +11130,7 @@
     "projPts": 85.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10461,6 +11146,7 @@
     "projPts": 84.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10476,6 +11162,7 @@
     "projPts": 82.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10491,6 +11178,7 @@
     "projPts": 81,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10506,6 +11194,7 @@
     "projPts": 79.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10521,6 +11210,7 @@
     "projPts": 77.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10536,6 +11226,7 @@
     "projPts": 76.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10551,6 +11242,7 @@
     "projPts": 75.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10566,6 +11258,7 @@
     "projPts": 73.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10581,6 +11274,7 @@
     "projPts": 72,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10596,6 +11290,7 @@
     "projPts": 69.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10611,6 +11306,7 @@
     "projPts": 68.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10626,6 +11322,7 @@
     "projPts": 65.4,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10641,6 +11338,7 @@
     "projPts": 64.8,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10656,6 +11354,7 @@
     "projPts": 62,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10671,6 +11370,7 @@
     "projPts": 59.2,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10686,6 +11386,7 @@
     "projPts": 53.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0
@@ -10701,6 +11402,7 @@
     "projPts": 50.6,
     "vorp": 0,
     "market": 1,
+    "lastYr": null,
     "adjVorp": 0,
     "value": 1,
     "edge": 0

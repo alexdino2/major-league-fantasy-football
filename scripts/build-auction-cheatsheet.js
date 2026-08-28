@@ -62,6 +62,9 @@ function buildCurves() {
     return { year, pool, draft, byPos, drafted, replacement };
   });
 
+  const lastYear = Math.max(...YEARS);
+  const lastSeason = seasons.find(s => s.year === lastYear);
+
   const curves = {};
   POSITIONS.forEach(pos => {
     const pts = [];
@@ -73,14 +76,21 @@ function buildCurves() {
       const g = picks.filter(p => Math.abs(p.priceRank - pr) <= 1);
       rate.push(mean(g.map(p => p.salary)));
     }
+    // Last year's actual winning bid at each positional price rank (n=1, exact).
+    // This is "what the Nth-most-expensive <pos> went for in the most recent
+    // auction", so it sits next to the five-year average as a freshness check.
+    const lastPicks = (lastSeason.byPos[pos] || []).slice().sort((a, b) => a.priceRank - b.priceRank);
+    const lastRate = lastPicks.map(p => p.salary);
     curves[pos] = {
       pointsAtRank: pts,
       goingRate: rate,
+      lastYearRate: lastRate,
       replacement: mean(seasons.map(s => s.replacement[pos])),
       draftedPerYear: mean(seasons.map(s => s.drafted[pos])),
       leagueSpendPerTeam: mean(seasons.map(s => (s.byPos[pos] || []).reduce((a, p) => a + p.salary, 0) / TEAMS))
     };
   });
+  curves._lastYear = lastYear;
   return curves;
 }
 
@@ -138,6 +148,9 @@ function valueBoard(curves) {
       p.vorp = Math.max(0, round1(p.projPts - c.replacement));
       p.market = p.posRank <= c.goingRate.length ? round1(interp(c.goingRate, p.posRank)) : 1;
       if (p.market < 1) p.market = 1;
+      // Last year's exact winning bid at this positional price rank (null if the
+      // most recent auction didn't draft that many at the position).
+      p.lastYr = p.posRank <= c.lastYearRate.length ? Math.round(c.lastYearRate[p.posRank - 1]) : null;
       let mult = 1;
       if (pos === 'WR') mult = WR_TD_VARIANCE_HAIRCUT;
       if (pos === 'RB') { p.goalLine = GOAL_LINE_PREMIUM[p.name] || 1; mult = p.goalLine; }
@@ -187,6 +200,7 @@ function buildReport(curves, model) {
   const out = [];
   const push = (...l) => out.push(...l);
   const meta = JSON.parse(fs.readFileSync(path.join(ECR_DIR, '_meta.json'), 'utf-8'));
+  const lastYear = curves._lastYear;
 
   push('# MLFF 2026 Auction Cheatsheet');
   push('');
@@ -198,7 +212,8 @@ function buildReport(curves, model) {
   push('## How to read it');
   push('');
   push('- **Val** = what the player is worth to you in our scoring (points over replacement, whole room\'s money split across the board). This is your **walk-away price** - happily pay less, never chase past it.');
-  push('- **Mkt** = what our league has actually paid at that positional price rank the last five years. The gap between Val and Mkt is your edge.');
+  push('- **Mkt (5yr)** = what our league has paid at that positional price rank averaged over the last five auctions. The gap between Val and Mkt is your edge.');
+  push(`- **'${String(lastYear).slice(2)} @rank** = the exact winning bid at that same positional price rank in **last year's (${lastYear}) auction** - one data point, so it is noisier than the five-year average but tells you where the room landed most recently.`);
   push('- **VALUE** = Val is at/above Mkt, you can win him at a profit. **Fade** = the room overpays him; only buy if he falls to your Val.');
   push('');
   push('## Why this board looks different from a normal cheatsheet');
@@ -246,12 +261,13 @@ function buildReport(curves, model) {
     push('');
     push(blurb[pos]);
     push('');
-    push(`| ${pos} | Player | Tm | Bye | Val | Mkt | Edge | Call |`);
-    push('|---|---|---|---|---|---|---|---|');
+    push(`| ${pos} | Player | Tm | Bye | Val | Mkt (5yr) | '${String(lastYear).slice(2)} @rank | Edge | Call |`);
+    push('|---|---|---|---|---|---|---|---|---|');
     board[pos].slice(0, shown[pos]).forEach(p => {
       const name = pos === 'RB' && p.goalLine > 1 ? `${p.name} 🎯` : p.name;
       const edge = p.edge >= 0 ? `+${p.edge}` : `${p.edge}`;
-      push(`| ${p.pos}${p.posRank} | ${name} | ${p.team} | ${p.bye || '-'} | **${money(p.value)}** | ${money(p.market)} | ${edge} | ${tierTag(pos, p)} |`);
+      const ly = p.lastYr == null ? '-' : money(p.lastYr);
+      push(`| ${p.pos}${p.posRank} | ${name} | ${p.team} | ${p.bye || '-'} | **${money(p.value)}** | ${money(p.market)} | ${ly} | ${edge} | ${tierTag(pos, p)} |`);
     });
     push('');
   });

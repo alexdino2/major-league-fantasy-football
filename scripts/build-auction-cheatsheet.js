@@ -59,6 +59,9 @@ function buildCurves() {
       for (let r = drafted[pos] + 1; r <= drafted[pos] + 5; r++) vals.push(pointsAtRank(pool, pos, r));
       replacement[pos] = mean(vals);
     });
+    // A pick "busts" when it returns below replacement. Bust rate by price rank
+    // is our empirical predictability signal (section below).
+    draft.forEach(p => { p.vorp = p.points - replacement[p.pos]; });
     return { year, pool, draft, byPos, drafted, replacement };
   });
 
@@ -68,13 +71,19 @@ function buildCurves() {
   const curves = {};
   POSITIONS.forEach(pos => {
     const pts = [];
-    for (let r = 1; r <= 70; r++) pts.push(mean(seasons.map(s => pointsAtRank(s.pool, pos, r))));
+    for (let r = 1; r <= 90; r++) pts.push(mean(seasons.map(s => pointsAtRank(s.pool, pos, r))));
     const picks = seasons.flatMap(s => s.byPos[pos] || []);
     const maxPR = Math.max(...picks.map(p => p.priceRank));
     const rate = [];
+    const bust = [];
     for (let pr = 1; pr <= Math.min(maxPR, 60); pr++) {
       const g = picks.filter(p => Math.abs(p.priceRank - pr) <= 1);
       rate.push(mean(g.map(p => p.salary)));
+      // Bust rate uses a wider +/-2 window: it is noisier than price, so it wants
+      // more samples, but we keep enough resolution to see the QB4-6 trap and the
+      // safe RB3-6 pocket rather than smoothing them away.
+      const gb = picks.filter(p => Math.abs(p.priceRank - pr) <= 2);
+      bust.push(gb.length ? gb.filter(p => p.vorp <= 0).length / gb.length : null);
     }
     // Last year's actual winning bid at each positional price rank (n=1, exact).
     // This is "what the Nth-most-expensive <pos> went for in the most recent
@@ -85,8 +94,10 @@ function buildCurves() {
       pointsAtRank: pts,
       goingRate: rate,
       lastYearRate: lastRate,
+      bustRate: bust,
       replacement: mean(seasons.map(s => s.replacement[pos])),
       draftedPerYear: mean(seasons.map(s => s.drafted[pos])),
+      draftCount: Math.round(mean(seasons.map(s => s.drafted[pos]))),
       leagueSpendPerTeam: mean(seasons.map(s => (s.byPos[pos] || []).reduce((a, p) => a + p.salary, 0) / TEAMS))
     };
   });
@@ -103,21 +114,51 @@ function interp(arr, x) {
 }
 
 // ---------------------------------------------------------------------------
-// 2. Strategy tilts
+// 2. Value model: why it is not linear
 // ---------------------------------------------------------------------------
+//
+// Raw points-over-replacement, split by dollars, gives a nearly straight line -
+// every rank a few dollars cheaper than the one above. That is wrong twice over.
+//
+//   (a) Baseline. You start ONE QB and ONE TE, so the alternative to an elite
+//       one is a streamer, not the 20th-best guy. Pricing QB/TE over the
+//       last startable body (not deep replacement) makes those positions
+//       collapse after the top few - elite or punt. RB (2 slots) and WR (3)
+//       get a deep baseline, so their bench depth keeps real value.
+//   (b) Predictability. A dollar buys certainty, and certainty is not constant.
+//       Season BUST RATE by position and price rank (our five years) is the
+//       signal: QB1-3 never bust while the QB4-6 tier busts a quarter of the
+//       time; the safest RBs are 3-6, not 1-2; TE is a coin flip after the top
+//       two. We weight each player's edge by how reliably that slot has paid.
+//   Plus a week-to-week CONSISTENCY factor per position - a receiver's night is
+//   mostly "did he score", so WR points swing hardest game to game.
+//
+// The result is convex: a steep, reliable top; a discounted risky middle; a
+// long cheap tail - the shape an auction actually takes.
 
-// WR points in this league are mostly TD points, and TDs are the noisiest thing
-// a receiver does. Three WR slots and a non-PPR floor mean a paid-up receiver
-// busts a manager's week far more often than a running back does. We shave WR
-// value and put the money on backs. (This is the same conclusion the five-year
-// study reached; the haircut just makes the room's WR prices someone else's
-// problem.)
-const WR_TD_VARIANCE_HAIRCUT = 0.85;
+// Baseline rank each player is measured against. Single-start positions use the
+// streamable-starter rank (collapse); multi-start positions use deep replacement.
+const BASELINE_RANK = { QB: 13, RB: 46, WR: 56, TE: 13, K: 11, DST: 11 };
+
+// Week-to-week consistency. Backs carry the ball and quarterbacks throw it every
+// possession; a receiver's fantasy night is mostly whether he found the end
+// zone, so WR production swings hardest game to game. This discounts a position's
+// whole board for that swing - the WR reduction the league's TD-heavy scoring
+// demands, now a predictability statement rather than a flat haircut.
+const CONSISTENCY = { QB: 1.0, RB: 1.0, WR: 0.75, TE: 0.90, K: 1.0, DST: 1.0 };
+
+// Convexity of the price curve (how much the reliable elite is worth over the
+// middle) and how hard predictability bites. The steep top mostly comes from the
+// baseline choice above; these just shape it.
+const GAMMA = 1.0;   // curve convexity on top of the baseline
+const BETA = 1.4;    // predictability weight (bust rate)
+const MAX_VALUE = 90; // never price one player past ~30% of a $300 budget
 
 // Goal-line premium. A back who gets the ball on the 1 is worth more than his
-// yardage says, because a TD is 6 and a yard is 0.04. Multipliers are seeded
-// from FantasyPros' projected rushing TDs for the top of the board and role for
-// the rest: heavy-workload / short-yardage backs up, pure passing-down backs flat.
+// yardage says, because a TD is 6 and a yard is 0.04. Seeded from FantasyPros'
+// projected rushing TDs at the top and role for the rest. Tapered at RB1-2, who
+// are already priced at the ceiling - the premium does its real work lifting the
+// mid-tier short-yardage backs the room lets go cheap.
 const GOAL_LINE_PREMIUM = {
   'Derrick Henry': 1.22, 'Jonathan Taylor': 1.20, 'Josh Jacobs': 1.20, 'Kyren Williams': 1.20,
   'Jahmyr Gibbs': 1.15, 'James Cook III': 1.15, 'Joe Mixon': 1.15, 'Isiah Pacheco': 1.12,
@@ -131,9 +172,15 @@ const GOAL_LINE_PREMIUM = {
 };
 
 // K and DST: the position is nearly flat (a replacement kicker already scores
-// ~126, a replacement DST ~87), so the VORP dollars are a mirage. They are
-// streamable all year. Cap the whole board at a couple of bucks.
+// ~126, a replacement DST ~87) and streamable all year. Cap the whole board at a
+// couple of bucks - the reliability math would otherwise chase a mirage.
 const FLAT_CAP = { K: [3, 2, 2], DST: [3, 2, 2] }; // ranks 1, 2, 3+ -> then $1
+
+function reliabilityAt(curve, rank) {
+  const b = curve.bustRate;
+  const bust = rank <= b.length ? (interp(b, rank) ?? 0.5) : Math.min(0.65, b[b.length - 1] ?? 0.5);
+  return Math.max(0.05, 1 - bust);
+}
 
 // ---------------------------------------------------------------------------
 // 3. Value model
@@ -143,40 +190,48 @@ function valueBoard(curves) {
   POSITIONS.forEach(pos => {
     const players = JSON.parse(fs.readFileSync(path.join(ECR_DIR, `${pos}.json`), 'utf-8'));
     const c = curves[pos];
+    const baseline = c.pointsAtRank[BASELINE_RANK[pos] - 1];
     players.forEach(p => {
       p.projPts = round1(interp(c.pointsAtRank, p.posRank));
-      p.vorp = Math.max(0, round1(p.projPts - c.replacement));
+      // Value over the last body you would actually start/roster at the position.
+      p.raw = Math.max(0, round1(p.projPts - baseline));
+      p.reliability = round1(reliabilityAt(c, p.posRank));
       p.market = p.posRank <= c.goingRate.length ? round1(interp(c.goingRate, p.posRank)) : 1;
       if (p.market < 1) p.market = 1;
-      // Last year's exact winning bid at this positional price rank (null if the
-      // most recent auction didn't draft that many at the position).
       p.lastYr = p.posRank <= c.lastYearRate.length ? Math.round(c.lastYearRate[p.posRank - 1]) : null;
-      let mult = 1;
-      if (pos === 'WR') mult = WR_TD_VARIANCE_HAIRCUT;
-      if (pos === 'RB') { p.goalLine = GOAL_LINE_PREMIUM[p.name] || 1; mult = p.goalLine; }
-      p.adjVorp = round1(p.vorp * mult);
+
+      let gl = 1;
+      if (pos === 'RB') {
+        gl = GOAL_LINE_PREMIUM[p.name] || 1;
+        if (p.posRank <= 2) gl = 1 + (gl - 1) * 0.5; // taper the already-maxed top
+        p.goalLine = gl;
+      }
+      p.rostered = p.posRank <= c.draftCount;
+      p.units = (p.rostered && p.raw > 0)
+        ? Math.pow(p.raw, GAMMA) * Math.pow(p.reliability, BETA) * CONSISTENCY[pos] * gl
+        : 0;
     });
     board[pos] = players;
   });
 
-  // Dollars per adjusted VORP point: split the whole room's discretionary money
-  // across every positive-VORP player. $1 floor per rostered slot.
-  const all = POSITIONS.flatMap(pos => board[pos]).filter(p => p.adjVorp > 0);
-  const totalV = all.reduce((a, p) => a + p.adjVorp, 0);
-  const discretionary = TEAMS * BUDGET - TEAMS * ROSTER_SIZE;
-  const rate = discretionary / totalV;
+  // Split the room's money across the players who actually get drafted, not the
+  // whole free-agent pool. Each rostered slot floors at $1.
+  const roster = POSITIONS.flatMap(pos => board[pos]).filter(p => p.rostered);
+  const totalU = roster.reduce((a, p) => a + p.units, 0);
+  const discretionary = TEAMS * BUDGET - roster.length;
+  const rate = discretionary / totalU;
 
   POSITIONS.forEach(pos => board[pos].forEach(p => {
-    let v = p.adjVorp > 0 ? Math.max(1, Math.round(1 + p.adjVorp * rate)) : 1;
+    let v = p.rostered ? (p.units > 0 ? Math.max(1, Math.round(1 + p.units * rate)) : 1) : 1;
     if (FLAT_CAP[pos]) {
       const cap = FLAT_CAP[pos][Math.min(p.posRank - 1, FLAT_CAP[pos].length - 1)] ?? 1;
       v = Math.min(v, cap);
     }
-    p.value = v;
+    p.value = Math.min(v, MAX_VALUE);
     p.edge = Math.round(p.value - p.market);
   }));
 
-  return { board, rate, totalV };
+  return { board, rate, totalU };
 }
 
 const round1 = x => Math.round(x * 10) / 10;
@@ -187,12 +242,13 @@ const money = x => `$${Math.round(x)}`;
 // ---------------------------------------------------------------------------
 function tierTag(pos, p) {
   if (pos === 'K' || pos === 'DST') return p.posRank <= 4 ? 'Stream #1-4' : 'Skip';
-  // A goal-line back near the top is an anchor you deliberately pay up for - one
-  // of these wins your week, so "market overpays the flat VORP" is not "avoid".
+  // Anchors are the players you deliberately pay up to win: the reliable elite QB,
+  // and the top goal-line backs whose short-yardage role our scoring rewards.
+  if (pos === 'QB' && p.value >= 45) return 'ANCHOR';
   if (pos === 'RB' && p.goalLine > 1 && p.posRank <= 8) return 'ANCHOR';
-  if (p.edge >= 6) return 'VALUE';
-  if (p.edge >= -3) return 'Fair';
-  return 'Fade';
+  if (p.edge >= 3) return 'VALUE';
+  if (p.edge <= -8) return 'Fade';
+  return 'Fair';
 }
 
 function buildReport(curves, model) {
@@ -211,7 +267,7 @@ function buildReport(curves, model) {
   push('');
   push('## How to read it');
   push('');
-  push('- **Val** = what the player is worth to you in our scoring (points over replacement, whole room\'s money split across the board). This is your **walk-away price** - happily pay less, never chase past it.');
+  push('- **Val** = what the player is worth to you in our scoring - your **walk-away price**. It is *not* a straight line down the ranks: it prices each player over the last body you would actually start at his position, then weights that edge by how **reliably** the slot has paid and how much a position swings week to week. Studs and safe positions get a premium; the risky middle gets discounted; the tail flattens to a dollar. Happily pay less than Val, never chase past it.');
   push('- **Mkt (5yr)** = what our league has paid at that positional price rank averaged over the last five auctions. The gap between Val and Mkt is your edge.');
   push(`- **'${String(lastYear).slice(2)} @rank** = the exact winning bid at that same positional price rank in **last year's (${lastYear}) auction** - one data point, so it is noisier than the five-year average but tells you where the room landed most recently.`);
   push('- **VALUE** = Val is at/above Mkt, you can win him at a profit. **Fade** = the room overpays him; only buy if he falls to your Val.');
@@ -224,6 +280,11 @@ function buildReport(curves, model) {
   push('2. **Wide receivers are a coin flip.** Take away the catch points and a WR\'s week is mostly "did he score." That variance, times three starting slots, is why we buy receivers in bulk from the bargain bin instead of paying up for one.');
   push('3. **Quarterbacks are underpriced, dual-threat QBs doubly so.** Four points a passing TD, six a rushing TD, rushing yards at the RB rate, and zero cost for a pick. A running quarterback is a cheat code the room habitually under-bids.');
   push('');
+  push('And the values are **not linear**. Two facts about our five years bend the curve, and they are the thing most cheatsheets get wrong:');
+  push('');
+  push('- **You only start one QB and one TE.** So the alternative to an elite one is a streamer, not the 20th-best guy - which means those positions should **collapse after the top few** (elite or punt), not slope gently down. RB and WR start two and three, so their depth stays worth real money.');
+  push('- **Predictability is not constant.** Bust rate by position and price rank is the tell: the top three QBs never bust while the next tier (roughly QB4-6) busts a quarter of the time; the *safest* backs are RB3-6, not the two most expensive; tight end is a coin flip after the top two. A dollar buys certainty, so we pay up where the slot has reliably paid and discount the murky middle. That is why the drop from one rank to the next is a cliff in some places and a shrug in others.');
+  push('');
 
   // Budget blueprint
   push('## The $300 plan');
@@ -232,10 +293,10 @@ function buildReport(curves, model) {
   push('');
   push('| Pos | $ | Bodies | Where |');
   push('|---|---|---|---|');
-  push('| QB | $50 | 1 (+$1 dart) | One top-6 dual-threat, **or** punt to a $10-20 arm and move the $ to RB |');
-  push('| RB | $150 | 4-5 | One $55-65 goal-line anchor, one $35-45 starter, two-three $12-25 value backs |');
-  push('| WR | $60 | 5-6 | All from the $8-18 tier - three startable bodies most weeks, no single overpay |');
-  push('| TE | $6 | 1-2 | One $4-8 value TE, stream the rest |');
+  push('| QB | $50 | 1 (+$1 dart) | A top-2 anchor if you want the ceiling, **or** the $16-25 value arm (QB7-9) and move the $ to RB |');
+  push('| RB | $150 | 4-5 | One $75-90 goal-line anchor, one $50-60 starter, two-three $30-50 🎯 value backs |');
+  push('| WR | $60 | 5-6 | Skip the $30+ names; five or six bodies from the ~$12-25 tier - startable most weeks, no single overpay |');
+  push('| TE | $6 | 1-2 | One $8-14 value TE, stream the rest |');
   push('| K | $2 | 1 | Best kicker at $2-3, no more |');
   push('| DEF | $2 | 1 | Same |');
   push('| Bench darts | ~$28 | 3-4 | $1-4 upside RB/WR lottery tickets |');
@@ -247,10 +308,10 @@ function buildReport(curves, model) {
   // Position tables
   const shown = { QB: 20, RB: 40, WR: 45, TE: 20, K: 8, DST: 8 };
   const blurb = {
-    QB: 'You only start one, and the room habitually lets top-10 arms go for a handful of dollars - so the big "Val" numbers below are worth far more than you will actually pay. That IS the edge: land a top-tier runner (Burrow/Allen/Jackson/Hurts/Daniels) for real money, **or** wait and steal a value arm near the Mkt price. The only trap is the $25-40 "second-tier" QB who costs like a starter and finishes like a streamer. There is no wrong end to shop, only the middle.',
-    RB: 'Where the auction is won. Pay up for a goal-line anchor, add a second every-down back, then mine the $12-25 tier for volume. The 🎯 backs get the short-yardage and red-zone work that our scoring pays for.',
-    WR: 'Do not pay up. Every receiver above ~$20 is a Fade in our rules. The plan is five or six bodies from the $8-18 band - three of them will be startable in any given week, and you did not sink $60 into one boom/bust play.',
-    TE: 'Punt it. One value TE in the $4-8 range and a $1 backup. The elite TEs are fine players and a bad use of TD-heavy dollars.',
+    QB: 'You only start one, so the board is bimodal, not a slope: the top two (Burrow, Allen) are the only arms that never bust and they carry a real anchor price. The next tier (roughly QB4-6) is the trap - starter money for a slot that busts a quarter of the time. Then it falls off a cliff to the value arms (QB7-9) the room lets go cheap, and a pile of $1 streamers. Buy an anchor, or buy the cliff. Never the trap.',
+    RB: 'Where the auction is won. Pay up for a goal-line anchor, add a second every-down back, then mine the $30-50 🎯 tier for backs with short-yardage work. Note the safest tier historically is RB3-6, not the two priciest - and a goal-line back two rounds later can outscore a pass-catcher ranked above him.',
+    WR: 'Do not pay up. Non-PPR plus 6-point TDs make a receiver\'s week a coin flip, so every name over ~$30 is a Fade here even though the room pays up. The plan is five or six bodies from the ~$12-25 tier - three will be startable in any given week, and you never sank $60 into one boom/bust play.',
+    TE: 'Punt it. One value TE in the $8-14 range and a $1 backup. After the top two it is a coin flip (a third of TE3-6 busts), so the elite TEs are fine players and a bad use of TD-heavy dollars.',
     K: 'Flat and streamable. Best available for $2-3, never more.',
     DST: 'Flat and streamable. A top unit for $2-3, then stream matchups.'
   };
@@ -274,9 +335,9 @@ function buildReport(curves, model) {
 
   push('## Fine print');
   push('');
-  push('- Val projects each player to finish exactly at his ECR rank, then reads our real points-scored-at-that-rank from 2021-2025. Ranks are consensus; treat one-dollar differences as noise and the tiers as the signal.');
-  push('- 🎯 marks a goal-line premium already baked into Val. WR Val already carries a 15% TD-variance haircut. K/DST are capped because the position is flat - do not let the "edge" column talk you into a $15 kicker.');
-  push('- The market column assumes the room bids the way it has for five years. If someone else has also read the study and stops overpaying for receivers, the WR bargains dry up - watch the room, not just the sheet.');
+  push('- **How Val is built.** Project each player to finish at his ECR rank; read our real points-scored-at-that-rank from 2021-2025; subtract the last startable body at the position (QB/TE the streamer line, RB/WR deep replacement); weight by reliability (1 minus that slot\'s five-year bust rate) and by a position consistency factor; split the room\'s $3,000 across everyone who gets drafted. Ranks are consensus - treat one-dollar differences as noise and the tiers and cliffs as the signal.');
+  push('- 🎯 marks a goal-line premium baked into Val, tapered at the two backs already priced at the ceiling. WR carries the heaviest week-to-week consistency discount; no single Val exceeds ~30% of budget. K/DST are capped because the position is flat - do not let a big "edge" talk you into a $15 kicker.');
+  push('- The Mkt columns assume the room bids the way it has for five years. If someone else has also read the study and stops overpaying for receivers, the WR bargains dry up - watch the room, not just the sheet.');
   push('- Full five-year methodology and the position-by-position study: `docs/auction-position-analysis.md`.');
   push('');
   return out.join('\n');

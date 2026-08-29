@@ -1,0 +1,830 @@
+[
+{
+"name": "Joe Burrow",
+"team": "CIN",
+"pos": "QB",
+"posRank": 1,
+"ecr": 1,
+"tier": null,
+"bye": "6"
+},
+{
+"name": "Josh Allen",
+"team": "BUF",
+"pos": "QB",
+"posRank": 2,
+"ecr": 2,
+"tier": null,
+"bye": "7"
+},
+{
+"name": "Lamar Jackson",
+"team": "BAL",
+"pos": "QB",
+"posRank": 3,
+"ecr": 3,
+"tier": null,
+"bye": "13"
+},
+{
+"name": "Jalen Hurts",
+"team": "PHI",
+"pos": "QB",
+"posRank": 4,
+"ecr": 4,
+"tier": null,
+"bye": "10"
+},
+{
+"name": "Justin Herbert",
+"team": "LAC",
+"pos": "QB",
+"posRank": 5,
+"ecr": 5,
+"tier": null,
+"bye": "7"
+},
+{
+"name": "Dak Prescott",
+"team": "DAL",
+"pos": "QB",
+"posRank": 6,
+"ecr": 6,
+"tier": null,
+"bye": "14"
+},
+{
+"name": "Jayden Daniels",
+"team": "WAS",
+"pos": "QB",
+"posRank": 7,
+"ecr": 7,
+"tier": null,
+"bye": "7"
+},
+{
+"name": "Drake Maye",
+"team": "NE",
+"pos": "QB",
+"posRank": 8,
+"ecr": 8,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Trevor Lawrence",
+"team": "JAC",
+"pos": "QB",
+"posRank": 9,
+"ecr": 9,
+"tier": null,
+"bye": "7"
+},
+{
+"name": "Caleb Williams",
+"team": "CHI",
+"pos": "QB",
+"posRank": 10,
+"ecr": 10,
+"tier": null,
+"bye": "10"
+},
+{
+"name": "Jaxson Dart",
+"team": "NYG",
+"pos": "QB",
+"posRank": 11,
+"ecr": 11,
+"tier": null,
+"bye": "8"
+},
+{
+"name": "Jared Goff",
+"team": "DET",
+"pos": "QB",
+"posRank": 12,
+"ecr": 12,
+"tier": null,
+"bye": "6"
+},
+{
+"name": "Matthew Stafford",
+"team": "LAR",
+"pos": "QB",
+"posRank": 13,
+"ecr": 13,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Brock Purdy",
+"team": "SF",
+"pos": "QB",
+"posRank": 14,
+"ecr": 14,
+"tier": null,
+"bye": "8"
+},
+{
+"name": "Baker Mayfield",
+"team": "TB",
+"pos": "QB",
+"posRank": 15,
+"ecr": 15,
+"tier": null,
+"bye": "10"
+},
+{
+"name": "Kyler Murray",
+"team": "MIN",
+"pos": "QB",
+"posRank": 16,
+"ecr": 16,
+"tier": null,
+"bye": "6"
+},
+{
+"name": "Patrick Mahomes II",
+"team": "KC",
+"pos": "QB",
+"posRank": 17,
+"ecr": 17,
+"tier": null,
+"bye": "5"
+},
+{
+"name": "Bo Nix",
+"team": "DEN",
+"pos": "QB",
+"posRank": 18,
+"ecr": 18,
+"tier": null,
+"bye": "10"
+},
+{
+"name": "Malik Willis",
+"team": "MIA",
+"pos": "QB",
+"posRank": 19,
+"ecr": 19,
+"tier": null,
+"bye": "6"
+},
+{
+"name": "Tyler Shough",
+"team": "NO",
+"pos": "QB",
+"posRank": 20,
+"ecr": 20,
+"tier": null,
+"bye": "8"
+},
+{
+"name": "Jordan Love",
+"team": "GB",
+"pos": "QB",
+"posRank": 21,
+"ecr": 21,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Sam Darnold",
+"team": "SEA",
+"pos": "QB",
+"posRank": 22,
+"ecr": 22,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "C.J. Stroud",
+"team": "HOU",
+"pos": "QB",
+"posRank": 23,
+"ecr": 23,
+"tier": null,
+"bye": "8"
+},
+{
+"name": "Bryce Young",
+"team": "CAR",
+"pos": "QB",
+"posRank": 24,
+"ecr": 24,
+"tier": null,
+"bye": "5"
+},
+{
+"name": "Daniel Jones",
+"team": "IND",
+"pos": "QB",
+"posRank": 25,
+"ecr": 25,
+"tier": null,
+"bye": "13"
+},
+{
+"name": "Aaron Rodgers",
+"team": "PIT",
+"pos": "QB",
+"posRank": 26,
+"ecr": 26,
+"tier": null,
+"bye": "9"
+},
+{
+"name": "Jacoby Brissett",
+"team": "ARI",
+"pos": "QB",
+"posRank": 27,
+"ecr": 27,
+"tier": null,
+"bye": "14"
+},
+{
+"name": "Kirk Cousins",
+"team": "LV",
+"pos": "QB",
+"posRank": 28,
+"ecr": 28,
+"tier": null,
+"bye": "13"
+},
+{
+"name": "Cam Ward",
+"team": "TEN",
+"pos": "QB",
+"posRank": 29,
+"ecr": 29,
+"tier": null,
+"bye": "9"
+},
+{
+"name": "Geno Smith",
+"team": "NYJ",
+"pos": "QB",
+"posRank": 30,
+"ecr": 30,
+"tier": null,
+"bye": "13"
+},
+{
+"name": "Tua Tagovailoa",
+"team": "ATL",
+"pos": "QB",
+"posRank": 31,
+"ecr": 31,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Deshaun Watson",
+"team": "CLE",
+"pos": "QB",
+"posRank": 32,
+"ecr": 32,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Shedeur Sanders",
+"team": "CLE",
+"pos": "QB",
+"posRank": 33,
+"ecr": 33,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Michael Penix Jr.",
+"team": "ATL",
+"pos": "QB",
+"posRank": 34,
+"ecr": 34,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Fernando Mendoza",
+"team": "LV",
+"pos": "QB",
+"posRank": 35,
+"ecr": 35,
+"tier": null,
+"bye": "13"
+},
+{
+"name": "Joe Flacco",
+"team": "CIN",
+"pos": "QB",
+"posRank": 36,
+"ecr": 36,
+"tier": null,
+"bye": "6"
+},
+{
+"name": "Ty Simpson",
+"team": "LAR",
+"pos": "QB",
+"posRank": 37,
+"ecr": 37,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Mac Jones",
+"team": "SF",
+"pos": "QB",
+"posRank": 38,
+"ecr": 38,
+"tier": null,
+"bye": "8"
+},
+{
+"name": "Justin Fields",
+"team": "KC",
+"pos": "QB",
+"posRank": 39,
+"ecr": 39,
+"tier": null,
+"bye": "5"
+},
+{
+"name": "J.J. McCarthy",
+"team": "MIN",
+"pos": "QB",
+"posRank": 40,
+"ecr": 40,
+"tier": null,
+"bye": "6"
+},
+{
+"name": "Jake Browning",
+"team": "TB",
+"pos": "QB",
+"posRank": 41,
+"ecr": 41,
+"tier": null,
+"bye": "10"
+},
+{
+"name": "Jarrett Stidham",
+"team": "DEN",
+"pos": "QB",
+"posRank": 42,
+"ecr": 42,
+"tier": null,
+"bye": "10"
+},
+{
+"name": "Joe Milton III",
+"team": "DAL",
+"pos": "QB",
+"posRank": 43,
+"ecr": 43,
+"tier": null,
+"bye": "14"
+},
+{
+"name": "Marcus Mariota",
+"team": "WAS",
+"pos": "QB",
+"posRank": 44,
+"ecr": 44,
+"tier": null,
+"bye": "7"
+},
+{
+"name": "Tyler Huntley",
+"team": "BAL",
+"pos": "QB",
+"posRank": 45,
+"ecr": 45,
+"tier": null,
+"bye": "13"
+},
+{
+"name": "Trey Lance",
+"team": "LAC",
+"pos": "QB",
+"posRank": 46,
+"ecr": 46,
+"tier": null,
+"bye": "7"
+},
+{
+"name": "Cade Klubnik",
+"team": "NYJ",
+"pos": "QB",
+"posRank": 47,
+"ecr": 47,
+"tier": null,
+"bye": "13"
+},
+{
+"name": "Tyrod Taylor",
+"team": "GB",
+"pos": "QB",
+"posRank": 48,
+"ecr": 48,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Jameis Winston",
+"team": "NYG",
+"pos": "QB",
+"posRank": 49,
+"ecr": 49,
+"tier": null,
+"bye": "8"
+},
+{
+"name": "Tyson Bagent",
+"team": "CHI",
+"pos": "QB",
+"posRank": 50,
+"ecr": 50,
+"tier": null,
+"bye": "10"
+},
+{
+"name": "Davis Mills",
+"team": "HOU",
+"pos": "QB",
+"posRank": 51,
+"ecr": 51,
+"tier": null,
+"bye": "8"
+},
+{
+"name": "Spencer Rattler",
+"team": "NO",
+"pos": "QB",
+"posRank": 52,
+"ecr": 52,
+"tier": null,
+"bye": "8"
+},
+{
+"name": "Tanner McKee",
+"team": "PHI",
+"pos": "QB",
+"posRank": 53,
+"ecr": 53,
+"tier": null,
+"bye": "10"
+},
+{
+"name": "Tommy DeVito",
+"team": "NE",
+"pos": "QB",
+"posRank": 54,
+"ecr": 54,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Riley Leonard",
+"team": "IND",
+"pos": "QB",
+"posRank": 55,
+"ecr": 55,
+"tier": null,
+"bye": "13"
+},
+{
+"name": "Quinn Ewers",
+"team": "MIA",
+"pos": "QB",
+"posRank": 56,
+"ecr": 56,
+"tier": null,
+"bye": "6"
+},
+{
+"name": "Nick Mullens",
+"team": "JAC",
+"pos": "QB",
+"posRank": 57,
+"ecr": 57,
+"tier": null,
+"bye": "7"
+},
+{
+"name": "Mitchell Trubisky",
+"team": "TEN",
+"pos": "QB",
+"posRank": 58,
+"ecr": 58,
+"tier": null,
+"bye": "9"
+},
+{
+"name": "Kenny Pickett",
+"team": "CAR",
+"pos": "QB",
+"posRank": 59,
+"ecr": 59,
+"tier": null,
+"bye": "5"
+},
+{
+"name": "Kyle Allen",
+"team": "BUF",
+"pos": "QB",
+"posRank": 60,
+"ecr": 60,
+"tier": null,
+"bye": "7"
+},
+{
+"name": "Mason Rudolph",
+"team": "PIT",
+"pos": "QB",
+"posRank": 61,
+"ecr": 61,
+"tier": null,
+"bye": "9"
+},
+{
+"name": "Joshua Dobbs",
+"team": "DET",
+"pos": "QB",
+"posRank": 62,
+"ecr": 62,
+"tier": null,
+"bye": "6"
+},
+{
+"name": "Carson Beck",
+"team": "ARI",
+"pos": "QB",
+"posRank": 63,
+"ecr": 63,
+"tier": null,
+"bye": "14"
+},
+{
+"name": "Jalen Milroe",
+"team": "SEA",
+"pos": "QB",
+"posRank": 64,
+"ecr": 64,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Drew Allar",
+"team": "PIT",
+"pos": "QB",
+"posRank": 65,
+"ecr": 65,
+"tier": null,
+"bye": "9"
+},
+{
+"name": "Drew Lock",
+"team": "SEA",
+"pos": "QB",
+"posRank": 66,
+"ecr": 66,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Andy Dalton",
+"team": "PHI",
+"pos": "QB",
+"posRank": 67,
+"ecr": 67,
+"tier": null,
+"bye": "10"
+},
+{
+"name": "Gardner Minshew II",
+"team": "ARI",
+"pos": "QB",
+"posRank": 68,
+"ecr": 68,
+"tier": null,
+"bye": "14"
+},
+{
+"name": "Aidan O'Connell",
+"team": "LV",
+"pos": "QB",
+"posRank": 69,
+"ecr": 69,
+"tier": null,
+"bye": "13"
+},
+{
+"name": "Carson Wentz",
+"team": "MIN",
+"pos": "QB",
+"posRank": 70,
+"ecr": 70,
+"tier": null,
+"bye": "6"
+},
+{
+"name": "Sam Howell",
+"team": "DAL",
+"pos": "QB",
+"posRank": 71,
+"ecr": 71,
+"tier": null,
+"bye": "14"
+},
+{
+"name": "Will Levis",
+"team": "TEN",
+"pos": "QB",
+"posRank": 72,
+"ecr": 72,
+"tier": null,
+"bye": "9"
+},
+{
+"name": "Stetson Bennett IV",
+"team": "LAR",
+"pos": "QB",
+"posRank": 73,
+"ecr": 73,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Anthony Richardson Sr.",
+"team": "IND",
+"pos": "QB",
+"posRank": 74,
+"ecr": 74,
+"tier": null,
+"bye": "13"
+},
+{
+"name": "Garrett Nussmeier",
+"team": "KC",
+"pos": "QB",
+"posRank": 75,
+"ecr": 75,
+"tier": null,
+"bye": "5"
+},
+{
+"name": "Brandon Allen",
+"team": "NYG",
+"pos": "QB",
+"posRank": 76,
+"ecr": 76,
+"tier": null,
+"bye": "8"
+},
+{
+"name": "Josh Johnson",
+"team": "CIN",
+"pos": "QB",
+"posRank": 77,
+"ecr": 77,
+"tier": null,
+"bye": "6"
+},
+{
+"name": "Dillon Gabriel",
+"team": "CLE",
+"pos": "QB",
+"posRank": 78,
+"ecr": 78,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Carter Bradley",
+"team": "JAC",
+"pos": "QB",
+"posRank": 79,
+"ecr": 79,
+"tier": null,
+"bye": "7"
+},
+{
+"name": "Behren Morton",
+"team": "NE",
+"pos": "QB",
+"posRank": 80,
+"ecr": 80,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Luke Altmyer",
+"team": "DET",
+"pos": "QB",
+"posRank": 81,
+"ecr": 81,
+"tier": null,
+"bye": "6"
+},
+{
+"name": "Athan Kaliakmanis",
+"team": "WAS",
+"pos": "QB",
+"posRank": 82,
+"ecr": 82,
+"tier": null,
+"bye": "7"
+},
+{
+"name": "Jack Strand",
+"team": "ATL",
+"pos": "QB",
+"posRank": 83,
+"ecr": 83,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Kurtis Rourke",
+"team": "SF",
+"pos": "QB",
+"posRank": 84,
+"ecr": 84,
+"tier": null,
+"bye": "8"
+},
+{
+"name": "Haynes King",
+"team": "CAR",
+"pos": "QB",
+"posRank": 85,
+"ecr": 85,
+"tier": null,
+"bye": "5"
+},
+{
+"name": "Sam Ehlinger",
+"team": "DEN",
+"pos": "QB",
+"posRank": 86,
+"ecr": 86,
+"tier": null,
+"bye": "10"
+},
+{
+"name": "DJ Uiagalelei",
+"team": "LAC",
+"pos": "QB",
+"posRank": 87,
+"ecr": 87,
+"tier": null,
+"bye": "7"
+},
+{
+"name": "Shane Buechele",
+"team": "BUF",
+"pos": "QB",
+"posRank": 88,
+"ecr": 88,
+"tier": null,
+"bye": "7"
+},
+{
+"name": "Brady Cook",
+"team": "NYJ",
+"pos": "QB",
+"posRank": 89,
+"ecr": 89,
+"tier": null,
+"bye": "13"
+},
+{
+"name": "Connor Bazelak",
+"team": "TB",
+"pos": "QB",
+"posRank": 90,
+"ecr": 90,
+"tier": null,
+"bye": "10"
+},
+{
+"name": "Cam Miller",
+"team": "MIA",
+"pos": "QB",
+"posRank": 91,
+"ecr": 91,
+"tier": null,
+"bye": "6"
+},
+{
+"name": "Case Keenum",
+"team": "CHI",
+"pos": "QB",
+"posRank": 92,
+"ecr": 92,
+"tier": null,
+"bye": "10"
+}
+]

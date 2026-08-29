@@ -76,11 +76,11 @@ Where the auction is won. Pay up for a goal-line anchor, add a second every-down
 
 | RB | Player | Tm | Bye | Val | Mkt (5yr) | '25 @rank | Edge | Sleeper | Call |
 |---|---|---|---|---|---|---|---|---|---|
-| RB1 | Jahmyr Gibbs ★ | DET | 6 | **$90** | $91 | $95 | -1 | RB1 | ANCHOR |
+| RB1 | Jahmyr Gibbs ★ | DET | 6 | **$100** | $91 | $95 | +9 | RB1 | ANCHOR |
 | RB2 | Bijan Robinson ★ | ATL | 11 | **$90** | $89 | $86 | +2 | RB2 | ANCHOR |
-| RB3 | Jonathan Taylor ★ | IND | 13 | **$90** | $83 | $82 | +7 | RB5 (FP +2) | ANCHOR |
+| RB3 | Jonathan Taylor ★ | IND | 13 | **$92** | $83 | $82 | +9 | RB5 (FP +2) | ANCHOR |
 | RB4 | Christian McCaffrey | SF | 8 | **$86** | $79 | $81 | +7 | RB6 (FP +2) | VALUE |
-| RB5 | Derrick Henry ★ | BAL | 13 | **$90** | $75 | $80 | +15 | RB3 (SL +2) | ANCHOR |
+| RB5 | Derrick Henry ★ | BAL | 13 | **$94** | $75 | $80 | +19 | RB3 (SL +2) | ANCHOR |
 | RB6 | De'Von Achane | MIA | 6 | **$76** | $71 | $74 | +5 | **RB11 (FP +5)** | VALUE |
 | RB7 | James Cook III ★ | BUF | 7 | **$79** | $67 | $68 | +12 | RB4 (SL +3) | ANCHOR |
 | RB8 | Saquon Barkley ★ | PHI | 10 | **$58** | $63 | $63 | -5 | RB8 | ANCHOR |

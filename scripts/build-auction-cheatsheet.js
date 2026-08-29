@@ -152,7 +152,9 @@ const CONSISTENCY = { QB: 1.0, RB: 1.0, WR: 0.75, TE: 0.90, K: 1.0, DST: 1.0 };
 // baseline choice above; these just shape it.
 const GAMMA = 1.0;   // curve convexity on top of the baseline
 const BETA = 1.4;    // predictability weight (bust rate)
-const MAX_VALUE = 90; // never price one player past ~30% of a $300 budget
+const MAX_VALUE = 100; // ceiling ~a third of a $300 budget - about the most the
+                       // league has ever paid for one player. Keeps the top a
+                       // real gradient instead of a flat tie at the cap.
 
 // Sleeper's own season projections, re-scored in our rules (see
 // data/sleeper-projections-2026.json). Two jobs: a data-driven goal-line signal

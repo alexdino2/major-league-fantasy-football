@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-29T12:44:31.243Z",
+ "generatedAt": "2026-08-29T19:44:28.692Z",
  "board": {
   "QB": [
    {
@@ -2452,8 +2452,8 @@
     "goalLine": 1.112,
     "rostered": true,
     "units": 149.4898664132034,
-    "value": 90,
-    "edge": -1
+    "value": 100,
+    "edge": 9
    },
    {
     "name": "Bijan Robinson",
@@ -2510,8 +2510,8 @@
     "goalLine": 1.192,
     "rostered": true,
     "units": 127.94877992854575,
-    "value": 90,
-    "edge": 7
+    "value": 92,
+    "edge": 9
    },
    {
     "name": "Christian McCaffrey",
@@ -2568,8 +2568,8 @@
     "goalLine": 1.224,
     "rostered": true,
     "units": 130.2336,
-    "value": 90,
-    "edge": 15
+    "value": 94,
+    "edge": 19
    },
    {
     "name": "De'Von Achane",

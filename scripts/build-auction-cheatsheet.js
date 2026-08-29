@@ -152,9 +152,8 @@ const CONSISTENCY = { QB: 1.0, RB: 1.0, WR: 0.75, TE: 0.90, K: 1.0, DST: 1.0 };
 // baseline choice above; these just shape it.
 const GAMMA = 1.0;   // curve convexity on top of the baseline
 const BETA = 1.4;    // predictability weight (bust rate)
-const MAX_VALUE = 100; // ceiling ~a third of a $300 budget - about the most the
-                       // league has ever paid for one player. Keeps the top a
-                       // real gradient instead of a flat tie at the cap.
+// No hard ceiling on Val: the top back is worth what the model says he is worth
+// (~$108 for the consensus RB1), and clamping it only hid the ordering.
 
 // Sleeper's own season projections, re-scored in our rules (see
 // data/sleeper-projections-2026.json). Two jobs: a data-driven goal-line signal
@@ -252,7 +251,7 @@ function valueBoard(curves) {
       const cap = FLAT_CAP[pos][Math.min(p.posRank - 1, FLAT_CAP[pos].length - 1)] ?? 1;
       v = Math.min(v, cap);
     }
-    p.value = Math.min(v, MAX_VALUE);
+    p.value = v;
     p.edge = Math.round(p.value - p.market);
   }));
 

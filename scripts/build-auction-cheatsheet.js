@@ -12,9 +12,10 @@
 //      the whole room's money ($3,000) across every positive-VORP player.
 //   3. "Market" = the going rate our league has actually paid at that positional
 //      price rank over the last five auctions.
-//   4. Strategy tilts, all documented below: a TD-variance haircut on WR, a
-//      goal-line premium on the backs who actually score, and a hard cap on
-//      K/DST (flat, streamable, high floor -> VORP overstates them).
+//   4. Strategy shades, all documented below: a week-to-week consistency
+//      discount on WR, a gentle reliability weight from five-year bust rates,
+//      and a hard cap on K/DST (flat, streamable, high floor). Goal-line value
+//      rides in through the projection blend, not a separate multiplier.
 //
 // The curves come straight from scripts/lib/auction-data.js so this file always
 // agrees with docs/auction-position-analysis.md.
@@ -151,9 +152,17 @@ const CONSISTENCY = { QB: 1.0, RB: 1.0, WR: 0.75, TE: 0.90, K: 1.0, DST: 1.0 };
 // middle) and how hard predictability bites. The steep top mostly comes from the
 // baseline choice above; these just shape it.
 const GAMMA = 1.0;   // curve convexity on top of the baseline
-const BETA = 1.4;    // predictability weight (bust rate)
-// No hard ceiling on Val: the top back is worth what the model says he is worth
-// (~$108 for the consensus RB1), and clamping it only hid the ordering.
+const BETA = 0.6;    // predictability weight - a gentle shade, not a rank-flipper
+// Projected points blend how many points a player scores in our scoring: half
+// from the five-year points-at-rank curve (what a player at his FantasyPros
+// rank has historically scored), half from Sleeper's own projection re-scored
+// in our rules (what Sleeper thinks THIS player scores, TDs and all). Blending
+// means a goal-line back's touchdowns lift his value through his real
+// projection - not a separate multiplier stacked on top, which double-counted
+// the TDs and priced him above backs who project for more.
+const PROJ_BLEND = 0.5; // weight on the historical curve; 1 - this on Sleeper
+// No hard ceiling on Val: the top back is worth what the model says he is worth,
+// and clamping it only hid the ordering.
 
 // Sleeper's own season projections, re-scored in our rules (see
 // data/sleeper-projections-2026.json). Two jobs: a data-driven goal-line signal
@@ -178,14 +187,15 @@ function isStar(pos, s) {
   return false;
 }
 
-// The goal-line premium on RB value, scaled straight off Sleeper's projected
-// rushing TDs rather than a hand-kept list. A back projected for 12 rushing
-// scores is worth more than his yardage says; one projected for 5 is not.
-// Tapered at RB1-2, who are already priced at the ceiling - the premium does its
-// real work lifting the mid-tier short-yardage backs the room lets go cheap.
-function goalLinePremium(rushTd, posRank) {
-  const gl = Math.min(1.24, 1 + Math.max(0, rushTd - 5) * 0.032);
-  return posRank <= 2 ? 1 + (gl - 1) * 0.5 : gl;
+// Sleeper's projected points for the Nth-ranked player at each position, so the
+// replacement baseline can be blended in the same units as a player's projPts.
+function sleeperPtsByRank() {
+  const out = {};
+  Object.entries(SLEEPER).forEach(([k, v]) => {
+    const pos = k.split('|')[0];
+    (out[pos] = out[pos] || [])[v.slrank - 1] = v.pts;
+  });
+  return out;
 }
 
 // K and DST: the position is nearly flat (a replacement kicker already scores
@@ -204,13 +214,24 @@ function reliabilityAt(curve, rank) {
 // ---------------------------------------------------------------------------
 function valueBoard(curves) {
   const board = {};
+  const slByRank = sleeperPtsByRank();
   POSITIONS.forEach(pos => {
     const players = JSON.parse(fs.readFileSync(path.join(ECR_DIR, `${pos}.json`), 'utf-8'));
     const c = curves[pos];
-    const baseline = c.pointsAtRank[BASELINE_RANK[pos] - 1];
+    // Replacement baseline, blended in the same units as projPts below.
+    const curveBase = c.pointsAtRank[BASELINE_RANK[pos] - 1];
+    const slBase = slByRank[pos] ? slByRank[pos][BASELINE_RANK[pos] - 1] : null;
+    const baseline = slBase != null ? PROJ_BLEND * curveBase + (1 - PROJ_BLEND) * slBase : curveBase;
+
     players.forEach(p => {
-      p.projPts = round1(interp(c.pointsAtRank, p.posRank));
-      // Value over the last body you would actually start/roster at the position.
+      const s = SLEEPER[sleeperKey(pos, p.name)] || null;
+
+      // Projected points in our scoring: the five-year points-at-rank curve for
+      // his FantasyPros rank, blended with Sleeper's own projection for him, so a
+      // goal-line back's touchdowns lift his value here - through the projection,
+      // not a multiplier stacked on top.
+      const curvePts = interp(c.pointsAtRank, p.posRank);
+      p.projPts = round1(s ? PROJ_BLEND * curvePts + (1 - PROJ_BLEND) * s.pts : curvePts);
       p.raw = Math.max(0, round1(p.projPts - baseline));
       p.reliability = round1(reliabilityAt(c, p.posRank));
       p.market = p.posRank <= c.goingRate.length ? round1(interp(c.goingRate, p.posRank)) : 1;
@@ -220,19 +241,13 @@ function valueBoard(curves) {
       // Sleeper's second opinion: its projected rank in our scoring, the gap to
       // FantasyPros' rank (positive = Sleeper is lower on him than FP), and the
       // goal-line / red-zone star.
-      const s = SLEEPER[sleeperKey(pos, p.name)] || null;
       p.sleeper = s ? { rank: s.slrank, pts: s.pts, rushTd: s.rushTd, recTd: s.recTd, passTd: s.passTd, tdShare: s.tdShare } : null;
       p.slGap = s ? s.slrank - p.posRank : null;
       p.star = isStar(pos, s);
 
-      let gl = 1;
-      if (pos === 'RB') {
-        gl = s ? goalLinePremium(s.rushTd, p.posRank) : 1;
-        p.goalLine = gl;
-      }
       p.rostered = p.posRank <= c.draftCount;
       p.units = (p.rostered && p.raw > 0)
-        ? Math.pow(p.raw, GAMMA) * Math.pow(p.reliability, BETA) * CONSISTENCY[pos] * gl
+        ? Math.pow(p.raw, GAMMA) * Math.pow(p.reliability, BETA) * CONSISTENCY[pos]
         : 0;
     });
     board[pos] = players;
@@ -384,8 +399,8 @@ function buildReport(curves, model) {
 
   push('## Fine print');
   push('');
-  push('- **How Val is built.** Project each player to finish at his ECR rank; read our real points-scored-at-that-rank from 2021-2025; subtract the last startable body at the position (QB/TE the streamer line, RB/WR deep replacement); weight by reliability (1 minus that slot\'s five-year bust rate) and by a position consistency factor; split the room\'s $3,000 across everyone who gets drafted. The rostered values sum to **exactly $3,000** - the whole room\'s budget, $300 a team - so if the field valued players like this the auction would clear. Ranks are consensus - treat one-dollar differences as noise and the tiers and cliffs as the signal.');
-  push('- **★ and the goal-line premium.** Stars come from Sleeper\'s projected TDs (rush TDs for RB/QB, receiving TDs for WR). For running backs that same projection scales a goal-line premium baked into Val - a back projected for twelve rushing scores is worth more than his yardage says - tapered at the two backs already priced at the ceiling. WR stars do **not** raise Val: the position keeps its week-to-week consistency discount, because red-zone receivers are exactly the boom/bust play. No single Val exceeds ~30% of budget. K/DST are capped because the position is flat - do not let a big "edge" talk you into a $15 kicker.');
+  push('- **How Val is built.** Estimate each player\'s points in our scoring - half from what a player at his FantasyPros rank has really scored in 2021-2025, half from Sleeper\'s own projection for him (touchdowns and all); subtract the last startable body at the position (QB/TE the streamer line, RB/WR deep replacement); shade by reliability (1 minus that slot\'s five-year bust rate) and by a position consistency factor; split the room\'s $3,000 across everyone who gets drafted. The rostered values sum to **exactly $3,000** - the whole room\'s budget, $300 a team - so if the field valued players like this the auction would clear. Ranks are consensus - treat one-dollar differences as noise and the tiers and cliffs as the signal.');
+  push('- **★ goal-line / red-zone magnets.** Stars come from Sleeper\'s projected touchdowns (rush TDs for RB/QB, receiving TDs for WR). A TD is worth 6 in our scoring, so those touchdowns already lift the player\'s projected points - and therefore his Val - which is why a heavy goal-line back can out-price a higher-ranked pass-catcher (check the Sleeper column: he\'ll project higher there too). There is no separate multiplier stacked on top, which used to double-count the TDs. WR keeps its week-to-week consistency discount, because red-zone receivers are exactly the boom/bust play. K/DST are capped because the position is flat - do not let a big "edge" talk you into a $15 kicker.');
   push('- **The Sleeper column** re-scores Sleeper\'s season projections in our rules and ranks them, then diffs against FantasyPros. It is a second opinion, not a tiebreaker - when they disagree by 4+ spots, that is a flag to look closer, not an instruction. Where both agree, lean in.');
   push('- The Mkt columns assume the room bids the way it has for five years. If someone else has also read the study and stops overpaying for receivers, the WR bargains dry up - watch the room, not just the sheet.');
   push('- Full five-year methodology and the position-by-position study: `docs/auction-position-analysis.md`.');

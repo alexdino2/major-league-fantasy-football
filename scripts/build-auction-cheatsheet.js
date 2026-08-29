@@ -239,23 +239,37 @@ function valueBoard(curves) {
   });
 
   // Split the room's money across the players who actually get drafted, not the
-  // whole free-agent pool. Each rostered slot floors at $1.
+  // whole free-agent pool - and make it clear the whole budget: the rostered
+  // values sum to exactly TEAMS x BUDGET ($3,000). K/DST are fixed at their
+  // streamer cap and rostered streamers at $1; the money left over (including
+  // what K/DST did not spend) is shared across the skill players by their units.
+  const TOTAL = TEAMS * BUDGET;
   const roster = POSITIONS.flatMap(pos => board[pos]).filter(p => p.rostered);
-  const totalU = roster.reduce((a, p) => a + p.units, 0);
-  const discretionary = TEAMS * BUDGET - roster.length;
-  const rate = discretionary / totalU;
+  const capOf = p => FLAT_CAP[p.pos] ? (FLAT_CAP[p.pos][Math.min(p.posRank - 1, FLAT_CAP[p.pos].length - 1)] ?? 1) : Infinity;
+
+  let fixed = 0;
+  const variable = [];
+  roster.forEach(p => {
+    if (FLAT_CAP[p.pos]) { p.value = capOf(p); fixed += p.value; }       // K / DST at cap
+    else if (p.units <= 0) { p.value = 1; fixed += 1; }                  // rostered streamer
+    else variable.push(p);
+  });
+  const totalVarUnits = variable.reduce((a, p) => a + p.units, 0);
+  const rate = (TOTAL - fixed - variable.length) / totalVarUnits;        // each skill player also floors at $1
+  variable.forEach(p => { p._exact = 1 + p.units * rate; p.value = Math.max(1, Math.floor(p._exact)); });
+
+  // Largest-remainder rounding: hand the leftover whole dollars to the players
+  // rounded down the most, so the board sums to exactly $3,000.
+  let short = TOTAL - roster.reduce((a, p) => a + p.value, 0);
+  variable.sort((a, b) => (b._exact - Math.floor(b._exact)) - (a._exact - Math.floor(a._exact)));
+  for (let i = 0; i < variable.length && short > 0; i++) { variable[i].value += 1; short--; }
 
   POSITIONS.forEach(pos => board[pos].forEach(p => {
-    let v = p.rostered ? (p.units > 0 ? Math.max(1, Math.round(1 + p.units * rate)) : 1) : 1;
-    if (FLAT_CAP[pos]) {
-      const cap = FLAT_CAP[pos][Math.min(p.posRank - 1, FLAT_CAP[pos].length - 1)] ?? 1;
-      v = Math.min(v, cap);
-    }
-    p.value = v;
+    if (!p.rostered) p.value = 1;
     p.edge = Math.round(p.value - p.market);
   }));
 
-  return { board, rate, totalU };
+  return { board, rate };
 }
 
 const round1 = x => Math.round(x * 10) / 10;
@@ -370,7 +384,7 @@ function buildReport(curves, model) {
 
   push('## Fine print');
   push('');
-  push('- **How Val is built.** Project each player to finish at his ECR rank; read our real points-scored-at-that-rank from 2021-2025; subtract the last startable body at the position (QB/TE the streamer line, RB/WR deep replacement); weight by reliability (1 minus that slot\'s five-year bust rate) and by a position consistency factor; split the room\'s $3,000 across everyone who gets drafted. Ranks are consensus - treat one-dollar differences as noise and the tiers and cliffs as the signal.');
+  push('- **How Val is built.** Project each player to finish at his ECR rank; read our real points-scored-at-that-rank from 2021-2025; subtract the last startable body at the position (QB/TE the streamer line, RB/WR deep replacement); weight by reliability (1 minus that slot\'s five-year bust rate) and by a position consistency factor; split the room\'s $3,000 across everyone who gets drafted. The rostered values sum to **exactly $3,000** - the whole room\'s budget, $300 a team - so if the field valued players like this the auction would clear. Ranks are consensus - treat one-dollar differences as noise and the tiers and cliffs as the signal.');
   push('- **★ and the goal-line premium.** Stars come from Sleeper\'s projected TDs (rush TDs for RB/QB, receiving TDs for WR). For running backs that same projection scales a goal-line premium baked into Val - a back projected for twelve rushing scores is worth more than his yardage says - tapered at the two backs already priced at the ceiling. WR stars do **not** raise Val: the position keeps its week-to-week consistency discount, because red-zone receivers are exactly the boom/bust play. No single Val exceeds ~30% of budget. K/DST are capped because the position is flat - do not let a big "edge" talk you into a $15 kicker.');
   push('- **The Sleeper column** re-scores Sleeper\'s season projections in our rules and ranks them, then diffs against FantasyPros. It is a second opinion, not a tiebreaker - when they disagree by 4+ spots, that is a flag to look closer, not an instruction. Where both agree, lean in.');
   push('- The Mkt columns assume the room bids the way it has for five years. If someone else has also read the study and stops overpaying for receivers, the WR bargains dry up - watch the room, not just the sheet.');

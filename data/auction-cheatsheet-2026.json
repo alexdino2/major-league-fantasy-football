@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-29T19:45:51.816Z",
+ "generatedAt": "2026-08-29T19:53:40.053Z",
  "board": {
   "QB": [
    {
@@ -27,8 +27,9 @@
     "star": false,
     "rostered": true,
     "units": 110.4,
-    "value": 80,
-    "edge": 17
+    "_exact": 82.52571850395312,
+    "value": 83,
+    "edge": 20
    },
    {
     "name": "Josh Allen",
@@ -55,8 +56,9 @@
     "star": true,
     "rostered": true,
     "units": 99.6,
-    "value": 72,
-    "edge": 13
+    "_exact": 74.55037647639247,
+    "value": 75,
+    "edge": 16
    },
    {
     "name": "Lamar Jackson",
@@ -83,8 +85,9 @@
     "star": true,
     "rostered": true,
     "units": 69.02866911702117,
-    "value": 50,
-    "edge": 0
+    "_exact": 51.97474499218106,
+    "value": 52,
+    "edge": 2
    },
    {
     "name": "Jalen Hurts",
@@ -111,8 +114,9 @@
     "star": true,
     "rostered": true,
     "units": 53.12055483187823,
-    "value": 39,
-    "edge": -2
+    "_exact": 40.2272771738905,
+    "value": 40,
+    "edge": -1
    },
    {
     "name": "Justin Herbert",
@@ -139,8 +143,9 @@
     "star": false,
     "rostered": true,
     "units": 40.68185741945496,
-    "value": 30,
-    "edge": -4
+    "_exact": 31.041826595982258,
+    "value": 31,
+    "edge": -3
    },
    {
     "name": "Dak Prescott",
@@ -167,8 +172,9 @@
     "star": false,
     "rostered": true,
     "units": 33.21863897200099,
-    "value": 25,
-    "edge": -2
+    "_exact": 25.53055624923731,
+    "value": 26,
+    "edge": -1
    },
    {
     "name": "Jayden Daniels",
@@ -195,8 +201,9 @@
     "star": true,
     "rostered": true,
     "units": 29.852873789815867,
-    "value": 22,
-    "edge": 0
+    "_exact": 23.045081386979785,
+    "value": 23,
+    "edge": 1
    },
    {
     "name": "Drake Maye",
@@ -223,6 +230,7 @@
     "star": false,
     "rostered": true,
     "units": 26.194433374397253,
+    "_exact": 20.3434782758303,
     "value": 20,
     "edge": 3
    },
@@ -251,8 +259,9 @@
     "star": true,
     "rostered": true,
     "units": 21.511629642661433,
-    "value": 16,
-    "edge": 4
+    "_exact": 16.885426293558965,
+    "value": 17,
+    "edge": 5
    },
    {
     "name": "Caleb Williams",
@@ -279,8 +288,9 @@
     "star": false,
     "rostered": true,
     "units": 11.53163418626894,
-    "value": 9,
-    "edge": 0
+    "_exact": 9.515622849278298,
+    "value": 10,
+    "edge": 1
    },
    {
     "name": "Jaxson Dart",
@@ -307,6 +317,7 @@
     "star": true,
     "rostered": true,
     "units": 7.040366134774722,
+    "_exact": 6.1990118448225395,
     "value": 6,
     "edge": 0
    },
@@ -335,6 +346,7 @@
     "star": false,
     "rostered": true,
     "units": 1.9421699682137163,
+    "_exact": 2.4342101640889764,
     "value": 2,
     "edge": -2
    },
@@ -2452,8 +2464,9 @@
     "goalLine": 1.112,
     "rostered": true,
     "units": 149.4898664132034,
-    "value": 108,
-    "edge": 17
+    "_exact": 111.39192724996717,
+    "value": 111,
+    "edge": 20
    },
    {
     "name": "Bijan Robinson",
@@ -2481,8 +2494,9 @@
     "goalLine": 1.064,
     "rostered": true,
     "units": 125.22628921857043,
-    "value": 90,
-    "edge": 2
+    "_exact": 93.4743043852155,
+    "value": 93,
+    "edge": 5
    },
    {
     "name": "Jonathan Taylor",
@@ -2510,8 +2524,9 @@
     "goalLine": 1.192,
     "rostered": true,
     "units": 127.94877992854575,
-    "value": 92,
-    "edge": 9
+    "_exact": 95.48474832770712,
+    "value": 95,
+    "edge": 12
    },
    {
     "name": "Christian McCaffrey",
@@ -2539,8 +2554,9 @@
     "goalLine": 1.064,
     "rostered": true,
     "units": 118.9552,
-    "value": 86,
-    "edge": 7
+    "_exact": 88.84337092193337,
+    "value": 89,
+    "edge": 10
    },
    {
     "name": "Derrick Henry",
@@ -2568,8 +2584,9 @@
     "goalLine": 1.224,
     "rostered": true,
     "units": 130.2336,
-    "value": 94,
-    "edge": 19
+    "_exact": 97.17199106301112,
+    "value": 97,
+    "edge": 22
    },
    {
     "name": "De'Von Achane",
@@ -2597,8 +2614,9 @@
     "goalLine": 1.032,
     "rostered": true,
     "units": 105.0576,
-    "value": 76,
-    "edge": 5
+    "_exact": 78.58058264765312,
+    "value": 79,
+    "edge": 8
    },
    {
     "name": "James Cook III",
@@ -2626,8 +2644,9 @@
     "goalLine": 1.192,
     "rostered": true,
     "units": 109.18719999999999,
-    "value": 79,
-    "edge": 12
+    "_exact": 81.63011713256185,
+    "value": 82,
+    "edge": 15
    },
    {
     "name": "Saquon Barkley",
@@ -2655,8 +2674,9 @@
     "goalLine": 1.096,
     "rostered": true,
     "units": 79.81646952662923,
-    "value": 58,
-    "edge": -5
+    "_exact": 59.94107813955912,
+    "value": 60,
+    "edge": -3
    },
    {
     "name": "Ashton Jeanty",
@@ -2684,8 +2704,9 @@
     "goalLine": 1.064,
     "rostered": true,
     "units": 72.71203890110542,
-    "value": 53,
-    "edge": -5
+    "_exact": 54.69475738496384,
+    "value": 55,
+    "edge": -3
    },
    {
     "name": "Omarion Hampton",
@@ -2713,8 +2734,9 @@
     "goalLine": 1.096,
     "rostered": true,
     "units": 72.62920449816498,
-    "value": 53,
-    "edge": 0
+    "_exact": 54.63358769097322,
+    "value": 55,
+    "edge": 2
    },
    {
     "name": "Chase Brown",
@@ -2742,8 +2764,9 @@
     "goalLine": 1.096,
     "rostered": true,
     "units": 69.98126475083606,
-    "value": 51,
-    "edge": 2
+    "_exact": 52.678196473073164,
+    "value": 53,
+    "edge": 4
    },
    {
     "name": "Javonte Williams",
@@ -2771,8 +2794,9 @@
     "goalLine": 1.064,
     "rostered": true,
     "units": 63.89845842824415,
-    "value": 47,
-    "edge": 3
+    "_exact": 48.186301944362164,
+    "value": 48,
+    "edge": 4
    },
    {
     "name": "Kyren Williams",
@@ -2800,8 +2824,9 @@
     "goalLine": 1.096,
     "rostered": true,
     "units": 63.55055393589437,
-    "value": 46,
-    "edge": 5
+    "_exact": 47.929389229601576,
+    "value": 48,
+    "edge": 7
    },
    {
     "name": "Kenneth Walker III",
@@ -2829,8 +2854,9 @@
     "goalLine": 1.1280000000000001,
     "rostered": true,
     "units": 63.654096939569904,
-    "value": 46,
-    "edge": 8
+    "_exact": 48.005851347089845,
+    "value": 48,
+    "edge": 10
    },
    {
     "name": "Josh Jacobs",
@@ -2858,8 +2884,9 @@
     "goalLine": 1.096,
     "rostered": true,
     "units": 49.88005464951706,
-    "value": 37,
-    "edge": 0
+    "_exact": 37.834305202158745,
+    "value": 38,
+    "edge": 1
    },
    {
     "name": "D'Andre Swift",
@@ -2887,8 +2914,9 @@
     "goalLine": 1.064,
     "rostered": true,
     "units": 44.68682531102203,
-    "value": 33,
-    "edge": -2
+    "_exact": 33.99932555381982,
+    "value": 34,
+    "edge": -1
    },
    {
     "name": "Breece Hall",
@@ -2916,8 +2944,9 @@
     "goalLine": 1.032,
     "rostered": true,
     "units": 40.92653391443816,
-    "value": 30,
-    "edge": -2
+    "_exact": 31.22250981205594,
+    "value": 31,
+    "edge": -1
    },
    {
     "name": "Cam Skattebo",
@@ -2945,8 +2974,9 @@
     "goalLine": 1.032,
     "rostered": true,
     "units": 39.56735013130183,
-    "value": 29,
-    "edge": 1
+    "_exact": 30.218810224201675,
+    "value": 30,
+    "edge": 2
    },
    {
     "name": "David Montgomery",
@@ -2974,8 +3004,9 @@
     "goalLine": 1.096,
     "rostered": true,
     "units": 39.454962841740176,
-    "value": 29,
-    "edge": 4
+    "_exact": 30.13581697662717,
+    "value": 30,
+    "edge": 5
    },
    {
     "name": "Travis Etienne Jr.",
@@ -3003,8 +3034,9 @@
     "goalLine": 1.032,
     "rostered": true,
     "units": 28.311011626651343,
-    "value": 21,
-    "edge": 0
+    "_exact": 21.90648156192501,
+    "value": 22,
+    "edge": 1
    },
    {
     "name": "Bucky Irving",
@@ -3032,8 +3064,9 @@
     "goalLine": 1.032,
     "rostered": true,
     "units": 32.9224516359687,
-    "value": 24,
-    "edge": 5
+    "_exact": 25.311834461358647,
+    "value": 25,
+    "edge": 6
    },
    {
     "name": "Jeremiyah Love",
@@ -3061,8 +3094,9 @@
     "goalLine": 1,
     "rostered": true,
     "units": 25.36959520979167,
-    "value": 19,
-    "edge": 2
+    "_exact": 19.734370268412253,
+    "value": 20,
+    "edge": 3
    },
    {
     "name": "Quinshon Judkins",
@@ -3090,6 +3124,7 @@
     "goalLine": 1.032,
     "rostered": true,
     "units": 24.678182701107584,
+    "_exact": 19.22379144999658,
     "value": 19,
     "edge": 4
    },
@@ -3119,6 +3154,7 @@
     "goalLine": 1.032,
     "rostered": true,
     "units": 28.844900286559735,
+    "_exact": 22.300735697795883,
     "value": 22,
     "edge": 8
    },
@@ -3148,8 +3184,9 @@
     "goalLine": 1,
     "rostered": true,
     "units": 27.072459074097722,
-    "value": 20,
-    "edge": 7
+    "_exact": 20.991863022506177,
+    "value": 21,
+    "edge": 8
    },
    {
     "name": "Tony Pollard",
@@ -3177,6 +3214,7 @@
     "goalLine": 1,
     "rostered": true,
     "units": 30.372614411489312,
+    "_exact": 23.428887796559668,
     "value": 23,
     "edge": 12
    },
@@ -3206,6 +3244,7 @@
     "goalLine": 1.064,
     "rostered": true,
     "units": 30.480299135311867,
+    "_exact": 23.50840839874747,
     "value": 23,
     "edge": 13
    },
@@ -3235,6 +3274,7 @@
     "goalLine": 1.032,
     "rostered": true,
     "units": 27.426470813574852,
+    "_exact": 21.25328568029338,
     "value": 21,
     "edge": 13
    },
@@ -3264,6 +3304,7 @@
     "goalLine": 1.032,
     "rostered": true,
     "units": 26.179813049321446,
+    "_exact": 20.33268178573459,
     "value": 20,
     "edge": 13
    },
@@ -3293,8 +3334,9 @@
     "goalLine": 1,
     "rostered": true,
     "units": 19.7555782432605,
-    "value": 15,
-    "edge": 9
+    "_exact": 15.588656800207211,
+    "value": 16,
+    "edge": 10
    },
    {
     "name": "TreVeyon Henderson",
@@ -3322,6 +3364,7 @@
     "goalLine": 1,
     "rostered": true,
     "units": 19.023890160176776,
+    "_exact": 15.048336177977314,
     "value": 15,
     "edge": 10
    },
@@ -3351,6 +3394,7 @@
     "goalLine": 1,
     "rostered": true,
     "units": 15.219112128141424,
+    "_exact": 12.238668942381851,
     "value": 12,
     "edge": 8
    },
@@ -3380,6 +3424,7 @@
     "goalLine": 1.032,
     "rostered": true,
     "units": 17.631302665869548,
+    "_exact": 14.019969365902888,
     "value": 14,
     "edge": 10
    },
@@ -3409,8 +3454,9 @@
     "goalLine": 1,
     "rostered": true,
     "units": 15.704022224122314,
-    "value": 12,
-    "edge": 9
+    "_exact": 12.59675448572119,
+    "value": 13,
+    "edge": 10
    },
    {
     "name": "Kyle Monangai",
@@ -3438,6 +3484,7 @@
     "goalLine": 1.032,
     "rostered": true,
     "units": 12.534694888923864,
+    "_exact": 10.256340643544808,
     "value": 10,
     "edge": 7
    },
@@ -3467,8 +3514,9 @@
     "goalLine": 1.032,
     "rostered": true,
     "units": 10.420409004045139,
-    "value": 8,
-    "edge": 6
+    "_exact": 8.695030173549297,
+    "value": 9,
+    "edge": 7
    },
    {
     "name": "Jonathon Brooks",
@@ -3496,6 +3544,7 @@
     "goalLine": 1,
     "rostered": true,
     "units": 5.4780976965518,
+    "_exact": 5.045342850962283,
     "value": 5,
     "edge": 3
    },
@@ -3525,8 +3574,9 @@
     "goalLine": 1,
     "rostered": true,
     "units": 4.793335484482826,
-    "value": 4,
-    "edge": 2
+    "_exact": 4.539674994591998,
+    "value": 5,
+    "edge": 3
    },
    {
     "name": "Kenny Gainwell",
@@ -3554,6 +3604,7 @@
     "goalLine": 1,
     "rostered": true,
     "units": 4.304219618719272,
+    "_exact": 4.1784836686132225,
     "value": 4,
     "edge": 2
    },
@@ -3583,6 +3634,7 @@
     "goalLine": 1.032,
     "rostered": true,
     "units": 3.735280043663107,
+    "_exact": 3.758345918234711,
     "value": 4,
     "edge": 3
    },
@@ -3612,6 +3664,7 @@
     "goalLine": 1,
     "rostered": true,
     "units": 2.836872021428611,
+    "_exact": 3.0949096906768965,
     "value": 3,
     "edge": 2
    },
@@ -3641,6 +3694,7 @@
     "goalLine": 1,
     "rostered": true,
     "units": 2.152109809359636,
+    "_exact": 2.5892418343066113,
     "value": 3,
     "edge": 2
    },
@@ -3670,6 +3724,7 @@
     "goalLine": 1,
     "rostered": true,
     "units": 1.1367874248827987,
+    "_exact": 1.8394693079694637,
     "value": 2,
     "edge": 1
    },
@@ -3699,6 +3754,7 @@
     "goalLine": 1,
     "rostered": true,
     "units": 0.5545158745241172,
+    "_exact": 1.4094864591705305,
     "value": 1,
     "edge": 0
    },
@@ -3728,6 +3784,7 @@
     "goalLine": 1,
     "rostered": true,
     "units": 0.1482722041361789,
+    "_exact": 1.1094927352931774,
     "value": 1,
     "edge": 0
    },
@@ -7085,8 +7142,9 @@
     "star": true,
     "rostered": true,
     "units": 93,
-    "value": 67,
-    "edge": -14
+    "_exact": 69.67655634843877,
+    "value": 70,
+    "edge": -11
    },
    {
     "name": "Puka Nacua",
@@ -7113,8 +7171,9 @@
     "star": true,
     "rostered": true,
     "units": 78.30000000000001,
-    "value": 57,
-    "edge": -22
+    "_exact": 58.82122969981458,
+    "value": 59,
+    "edge": -20
    },
    {
     "name": "Jaxon Smith-Njigba",
@@ -7141,8 +7200,9 @@
     "star": true,
     "rostered": true,
     "units": 66.9,
-    "value": 49,
-    "edge": -24
+    "_exact": 50.40281311516724,
+    "value": 50,
+    "edge": -23
    },
    {
     "name": "Amon-Ra St. Brown",
@@ -7169,8 +7229,9 @@
     "star": true,
     "rostered": true,
     "units": 63.150000000000006,
-    "value": 46,
-    "edge": -21
+    "_exact": 47.63359713337536,
+    "value": 48,
+    "edge": -19
    },
    {
     "name": "CeeDee Lamb",
@@ -7197,8 +7258,9 @@
     "star": true,
     "rostered": true,
     "units": 51.642073083171454,
-    "value": 38,
-    "edge": -24
+    "_exact": 39.13548109727545,
+    "value": 39,
+    "edge": -23
    },
    {
     "name": "Nico Collins",
@@ -7225,8 +7287,9 @@
     "star": true,
     "rostered": true,
     "units": 45.55892161723397,
-    "value": 33,
-    "edge": -25
+    "_exact": 34.6433316948395,
+    "value": 35,
+    "edge": -23
    },
    {
     "name": "Justin Jefferson",
@@ -7253,8 +7316,9 @@
     "star": false,
     "rostered": true,
     "units": 48.599999999999994,
-    "value": 36,
-    "edge": -19
+    "_exact": 36.88903912402283,
+    "value": 37,
+    "edge": -18
    },
    {
     "name": "George Pickens",
@@ -7281,8 +7345,9 @@
     "star": false,
     "rostered": true,
     "units": 46.05,
-    "value": 34,
-    "edge": -17
+    "_exact": 35.005972256404355,
+    "value": 35,
+    "edge": -16
    },
    {
     "name": "Chris Olave",
@@ -7309,8 +7374,9 @@
     "star": false,
     "rostered": true,
     "units": 43.95,
-    "value": 32,
-    "edge": -14
+    "_exact": 33.4552113066009,
+    "value": 33,
+    "edge": -13
    },
    {
     "name": "Drake London",
@@ -7337,8 +7403,9 @@
     "star": false,
     "rostered": true,
     "units": 41.55,
-    "value": 31,
-    "edge": -11
+    "_exact": 31.68291307825409,
+    "value": 32,
+    "edge": -10
    },
    {
     "name": "A.J. Brown",
@@ -7365,8 +7432,9 @@
     "star": true,
     "rostered": true,
     "units": 40.2,
-    "value": 30,
-    "edge": -9
+    "_exact": 30.685995324809017,
+    "value": 31,
+    "edge": -8
    },
    {
     "name": "Tee Higgins",
@@ -7393,8 +7461,9 @@
     "star": false,
     "rostered": true,
     "units": 38.7,
-    "value": 29,
-    "edge": -8
+    "_exact": 29.578308932092263,
+    "value": 30,
+    "edge": -7
    },
    {
     "name": "Rashee Rice",
@@ -7421,8 +7490,9 @@
     "star": false,
     "rostered": true,
     "units": 31.968902384820424,
-    "value": 24,
-    "edge": -11
+    "_exact": 24.607678774503853,
+    "value": 25,
+    "edge": -10
    },
    {
     "name": "Zay Flowers",
@@ -7449,8 +7519,9 @@
     "star": false,
     "rostered": true,
     "units": 25.57249850377609,
-    "value": 19,
-    "edge": -14
+    "_exact": 19.88420574693489,
+    "value": 20,
+    "edge": -13
    },
    {
     "name": "DeVonta Smith",
@@ -7477,6 +7548,7 @@
     "star": false,
     "rostered": true,
     "units": 24.91397922900074,
+    "_exact": 19.39791718692798,
     "value": 19,
     "edge": -11
    },
@@ -7505,8 +7577,9 @@
     "star": false,
     "rostered": true,
     "units": 24.145706741762837,
-    "value": 18,
-    "edge": -10
+    "_exact": 18.830580533586595,
+    "value": 19,
+    "edge": -9
    },
    {
     "name": "Davante Adams",
@@ -7533,6 +7606,7 @@
     "star": true,
     "rostered": true,
     "units": 23.596940679450043,
+    "_exact": 18.42534006691417,
     "value": 18,
     "edge": -8
    },
@@ -7561,6 +7635,7 @@
     "star": false,
     "rostered": true,
     "units": 23.15792782959981,
+    "_exact": 18.10114769357623,
     "value": 18,
     "edge": -7
    },
@@ -7589,8 +7664,9 @@
     "star": false,
     "rostered": true,
     "units": 22.49940855482446,
-    "value": 17,
-    "edge": -6
+    "_exact": 17.614859133569325,
+    "value": 18,
+    "edge": -5
    },
    {
     "name": "Jaylen Waddle",
@@ -7617,6 +7693,7 @@
     "star": false,
     "rostered": true,
     "units": 22.27990212989934,
+    "_exact": 17.452762946900354,
     "value": 17,
     "edge": -5
    },
@@ -7645,8 +7722,9 @@
     "star": false,
     "rostered": true,
     "units": 21.292123217736314,
-    "value": 16,
-    "edge": -5
+    "_exact": 16.723330106889993,
+    "value": 17,
+    "edge": -4
    },
    {
     "name": "Ladd McConkey",
@@ -7673,8 +7751,9 @@
     "star": false,
     "rostered": true,
     "units": 24.462034618344372,
-    "value": 18,
-    "edge": -1
+    "_exact": 19.064175256604162,
+    "value": 19,
+    "edge": 0
    },
    {
     "name": "Garrett Wilson",
@@ -7701,6 +7780,7 @@
     "star": false,
     "rostered": true,
     "units": 23.55603333618347,
+    "_exact": 18.395131728581784,
     "value": 18,
     "edge": 0
    },
@@ -7729,8 +7809,9 @@
     "star": false,
     "rostered": true,
     "units": 21.61460201726725,
-    "value": 16,
-    "edge": 0
+    "_exact": 16.96146702567669,
+    "value": 17,
+    "edge": 1
    },
    {
     "name": "Rome Odunze",
@@ -7757,8 +7838,9 @@
     "star": false,
     "rostered": true,
     "units": 20.3203144713231,
-    "value": 15,
-    "edge": 0
+    "_exact": 16.005690557073297,
+    "value": 16,
+    "edge": 1
    },
    {
     "name": "Mike Evans",
@@ -7785,6 +7867,7 @@
     "star": true,
     "rostered": true,
     "units": 16.462981869383754,
+    "_exact": 13.157214000172678,
     "value": 13,
     "edge": -1
    },
@@ -7813,6 +7896,7 @@
     "star": false,
     "rostered": true,
     "units": 12.836529633662531,
+    "_exact": 10.479232803275579,
     "value": 10,
     "edge": -3
    },
@@ -7841,6 +7925,7 @@
     "star": false,
     "rostered": true,
     "units": 12.745490416402514,
+    "_exact": 10.41200420183391,
     "value": 10,
     "edge": -3
    },
@@ -7869,6 +7954,7 @@
     "star": false,
     "rostered": true,
     "units": 12.199255112842406,
+    "_exact": 10.008632593183885,
     "value": 10,
     "edge": -2
    },
@@ -7897,6 +7983,7 @@
     "star": false,
     "rostered": true,
     "units": 11.926137461062352,
+    "_exact": 9.806946788858871,
     "value": 10,
     "edge": -1
    },
@@ -7925,6 +8012,7 @@
     "star": false,
     "rostered": true,
     "units": 14.048411195207468,
+    "_exact": 11.374155946814017,
     "value": 11,
     "edge": 1
    },
@@ -7953,6 +8041,7 @@
     "star": false,
     "rostered": true,
     "units": 13.719151557819792,
+    "_exact": 11.131011666810563,
     "value": 11,
     "edge": 2
    },
@@ -7981,6 +8070,7 @@
     "star": false,
     "rostered": true,
     "units": 11.106784505722189,
+    "_exact": 9.201889375883834,
     "value": 9,
     "edge": 1
    },
@@ -8009,6 +8099,7 @@
     "star": false,
     "rostered": true,
     "units": 10.924706071202156,
+    "_exact": 9.067432173000494,
     "value": 9,
     "edge": 2
    },
@@ -8037,6 +8128,7 @@
     "star": false,
     "rostered": true,
     "units": 9.83223546408194,
+    "_exact": 8.260688955700445,
     "value": 8,
     "edge": 2
    },
@@ -8065,6 +8157,7 @@
     "star": false,
     "rostered": true,
     "units": 9.650157029561901,
+    "_exact": 8.126231752817102,
     "value": 8,
     "edge": 2
    },
@@ -8093,8 +8186,9 @@
     "star": false,
     "rostered": true,
     "units": 9.012882508741777,
-    "value": 7,
-    "edge": 2
+    "_exact": 7.6556315427254065,
+    "value": 8,
+    "edge": 3
    },
    {
     "name": "Chris Godwin Jr.",
@@ -8121,8 +8215,9 @@
     "star": false,
     "rostered": true,
     "units": 10.207048759017926,
-    "value": 8,
-    "edge": 3
+    "_exact": 8.53747268010706,
+    "value": 9,
+    "edge": 4
    },
    {
     "name": "Jordan Addison",
@@ -8149,6 +8244,7 @@
     "star": false,
     "rostered": true,
     "units": 9.548529484242575,
+    "_exact": 8.051184120100153,
     "value": 8,
     "edge": 4
    },
@@ -8177,6 +8273,7 @@
     "star": false,
     "rostered": true,
     "units": 10.613157876742001,
+    "_exact": 8.837367042547836,
     "value": 9,
     "edge": 5
    },
@@ -8205,6 +8302,7 @@
     "star": false,
     "rostered": true,
     "units": 8.011984509766759,
+    "_exact": 6.916510813417369,
     "value": 7,
     "edge": 3
    },
@@ -8233,6 +8331,7 @@
     "star": false,
     "rostered": true,
     "units": 7.133958810066291,
+    "_exact": 6.268126066741492,
     "value": 6,
     "edge": 3
    },
@@ -8261,6 +8360,7 @@
     "star": false,
     "rostered": true,
     "units": 5.37131381834106,
+    "_exact": 4.966487485058575,
     "value": 5,
     "edge": 2
    },
@@ -8289,6 +8389,7 @@
     "star": false,
     "rostered": true,
     "units": 5.007156949300987,
+    "_exact": 4.697573079291892,
     "value": 5,
     "edge": 3
    },
@@ -8317,6 +8418,7 @@
     "star": false,
     "rostered": true,
     "units": 3.5950016133621197,
+    "_exact": 3.654756245943999,
     "value": 4,
     "edge": 2
    },
@@ -8345,6 +8447,7 @@
     "star": false,
     "rostered": true,
     "units": 2.3872535922538773,
+    "_exact": 2.7628855467358737,
     "value": 3,
     "edge": 1
    },
@@ -8373,6 +8476,7 @@
     "star": false,
     "rostered": true,
     "units": 2.2167354785214575,
+    "_exact": 2.636965150540454,
     "value": 3,
     "edge": 1
    },
@@ -8401,6 +8505,7 @@
     "star": false,
     "rostered": true,
     "units": 1.818859879812478,
+    "_exact": 2.343150892751142,
     "value": 2,
     "edge": 0
    },
@@ -8429,6 +8534,7 @@
     "star": false,
     "rostered": true,
     "units": 1.4778236523476382,
+    "_exact": 2.0913101003603027,
     "value": 2,
     "edge": 0
    },
@@ -8457,6 +8563,7 @@
     "star": false,
     "rostered": true,
     "units": 1.1367874248827987,
+    "_exact": 1.8394693079694637,
     "value": 2,
     "edge": 1
    },
@@ -8485,6 +8592,7 @@
     "star": false,
     "rostered": true,
     "units": 0.9662693111503788,
+    "_exact": 1.7135489117740441,
     "value": 2,
     "edge": 1
    },
@@ -8513,6 +8621,7 @@
     "star": false,
     "rostered": true,
     "units": 0.6820724549296792,
+    "_exact": 1.503681584781678,
     "value": 1,
     "edge": 0
    },
@@ -8541,6 +8650,7 @@
     "star": false,
     "rostered": true,
     "units": 0.4158869058930879,
+    "_exact": 1.307114844377898,
     "value": 1,
     "edge": 0
    },
@@ -8569,6 +8679,7 @@
     "star": false,
     "rostered": true,
     "units": 0.19460726792873478,
+    "_exact": 1.1437092150722954,
     "value": 1,
     "edge": 0
    },
@@ -8597,6 +8708,7 @@
     "star": false,
     "rostered": true,
     "units": 0.11120415310213416,
+    "_exact": 1.0821195514698831,
     "value": 1,
     "edge": 0
    },
@@ -13352,8 +13464,9 @@
     "star": false,
     "rostered": true,
     "units": 39.64286034147607,
-    "value": 29,
-    "edge": -20
+    "_exact": 30.274571312415805,
+    "value": 30,
+    "edge": -19
    },
    {
     "name": "Trey McBride",
@@ -13380,6 +13493,7 @@
     "star": false,
     "rostered": true,
     "units": 27.6578095405647,
+    "_exact": 21.424119520290095,
     "value": 21,
     "edge": -20
    },
@@ -13408,8 +13522,9 @@
     "star": false,
     "rostered": true,
     "units": 18.70194740361994,
-    "value": 14,
-    "edge": -15
+    "_exact": 14.810595104196159,
+    "value": 15,
+    "edge": -14
    },
    {
     "name": "Tyler Warren",
@@ -13436,8 +13551,9 @@
     "star": false,
     "rostered": true,
     "units": 13.000400224730564,
-    "value": 10,
-    "edge": -10
+    "_exact": 10.600244285870586,
+    "value": 11,
+    "edge": -9
    },
    {
     "name": "Tucker Kraft",
@@ -13464,8 +13580,9 @@
     "star": false,
     "rostered": true,
     "units": 11.798682556898328,
-    "value": 9,
-    "edge": -5
+    "_exact": 9.712826746840532,
+    "value": 10,
+    "edge": -4
    },
    {
     "name": "Sam LaPorta",
@@ -13492,6 +13609,7 @@
     "star": false,
     "rostered": true,
     "units": 10.05072958550598,
+    "_exact": 8.42203759916045,
     "value": 8,
     "edge": -2
    },
@@ -13520,6 +13638,7 @@
     "star": false,
     "rostered": true,
     "units": 9.395247221233852,
+    "_exact": 7.937991668780423,
     "value": 8,
     "edge": 1
    },
@@ -13548,6 +13667,7 @@
     "star": false,
     "rostered": true,
     "units": 5.1063696385715,
+    "_exact": 4.770837443218413,
     "value": 5,
     "edge": 1
    },
@@ -13576,6 +13696,7 @@
     "star": false,
     "rostered": true,
     "units": 4.1379202243596644,
+    "_exact": 4.05567861778044,
     "value": 4,
     "edge": 1
    },
@@ -13604,6 +13725,7 @@
     "star": false,
     "rostered": true,
     "units": 3.081429954310388,
+    "_exact": 3.275505353666284,
     "value": 3,
     "edge": 1
    },
@@ -13632,6 +13754,7 @@
     "star": false,
     "rostered": true,
     "units": 2.2010213959359914,
+    "_exact": 2.6253609669044886,
     "value": 3,
     "edge": 2
    },
@@ -13660,6 +13783,7 @@
     "star": false,
     "rostered": true,
     "units": 0.8804085583743966,
+    "_exact": 1.6501443867617955,
     "value": 2,
     "edge": 1
    },
@@ -17638,8 +17762,8 @@
     "star": false,
     "rostered": true,
     "units": 0.2311344467875316,
-    "value": 1,
-    "edge": 0
+    "value": 2,
+    "edge": 1
    },
    {
     "name": "Will Reichard",
@@ -18249,8 +18373,8 @@
     "star": false,
     "rostered": true,
     "units": 0.441256671139833,
-    "value": 1,
-    "edge": 0
+    "value": 2,
+    "edge": 1
    },
    {
     "name": "Minnesota Vikings",
@@ -18270,8 +18394,8 @@
     "star": false,
     "rostered": true,
     "units": 0.12739429457711915,
-    "value": 1,
-    "edge": 0
+    "value": 2,
+    "edge": 1
    },
    {
     "name": "Detroit Lions",

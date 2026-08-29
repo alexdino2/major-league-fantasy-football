@@ -49,16 +49,16 @@ You only start one, so the board is bimodal, not a slope: the top two (Burrow, A
 
 | QB | Player | Tm | Bye | Val | Mkt (5yr) | '25 @rank | Edge | Sleeper | Call |
 |---|---|---|---|---|---|---|---|---|---|
-| QB1 | Joe Burrow | CIN | 6 | **$80** | $63 | $77 | +17 | QB4 (FP +3) | ANCHOR |
-| QB2 | Josh Allen ★ | BUF | 7 | **$72** | $59 | $67 | +13 | QB1 (SL +1) | ANCHOR |
-| QB3 | Lamar Jackson ★ | BAL | 13 | **$50** | $50 | $59 | +0 | QB2 (SL +1) | ANCHOR |
-| QB4 | Jalen Hurts ★ | PHI | 10 | **$39** | $41 | $57 | -2 | QB6 (FP +2) | Fair |
-| QB5 | Justin Herbert | LAC | 7 | **$30** | $34 | $47 | -4 | **QB13 (FP +8)** | Fair |
-| QB6 | Dak Prescott | DAL | 14 | **$25** | $28 | $40 | -2 | QB8 (FP +2) | Fair |
-| QB7 | Jayden Daniels ★ | WAS | 7 | **$22** | $22 | $25 | +0 | **QB11 (FP +4)** | Fair |
+| QB1 | Joe Burrow | CIN | 6 | **$83** | $63 | $77 | +20 | QB4 (FP +3) | ANCHOR |
+| QB2 | Josh Allen ★ | BUF | 7 | **$75** | $59 | $67 | +16 | QB1 (SL +1) | ANCHOR |
+| QB3 | Lamar Jackson ★ | BAL | 13 | **$52** | $50 | $59 | +2 | QB2 (SL +1) | ANCHOR |
+| QB4 | Jalen Hurts ★ | PHI | 10 | **$40** | $41 | $57 | -1 | QB6 (FP +2) | Fair |
+| QB5 | Justin Herbert | LAC | 7 | **$31** | $34 | $47 | -3 | **QB13 (FP +8)** | Fair |
+| QB6 | Dak Prescott | DAL | 14 | **$26** | $28 | $40 | -1 | QB8 (FP +2) | Fair |
+| QB7 | Jayden Daniels ★ | WAS | 7 | **$23** | $22 | $25 | +1 | **QB11 (FP +4)** | Fair |
 | QB8 | Drake Maye | NE | 11 | **$20** | $17 | $9 | +3 | **QB3 (SL +5)** | VALUE |
-| QB9 | Trevor Lawrence ★ | JAC | 7 | **$16** | $13 | $9 | +4 | QB7 (SL +2) | VALUE |
-| QB10 | Caleb Williams | CHI | 10 | **$9** | $9 | $8 | +0 | QB9 (SL +1) | Fair |
+| QB9 | Trevor Lawrence ★ | JAC | 7 | **$17** | $13 | $9 | +5 | QB7 (SL +2) | VALUE |
+| QB10 | Caleb Williams | CHI | 10 | **$10** | $9 | $8 | +1 | QB9 (SL +1) | Fair |
 | QB11 | Jaxson Dart ★ | NYG | 8 | **$6** | $6 | $4 | +0 | QB12 (FP +1) | Fair |
 | QB12 | Jared Goff | DET | 6 | **$2** | $4 | $4 | -2 | QB14 (FP +2) | Fair |
 | QB13 | Matthew Stafford | LAR | 11 | **$1** | $3 | $3 | -2 | QB15 (FP +2) | Fair |
@@ -76,44 +76,44 @@ Where the auction is won. Pay up for a goal-line anchor, add a second every-down
 
 | RB | Player | Tm | Bye | Val | Mkt (5yr) | '25 @rank | Edge | Sleeper | Call |
 |---|---|---|---|---|---|---|---|---|---|
-| RB1 | Jahmyr Gibbs ★ | DET | 6 | **$108** | $91 | $95 | +17 | RB1 | ANCHOR |
-| RB2 | Bijan Robinson ★ | ATL | 11 | **$90** | $89 | $86 | +2 | RB2 | ANCHOR |
-| RB3 | Jonathan Taylor ★ | IND | 13 | **$92** | $83 | $82 | +9 | RB5 (FP +2) | ANCHOR |
-| RB4 | Christian McCaffrey | SF | 8 | **$86** | $79 | $81 | +7 | RB6 (FP +2) | VALUE |
-| RB5 | Derrick Henry ★ | BAL | 13 | **$94** | $75 | $80 | +19 | RB3 (SL +2) | ANCHOR |
-| RB6 | De'Von Achane | MIA | 6 | **$76** | $71 | $74 | +5 | **RB11 (FP +5)** | VALUE |
-| RB7 | James Cook III ★ | BUF | 7 | **$79** | $67 | $68 | +12 | RB4 (SL +3) | ANCHOR |
-| RB8 | Saquon Barkley ★ | PHI | 10 | **$58** | $63 | $63 | -5 | RB8 | ANCHOR |
-| RB9 | Ashton Jeanty | LV | 13 | **$53** | $58 | $63 | -5 | RB12 (FP +3) | Fair |
-| RB10 | Omarion Hampton ★ | LAC | 7 | **$53** | $54 | $60 | +0 | RB10 | Fair |
-| RB11 | Chase Brown ★ | CIN | 6 | **$51** | $49 | $52 | +2 | RB9 (SL +2) | Fair |
-| RB12 | Javonte Williams | DAL | 14 | **$47** | $45 | $49 | +3 | **RB19 (FP +7)** | VALUE |
-| RB13 | Kyren Williams ★ | LAR | 11 | **$46** | $41 | $46 | +5 | RB13 | VALUE |
-| RB14 | Kenneth Walker III ★ | KC | 5 | **$46** | $39 | $39 | +8 | **RB7 (SL +7)** | VALUE |
-| RB15 | Josh Jacobs ★ | GB | 11 | **$37** | $37 | $39 | +0 | RB14 (SL +1) | Fair |
-| RB16 | D'Andre Swift | CHI | 10 | **$33** | $35 | $39 | -2 | RB18 (FP +2) | Fair |
-| RB17 | Breece Hall | NYJ | 13 | **$30** | $32 | $38 | -2 | RB16 (SL +1) | Fair |
-| RB18 | Cam Skattebo | NYG | 8 | **$29** | $28 | $35 | +1 | **RB24 (FP +6)** | Fair |
-| RB19 | David Montgomery ★ | HOU | 8 | **$29** | $25 | $26 | +4 | **RB15 (SL +4)** | VALUE |
-| RB20 | Travis Etienne Jr. | NO | 8 | **$21** | $21 | $22 | +0 | RB17 (SL +3) | Fair |
-| RB21 | Bucky Irving | TB | 10 | **$24** | $19 | $20 | +5 | RB20 (SL +1) | VALUE |
-| RB22 | Jeremiyah Love | ARI | 14 | **$19** | $17 | $17 | +2 | RB21 (SL +1) | Fair |
+| RB1 | Jahmyr Gibbs ★ | DET | 6 | **$111** | $91 | $95 | +20 | RB1 | ANCHOR |
+| RB2 | Bijan Robinson ★ | ATL | 11 | **$93** | $89 | $86 | +5 | RB2 | ANCHOR |
+| RB3 | Jonathan Taylor ★ | IND | 13 | **$95** | $83 | $82 | +12 | RB5 (FP +2) | ANCHOR |
+| RB4 | Christian McCaffrey | SF | 8 | **$89** | $79 | $81 | +10 | RB6 (FP +2) | VALUE |
+| RB5 | Derrick Henry ★ | BAL | 13 | **$97** | $75 | $80 | +22 | RB3 (SL +2) | ANCHOR |
+| RB6 | De'Von Achane | MIA | 6 | **$79** | $71 | $74 | +8 | **RB11 (FP +5)** | VALUE |
+| RB7 | James Cook III ★ | BUF | 7 | **$82** | $67 | $68 | +15 | RB4 (SL +3) | ANCHOR |
+| RB8 | Saquon Barkley ★ | PHI | 10 | **$60** | $63 | $63 | -3 | RB8 | ANCHOR |
+| RB9 | Ashton Jeanty | LV | 13 | **$55** | $58 | $63 | -3 | RB12 (FP +3) | Fair |
+| RB10 | Omarion Hampton ★ | LAC | 7 | **$55** | $54 | $60 | +2 | RB10 | Fair |
+| RB11 | Chase Brown ★ | CIN | 6 | **$53** | $49 | $52 | +4 | RB9 (SL +2) | VALUE |
+| RB12 | Javonte Williams | DAL | 14 | **$48** | $45 | $49 | +4 | **RB19 (FP +7)** | VALUE |
+| RB13 | Kyren Williams ★ | LAR | 11 | **$48** | $41 | $46 | +7 | RB13 | VALUE |
+| RB14 | Kenneth Walker III ★ | KC | 5 | **$48** | $39 | $39 | +10 | **RB7 (SL +7)** | VALUE |
+| RB15 | Josh Jacobs ★ | GB | 11 | **$38** | $37 | $39 | +1 | RB14 (SL +1) | Fair |
+| RB16 | D'Andre Swift | CHI | 10 | **$34** | $35 | $39 | -1 | RB18 (FP +2) | Fair |
+| RB17 | Breece Hall | NYJ | 13 | **$31** | $32 | $38 | -1 | RB16 (SL +1) | Fair |
+| RB18 | Cam Skattebo | NYG | 8 | **$30** | $28 | $35 | +2 | **RB24 (FP +6)** | Fair |
+| RB19 | David Montgomery ★ | HOU | 8 | **$30** | $25 | $26 | +5 | **RB15 (SL +4)** | VALUE |
+| RB20 | Travis Etienne Jr. | NO | 8 | **$22** | $21 | $22 | +1 | RB17 (SL +3) | Fair |
+| RB21 | Bucky Irving | TB | 10 | **$25** | $19 | $20 | +6 | RB20 (SL +1) | VALUE |
+| RB22 | Jeremiyah Love | ARI | 14 | **$20** | $17 | $17 | +3 | RB21 (SL +1) | VALUE |
 | RB23 | Quinshon Judkins | CLE | 11 | **$19** | $15 | $17 | +4 | RB22 (SL +1) | VALUE |
 | RB24 | Bhayshul Tuten | JAC | 7 | **$22** | $14 | $17 | +8 | RB25 (FP +1) | VALUE |
-| RB25 | Jaylen Warren | PIT | 9 | **$20** | $13 | $15 | +7 | **RB30 (FP +5)** | VALUE |
+| RB25 | Jaylen Warren | PIT | 9 | **$21** | $13 | $15 | +8 | **RB30 (FP +5)** | VALUE |
 | RB26 | Tony Pollard | TEN | 9 | **$23** | $12 | $15 | +12 | **RB32 (FP +6)** | VALUE |
 | RB27 | Jadarian Price | SEA | 11 | **$23** | $10 | $9 | +13 | **RB23 (SL +4)** | VALUE |
 | RB28 | Rhamondre Stevenson | NE | 11 | **$21** | $8 | $8 | +13 | RB26 (SL +2) | VALUE |
 | RB29 | J.K. Dobbins | DEN | 10 | **$20** | $7 | $5 | +13 | RB28 (SL +1) | VALUE |
-| RB30 | Rico Dowdle | PIT | 9 | **$15** | $6 | $5 | +9 | **RB36 (FP +6)** | VALUE |
+| RB30 | Rico Dowdle | PIT | 9 | **$16** | $6 | $5 | +10 | **RB36 (FP +6)** | VALUE |
 | RB31 | TreVeyon Henderson | NE | 11 | **$15** | $5 | $3 | +10 | RB31 | VALUE |
 | RB32 | Chuba Hubbard | CAR | 5 | **$12** | $4 | $2 | +8 | RB33 (FP +1) | VALUE |
 | RB33 | Blake Corum | LAR | 11 | **$14** | $4 | $2 | +10 | RB34 (FP +1) | VALUE |
-| RB34 | Jacory Croskey-Merritt | WAS | 7 | **$12** | $3 | $1 | +9 | **RB38 (FP +4)** | VALUE |
+| RB34 | Jacory Croskey-Merritt | WAS | 7 | **$13** | $3 | $1 | +10 | **RB38 (FP +4)** | VALUE |
 | RB35 | Kyle Monangai | CHI | 10 | **$10** | $3 | $1 | +7 | **RB29 (SL +6)** | VALUE |
-| RB36 | Jordan Mason | MIN | 6 | **$8** | $2 | $1 | +6 | **RB27 (SL +9)** | VALUE |
+| RB36 | Jordan Mason | MIN | 6 | **$9** | $2 | $1 | +7 | **RB27 (SL +9)** | VALUE |
 | RB37 | Jonathon Brooks | CAR | 5 | **$5** | $2 | $1 | +3 | RB37 | VALUE |
-| RB38 | Rachaad White | WAS | 7 | **$4** | $2 | $1 | +2 | **RB42 (FP +4)** | Fair |
+| RB38 | Rachaad White | WAS | 7 | **$5** | $2 | $1 | +3 | **RB42 (FP +4)** | VALUE |
 | RB39 | Kenny Gainwell | TB | 10 | **$4** | $2 | $1 | +2 | RB40 (FP +1) | Fair |
 | RB40 | Chris Rodriguez Jr. | JAC | 7 | **$4** | $1 | $1 | +3 | **RB35 (SL +5)** | VALUE |
 
@@ -123,31 +123,31 @@ Do not pay up. Non-PPR plus 6-point TDs make a receiver's week a coin flip, so e
 
 | WR | Player | Tm | Bye | Val | Mkt (5yr) | '25 @rank | Edge | Sleeper | Call |
 |---|---|---|---|---|---|---|---|---|---|
-| WR1 | Ja'Marr Chase ★ | CIN | 6 | **$67** | $81 | $88 | -14 | WR1 | Fade |
-| WR2 | Puka Nacua ★ | LAR | 11 | **$57** | $79 | $83 | -22 | WR2 | Fade |
-| WR3 | Jaxon Smith-Njigba ★ | SEA | 11 | **$49** | $73 | $78 | -24 | WR3 | Fade |
-| WR4 | Amon-Ra St. Brown ★ | DET | 6 | **$46** | $67 | $65 | -21 | WR5 (FP +1) | Fade |
-| WR5 | CeeDee Lamb ★ | DAL | 14 | **$38** | $62 | $63 | -24 | WR6 (FP +1) | Fade |
-| WR6 | Nico Collins ★ | HOU | 8 | **$33** | $58 | $57 | -25 | WR4 (SL +2) | Fade |
-| WR7 | Justin Jefferson | MIN | 6 | **$36** | $55 | $57 | -19 | **WR11 (FP +4)** | Fade |
-| WR8 | George Pickens | DAL | 14 | **$34** | $51 | $45 | -17 | WR8 | Fade |
-| WR9 | Chris Olave | NO | 8 | **$32** | $46 | $41 | -14 | WR12 (FP +3) | Fade |
-| WR10 | Drake London | ATL | 11 | **$31** | $42 | $38 | -11 | WR10 | Fade |
-| WR11 | A.J. Brown ★ | NE | 11 | **$30** | $40 | $38 | -9 | **WR7 (SL +4)** | Fade |
-| WR12 | Tee Higgins | CIN | 6 | **$29** | $38 | $36 | -8 | WR13 (FP +1) | Fade |
-| WR13 | Rashee Rice | KC | 5 | **$24** | $35 | $35 | -11 | **WR17 (FP +4)** | Fade |
-| WR14 | Zay Flowers | BAL | 13 | **$19** | $33 | $32 | -14 | **WR24 (FP +10)** | Fade |
+| WR1 | Ja'Marr Chase ★ | CIN | 6 | **$70** | $81 | $88 | -11 | WR1 | Fade |
+| WR2 | Puka Nacua ★ | LAR | 11 | **$59** | $79 | $83 | -20 | WR2 | Fade |
+| WR3 | Jaxon Smith-Njigba ★ | SEA | 11 | **$50** | $73 | $78 | -23 | WR3 | Fade |
+| WR4 | Amon-Ra St. Brown ★ | DET | 6 | **$48** | $67 | $65 | -19 | WR5 (FP +1) | Fade |
+| WR5 | CeeDee Lamb ★ | DAL | 14 | **$39** | $62 | $63 | -23 | WR6 (FP +1) | Fade |
+| WR6 | Nico Collins ★ | HOU | 8 | **$35** | $58 | $57 | -23 | WR4 (SL +2) | Fade |
+| WR7 | Justin Jefferson | MIN | 6 | **$37** | $55 | $57 | -18 | **WR11 (FP +4)** | Fade |
+| WR8 | George Pickens | DAL | 14 | **$35** | $51 | $45 | -16 | WR8 | Fade |
+| WR9 | Chris Olave | NO | 8 | **$33** | $46 | $41 | -13 | WR12 (FP +3) | Fade |
+| WR10 | Drake London | ATL | 11 | **$32** | $42 | $38 | -10 | WR10 | Fade |
+| WR11 | A.J. Brown ★ | NE | 11 | **$31** | $40 | $38 | -8 | **WR7 (SL +4)** | Fade |
+| WR12 | Tee Higgins | CIN | 6 | **$30** | $38 | $36 | -7 | WR13 (FP +1) | Fair |
+| WR13 | Rashee Rice | KC | 5 | **$25** | $35 | $35 | -10 | **WR17 (FP +4)** | Fade |
+| WR14 | Zay Flowers | BAL | 13 | **$20** | $33 | $32 | -13 | **WR24 (FP +10)** | Fade |
 | WR15 | DeVonta Smith | PHI | 10 | **$19** | $30 | $28 | -11 | WR14 (SL +1) | Fade |
-| WR16 | Tetairoa McMillan | CAR | 5 | **$18** | $28 | $27 | -10 | **WR25 (FP +9)** | Fade |
+| WR16 | Tetairoa McMillan | CAR | 5 | **$19** | $28 | $27 | -9 | **WR25 (FP +9)** | Fade |
 | WR17 | Davante Adams ★ | LAR | 11 | **$18** | $27 | $26 | -8 | **WR23 (FP +6)** | Fade |
 | WR18 | Emeka Egbuka | TB | 10 | **$18** | $25 | $23 | -7 | WR16 (SL +2) | Fair |
-| WR19 | Christian Watson | GB | 11 | **$17** | $24 | $22 | -6 | WR20 (FP +1) | Fair |
+| WR19 | Christian Watson | GB | 11 | **$18** | $24 | $22 | -5 | WR20 (FP +1) | Fair |
 | WR20 | Jaylen Waddle | DEN | 10 | **$17** | $22 | $22 | -5 | WR21 (FP +1) | Fair |
-| WR21 | Jameson Williams | DET | 6 | **$16** | $21 | $21 | -5 | WR18 (SL +3) | Fair |
-| WR22 | Ladd McConkey | LAC | 7 | **$18** | $20 | $20 | -1 | **WR15 (SL +7)** | Fair |
+| WR21 | Jameson Williams | DET | 6 | **$17** | $21 | $21 | -4 | WR18 (SL +3) | Fair |
+| WR22 | Ladd McConkey | LAC | 7 | **$19** | $20 | $20 | +0 | **WR15 (SL +7)** | Fair |
 | WR23 | Garrett Wilson | NYJ | 13 | **$18** | $18 | $18 | +0 | **WR29 (FP +6)** | Fair |
-| WR24 | Terry McLaurin | WAS | 7 | **$16** | $16 | $18 | +0 | **WR30 (FP +6)** | Fair |
-| WR25 | Rome Odunze | CHI | 10 | **$15** | $15 | $15 | +0 | WR26 (FP +1) | Fair |
+| WR24 | Terry McLaurin | WAS | 7 | **$17** | $16 | $18 | +1 | **WR30 (FP +6)** | Fair |
+| WR25 | Rome Odunze | CHI | 10 | **$16** | $15 | $15 | +1 | WR26 (FP +1) | Fair |
 | WR26 | Mike Evans ★ | SF | 8 | **$13** | $14 | $14 | -1 | **WR9 (SL +17)** | Fair |
 | WR27 | Luther Burden III | CHI | 10 | **$10** | $14 | $12 | -3 | WR27 | Fair |
 | WR28 | Malik Nabers | NYG | 8 | **$10** | $13 | $12 | -3 | **WR19 (SL +9)** | Fair |
@@ -159,8 +159,8 @@ Do not pay up. Non-PPR plus 6-point TDs make a receiver's week a coin flip, so e
 | WR34 | Brian Thomas Jr. | JAC | 7 | **$9** | $7 | $5 | +2 | **WR28 (SL +6)** | Fair |
 | WR35 | DJ Moore | BUF | 7 | **$8** | $6 | $4 | +2 | WR36 (FP +1) | Fair |
 | WR36 | Quentin Johnston | LAC | 7 | **$8** | $6 | $4 | +2 | **WR44 (FP +8)** | Fair |
-| WR37 | Josh Downs | IND | 13 | **$7** | $5 | $4 | +2 | **WR49 (FP +12)** | Fair |
-| WR38 | Chris Godwin Jr. | TB | 10 | **$8** | $5 | $3 | +3 | **WR45 (FP +7)** | VALUE |
+| WR37 | Josh Downs | IND | 13 | **$8** | $5 | $4 | +3 | **WR49 (FP +12)** | VALUE |
+| WR38 | Chris Godwin Jr. | TB | 10 | **$9** | $5 | $3 | +4 | **WR45 (FP +7)** | VALUE |
 | WR39 | Jordan Addison | MIN | 6 | **$8** | $4 | $2 | +4 | WR39 | VALUE |
 | WR40 | Jayden Reed | GB | 11 | **$9** | $4 | $2 | +5 | **WR31 (SL +9)** | VALUE |
 | WR41 | Michael Wilson | ARI | 14 | **$7** | $4 | $2 | +3 | WR42 (FP +1) | VALUE |
@@ -175,11 +175,11 @@ Punt it. One value TE in the $8-14 range and a $1 backup. After the top two it i
 
 | TE | Player | Tm | Bye | Val | Mkt (5yr) | '25 @rank | Edge | Sleeper | Call |
 |---|---|---|---|---|---|---|---|---|---|
-| TE1 | Brock Bowers | LV | 13 | **$29** | $49 | $40 | -20 | TE1 | Fade |
+| TE1 | Brock Bowers | LV | 13 | **$30** | $49 | $40 | -19 | TE1 | Fade |
 | TE2 | Trey McBride | ARI | 14 | **$21** | $42 | $39 | -20 | TE2 | Fade |
-| TE3 | Colston Loveland | CHI | 10 | **$14** | $29 | $11 | -15 | TE3 | Fade |
-| TE4 | Tyler Warren | IND | 13 | **$10** | $20 | $11 | -10 | TE5 (FP +1) | Fade |
-| TE5 | Tucker Kraft | GB | 11 | **$9** | $15 | $10 | -5 | TE8 (FP +3) | Fair |
+| TE3 | Colston Loveland | CHI | 10 | **$15** | $29 | $11 | -14 | TE3 | Fade |
+| TE4 | Tyler Warren | IND | 13 | **$11** | $20 | $11 | -9 | TE5 (FP +1) | Fade |
+| TE5 | Tucker Kraft | GB | 11 | **$10** | $15 | $10 | -4 | TE8 (FP +3) | Fair |
 | TE6 | Sam LaPorta | DET | 6 | **$8** | $11 | $8 | -2 | TE4 (SL +2) | Fair |
 | TE7 | Kyle Pitts Sr. | ATL | 11 | **$8** | $7 | $3 | +1 | TE10 (FP +3) | Fair |
 | TE8 | Harold Fannin Jr. | CLE | 11 | **$5** | $4 | $3 | +1 | TE9 (FP +1) | Fair |
@@ -228,7 +228,7 @@ Flat and streamable. A top unit for $2-3, then stream matchups.
 
 ## Fine print
 
-- **How Val is built.** Project each player to finish at his ECR rank; read our real points-scored-at-that-rank from 2021-2025; subtract the last startable body at the position (QB/TE the streamer line, RB/WR deep replacement); weight by reliability (1 minus that slot's five-year bust rate) and by a position consistency factor; split the room's $3,000 across everyone who gets drafted. Ranks are consensus - treat one-dollar differences as noise and the tiers and cliffs as the signal.
+- **How Val is built.** Project each player to finish at his ECR rank; read our real points-scored-at-that-rank from 2021-2025; subtract the last startable body at the position (QB/TE the streamer line, RB/WR deep replacement); weight by reliability (1 minus that slot's five-year bust rate) and by a position consistency factor; split the room's $3,000 across everyone who gets drafted. The rostered values sum to **exactly $3,000** - the whole room's budget, $300 a team - so if the field valued players like this the auction would clear. Ranks are consensus - treat one-dollar differences as noise and the tiers and cliffs as the signal.
 - **★ and the goal-line premium.** Stars come from Sleeper's projected TDs (rush TDs for RB/QB, receiving TDs for WR). For running backs that same projection scales a goal-line premium baked into Val - a back projected for twelve rushing scores is worth more than his yardage says - tapered at the two backs already priced at the ceiling. WR stars do **not** raise Val: the position keeps its week-to-week consistency discount, because red-zone receivers are exactly the boom/bust play. No single Val exceeds ~30% of budget. K/DST are capped because the position is flat - do not let a big "edge" talk you into a $15 kicker.
 - **The Sleeper column** re-scores Sleeper's season projections in our rules and ranks them, then diffs against FantasyPros. It is a second opinion, not a tiebreaker - when they disagree by 4+ spots, that is a flag to look closer, not an instruction. Where both agree, lean in.
 - The Mkt columns assume the room bids the way it has for five years. If someone else has also read the study and stops overpaying for receivers, the WR bargains dry up - watch the room, not just the sheet.

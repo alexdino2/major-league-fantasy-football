@@ -1,30 +1,30 @@
 {
  "source": "FantasyPros Expert Consensus Rankings (ECR)",
  "season": 2026,
- "fetched": "2026-08-28",
+ "fetched": "2026-08-29",
  "scoring": "STD (non-PPR)",
  "positions": {
   "QB": {
    "count": 92,
-   "updated": "8/27",
+   "updated": "8/28",
    "experts": 16,
    "scoring": "STD"
   },
   "RB": {
-   "count": 163,
-   "updated": "8/27",
+   "count": 173,
+   "updated": "8/28",
    "experts": 15,
    "scoring": "STD"
   },
   "WR": {
-   "count": 232,
-   "updated": "8/27",
+   "count": 235,
+   "updated": "8/28",
    "experts": 15,
    "scoring": "STD"
   },
   "TE": {
-   "count": 153,
-   "updated": "8/27",
+   "count": 159,
+   "updated": "8/28",
    "experts": 15,
    "scoring": "STD"
   },
@@ -37,7 +37,7 @@
   "DST": {
    "count": 32,
    "updated": "8/26",
-   "experts": 11,
+   "experts": 10,
    "scoring": "STD"
   }
  }

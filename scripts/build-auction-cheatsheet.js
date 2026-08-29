@@ -154,22 +154,38 @@ const GAMMA = 1.0;   // curve convexity on top of the baseline
 const BETA = 1.4;    // predictability weight (bust rate)
 const MAX_VALUE = 90; // never price one player past ~30% of a $300 budget
 
-// Goal-line premium. A back who gets the ball on the 1 is worth more than his
-// yardage says, because a TD is 6 and a yard is 0.04. Seeded from FantasyPros'
-// projected rushing TDs at the top and role for the rest. Tapered at RB1-2, who
-// are already priced at the ceiling - the premium does its real work lifting the
-// mid-tier short-yardage backs the room lets go cheap.
-const GOAL_LINE_PREMIUM = {
-  'Derrick Henry': 1.22, 'Jonathan Taylor': 1.20, 'Josh Jacobs': 1.20, 'Kyren Williams': 1.20,
-  'Jahmyr Gibbs': 1.15, 'James Cook III': 1.15, 'Joe Mixon': 1.15, 'Isiah Pacheco': 1.12,
-  'Chase Brown': 1.12, 'Javonte Williams': 1.12, 'Kenneth Walker III': 1.12,
-  'Bijan Robinson': 1.10, 'Saquon Barkley': 1.10, 'Chuba Hubbard': 1.10, 'James Conner': 1.12,
-  'Alvin Kamara': 1.10, 'Tony Pollard': 1.10, 'Najee Harris': 1.10,
-  'Christian McCaffrey': 1.08, "D'Andre Swift": 1.08, 'Omarion Hampton': 1.08, 'Bucky Irving': 1.08,
-  'TreVeyon Henderson': 1.08, 'Rhamondre Stevenson': 1.08, 'Tank Bigsby': 1.08, 'Braelon Allen': 1.08,
-  'Jordan Mason': 1.08, 'Quinshon Judkins': 1.08,
-  'Aaron Jones': 1.05, 'RJ Harvey': 1.05, 'Jaylen Warren': 1.05, 'Trey Benson': 1.05
-};
+// Sleeper's own season projections, re-scored in our rules (see
+// data/sleeper-projections-2026.json). Two jobs: a data-driven goal-line signal
+// (its projected rushing / receiving TDs) and a second opinion to diff against
+// the FantasyPros consensus.
+const SLEEPER = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data', 'sleeper-projections-2026.json'), 'utf-8'));
+function sleeperKey(pos, name) {
+  const n = name.toLowerCase().replace(/[.'']/g, '').replace(/-/g, ' ')
+    .replace(/\b(jr|sr|ii|iii|iv|v)\b/g, '').replace(/\s+/g, ' ').trim();
+  return `${pos}|${n}`;
+}
+
+// Goal-line / red-zone star. Flags the players Sleeper projects for an
+// outsized share of the scoring plays our rules pay for: RBs with the
+// short-yardage carries, WRs who are the red-zone target, QBs who run it in
+// themselves. A TD is 6 and a yard is 0.04, so this is where the money is.
+function isStar(pos, s) {
+  if (!s) return false;
+  if (pos === 'RB') return s.rushTd >= 8 || (s.rushTd >= 6 && s.tdShare >= 0.55);
+  if (pos === 'WR') return s.recTd >= 8 || (s.tdShare >= 0.55 && s.rec >= 45);
+  if (pos === 'QB') return s.rushTd >= 5;
+  return false;
+}
+
+// The goal-line premium on RB value, scaled straight off Sleeper's projected
+// rushing TDs rather than a hand-kept list. A back projected for 12 rushing
+// scores is worth more than his yardage says; one projected for 5 is not.
+// Tapered at RB1-2, who are already priced at the ceiling - the premium does its
+// real work lifting the mid-tier short-yardage backs the room lets go cheap.
+function goalLinePremium(rushTd, posRank) {
+  const gl = Math.min(1.24, 1 + Math.max(0, rushTd - 5) * 0.032);
+  return posRank <= 2 ? 1 + (gl - 1) * 0.5 : gl;
+}
 
 // K and DST: the position is nearly flat (a replacement kicker already scores
 // ~126, a replacement DST ~87) and streamable all year. Cap the whole board at a
@@ -200,10 +216,17 @@ function valueBoard(curves) {
       if (p.market < 1) p.market = 1;
       p.lastYr = p.posRank <= c.lastYearRate.length ? Math.round(c.lastYearRate[p.posRank - 1]) : null;
 
+      // Sleeper's second opinion: its projected rank in our scoring, the gap to
+      // FantasyPros' rank (positive = Sleeper is lower on him than FP), and the
+      // goal-line / red-zone star.
+      const s = SLEEPER[sleeperKey(pos, p.name)] || null;
+      p.sleeper = s ? { rank: s.slrank, pts: s.pts, rushTd: s.rushTd, recTd: s.recTd, passTd: s.passTd, tdShare: s.tdShare } : null;
+      p.slGap = s ? s.slrank - p.posRank : null;
+      p.star = isStar(pos, s);
+
       let gl = 1;
       if (pos === 'RB') {
-        gl = GOAL_LINE_PREMIUM[p.name] || 1;
-        if (p.posRank <= 2) gl = 1 + (gl - 1) * 0.5; // taper the already-maxed top
+        gl = s ? goalLinePremium(s.rushTd, p.posRank) : 1;
         p.goalLine = gl;
       }
       p.rostered = p.posRank <= c.draftCount;
@@ -245,7 +268,7 @@ function tierTag(pos, p) {
   // Anchors are the players you deliberately pay up to win: the reliable elite QB,
   // and the top goal-line backs whose short-yardage role our scoring rewards.
   if (pos === 'QB' && p.value >= 45) return 'ANCHOR';
-  if (pos === 'RB' && p.goalLine > 1 && p.posRank <= 8) return 'ANCHOR';
+  if (pos === 'RB' && p.star && p.posRank <= 8) return 'ANCHOR';
   if (p.edge >= 3) return 'VALUE';
   if (p.edge <= -8) return 'Fade';
   return 'Fair';
@@ -262,8 +285,8 @@ function buildReport(curves, model) {
   push('');
   push(`10 teams · $300 cap · 16-man rosters · start 1 QB / 2 RB / 3 WR / 1 TE / 1 K / 1 DEF.`);
   push('');
-  push(`Rankings: FantasyPros Expert Consensus (Standard / non-PPR), ${meta.positions.RB.experts}+ experts, pulled ${meta.fetched}. ` +
-    `Prices in **our** scoring, calibrated on our last five auctions (2021-2025).`);
+  push(`Rankings: FantasyPros Expert Consensus (Standard / non-PPR), ${meta.positions.RB.experts}+ experts, pulled ${meta.fetched}, ` +
+    `cross-checked against Sleeper's own projections. Prices in **our** scoring, calibrated on our last five auctions (2021-2025).`);
   push('');
   push('## How to read it');
   push('');
@@ -271,6 +294,8 @@ function buildReport(curves, model) {
   push('- **Mkt (5yr)** = what our league has paid at that positional price rank averaged over the last five auctions. The gap between Val and Mkt is your edge.');
   push(`- **'${String(lastYear).slice(2)} @rank** = the exact winning bid at that same positional price rank in **last year's (${lastYear}) auction** - one data point, so it is noisier than the five-year average but tells you where the room landed most recently.`);
   push('- **VALUE** = Val is at/above Mkt, you can win him at a profit. **Fade** = the room overpays him; only buy if he falls to your Val.');
+  push('- **★** = Sleeper projects an *inordinate* share of the plays our scoring pays for - goal-line carries (RB), red-zone targets (WR), or designed QB runs. For a back or a running QB that is a reliability boost; for a receiver it is where the points come from **and** the source of the week-to-week swing, so a star is a reason to like the ceiling, not to overpay.');
+  push(`- **Sleeper** = the player's projected positional rank in Sleeper's own numbers (re-scored in our rules). \`(FP +n)\` means FantasyPros ranks him n spots higher than Sleeper does; \`(SL +n)\` means Sleeper is the higher one. **Bold** marks a disagreement of 4+ spots - a FantasyPros darling Sleeper is cold on (verify before paying up) or a Sleeper value the ADP-following room may let slide.`);
   push('');
   push('## Why this board looks different from a normal cheatsheet');
   push('');
@@ -294,7 +319,7 @@ function buildReport(curves, model) {
   push('| Pos | $ | Bodies | Where |');
   push('|---|---|---|---|');
   push('| QB | $50 | 1 (+$1 dart) | A top-2 anchor if you want the ceiling, **or** the $16-25 value arm (QB7-9) and move the $ to RB |');
-  push('| RB | $150 | 4-5 | One $75-90 goal-line anchor, one $50-60 starter, two-three $30-50 🎯 value backs |');
+  push('| RB | $150 | 4-5 | One $75-90 goal-line anchor, one $50-60 starter, two-three $30-50 ★ value backs |');
   push('| WR | $60 | 5-6 | Skip the $30+ names; five or six bodies from the ~$12-25 tier - startable most weeks, no single overpay |');
   push('| TE | $6 | 1-2 | One $8-14 value TE, stream the rest |');
   push('| K | $2 | 1 | Best kicker at $2-3, no more |');
@@ -309,7 +334,7 @@ function buildReport(curves, model) {
   const shown = { QB: 20, RB: 40, WR: 45, TE: 20, K: 8, DST: 8 };
   const blurb = {
     QB: 'You only start one, so the board is bimodal, not a slope: the top two (Burrow, Allen) are the only arms that never bust and they carry a real anchor price. The next tier (roughly QB4-6) is the trap - starter money for a slot that busts a quarter of the time. Then it falls off a cliff to the value arms (QB7-9) the room lets go cheap, and a pile of $1 streamers. Buy an anchor, or buy the cliff. Never the trap.',
-    RB: 'Where the auction is won. Pay up for a goal-line anchor, add a second every-down back, then mine the $30-50 🎯 tier for backs with short-yardage work. Note the safest tier historically is RB3-6, not the two priciest - and a goal-line back two rounds later can outscore a pass-catcher ranked above him.',
+    RB: 'Where the auction is won. Pay up for a goal-line anchor, add a second every-down back, then mine the $30-50 ★ tier for backs with short-yardage work. Note the safest tier historically is RB3-6, not the two priciest - and a goal-line back two rounds later can outscore a pass-catcher ranked above him.',
     WR: 'Do not pay up. Non-PPR plus 6-point TDs make a receiver\'s week a coin flip, so every name over ~$30 is a Fade here even though the room pays up. The plan is five or six bodies from the ~$12-25 tier - three will be startable in any given week, and you never sank $60 into one boom/bust play.',
     TE: 'Punt it. One value TE in the $8-14 range and a $1 backup. After the top two it is a coin flip (a third of TE3-6 busts), so the elite TEs are fine players and a bad use of TD-heavy dollars.',
     K: 'Flat and streamable. Best available for $2-3, never more.',
@@ -322,13 +347,22 @@ function buildReport(curves, model) {
     push('');
     push(blurb[pos]);
     push('');
-    push(`| ${pos} | Player | Tm | Bye | Val | Mkt (5yr) | '${String(lastYear).slice(2)} @rank | Edge | Call |`);
-    push('|---|---|---|---|---|---|---|---|---|');
+    push(`| ${pos} | Player | Tm | Bye | Val | Mkt (5yr) | '${String(lastYear).slice(2)} @rank | Edge | Sleeper | Call |`);
+    push('|---|---|---|---|---|---|---|---|---|---|');
     board[pos].slice(0, shown[pos]).forEach(p => {
-      const name = pos === 'RB' && p.goalLine > 1 ? `${p.name} 🎯` : p.name;
+      const name = p.star ? `${p.name} ★` : p.name;
       const edge = p.edge >= 0 ? `+${p.edge}` : `${p.edge}`;
       const ly = p.lastYr == null ? '-' : money(p.lastYr);
-      push(`| ${p.pos}${p.posRank} | ${name} | ${p.team} | ${p.bye || '-'} | **${money(p.value)}** | ${money(p.market)} | ${ly} | ${edge} | ${tierTag(pos, p)} |`);
+      // Sleeper's projected positional rank + the disagreement with FP. A big gap
+      // is the interesting cell: **bold** where they differ by 4+ spots.
+      let sleeper = '-';
+      if (p.sleeper) {
+        const g = p.slGap;
+        const tag = g > 0 ? ` (FP +${g})` : g < 0 ? ` (SL +${-g})` : '';
+        sleeper = `${pos}${p.sleeper.rank}${tag}`;
+        if (Math.abs(g) >= 4) sleeper = `**${sleeper}**`;
+      }
+      push(`| ${p.pos}${p.posRank} | ${name} | ${p.team} | ${p.bye || '-'} | **${money(p.value)}** | ${money(p.market)} | ${ly} | ${edge} | ${sleeper} | ${tierTag(pos, p)} |`);
     });
     push('');
   });
@@ -336,7 +370,8 @@ function buildReport(curves, model) {
   push('## Fine print');
   push('');
   push('- **How Val is built.** Project each player to finish at his ECR rank; read our real points-scored-at-that-rank from 2021-2025; subtract the last startable body at the position (QB/TE the streamer line, RB/WR deep replacement); weight by reliability (1 minus that slot\'s five-year bust rate) and by a position consistency factor; split the room\'s $3,000 across everyone who gets drafted. Ranks are consensus - treat one-dollar differences as noise and the tiers and cliffs as the signal.');
-  push('- 🎯 marks a goal-line premium baked into Val, tapered at the two backs already priced at the ceiling. WR carries the heaviest week-to-week consistency discount; no single Val exceeds ~30% of budget. K/DST are capped because the position is flat - do not let a big "edge" talk you into a $15 kicker.');
+  push('- **★ and the goal-line premium.** Stars come from Sleeper\'s projected TDs (rush TDs for RB/QB, receiving TDs for WR). For running backs that same projection scales a goal-line premium baked into Val - a back projected for twelve rushing scores is worth more than his yardage says - tapered at the two backs already priced at the ceiling. WR stars do **not** raise Val: the position keeps its week-to-week consistency discount, because red-zone receivers are exactly the boom/bust play. No single Val exceeds ~30% of budget. K/DST are capped because the position is flat - do not let a big "edge" talk you into a $15 kicker.');
+  push('- **The Sleeper column** re-scores Sleeper\'s season projections in our rules and ranks them, then diffs against FantasyPros. It is a second opinion, not a tiebreaker - when they disagree by 4+ spots, that is a flag to look closer, not an instruction. Where both agree, lean in.');
   push('- The Mkt columns assume the room bids the way it has for five years. If someone else has also read the study and stops overpaying for receivers, the WR bargains dry up - watch the room, not just the sheet.');
   push('- Full five-year methodology and the position-by-position study: `docs/auction-position-analysis.md`.');
   push('');

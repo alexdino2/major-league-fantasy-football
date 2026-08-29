@@ -9,40 +9,40 @@
 "bye": "7"
 },
 {
-"name": "Houston Texans",
-"team": "HOU",
+"name": "Los Angeles Chargers",
+"team": "LAC",
 "pos": "DST",
 "posRank": 2,
 "ecr": 2,
 "tier": null,
-"bye": "8"
+"bye": "7"
 },
 {
-"name": "Los Angeles Chargers",
-"team": "LAC",
+"name": "Houston Texans",
+"team": "HOU",
 "pos": "DST",
 "posRank": 3,
 "ecr": 3,
 "tier": null,
-"bye": "7"
-},
-{
-"name": "Denver Broncos",
-"team": "DEN",
-"pos": "DST",
-"posRank": 4,
-"ecr": 4,
-"tier": null,
-"bye": "10"
+"bye": "8"
 },
 {
 "name": "Los Angeles Rams",
 "team": "LAR",
 "pos": "DST",
+"posRank": 4,
+"ecr": 4,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Denver Broncos",
+"team": "DEN",
+"pos": "DST",
 "posRank": 5,
 "ecr": 5,
 "tier": null,
-"bye": "11"
+"bye": "10"
 },
 {
 "name": "Seattle Seahawks",
@@ -207,13 +207,13 @@
 "bye": "6"
 },
 {
-"name": "Indianapolis Colts",
-"team": "IND",
+"name": "San Francisco 49ers",
+"team": "SF",
 "pos": "DST",
 "posRank": 24,
 "ecr": 24,
 "tier": null,
-"bye": "13"
+"bye": "8"
 },
 {
 "name": "Cincinnati Bengals",
@@ -225,13 +225,13 @@
 "bye": "6"
 },
 {
-"name": "San Francisco 49ers",
-"team": "SF",
+"name": "Indianapolis Colts",
+"team": "IND",
 "pos": "DST",
 "posRank": 26,
 "ecr": 26,
 "tier": null,
-"bye": "8"
+"bye": "13"
 },
 {
 "name": "Tampa Bay Buccaneers",

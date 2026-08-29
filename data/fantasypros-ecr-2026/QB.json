@@ -81,22 +81,22 @@
 "bye": "7"
 },
 {
-"name": "Jaxson Dart",
-"team": "NYG",
+"name": "Caleb Williams",
+"team": "CHI",
 "pos": "QB",
 "posRank": 10,
 "ecr": 10,
 "tier": null,
-"bye": "8"
+"bye": "10"
 },
 {
-"name": "Caleb Williams",
-"team": "CHI",
+"name": "Jaxson Dart",
+"team": "NYG",
 "pos": "QB",
 "posRank": 11,
 "ecr": 11,
 "tier": null,
-"bye": "10"
+"bye": "8"
 },
 {
 "name": "Jared Goff",
@@ -360,8 +360,8 @@
 "bye": "6"
 },
 {
-"name": "Jarrett Stidham",
-"team": "DEN",
+"name": "Jake Browning",
+"team": "TB",
 "pos": "QB",
 "posRank": 41,
 "ecr": 41,
@@ -369,8 +369,8 @@
 "bye": "10"
 },
 {
-"name": "Jake Browning",
-"team": "TB",
+"name": "Jarrett Stidham",
+"team": "DEN",
 "pos": "QB",
 "posRank": 42,
 "ecr": 42,
@@ -378,11 +378,20 @@
 "bye": "10"
 },
 {
-"name": "Marcus Mariota",
-"team": "WAS",
+"name": "Joe Milton III",
+"team": "DAL",
 "pos": "QB",
 "posRank": 43,
 "ecr": 43,
+"tier": null,
+"bye": "14"
+},
+{
+"name": "Marcus Mariota",
+"team": "WAS",
+"pos": "QB",
+"posRank": 44,
+"ecr": 44,
 "tier": null,
 "bye": "7"
 },
@@ -390,71 +399,44 @@
 "name": "Tyler Huntley",
 "team": "BAL",
 "pos": "QB",
-"posRank": 44,
-"ecr": 44,
-"tier": null,
-"bye": "13"
-},
-{
-"name": "Cade Klubnik",
-"team": "NYJ",
-"pos": "QB",
 "posRank": 45,
 "ecr": 45,
 "tier": null,
 "bye": "13"
 },
 {
-"name": "Jameis Winston",
-"team": "NYG",
+"name": "Trey Lance",
+"team": "LAC",
 "pos": "QB",
 "posRank": 46,
 "ecr": 46,
 "tier": null,
-"bye": "8"
+"bye": "7"
 },
 {
-"name": "Joe Milton III",
-"team": "DAL",
+"name": "Cade Klubnik",
+"team": "NYJ",
 "pos": "QB",
 "posRank": 47,
 "ecr": 47,
 "tier": null,
-"bye": "14"
-},
-{
-"name": "Trey Lance",
-"team": "LAC",
-"pos": "QB",
-"posRank": 48,
-"ecr": 48,
-"tier": null,
-"bye": "7"
+"bye": "13"
 },
 {
 "name": "Tyrod Taylor",
 "team": "GB",
 "pos": "QB",
-"posRank": 49,
-"ecr": 49,
+"posRank": 48,
+"ecr": 48,
 "tier": null,
 "bye": "11"
 },
 {
-"name": "Davis Mills",
-"team": "HOU",
+"name": "Jameis Winston",
+"team": "NYG",
 "pos": "QB",
-"posRank": 50,
-"ecr": 50,
-"tier": null,
-"bye": "8"
-},
-{
-"name": "Spencer Rattler",
-"team": "NO",
-"pos": "QB",
-"posRank": 51,
-"ecr": 51,
+"posRank": 49,
+"ecr": 49,
 "tier": null,
 "bye": "8"
 },
@@ -462,46 +444,64 @@
 "name": "Tyson Bagent",
 "team": "CHI",
 "pos": "QB",
-"posRank": 52,
-"ecr": 52,
+"posRank": 50,
+"ecr": 50,
 "tier": null,
 "bye": "10"
 },
 {
-"name": "Quinn Ewers",
-"team": "MIA",
+"name": "Davis Mills",
+"team": "HOU",
 "pos": "QB",
-"posRank": 53,
-"ecr": 53,
+"posRank": 51,
+"ecr": 51,
 "tier": null,
-"bye": "6"
+"bye": "8"
 },
 {
-"name": "Riley Leonard",
-"team": "IND",
+"name": "Spencer Rattler",
+"team": "NO",
 "pos": "QB",
-"posRank": 54,
-"ecr": 54,
+"posRank": 52,
+"ecr": 52,
 "tier": null,
-"bye": "13"
-},
-{
-"name": "Tommy DeVito",
-"team": "NE",
-"pos": "QB",
-"posRank": 55,
-"ecr": 55,
-"tier": null,
-"bye": "11"
+"bye": "8"
 },
 {
 "name": "Tanner McKee",
 "team": "PHI",
 "pos": "QB",
+"posRank": 53,
+"ecr": 53,
+"tier": null,
+"bye": "10"
+},
+{
+"name": "Tommy DeVito",
+"team": "NE",
+"pos": "QB",
+"posRank": 54,
+"ecr": 54,
+"tier": null,
+"bye": "11"
+},
+{
+"name": "Riley Leonard",
+"team": "IND",
+"pos": "QB",
+"posRank": 55,
+"ecr": 55,
+"tier": null,
+"bye": "13"
+},
+{
+"name": "Quinn Ewers",
+"team": "MIA",
+"pos": "QB",
 "posRank": 56,
 "ecr": 56,
 "tier": null,
-"bye": "10"
+"bye": "6"
 },
 {
 "name": "Nick Mullens",
@@ -522,13 +522,13 @@
 "bye": "9"
 },
 {
-"name": "Carson Beck",
-"team": "ARI",
+"name": "Kenny Pickett",
+"team": "CAR",
 "pos": "QB",
 "posRank": 59,
 "ecr": 59,
 "tier": null,
-"bye": "14"
+"bye": "5"
 },
 {
 "name": "Kyle Allen",
@@ -540,43 +540,43 @@
 "bye": "7"
 },
 {
-"name": "Kenny Pickett",
-"team": "CAR",
+"name": "Mason Rudolph",
+"team": "PIT",
 "pos": "QB",
 "posRank": 61,
 "ecr": 61,
 "tier": null,
-"bye": "5"
+"bye": "9"
+},
+{
+"name": "Joshua Dobbs",
+"team": "DET",
+"pos": "QB",
+"posRank": 62,
+"ecr": 62,
+"tier": null,
+"bye": "6"
+},
+{
+"name": "Carson Beck",
+"team": "ARI",
+"pos": "QB",
+"posRank": 63,
+"ecr": 63,
+"tier": null,
+"bye": "14"
 },
 {
 "name": "Jalen Milroe",
 "team": "SEA",
 "pos": "QB",
-"posRank": 62,
-"ecr": 62,
+"posRank": 64,
+"ecr": 64,
 "tier": null,
 "bye": "11"
 },
 {
 "name": "Drew Allar",
-"team": "PIT",
-"pos": "QB",
-"posRank": 63,
-"ecr": 63,
-"tier": null,
-"bye": "9"
-},
-{
-"name": "Andy Dalton",
-"team": "PHI",
-"pos": "QB",
-"posRank": 64,
-"ecr": 64,
-"tier": null,
-"bye": "10"
-},
-{
-"name": "Mason Rudolph",
 "team": "PIT",
 "pos": "QB",
 "posRank": 65,
@@ -585,20 +585,38 @@
 "bye": "9"
 },
 {
-"name": "Joshua Dobbs",
-"team": "DET",
+"name": "Drew Lock",
+"team": "SEA",
 "pos": "QB",
 "posRank": 66,
 "ecr": 66,
 "tier": null,
-"bye": "6"
+"bye": "11"
+},
+{
+"name": "Andy Dalton",
+"team": "PHI",
+"pos": "QB",
+"posRank": 67,
+"ecr": 67,
+"tier": null,
+"bye": "10"
+},
+{
+"name": "Gardner Minshew II",
+"team": "ARI",
+"pos": "QB",
+"posRank": 68,
+"ecr": 68,
+"tier": null,
+"bye": "14"
 },
 {
 "name": "Aidan O'Connell",
 "team": "LV",
 "pos": "QB",
-"posRank": 67,
-"ecr": 67,
+"posRank": 69,
+"ecr": 69,
 "tier": null,
 "bye": "13"
 },
@@ -606,44 +624,35 @@
 "name": "Carson Wentz",
 "team": "MIN",
 "pos": "QB",
-"posRank": 68,
-"ecr": 68,
+"posRank": 70,
+"ecr": 70,
 "tier": null,
 "bye": "6"
-},
-{
-"name": "Will Levis",
-"team": "TEN",
-"pos": "QB",
-"posRank": 69,
-"ecr": 69,
-"tier": null,
-"bye": "9"
 },
 {
 "name": "Sam Howell",
 "team": "DAL",
 "pos": "QB",
-"posRank": 70,
-"ecr": 70,
+"posRank": 71,
+"ecr": 71,
 "tier": null,
 "bye": "14"
+},
+{
+"name": "Will Levis",
+"team": "TEN",
+"pos": "QB",
+"posRank": 72,
+"ecr": 72,
+"tier": null,
+"bye": "9"
 },
 {
 "name": "Stetson Bennett IV",
 "team": "LAR",
 "pos": "QB",
-"posRank": 71,
-"ecr": 71,
-"tier": null,
-"bye": "11"
-},
-{
-"name": "Drew Lock",
-"team": "SEA",
-"pos": "QB",
-"posRank": 72,
-"ecr": 72,
+"posRank": 73,
+"ecr": 73,
 "tier": null,
 "bye": "11"
 },
@@ -651,8 +660,8 @@
 "name": "Anthony Richardson Sr.",
 "team": "IND",
 "pos": "QB",
-"posRank": 73,
-"ecr": 73,
+"posRank": 74,
+"ecr": 74,
 "tier": null,
 "bye": "13"
 },
@@ -660,8 +669,8 @@
 "name": "Garrett Nussmeier",
 "team": "KC",
 "pos": "QB",
-"posRank": 74,
-"ecr": 74,
+"posRank": 75,
+"ecr": 75,
 "tier": null,
 "bye": "5"
 },
@@ -669,19 +678,10 @@
 "name": "Brandon Allen",
 "team": "NYG",
 "pos": "QB",
-"posRank": 75,
-"ecr": 75,
-"tier": null,
-"bye": "8"
-},
-{
-"name": "Dillon Gabriel",
-"team": "CLE",
-"pos": "QB",
 "posRank": 76,
 "ecr": 76,
 "tier": null,
-"bye": "11"
+"bye": "8"
 },
 {
 "name": "Josh Johnson",
@@ -693,8 +693,8 @@
 "bye": "6"
 },
 {
-"name": "Behren Morton",
-"team": "NE",
+"name": "Dillon Gabriel",
+"team": "CLE",
 "pos": "QB",
 "posRank": 78,
 "ecr": 78,
@@ -702,22 +702,22 @@
 "bye": "11"
 },
 {
-"name": "Gardner Minshew II",
-"team": "ARI",
+"name": "Carter Bradley",
+"team": "JAC",
 "pos": "QB",
 "posRank": 79,
 "ecr": 79,
 "tier": null,
-"bye": "14"
+"bye": "7"
 },
 {
-"name": "Carter Bradley",
-"team": "JAC",
+"name": "Behren Morton",
+"team": "NE",
 "pos": "QB",
 "posRank": 80,
 "ecr": 80,
 "tier": null,
-"bye": "7"
+"bye": "11"
 },
 {
 "name": "Luke Altmyer",

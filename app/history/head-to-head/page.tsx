@@ -88,7 +88,7 @@ export default function HeadToHeadPage() {
             <Row key={p.top + p.bot} left={<><TeamLink id={p.top} /> over {franchiseName(p.bot)}</>} right={`${record(p)} · ${Math.round(p.share * 100)}%`} />
           ))}
         </ListCard>
-        <ListCard title="Postseason rivalries" note="Week 17–18 meetings, row team first.">
+        <ListCard title="Postseason rivalries" note="Week-17 championship and placement meetings, row team first.">
           {playoffRivals.map((p) => (
             <Row key={p.a + p.b} left={<><TeamLink id={p.a} /> v <TeamLink id={p.b} /></>} right={`${p.postW}-${p.postL}`} />
           ))}

@@ -89,7 +89,6 @@ export default function HistoryPage() {
                         {fin ? (
                           <span>
                             {fmt(fin.score[fin.winner])}–{fmt(fin.score[fin.loser])}
-                            {fin.format === "two-week aggregate" && <span className="text-xs text-muted-foreground"> (2 wks{fin.complete ? "" : ", partial"})</span>}
                           </span>
                         ) : (
                           <span className="text-muted-foreground">—</span>
@@ -208,7 +207,7 @@ export default function HistoryPage() {
         </Card>
         <p className="text-xs text-muted-foreground mt-2">
           Regular season only. 1994–2002 as recorded in the pre-CBS sheet; 2003 onward rebuilt from week 1–16 results. Avg finish is regular-season rank. Franchises with fewer than five seasons are listed last.
-          Postseason is the week-17 (and, since 2021, week-18) games on file from 2003.
+          Postseason is the week-17 games on file from 2003. The week-18 All-Star game (2021 on) is not counted.
         </p>
       </section>
 
@@ -292,9 +291,9 @@ export default function HistoryPage() {
   )
 }
 
-// Format changes we can see in the data itself (week-18 games first appear in 2021).
+// League format changes, as confirmed by the commissioner.
 const FORMAT_NOTES: Record<number, string> = {
-  2021: "Championship becomes a two-week, total-points final (weeks 17 and 18).",
+  2021: "A Week 18 All-Star game is added after the week-17 championship. It is not counted in any record.",
 }
 
 function timelineEntries(timeline: typeof history.timeline) {

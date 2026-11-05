@@ -40,6 +40,7 @@ const FRANCHISES = [
       'My hate for you',
     ],
   },
+  // Joined in 2014 under a new owner (confirmed by the league): a new franchise, not a takeover.
   { id: 'kentucky-football-club', name: 'Kentucky Football Club', manager: 'Gustave Carruth', logo: '/logos/KFC.jpg', aliases: [] },
   { id: 'relegators', name: 'Relegators', manager: 'Patrick Williams', logo: '/logos/relegators.jpg', aliases: [] },
   { id: 'donora-dragons', name: 'Donora Dragons', manager: 'Sammy Kowall', logo: null, aliases: [] },

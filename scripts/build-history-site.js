@@ -18,8 +18,10 @@ const STATS = path.join(ROOT, 'data', 'yearly-stats')
 const OUT_DIR = path.join(ROOT, 'data', 'history')
 const FIRST_YEAR = 1994
 const LAST_YEAR = 2025
-const POSTSEASON_WEEK = 17 // weeks >= 17 are postseason in every season with weekly data
-const AGGREGATE_FINAL_FROM = 2021 // two-week (weeks 17+18) championship from 2021 on
+const POSTSEASON_WEEK = 17 // week 17 is championship / placement week in every season with weekly data
+// Week 18 (2021 on) is the league's All-Star game, not part of the championship.
+// It is left out of every record, per the commissioner and Brad.
+const ALL_STAR_WEEK = 18
 
 // 2001 only exists in the pre-CBS sheet, which still uses the old name; CBS calls the franchise
 // Munich Cowboys in both 2000 and 2002, so use that for 2001 as well.
@@ -241,6 +243,8 @@ function loadAuction(year, seasonTeams) {
 function main() {
   const preCbs = loadPreCbs()
   const champions = loadChampions()
+  // League-provided context for a season (data/season-notes.json), shown on that season's page.
+  const seasonNotes = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'season-notes.json'), 'utf-8'))
   const seasons = []
   const allGames = []
 
@@ -277,19 +281,26 @@ function main() {
 
     // Weekly results
     const weekly = loadWeekly(year)
-    const bracket = loadBracket(year)
+    let bracket = loadBracket(year)
     let games = []
     let playoff = null
     if (weekly) {
-      games = weekly.games.map((g) => ({ ...g, year, post: g.week >= POSTSEASON_WEEK }))
+      const allStar = weekly.games.filter((g) => g.week >= ALL_STAR_WEEK)
+      games = weekly.games.filter((g) => g.week < ALL_STAR_WEEK).map((g) => ({ ...g, year, post: g.week >= POSTSEASON_WEEK }))
+      if (allStar.length || year >= 2021) notes.push('Week 18 is the All-Star game and is not counted in any record.')
+      // Some bracket exports captured the All-Star game instead of week 17; drop those matchups.
+      if (bracket) {
+        const isAllStar = (b) => allStar.some((g) => (g.away === b.top && g.home === b.bottom && g.awayPts === b.topPts && g.homePts === b.bottomPts) || (g.home === b.top && g.away === b.bottom && g.homePts === b.topPts && g.awayPts === b.bottomPts))
+        const kept = bracket.filter((b) => !isAllStar(b))
+        if (kept.length !== bracket.length) warn(`${year}: dropped ${bracket.length - kept.length} bracket matchup(s) that are the week-18 All-Star game`)
+        bracket = kept.length ? kept : null
+      }
       const reg = games.filter((g) => !g.post)
       const regWeeks = new Set(reg.map((g) => g.week))
       if (regWeeks.size !== 16) warn(`${year}: ${regWeeks.size} regular-season weeks in weekly results`)
-      for (let w = POSTSEASON_WEEK; w <= (year >= AGGREGATE_FINAL_FROM ? 18 : 17); w++) {
-        if (!games.some((g) => g.week === w)) {
-          warn(`${year}: week ${w} postseason games are missing (only TBA placeholders)`)
-          notes.push(`Week ${w} postseason scores are missing from the CBS export.`)
-        }
+      if (!games.some((g) => g.week === POSTSEASON_WEEK)) {
+        warn(`${year}: week ${POSTSEASON_WEEK} games are missing (only TBA placeholders)`)
+        notes.push(`Week ${POSTSEASON_WEEK} scores (the championship and placement games) are missing from the CBS export.`)
       }
 
       // Regular-season record from the games themselves
@@ -327,16 +338,17 @@ function main() {
       const post = games.filter((g) => g.post)
       const findGame = (week, a, b) => post.find((g) => g.week === week && ((g.away === a && g.home === b) || (g.away === b && g.home === a)))
       const pts = (g, t) => (!g ? null : g.away === t ? g.awayPts : g.homePts)
+      // The final is the week-17 game in bracket slot 1. Without a bracket file, it is the
+      // week-17 game the champion (or both co-champions) played.
       let finalPair = null
-      if (year >= AGGREGATE_FINAL_FROM) {
-        const wk18 = post.filter((g) => g.week === 18)
-        if (wk18.length === 1) finalPair = [wk18[0].away, wk18[0].home]
-        else if (bracket && bracket.length) {
-          finalPair = [bracket[0].top, bracket[0].bottom]
-          warn(`${year}: no week-18 final in weekly results; using bracket slot 1 (week 17) as the final`)
-          notes.push('Week 18 of the championship is missing from the CBS export, so only the week-17 leg of the final is shown.')
-        } else warn(`${year}: expected exactly one week-18 final, found ${wk18.length}`)
-      } else if (bracket && bracket.length) finalPair = [bracket[0].top, bracket[0].bottom]
+      const champIds = champions[year] || []
+      if (bracket && bracket.length) finalPair = [bracket[0].top, bracket[0].bottom]
+      else if (champIds.length) {
+        const g = post.find((x) => x.week === POSTSEASON_WEEK && (champIds.length > 1
+          ? champIds.includes(x.away) && champIds.includes(x.home)
+          : x.away === champIds[0] || x.home === champIds[0]))
+        if (g) finalPair = [g.away, g.home]
+      }
 
       const placements = {}
       const placementGames = []
@@ -344,32 +356,27 @@ function main() {
         for (const b of bracket) {
           const g17 = findGame(17, b.top, b.bottom)
           if (!g17) warn(`${year}: bracket game ${b.top} v ${b.bottom} not found in week 17`)
-          else if (!(year >= AGGREGATE_FINAL_FROM && b.slot === 1) && (pts(g17, b.top) !== b.topPts || pts(g17, b.bottom) !== b.bottomPts)) warn(`${year}: bracket score mismatch for slot ${b.slot}`)
+          else if (pts(g17, b.top) !== b.topPts || pts(g17, b.bottom) !== b.bottomPts) warn(`${year}: bracket score mismatch for slot ${b.slot}`)
         }
       }
       let final = null
       if (finalPair) {
         const [a, b] = finalPair
-        const legs = [17, 18].map((w) => findGame(w, a, b)).filter(Boolean)
-        const aPts = legs.reduce((s, g) => s + pts(g, a), 0)
-        const bPts = legs.reduce((s, g) => s + pts(g, b), 0)
-        const winner = aPts > bPts ? a : b
-        const loser = winner === a ? b : a
-        final = {
-          format: year >= AGGREGATE_FINAL_FROM ? 'two-week aggregate' : 'single game',
-          legs: legs.map((g) => ({ week: g.week, [a]: pts(g, a), [b]: pts(g, b) })),
-          teams: [a, b],
-          score: { [a]: round(aPts), [b]: round(bPts) },
-          winner, loser,
-          complete: year >= AGGREGATE_FINAL_FROM ? legs.length === 2 : legs.length === 1,
+        const g = findGame(POSTSEASON_WEEK, a, b)
+        if (g) {
+          const winner = pts(g, a) > pts(g, b) ? a : b
+          const loser = winner === a ? b : a
+          final = {
+            format: 'single game',
+            legs: [{ week: g.week, [a]: pts(g, a), [b]: pts(g, b) }],
+            teams: [a, b],
+            score: { [a]: pts(g, a), [b]: pts(g, b) },
+            winner, loser,
+            complete: true,
+          }
+          placements[winner] = 1
+          placements[loser] = 2
         }
-        if (!final.complete && legs.length) {
-          const haveWeek18 = legs.some((g) => g.week === 18)
-          if (haveWeek18) final.complete = false
-          warn(`${year}: championship legs incomplete (${legs.length} found)`)
-        }
-        placements[winner] = 1
-        placements[loser] = 2
       }
       // Consolation / placement games from the bracket order (slot k decides places 2k-1 and 2k)
       if (bracket) {
@@ -392,7 +399,7 @@ function main() {
         placementGames.push({ ...g, kind: isFinal ? 'final' : 'placement' })
       }
       if (!bracket) {
-        notes.push('No playoff bracket export for this season, so placement order below 2nd is unknown.')
+        notes.push(year >= 2021 && year <= 2021 ? "This season's CBS bracket export only holds the All-Star game, so placement order below 2nd is unknown." : 'No playoff bracket export for this season, so placement order below 2nd is unknown.')
         warn(`${year}: no playoff bracket file`)
       } else if (bracket.length < 5) {
         notes.push(`The bracket export only has ${bracket.length} of 5 placement games; places below ${bracket.length * 2} are unknown.`)
@@ -416,7 +423,15 @@ function main() {
       warn(`${year}: champions.json says ${champ[0]} but the final score says ${playoff.final.winner}`)
       notes.push('The final score in the CBS export does not match the champion in the league record; the league record is shown.')
     }
-    if (champ.length > 1) notes.push('Co-championship: the title was shared (½ title each).')
+    // League-provided context goes first; the generic co-title line only when the league gave no reason.
+    const curated = seasonNotes[year] || []
+    if (champ.length > 1 && !curated.length) notes.push('Co-championship: the title was shared (½ title each).')
+    // Drop the generic missing-week-17 line when the league note already explains it.
+    if (curated.some((n) => /week 17/i.test(n))) {
+      const i = notes.findIndex((n) => n.startsWith('Week 17 scores'))
+      if (i >= 0) notes.splice(i, 1)
+    }
+    notes.unshift(...curated)
     for (const t of teams) {
       if (champ.includes(t.franchise)) t.finish = 1
       else if (t.finish === 1) t.finish = 2

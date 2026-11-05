@@ -10,7 +10,7 @@ Generated alongside `data/history/league.json` by `node scripts/build-history-si
 | Week-by-week scores | 2003-2025 | 1994-2002 (2001-2002 exist in Mig's archive; not loaded yet) |
 | Playoff bracket export | 2003-2020, 2023, 2025 | 1994-2002, 2022, 2024; 2019 is partial (2 of 5 games); 2021's export only holds the All-Star game |
 | Champion | 1994-2025 (`data/champions.json`) | none |
-| Runner-up | 27 of 32 seasons | 1994, 1997, 1999 (no final rank for the runner-up); 2024 (week 17 wiped); co-champion year 2022 has none by definition |
+| Runner-up | 28 of 32 seasons | 1994, 1997, 1999 (no final rank for the runner-up); co-champion year 2022 has none by definition |
 | Final placings 1st-10th | 22 seasons (2017 includes a tied 5th-place game) | 1994-1997, 1999, 2000, 2019, 2021, 2022, 2024 (partial) |
 | Auction results with prices | 2010-2025 | 1994-2009 (2008 file is a garbled snake-draft export) |
 | Player season points in auction files | 2021-2025 | 2010-2020 |
@@ -20,8 +20,7 @@ Generated alongside `data/history/league.json` by `node scripts/build-history-si
 - **2001-2002 weekly scores are in Mig's archive.** Loading them would add two seasons to the record book, streaks and head-to-head, and give 2001 its first real detail. Export them in the same layout as `data/yearly-stats/weekly_results_YYYY.csv` (`week,away_team,home_team,away_result,home_result`) and rebuild.
 - **1994-2000 weekly scores.** Still not on file anywhere we know of. Old emails, printouts or the pre-CBS host's exports would extend the record book back to 1994.
 - **2001 season.** CBS has no data for 2001 (no standings, record book, weekly results or bracket). All we have is one line per team in the pre-CBS sheet, which still calls Munich "Italian Stallions". The site uses "Munich Cowboys" for 2001 because CBS uses that name in both 2000 and 2002.
-- **2024 week 17.** Brad wiped it while setting up the All-Star game, so the championship score, the runner-up and the placement games are all missing. The Generals' title stands from the league record. If anyone has the week-17 scores (a screenshot or email), they can go straight into `weekly_results_2024.csv`.
-- **Playoff brackets for 2021, 2022 and 2024**, plus the missing games in 2019. Without them we can't place teams below 2nd in those seasons. (2021's bracket export only holds the All-Star game.)
+- **Playoff brackets for 2021, 2022 and 2024**, plus the missing games in 2019. Without them we can't place teams below 2nd in those seasons. 2021's bracket export only holds the All-Star game. 2024's week-17 scores are back, but the recap doesn't say which game decided 3rd, 5th and so on.
 - **Pre-2003 postseason.** How the title was decided in 1994-2002, and the scores, aren't in any file.
 
 ## 2. Records that disagree
@@ -53,6 +52,7 @@ From league feedback, November 2026:
 - **2022 co-championship.** The Bills–Bengals game was canceled with the Generals' Josh Allen still to play, so the title was shared with Munich (who led 60-30). The 2022 season page now says so. Curated notes like this live in `data/season-notes.json`.
 - **Kentucky Football Club** joined in 2014 under a new owner. It's a new franchise, not a continuation.
 - **2013:** ಠ_ಠ was Homers Heroes and Average Joe's was Polish Power.
+- **2024 week 17 restored** from the league's CBS "Week 17 Recap" article: Generals 82, LA Losers 79 (the title game); Relegators 78, Kentucky Football Club 71; Masters of Disaster 68, Egyptian Magicians 65; Rock Stars 63, Munich Cowboys 53; Leeds United 74, Homers Heroes 67. Every team's record in the article matches its standings record plus this result. The scores live in `data/yearly-stats/manual_weekly_results.csv`, which the build uses only where the CBS export has no real games, so a re-scrape can't wipe them.
 
 ## 4. Auction / draft files
 
@@ -70,6 +70,6 @@ From league feedback, November 2026:
 
 ## How to update
 
-1. Drop new or corrected CSVs into `data/yearly-stats/` (same formats as the existing files), or fix `data/champions.json`.
+1. Drop new or corrected CSVs into `data/yearly-stats/` (same formats as the existing files), or fix `data/champions.json`. Scores recovered by hand go in `data/yearly-stats/manual_weekly_results.csv` with a source.
 2. Add any confirmed rename to `aliases` in `scripts/lib/franchises.js`.
 3. Run `pnpm build-history-site`, check the `WARN` lines, and commit `data/history/league.json`.

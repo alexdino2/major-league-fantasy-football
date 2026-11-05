@@ -118,7 +118,7 @@ export default async function SeasonPage({ params }: { params: Promise<{ year: s
                         <TableHead className="text-right hidden sm:table-cell">Pct</TableHead>
                         <TableHead className="text-right">PF</TableHead>
                         {hasPA && <TableHead className="text-right hidden sm:table-cell">PA</TableHead>}
-                        {hasHighLow && <TableHead className="text-right hidden md:table-cell">High</TableHead>}
+                        {hasHighLow && <TableHead className="text-right hidden md:table-cell xl:hidden 2xl:table-cell">High</TableHead>}
                         {s.hasWeekly && <TableHead className="text-right hidden md:table-cell" title="Weeks with the league's top score">Top wk</TableHead>}
                         <TableHead className="text-right">Finish</TableHead>
                       </TableRow>
@@ -134,7 +134,7 @@ export default async function SeasonPage({ params }: { params: Promise<{ year: s
                           <TableCell className="text-right tabular-nums hidden sm:table-cell">{pct(t)}</TableCell>
                           <TableCell className="text-right tabular-nums">{fmt(t.PF)}</TableCell>
                           {hasPA && <TableCell className="text-right tabular-nums hidden sm:table-cell">{fmt(t.PA ?? null)}</TableCell>}
-                          {hasHighLow && <TableCell className="text-right tabular-nums hidden md:table-cell">{fmt(t.max ?? null)}</TableCell>}
+                          {hasHighLow && <TableCell className="text-right tabular-nums hidden md:table-cell xl:hidden 2xl:table-cell">{fmt(t.max ?? null)}</TableCell>}
                           {s.hasWeekly && <TableCell className="text-right tabular-nums hidden md:table-cell">{t.weeksWon ? fmt(t.weeksWon, Number.isInteger(t.weeksWon) ? 0 : 1) : "—"}</TableCell>}
                           <TableCell className="text-right tabular-nums">{t.finish ? ordinal(t.finish) : "—"}</TableCell>
                         </TableRow>

@@ -114,9 +114,23 @@ function loadCbsStandings(year) {
   return teams
 }
 
+// Scores recovered by hand (e.g. from league recap articles) for weeks the CBS export lost.
+// They fill a week only when the export has no real game for that week, so a re-scrape can't wipe them.
+const MANUAL_WEEKLY = readCsvObjects(path.join(STATS, 'manual_weekly_results.csv')) || []
+
 function loadWeekly(year) {
-  const rows = readCsvObjects(path.join(STATS, `weekly_results_${year}.csv`))
+  let rows = readCsvObjects(path.join(STATS, `weekly_results_${year}.csv`))
   if (!rows) return null
+  const manual = MANUAL_WEEKLY.filter((r) => Number(r.year) === year)
+  const manualWeeks = new Set(manual.map((r) => r.week))
+  for (const w of manualWeeks) {
+    if (rows.some((r) => r.week === w && r.away_team !== 'TBA' && r.home_team !== 'TBA')) {
+      warn(`${year}: week ${w} has real games in the CBS export; manual scores for it are ignored`)
+      continue
+    }
+    rows = rows.filter((r) => r.week !== w).concat(manual.filter((r) => r.week === w))
+    warn(`${year}: week ${w} filled from manual_weekly_results.csv`)
+  }
   const games = []
   let tba = 0
   for (const r of rows) {

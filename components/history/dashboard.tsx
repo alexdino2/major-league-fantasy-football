@@ -72,7 +72,7 @@ export function HistoryDashboard({ data }: { data: DashboardData }) {
       { key: "weekly", label: "2003+ (weekly scores)", from: 2003, to: lastYear },
       { key: "auction", label: "Auction era (2010+)", from: 2010, to: lastYear },
       { key: "last10", label: "Last 10 seasons", from: lastYear - 9, to: lastYear },
-      { key: "twoweek", label: "Two-week finals (2021+)", from: 2021, to: lastYear },
+      { key: "last5", label: "Last 5 seasons", from: lastYear - 4, to: lastYear },
       { key: "early", label: "Early years (1994–2002)", from: firstYear, to: 2002 },
     ],
     [firstYear, lastYear]
@@ -661,7 +661,7 @@ export function HistoryDashboard({ data }: { data: DashboardData }) {
       </Panel>
 
       {/* ------------------------------------------------------------ Table */}
-      <Panel title={`Standings, ${rangeLabel}`} note="Click a column to sort. Records are regular season; postseason is week 17–18 games from 2003. All-play and luck need weekly scores (2003+).">
+      <Panel title={`Standings, ${rangeLabel}`} note="Click a column to sort. Records are regular season; postseason is week-17 games from 2003 (the week-18 All-Star game isn't counted). All-play and luck need weekly scores (2003+).">
         <StandingsTable rows={d.list} focusColor={focusColor} />
       </Panel>
 

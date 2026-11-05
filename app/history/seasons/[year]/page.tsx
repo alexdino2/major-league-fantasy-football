@@ -72,7 +72,7 @@ export default async function SeasonPage({ params }: { params: Promise<{ year: s
         {final && (
           <Card className="md:col-span-2">
             <CardHeader className="pb-2">
-              <p className="text-sm text-muted-foreground">Championship · {final.format}</p>
+              <p className="text-sm text-muted-foreground">Championship · week {final.legs[0]?.week ?? 17}</p>
             </CardHeader>
             <CardContent>
               <Table>

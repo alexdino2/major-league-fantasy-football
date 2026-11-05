@@ -30,7 +30,9 @@ const FRANCHISES = [
     manager: 'Michael',
     logo: '/logos/homers.jpg',
     // championships.json credits the 1997 (Magical Mystery Men) and 2016 (I hate you guys) titles to Homers Heroes.
+    // ಠ_ಠ (2013) confirmed as Homers by the commissioner.
     aliases: [
+      'ಠ_ಠ',
       'Magical Mystery Men',
       "Homer's Zeroes (feat. Homer)",
       'I hate you guys (feat. Homer)',
@@ -41,7 +43,8 @@ const FRANCHISES = [
   { id: 'kentucky-football-club', name: 'Kentucky Football Club', manager: 'Gustave Carruth', logo: '/logos/KFC.jpg', aliases: [] },
   { id: 'relegators', name: 'Relegators', manager: 'Patrick Williams', logo: '/logos/relegators.jpg', aliases: [] },
   { id: 'donora-dragons', name: 'Donora Dragons', manager: 'Sammy Kowall', logo: null, aliases: [] },
-  { id: 'polish-power', name: 'Polish Power', manager: 'Jeremy Kowall', logo: null, aliases: [] },
+  // Average Joe's (2013) confirmed as Polish Power by the commissioner.
+  { id: 'polish-power', name: 'Polish Power', manager: 'Jeremy Kowall', logo: null, aliases: ["Average Joe's"] },
   { id: 'p-funk-all-stars', name: 'P-Funk All Stars', manager: null, logo: null, aliases: [] },
   { id: 'death-dealers', name: 'Death Dealers', manager: null, logo: null, aliases: [] },
   { id: 'muff-marauders', name: 'Muff Marauders', manager: null, logo: null, aliases: [] },
@@ -49,8 +52,6 @@ const FRANCHISES = [
   { id: 'fruity-whipple-hot-mops', name: 'Fruity Whipple Hot Mops', manager: null, logo: null, aliases: [] },
   { id: 'osama-bin-laden', name: 'Osama Bin Laden', manager: null, logo: null, aliases: [] },
   { id: 'latin-assassins', name: 'Latin Assassins', manager: null, logo: null, aliases: [] },
-  { id: 'average-joes', name: "Average Joe's", manager: null, logo: null, aliases: [] },
-  { id: 'look-of-disapproval', name: 'ಠ_ಠ', manager: null, logo: null, aliases: [] },
 ]
 
 const norm = (s) => String(s || '').trim().toLowerCase().replace(/\s+/g, ' ')

@@ -31,7 +31,11 @@ export default function HistoryPage() {
       <PageHeader
         title="MLFF History"
         subtitle={`${seasons.length} seasons of Major League Fantasy Football, ${firstYear}–${lastYear}. Every champion, every franchise, and the numbers behind them.`}
-      />
+      >
+        <Link href="/history/dashboard" className="mt-4 inline-flex items-center rounded-md bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700">
+          Open the interactive dashboard →
+        </Link>
+      </PageHeader>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
         <Stat icon={<Calendar className="w-6 h-6 text-purple-500" />} label="Seasons" value={seasons.length} sub={`${firstYear}–${lastYear}`} />

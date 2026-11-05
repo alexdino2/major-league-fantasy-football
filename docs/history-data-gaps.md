@@ -36,20 +36,20 @@ Generated alongside `data/history/league.json` by `node scripts/build-history-si
 The site keeps a franchise's history through renames only where the league's own title list already does (`scripts/lib/franchises.js`):
 
 - Italian Stallions → Munich Cowboys
-- Magical Mystery Men, Homer's Zeroes (feat. Homer), I hate you guys (feat. Homer), My hate for you, it grow → Homers Heroes
+- Average Joe's (2013) → Polish Power
+- Magical Mystery Men, ಠ_ಠ (2013), Homer's Zeroes (feat. Homer), I hate you guys (feat. Homer), My hate for you, it grow → Homers Heroes
 
 Still unconfirmed, so each is its own franchise for now:
 
-- **2013: Average Joe's (12-4, runner-up) and ಠ_ಠ (3-13).** Homers Heroes and Polish Power both sit out 2013, so these are probably those two owners under new names. Which is which?
 - **1998 and 1999.** Magical Mystery Men is missing both years. Osama Bin Laden (1998) and Latin Assassins (1999) appear in their place. Same owner?
 - **P-Funk All Stars (1998-2005)** vs. **Donora Dragons**, who return in 2006 after playing 1994-1996. Is that a continuation, and are both Donora runs the same owner?
 - **Kentucky Football Club (2014)** and **Relegators (2024)**: new owners, or taking over an existing franchise?
-- Managers for Death Dealers, Muff Marauders, Rat Boys, Fruity Whipple Hot Mops, Osama Bin Laden, Latin Assassins, P-Funk All Stars, Average Joe's and ಠ_ಠ. Earlier Homers Heroes and Donora Dragons managers ("+2" in CBS) are also unnamed.
+- Managers for Death Dealers, Muff Marauders, Rat Boys, Fruity Whipple Hot Mops, Osama Bin Laden, Latin Assassins, and P-Funk All Stars. Earlier Homers Heroes and Donora Dragons managers ("+2" in CBS) are also unnamed.
 
 ## 4. Auction / draft files
 
 - **2020:** `scripts/fix-munich-cowboys.js` labeled the first 16 rows "Munich Cowboys", but that year has its own MUNICH COWBOYS block. The unlabeled block is Masters of Disaster's. The site build assigns it correctly. The raw CSV is still wrong if anything else reads it.
-- **2013:** Average Joe's has no picks in the file, and the first, unlabeled block can't be matched to a team for certain (16 picks show as "Unassigned").
+- **2013:** Average Joe's (Polish Power) has no picks in the file, and the first, unlabeled block can't be matched to a team for certain (16 picks show as "Unassigned").
 - **2010-2011:** columns are shifted one place (handled), and kickers and defenses carry no position label.
 - **2008:** the export is unreadable (rounds and teams are mixed up). **1994-2007 and 2009:** no draft files at all.
 - **Player points before 2021:** the scraper only pulled `Total FPTS` for 2021-2025, so best-value and bust lists exist only for those years.
